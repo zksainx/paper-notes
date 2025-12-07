@@ -37,19 +37,23 @@
          <lastmod>2025-12-07</lastmod>
     </url>
     <url>
-         <loc>https://zksainx.github.io/paper-notes/machine-learning/</loc>
+         <loc>https://zksainx.github.io/paper-notes/intra-gpu-multiplexing/</loc>
          <lastmod>2025-12-07</lastmod>
     </url>
     <url>
-         <loc>https://zksainx.github.io/paper-notes/machine-learning/attention-is-all-you-need/</loc>
+         <loc>https://zksainx.github.io/paper-notes/intra-gpu-multiplexing/bullet/</loc>
          <lastmod>2025-12-07</lastmod>
     </url>
     <url>
-         <loc>https://zksainx.github.io/paper-notes/nlp/</loc>
+         <loc>https://zksainx.github.io/paper-notes/intra-gpu-multiplexing/nanoflow/</loc>
          <lastmod>2025-12-07</lastmod>
     </url>
     <url>
-         <loc>https://zksainx.github.io/paper-notes/nlp/bert/</loc>
+         <loc>https://zksainx.github.io/paper-notes/intra-gpu-multiplexing/nexus/</loc>
+         <lastmod>2025-12-07</lastmod>
+    </url>
+    <url>
+         <loc>https://zksainx.github.io/paper-notes/intra-gpu-multiplexing/pd-multiplex/</loc>
          <lastmod>2025-12-07</lastmod>
     </url>
     <url>
@@ -77,14 +81,6 @@
          <lastmod>2025-12-07</lastmod>
     </url>
     <url>
-         <loc>https://zksainx.github.io/paper-notes/simulation/dlrm/</loc>
-         <lastmod>2025-12-07</lastmod>
-    </url>
-    <url>
-         <loc>https://zksainx.github.io/paper-notes/simulation/forecasting-llm-inference/</loc>
-         <lastmod>2025-12-07</lastmod>
-    </url>
-    <url>
          <loc>https://zksainx.github.io/paper-notes/simulation/frontier/</loc>
          <lastmod>2025-12-07</lastmod>
     </url>
@@ -106,10 +102,6 @@
     </url>
     <url>
          <loc>https://zksainx.github.io/paper-notes/simulation/simai/</loc>
-         <lastmod>2025-12-07</lastmod>
-    </url>
-    <url>
-         <loc>https://zksainx.github.io/paper-notes/simulation/universal-performance/</loc>
          <lastmod>2025-12-07</lastmod>
     </url>
     <url>

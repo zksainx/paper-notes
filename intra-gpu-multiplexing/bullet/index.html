@@ -12,13 +12,13 @@
         <meta name="author" content="zksainx">
       
       
-        <link rel="canonical" href="https://zksainx.github.io/paper-notes/simulation/dlrm/">
+        <link rel="canonical" href="https://zksainx.github.io/paper-notes/intra-gpu-multiplexing/bullet/">
       
       
-        <link rel="prev" href="../chakra/">
+        <link rel="prev" href="../nanoflow/">
       
       
-        <link rel="next" href="../forecasting-llm-inference/">
+        <link rel="next" href="../nexus/">
       
       
         
@@ -29,7 +29,7 @@
     
     
       
-        <title>DLRM - 论文笔记</title>
+        <title>Bullet - 论文笔记</title>
       
     
     
@@ -82,7 +82,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#dlrm-deep-learning-recommendation-model-for-personalization-and-recommendation-systems" class="md-skip">
+        <a href="#bullet-boosting-gpu-utilization-for-llm-serving-via-dynamic-spatial-temporal-orchestration" class="md-skip">
           跳转至
         </a>
       
@@ -116,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              DLRM
+              Bullet
             
           </span>
         </div>
@@ -255,53 +255,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../machine-learning/" class="md-tabs__link">
-          
-  
-  
-    
-  
-  机器学习
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../nlp/" class="md-tabs__link">
-          
-  
-  
-    
-  
-  自然语言处理
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-    
-  
-  
-    
-    
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../" class="md-tabs__link">
+        <a href="../../simulation/" class="md-tabs__link">
           
   
   
@@ -330,6 +284,30 @@
     
   
   Autotuning
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Intra-GPU Spatial Multiplexing
 
         </a>
       </li>
@@ -443,6 +421,30 @@
       
         
       
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
     
     
     
@@ -462,14 +464,14 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../machine-learning/" class="md-nav__link ">
+            <a href="../../simulation/" class="md-nav__link ">
               
   
   
   <span class="md-ellipsis">
     
   
-    机器学习
+    Simulation
   
 
     
@@ -491,251 +493,6 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    机器学习
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../machine-learning/attention-is-all-you-need/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Attention Is All You Need
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-      
-        
-          
-        
-      
-        
-      
-    
-    
-    
-      
-      
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
-        
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../../nlp/" class="md-nav__link ">
-              
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    自然语言处理
-  
-
-    
-  </span>
-  
-  
-
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    自然语言处理
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../nlp/bert/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    BERT 预训练语言模型
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-    
-  
-  
-  
-    
-    
-      
-        
-          
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-      
-        
-        
-      
-      
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
-        
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
-              
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Simulation
-  
-
-    
-  </span>
-  
-  
-
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_4">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
     Simulation
   
 
@@ -751,7 +508,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../amali/" class="md-nav__link">
+      <a href="../../simulation/amali/" class="md-nav__link">
         
   
   
@@ -779,7 +536,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../apex/" class="md-nav__link">
+      <a href="../../simulation/apex/" class="md-nav__link">
         
   
   
@@ -807,7 +564,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../astra-sim/" class="md-nav__link">
+      <a href="../../simulation/astra-sim/" class="md-nav__link">
         
   
   
@@ -835,7 +592,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../astra-sim-2/" class="md-nav__link">
+      <a href="../../simulation/astra-sim-2/" class="md-nav__link">
         
   
   
@@ -863,7 +620,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../chakra/" class="md-nav__link">
+      <a href="../../simulation/chakra/" class="md-nav__link">
         
   
   
@@ -888,135 +645,10 @@
                 
   
   
-    
-  
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    DLRM
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    DLRM
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#abstract" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Abstract
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#core-ideas" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Core Ideas
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
   
   
     <li class="md-nav__item">
-      <a href="../forecasting-llm-inference/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Forecasting LLM Inference
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../frontier/" class="md-nav__link">
+      <a href="../../simulation/frontier/" class="md-nav__link">
         
   
   
@@ -1044,7 +676,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../llmcompass/" class="md-nav__link">
+      <a href="../../simulation/llmcompass/" class="md-nav__link">
         
   
   
@@ -1072,14 +704,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../linear/" class="md-nav__link">
+      <a href="../../simulation/linear/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Linformer
+    Path Forward Beyond Simulators
   
 
     
@@ -1100,7 +732,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../mystique/" class="md-nav__link">
+      <a href="../../simulation/mystique/" class="md-nav__link">
         
   
   
@@ -1128,7 +760,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../neusight/" class="md-nav__link">
+      <a href="../../simulation/neusight/" class="md-nav__link">
         
   
   
@@ -1156,7 +788,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../simai/" class="md-nav__link">
+      <a href="../../simulation/simai/" class="md-nav__link">
         
   
   
@@ -1184,35 +816,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../universal-performance/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Universal Performance
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../vidur/" class="md-nav__link">
+      <a href="../../simulation/vidur/" class="md-nav__link">
         
   
   
@@ -1240,7 +844,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../vtrain/" class="md-nav__link">
+      <a href="../../simulation/vtrain/" class="md-nav__link">
         
   
   
@@ -1308,7 +912,7 @@
         
           
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
         
           
           <div class="md-nav__link md-nav__container">
@@ -1330,14 +934,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_5">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -1528,6 +1132,274 @@
       
   
   
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Intra-GPU Spatial Multiplexing
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Intra-GPU Spatial Multiplexing
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../nanoflow/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NanoFlow
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bullet
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bullet
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#abstract" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Abstract
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#core-ideas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Core Ideas
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../nexus/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Nexus
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pd-multiplex/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PD-Multiplexing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
   
   
     <li class="md-nav__item">
@@ -1619,28 +1491,29 @@
   
 
 
-<h1 id="dlrm-deep-learning-recommendation-model-for-personalization-and-recommendation-systems">DLRM: Deep Learning Recommendation Model for Personalization and Recommendation Systems<a class="headerlink" href="#dlrm-deep-learning-recommendation-model-for-personalization-and-recommendation-systems" title="Permanent link">&para;</a></h1>
+<h1 id="bullet-boosting-gpu-utilization-for-llm-serving-via-dynamic-spatial-temporal-orchestration">Bullet: Boosting GPU Utilization for LLM Serving via Dynamic Spatial-Temporal Orchestration<a class="headerlink" href="#bullet-boosting-gpu-utilization-for-llm-serving-via-dynamic-spatial-temporal-orchestration" title="Permanent link">&para;</a></h1>
 <div class="paper-meta">
-<p><strong>Authors</strong>: Maxim Naumov et al.
-<strong>Institution</strong>: Facebook AI Research
-<strong>Conference</strong>: arXiv 2019
-<strong>Paper Link</strong>: <a href="https://arxiv.org/abs/1906.00091">arXiv:1906.00091</a></p>
+<p><strong>Authors</strong>: Zejia Lin, Hongxin Xu, Guanyi Chen<br />
+<strong>Institution</strong>: Sun Yat-sen University<br />
+<strong>Conference</strong>: arXiv 2025<br />
+<strong>Paper Link</strong>: <a href="https://arxiv.org/abs/2504.19516">arXiv:2504.19516</a></p>
 </div>
 <div class="paper-tags">
-<p><span class="paper-tag">Recommendation Systems</span>
-<span class="paper-tag">Deep Learning</span>
-<span class="paper-tag">Embedding Tables</span></p>
+<p><span class="paper-tag">GPU Utilization</span>
+<span class="paper-tag">Spatial-Temporal Orchestration</span>
+<span class="paper-tag">Performance Modeling</span></p>
 </div>
 <h2 id="abstract">Abstract<a class="headerlink" href="#abstract" title="Permanent link">&para;</a></h2>
-<p>DLRM is a state-of-the-art deep learning recommendation model developed by Facebook that handles both dense and sparse features. It uses specialized parallelization schemes with model parallelism on embedding tables and data parallelism on fully-connected layers.</p>
+<p>Bullet is a novel spatial-temporal orchestration system that eliminates GPU inefficiencies through precise phase coordination. It enables concurrent execution of prefill and decode phases while dynamically provisioning GPU resources using real-time performance modeling. Bullet delivers 1.26x average throughput gains (up to 1.55x) over state-of-the-art systems while consistently meeting latency constraints.</p>
 <p><strong>Key Contributions</strong>:
-- Novel interaction layer mimicking factorization machines
-- Specialized parallelization scheme for large-scale recommendation
-- Open-source implementation in PyTorch and Caffe2</p>
+- Dynamic spatial-temporal GPU resource orchestration
+- Concurrent prefill and decode execution
+- Real-time performance modeling for resource provisioning
+- 1.26x average throughput improvement (up to 1.55x)</p>
 <h2 id="core-ideas">Core Ideas<a class="headerlink" href="#core-ideas" title="Permanent link">&para;</a></h2>
-<p>DLRM specifically interacts embeddings in a structured way that significantly reduces model dimensionality by only considering cross-terms produced by dot-products between pairs of embeddings. The model has become part of the popular MLPerf Benchmark and is widely used in production recommendation systems.</p>
+<p>Bullet addresses the fundamental mismatch between compute-intensive prefill and memory-bound decode phases in LLM serving. The system identifies two key inefficiencies: (1) prefill suffers from suboptimal compute utilization due to wave quantization and attention bottlenecks, and (2) hybrid batches prioritize latency over throughput. Bullet's spatial-temporal orchestration dynamically coordinates phase execution and resource allocation to maximize GPU utilization while meeting latency requirements.</p>
 <hr />
-<p><em>Reading date: 2024</em>
+<p><em>Reading date: 2025</em>
 <em>Note status: Completed</em></p>
 
 
