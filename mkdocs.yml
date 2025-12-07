@@ -89,12 +89,35 @@ nav:
   - 机器学习:
       - machine-learning/index.md
       - Attention Is All You Need: machine-learning/attention-is-all-you-need.md
-  - 计算机视觉:
-      - computer-vision/index.md
-      - ResNet 深度残差网络: computer-vision/resnet.md
   - 自然语言处理:
       - nlp/index.md
       - BERT 预训练语言模型: nlp/bert.md
+  - Simulation:
+      - simulation/index.md
+      - AMALI: simulation/amali.md
+      - APEX: simulation/apex.md
+      - Astra-Sim: simulation/astra-sim.md
+      - Astra-Sim 2.0: simulation/astra-sim-2.md
+      - Chakra: simulation/chakra.md
+      - DLRM: simulation/dlrm.md
+      - Forecasting LLM Inference: simulation/forecasting-llm-inference.md
+      - Frontier: simulation/frontier.md
+      - LLMCompass: simulation/llmcompass.md
+      - Linformer: simulation/linear.md
+      - Mystique: simulation/mystique.md
+      - NeuSight: simulation/neusight.md
+      - SimAI: simulation/simai.md
+      - Universal Performance: simulation/universal-performance.md
+      - VIDUR: simulation/vidur.md
+      - vTrain: simulation/vtrain.md
+  - Autotuning:
+      - autotuning/index.md
+      - Ansor: autotuning/ansor.md
+      - Learning to Optimize Tensor Programs: autotuning/learning-optimize-tensor-programs.md
+      - Learned Performance Model for TPU: autotuning/learned-performance-model-tpu.md
+      - MetaTune: autotuning/metatune.md
+      - GPU Performance Portability: autotuning/gpu-performance-portability.md
+      - Anatomy of Triton Attention Kernel: autotuning/anatomy-triton-attention.md
   - 关于: about.md
 
 # Copyright

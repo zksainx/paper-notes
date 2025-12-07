@@ -13,11 +13,14 @@
 ### [机器学习](machine-learning/index.md)
 包括深度学习基础、优化方法、模型架构等相关论文。
 
-### [计算机视觉](computer-vision/index.md)
-涵盖图像分类、目标检测、图像分割、生成模型等视觉任务的论文。
-
 ### [自然语言处理](nlp/index.md)
 包含语言模型、文本理解、机器翻译等NLP领域的论文。
+
+### [Simulation](simulation/index.md)
+Papers on performance modeling, simulation frameworks, and analytical models for ML systems.
+
+### [Autotuning](autotuning/index.md)
+Papers on automatic performance tuning, compiler optimization, and ML-guided program optimization.
 
 ## 🔍 如何使用
 
