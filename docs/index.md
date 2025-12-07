@@ -13,7 +13,7 @@
 ### [Simulation](simulation/index.md)
 Papers on performance modeling, simulation frameworks, and analytical models for ML systems.
 
-### [Tensor Program Optimization](autotuning/index.md)
+### [Tensor Program Optimization](tensor-program-optimization/index.md)
 Papers on automated tensor program optimization through compiler techniques, ML-guided search, and performance modeling for deep learning workloads.
 
 ### [Intra-GPU Spatial Multiplexing](intra-gpu-multiplexing/index.md)

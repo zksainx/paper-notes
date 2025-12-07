@@ -102,13 +102,13 @@ nav:
       - VIDUR: simulation/vidur.md
       - vTrain: simulation/vtrain.md
   - Tensor Program Optimization:
-      - autotuning/index.md
-      - Ansor: autotuning/ansor.md
-      - Learning to Optimize Tensor Programs: autotuning/learning-optimize-tensor-programs.md
-      - Learned Performance Model for TPU: autotuning/learned-performance-model-tpu.md
-      - MetaTune: autotuning/metatune.md
-      - GPU Performance Portability: autotuning/gpu-performance-portability.md
-      - Anatomy of Triton Attention Kernel: autotuning/anatomy-triton-attention.md
+      - tensor-program-optimization/index.md
+      - Ansor: tensor-program-optimization/ansor.md
+      - Learning to Optimize Tensor Programs: tensor-program-optimization/learning-optimize-tensor-programs.md
+      - Learned Performance Model for TPU: tensor-program-optimization/learned-performance-model-tpu.md
+      - MetaTune: tensor-program-optimization/metatune.md
+      - GPU Performance Portability: tensor-program-optimization/gpu-performance-portability.md
+      - Anatomy of Triton Attention Kernel: tensor-program-optimization/anatomy-triton-attention.md
   - Intra-GPU Spatial Multiplexing:
       - intra-gpu-multiplexing/index.md
       - NanoFlow: intra-gpu-multiplexing/nanoflow.md
