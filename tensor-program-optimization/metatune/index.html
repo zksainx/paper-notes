@@ -12,13 +12,13 @@
         <meta name="author" content="zksainx">
       
       
-        <link rel="canonical" href="https://zksainx.github.io/paper-notes/autotuning/learned-performance-model-tpu/">
+        <link rel="canonical" href="https://zksainx.github.io/paper-notes/tensor-program-optimization/metatune/">
       
       
-        <link rel="prev" href="../learning-optimize-tensor-programs/">
+        <link rel="prev" href="../learned-performance-model-tpu/">
       
       
-        <link rel="next" href="../metatune/">
+        <link rel="next" href="../gpu-performance-portability/">
       
       
         
@@ -29,7 +29,7 @@
     
     
       
-        <title>Learned Performance Model for TPU - Paper Notes</title>
+        <title>MetaTune - Paper Notes</title>
       
     
     
@@ -82,7 +82,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#a-learned-performance-model-for-tensor-processing-units" class="md-skip">
+        <a href="#metatune-meta-learning-based-cost-model-for-fast-and-efficient-auto-tuning-frameworks" class="md-skip">
           跳转至
         </a>
       
@@ -116,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Learned Performance Model for TPU
+              MetaTune
             
           </span>
         </div>
@@ -1016,6 +1016,34 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../learned-performance-model-tpu/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Learned Performance Model for TPU
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -1035,7 +1063,7 @@
   <span class="md-ellipsis">
     
   
-    Learned Performance Model for TPU
+    MetaTune
   
 
     
@@ -1053,7 +1081,7 @@
   <span class="md-ellipsis">
     
   
-    Learned Performance Model for TPU
+    MetaTune
   
 
     
@@ -1104,34 +1132,6 @@
   
 </nav>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../metatune/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    MetaTune
-  
-
-    
-  </span>
-  
-  
-
-      </a>
     </li>
   
 
@@ -1491,27 +1491,27 @@
   
 
 
-<h1 id="a-learned-performance-model-for-tensor-processing-units">A Learned Performance Model for Tensor Processing Units<a class="headerlink" href="#a-learned-performance-model-for-tensor-processing-units" title="Permanent link">&para;</a></h1>
+<h1 id="metatune-meta-learning-based-cost-model-for-fast-and-efficient-auto-tuning-frameworks">MetaTune: Meta-Learning Based Cost Model for Fast and Efficient Auto-tuning Frameworks<a class="headerlink" href="#metatune-meta-learning-based-cost-model-for-fast-and-efficient-auto-tuning-frameworks" title="Permanent link">&para;</a></h1>
 <div class="paper-meta">
-<p><strong>Authors</strong>: Samuel J. Kaufman, Phitchaya Mangpo Phothilimthana, Yanqi Zhou<br />
-<strong>Institution</strong>: Google<br />
-<strong>Conference</strong>: MLSys 2021<br />
-<strong>Paper Link</strong>: <a href="https://arxiv.org/abs/2008.01040">arXiv:2008.01040</a></p>
+<p><strong>Authors</strong>: Jaehun Ryu, Hyojin Sung<br />
+<strong>Institution</strong>: Samsung Electronics, Seoul National University<br />
+<strong>Conference</strong>: arXiv 2021<br />
+<strong>Paper Link</strong>: <a href="https://arxiv.org/abs/2102.04199">arXiv:2102.04199</a></p>
 </div>
 <div class="paper-tags">
-<p><span class="paper-tag">TPU</span>
-<span class="paper-tag">Performance Modeling</span>
-<span class="paper-tag">Machine Learning</span></p>
+<p><span class="paper-tag">Meta-Learning</span>
+<span class="paper-tag">Cost Model</span>
+<span class="paper-tag">TVM</span></p>
 </div>
 <h2 id="abstract">Abstract<a class="headerlink" href="#abstract" title="Permanent link">&para;</a></h2>
-<p>This paper demonstrates a method of learning performance models from a corpus of tensor computation graph programs for Tensor Processing Unit (TPU) instances. The learned model outperforms heavily-optimized analytical performance models on tile-size selection and operator fusion tasks.</p>
+<p>MetaTune is a meta-learning based cost model that quickly and accurately predicts the performance of optimized codes with pre-trained model parameters. It addresses the large space exploration and cost model training overheads in auto-tuning frameworks.</p>
 <p><strong>Key Contributions</strong>:
-- Machine learning-based performance modeling for TPUs
-- Outperforms analytical models on key optimization tasks
-- Enables autotuning in settings where TPU access is limited or expensive
-- Reduces development burden for modeling contemporary accelerators</p>
+- GNN-based meta-learning for cost model training
+- Encodes convolution kernels as structurally similar graphs
+- 8-13% better inference time on average for four CNN models
+- Outperforms transfer learning by 10% in cross-platform cases</p>
 <h2 id="core-ideas">Core Ideas<a class="headerlink" href="#core-ideas" title="Permanent link">&para;</a></h2>
-<p>Accurate hardware performance models are critical for efficient code generation but difficult to develop for complex processors. This research shows that learning from execution data can produce more accurate models than traditional analytical approaches, particularly useful for the proliferation of deep learning accelerators where analytical modeling is costly.</p>
+<p>MetaTune encodes convolution kernel codes as graphs to facilitate meta-learning, meta-trains a GNN model with minimal input data, and predicts optimization parameters for unseen operations during compilation. Implemented as an alternative cost model for TVM's auto-tuning framework, it provides comparable or lower optimization time while improving inference performance.</p>
 <hr />
 <p><em>Reading date: 2025</em>
 <em>Note status: Completed</em></p>

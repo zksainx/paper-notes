@@ -12,13 +12,13 @@
         <meta name="author" content="zksainx">
       
       
-        <link rel="canonical" href="https://zksainx.github.io/paper-notes/autotuning/anatomy-triton-attention/">
+        <link rel="canonical" href="https://zksainx.github.io/paper-notes/tensor-program-optimization/learned-performance-model-tpu/">
       
       
-        <link rel="prev" href="../gpu-performance-portability/">
+        <link rel="prev" href="../learning-optimize-tensor-programs/">
       
       
-        <link rel="next" href="../../intra-gpu-multiplexing/">
+        <link rel="next" href="../metatune/">
       
       
         
@@ -29,7 +29,7 @@
     
     
       
-        <title>Anatomy of Triton Attention Kernel - Paper Notes</title>
+        <title>Learned Performance Model for TPU - Paper Notes</title>
       
     
     
@@ -82,7 +82,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#the-anatomy-of-a-triton-attention-kernel" class="md-skip">
+        <a href="#a-learned-performance-model-for-tensor-processing-units" class="md-skip">
           跳转至
         </a>
       
@@ -116,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Anatomy of Triton Attention Kernel
+              Learned Performance Model for TPU
             
           </span>
         </div>
@@ -1016,10 +1016,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../learned-performance-model-tpu/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Learned Performance Model for TPU
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1035,6 +1062,48 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#abstract" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Abstract
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#core-ideas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Core Ideas
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1100,37 +1169,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Anatomy of Triton Attention Kernel
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../anatomy-triton-attention/" class="md-nav__link">
         
   
   
@@ -1146,48 +1188,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#abstract" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Abstract
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#core-ideas" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Core Ideas
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1491,27 +1491,27 @@
   
 
 
-<h1 id="the-anatomy-of-a-triton-attention-kernel">The Anatomy of a Triton Attention Kernel<a class="headerlink" href="#the-anatomy-of-a-triton-attention-kernel" title="Permanent link">&para;</a></h1>
+<h1 id="a-learned-performance-model-for-tensor-processing-units">A Learned Performance Model for Tensor Processing Units<a class="headerlink" href="#a-learned-performance-model-for-tensor-processing-units" title="Permanent link">&para;</a></h1>
 <div class="paper-meta">
-<p><strong>Authors</strong>: Burkhard Ringlein, Jan van Lunteren, Radu Stoica<br />
-<strong>Institution</strong>: IBM Research Europe<br />
-<strong>Conference</strong>: arXiv 2025<br />
-<strong>Paper Link</strong>: <a href="https://arxiv.org/abs/2511.11581">arXiv:2511.11581</a></p>
+<p><strong>Authors</strong>: Samuel J. Kaufman, Phitchaya Mangpo Phothilimthana, Yanqi Zhou<br />
+<strong>Institution</strong>: Google<br />
+<strong>Conference</strong>: MLSys 2021<br />
+<strong>Paper Link</strong>: <a href="https://arxiv.org/abs/2008.01040">arXiv:2008.01040</a></p>
 </div>
 <div class="paper-tags">
-<p><span class="paper-tag">Triton</span>
-<span class="paper-tag">Attention Mechanism</span>
-<span class="paper-tag">GPU Kernels</span></p>
+<p><span class="paper-tag">TPU</span>
+<span class="paper-tag">Performance Modeling</span>
+<span class="paper-tag">Machine Learning</span></p>
 </div>
 <h2 id="abstract">Abstract<a class="headerlink" href="#abstract" title="Permanent link">&para;</a></h2>
-<p>This paper develops a state-of-the-art paged attention kernel using exclusively OpenAI's Triton language, achieving state-of-the-art performance on both NVIDIA and AMD GPUs. It brings Triton attention kernel performance from 19.7% to 105.9% of state-of-the-art through systematic optimizations.</p>
+<p>This paper demonstrates a method of learning performance models from a corpus of tensor computation graph programs for Tensor Processing Unit (TPU) instances. The learned model outperforms heavily-optimized analytical performance models on tile-size selection and operator fusion tasks.</p>
 <p><strong>Key Contributions</strong>:
-- Feature-complete cross-platform paged attention kernel
-- High-level approach with algorithmic and system-level improvements
-- Parameter auto-tuning for optimal performance
-- Open-sourced kernels adopted as default in vLLM for AMD GPUs</p>
+- Machine learning-based performance modeling for TPUs
+- Outperforms analytical models on key optimization tasks
+- Enables autotuning in settings where TPU access is limited or expensive
+- Reduces development burden for modeling contemporary accelerators</p>
 <h2 id="core-ideas">Core Ideas<a class="headerlink" href="#core-ideas" title="Permanent link">&para;</a></h2>
-<p>The paper demonstrates how to build production-quality attention kernels using high-level Triton code through systematic optimization. Triton enables writing GPU kernels in Python while abstracting away CUDA threading complexities like memory coalescing and tensor core scheduling. The resulting kernel achieves competitive or better performance than vendor-optimized implementations while maintaining cross-platform portability.</p>
+<p>Accurate hardware performance models are critical for efficient code generation but difficult to develop for complex processors. This research shows that learning from execution data can produce more accurate models than traditional analytical approaches, particularly useful for the proliferation of deep learning accelerators where analytical modeling is costly.</p>
 <hr />
 <p><em>Reading date: 2025</em>
 <em>Note status: Completed</em></p>

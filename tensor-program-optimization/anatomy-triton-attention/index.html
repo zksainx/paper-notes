@@ -12,13 +12,13 @@
         <meta name="author" content="zksainx">
       
       
-        <link rel="canonical" href="https://zksainx.github.io/paper-notes/autotuning/gpu-performance-portability/">
+        <link rel="canonical" href="https://zksainx.github.io/paper-notes/tensor-program-optimization/anatomy-triton-attention/">
       
       
-        <link rel="prev" href="../metatune/">
+        <link rel="prev" href="../gpu-performance-portability/">
       
       
-        <link rel="next" href="../anatomy-triton-attention/">
+        <link rel="next" href="../../intra-gpu-multiplexing/">
       
       
         
@@ -29,7 +29,7 @@
     
     
       
-        <title>GPU Performance Portability - Paper Notes</title>
+        <title>Anatomy of Triton Attention Kernel - Paper Notes</title>
       
     
     
@@ -82,7 +82,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#gpu-performance-portability-needs-autotuning" class="md-skip">
+        <a href="#the-anatomy-of-a-triton-attention-kernel" class="md-skip">
           跳转至
         </a>
       
@@ -116,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              GPU Performance Portability
+              Anatomy of Triton Attention Kernel
             
           </span>
         </div>
@@ -1072,6 +1072,34 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../gpu-performance-portability/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GPU Performance Portability
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -1091,7 +1119,7 @@
   <span class="md-ellipsis">
     
   
-    GPU Performance Portability
+    Anatomy of Triton Attention Kernel
   
 
     
@@ -1109,7 +1137,7 @@
   <span class="md-ellipsis">
     
   
-    GPU Performance Portability
+    Anatomy of Triton Attention Kernel
   
 
     
@@ -1160,34 +1188,6 @@
   
 </nav>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../anatomy-triton-attention/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Anatomy of Triton Attention Kernel
-  
-
-    
-  </span>
-  
-  
-
-      </a>
     </li>
   
 
@@ -1491,27 +1491,27 @@
   
 
 
-<h1 id="gpu-performance-portability-needs-autotuning">GPU Performance Portability needs Autotuning<a class="headerlink" href="#gpu-performance-portability-needs-autotuning" title="Permanent link">&para;</a></h1>
+<h1 id="the-anatomy-of-a-triton-attention-kernel">The Anatomy of a Triton Attention Kernel<a class="headerlink" href="#the-anatomy-of-a-triton-attention-kernel" title="Permanent link">&para;</a></h1>
 <div class="paper-meta">
-<p><strong>Authors</strong>: Burkhard Ringlein, Thomas Parnell, Radu Stoica<br />
+<p><strong>Authors</strong>: Burkhard Ringlein, Jan van Lunteren, Radu Stoica<br />
 <strong>Institution</strong>: IBM Research Europe<br />
 <strong>Conference</strong>: arXiv 2025<br />
-<strong>Paper Link</strong>: <a href="https://arxiv.org/abs/2505.03780">arXiv:2505.03780</a></p>
+<strong>Paper Link</strong>: <a href="https://arxiv.org/abs/2511.11581">arXiv:2511.11581</a></p>
 </div>
 <div class="paper-tags">
-<p><span class="paper-tag">GPU Portability</span>
-<span class="paper-tag">Autotuning</span>
-<span class="paper-tag">LLM Inference</span></p>
+<p><span class="paper-tag">Triton</span>
+<span class="paper-tag">Attention Mechanism</span>
+<span class="paper-tag">GPU Kernels</span></p>
 </div>
 <h2 id="abstract">Abstract<a class="headerlink" href="#abstract" title="Permanent link">&para;</a></h2>
-<p>This paper makes the case for combining just-in-time (JIT) compilation with comprehensive kernel parameter autotuning to enable portable LLM inference with state-of-the-art performance without code changes, addressing vendor lock-in and hardware portability challenges.</p>
+<p>This paper develops a state-of-the-art paged attention kernel using exclusively OpenAI's Triton language, achieving state-of-the-art performance on both NVIDIA and AMD GPUs. It brings Triton attention kernel performance from 19.7% to 105.9% of state-of-the-art through systematic optimizations.</p>
 <p><strong>Key Contributions</strong>:
-- Explores up to 15× more kernel parameter configurations
-- Produces significantly more diverse code across multiple dimensions
-- Outperforms vendor-optimized implementations by up to 230%
-- Reduces kernel code size by 70× while eliminating manual optimizations</p>
+- Feature-complete cross-platform paged attention kernel
+- High-level approach with algorithmic and system-level improvements
+- Parameter auto-tuning for optimal performance
+- Open-sourced kernels adopted as default in vLLM for AMD GPUs</p>
 <h2 id="core-ideas">Core Ideas<a class="headerlink" href="#core-ideas" title="Permanent link">&para;</a></h2>
-<p>As LLMs grow in complexity, reliance on a single dominant platform limits portability and creates vendor lock-in. Combining JIT compilation with comprehensive autotuning enables performance-portable LLM inference across different GPU vendors. The "dejavu" mechanism for Triton's autotuner reduces overhead to zero, enabling production use with full autotuning benefits.</p>
+<p>The paper demonstrates how to build production-quality attention kernels using high-level Triton code through systematic optimization. Triton enables writing GPU kernels in Python while abstracting away CUDA threading complexities like memory coalescing and tensor core scheduling. The resulting kernel achieves competitive or better performance than vendor-optimized implementations while maintaining cross-platform portability.</p>
 <hr />
 <p><em>Reading date: 2025</em>
 <em>Note status: Completed</em></p>

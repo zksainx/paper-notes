@@ -12,13 +12,13 @@
         <meta name="author" content="zksainx">
       
       
-        <link rel="canonical" href="https://zksainx.github.io/paper-notes/autotuning/ansor/">
+        <link rel="canonical" href="https://zksainx.github.io/paper-notes/tensor-program-optimization/gpu-performance-portability/">
       
       
-        <link rel="prev" href="../">
+        <link rel="prev" href="../metatune/">
       
       
-        <link rel="next" href="../learning-optimize-tensor-programs/">
+        <link rel="next" href="../anatomy-triton-attention/">
       
       
         
@@ -29,7 +29,7 @@
     
     
       
-        <title>Ansor - Paper Notes</title>
+        <title>GPU Performance Portability - Paper Notes</title>
       
     
     
@@ -82,7 +82,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#ansor-generating-high-performance-tensor-programs-for-deep-learning" class="md-skip">
+        <a href="#gpu-performance-portability-needs-autotuning" class="md-skip">
           跳转至
         </a>
       
@@ -116,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Ansor
+              GPU Performance Portability
             
           </span>
         </div>
@@ -960,37 +960,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Ansor
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../ansor/" class="md-nav__link">
         
   
   
@@ -1006,48 +979,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#abstract" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Abstract
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#core-ideas" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Core Ideas
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1141,10 +1072,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../gpu-performance-portability/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GPU Performance Portability
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1160,6 +1118,48 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#abstract" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Abstract
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#core-ideas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Core Ideas
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1491,27 +1491,27 @@
   
 
 
-<h1 id="ansor-generating-high-performance-tensor-programs-for-deep-learning">Ansor: Generating High-Performance Tensor Programs for Deep Learning<a class="headerlink" href="#ansor-generating-high-performance-tensor-programs-for-deep-learning" title="Permanent link">&para;</a></h1>
+<h1 id="gpu-performance-portability-needs-autotuning">GPU Performance Portability needs Autotuning<a class="headerlink" href="#gpu-performance-portability-needs-autotuning" title="Permanent link">&para;</a></h1>
 <div class="paper-meta">
-<p><strong>Authors</strong>: Lianmin Zheng, Chengfan Jia, Minmin Sun, Zhao Wu, Cody Hao Yu, Ameer Haj-Ali, Yida Wang, Jun Yang, Danyang Zhuo, Koushik Sen, Joseph E. Gonzalez, Ion Stoica<br />
-<strong>Institution</strong>: UC Berkeley, University of Washington, AWS<br />
-<strong>Conference</strong>: OSDI 2020<br />
-<strong>Paper Link</strong>: <a href="https://arxiv.org/abs/2006.06762">arXiv:2006.06762</a></p>
+<p><strong>Authors</strong>: Burkhard Ringlein, Thomas Parnell, Radu Stoica<br />
+<strong>Institution</strong>: IBM Research Europe<br />
+<strong>Conference</strong>: arXiv 2025<br />
+<strong>Paper Link</strong>: <a href="https://arxiv.org/abs/2505.03780">arXiv:2505.03780</a></p>
 </div>
 <div class="paper-tags">
-<p><span class="paper-tag">Tensor Programs</span>
-<span class="paper-tag">Auto-Scheduling</span>
-<span class="paper-tag">TVM</span></p>
+<p><span class="paper-tag">GPU Portability</span>
+<span class="paper-tag">Autotuning</span>
+<span class="paper-tag">LLM Inference</span></p>
 </div>
 <h2 id="abstract">Abstract<a class="headerlink" href="#abstract" title="Permanent link">&para;</a></h2>
-<p>Ansor is a tensor program generation framework for deep learning that automatically generates high-performance code without manual templates. It explores a large search space by sampling from a hierarchical representation and fine-tunes programs with evolutionary search and learned cost models.</p>
+<p>This paper makes the case for combining just-in-time (JIT) compilation with comprehensive kernel parameter autotuning to enable portable LLM inference with state-of-the-art performance without code changes, addressing vendor lock-in and hardware portability challenges.</p>
 <p><strong>Key Contributions</strong>:
-- Template-free automatic tensor program generation
-- Hierarchical search space sampling with evolutionary search
-- Learned cost model for program performance prediction
-- Improves performance by up to 3.8× (Intel CPU), 2.6× (ARM CPU), 1.7× (NVIDIA GPU)</p>
+- Explores up to 15× more kernel parameter configurations
+- Produces significantly more diverse code across multiple dimensions
+- Outperforms vendor-optimized implementations by up to 230%
+- Reduces kernel code size by 70× while eliminating manual optimizations</p>
 <h2 id="core-ideas">Core Ideas<a class="headerlink" href="#core-ideas" title="Permanent link">&para;</a></h2>
-<p>Unlike AutoTVM which requires manual templates, Ansor takes only tensor expressions as input and generates high-performance code automatically. It has three major components: a program sampler for diverse program generation, a performance tuner using evolutionary search, and a task scheduler for time resource allocation. Ansor is integrated into Apache TVM as the tvm.auto_scheduler package.</p>
+<p>As LLMs grow in complexity, reliance on a single dominant platform limits portability and creates vendor lock-in. Combining JIT compilation with comprehensive autotuning enables performance-portable LLM inference across different GPU vendors. The "dejavu" mechanism for Triton's autotuner reduces overhead to zero, enabling production use with full autotuning benefits.</p>
 <hr />
 <p><em>Reading date: 2025</em>
 <em>Note status: Completed</em></p>

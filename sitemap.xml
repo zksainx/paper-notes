@@ -9,34 +9,6 @@
          <lastmod>2025-12-07</lastmod>
     </url>
     <url>
-         <loc>https://zksainx.github.io/paper-notes/autotuning/</loc>
-         <lastmod>2025-12-07</lastmod>
-    </url>
-    <url>
-         <loc>https://zksainx.github.io/paper-notes/autotuning/anatomy-triton-attention/</loc>
-         <lastmod>2025-12-07</lastmod>
-    </url>
-    <url>
-         <loc>https://zksainx.github.io/paper-notes/autotuning/ansor/</loc>
-         <lastmod>2025-12-07</lastmod>
-    </url>
-    <url>
-         <loc>https://zksainx.github.io/paper-notes/autotuning/gpu-performance-portability/</loc>
-         <lastmod>2025-12-07</lastmod>
-    </url>
-    <url>
-         <loc>https://zksainx.github.io/paper-notes/autotuning/learned-performance-model-tpu/</loc>
-         <lastmod>2025-12-07</lastmod>
-    </url>
-    <url>
-         <loc>https://zksainx.github.io/paper-notes/autotuning/learning-optimize-tensor-programs/</loc>
-         <lastmod>2025-12-07</lastmod>
-    </url>
-    <url>
-         <loc>https://zksainx.github.io/paper-notes/autotuning/metatune/</loc>
-         <lastmod>2025-12-07</lastmod>
-    </url>
-    <url>
          <loc>https://zksainx.github.io/paper-notes/intra-gpu-multiplexing/</loc>
          <lastmod>2025-12-07</lastmod>
     </url>
@@ -110,6 +82,34 @@
     </url>
     <url>
          <loc>https://zksainx.github.io/paper-notes/simulation/vtrain/</loc>
+         <lastmod>2025-12-07</lastmod>
+    </url>
+    <url>
+         <loc>https://zksainx.github.io/paper-notes/tensor-program-optimization/</loc>
+         <lastmod>2025-12-07</lastmod>
+    </url>
+    <url>
+         <loc>https://zksainx.github.io/paper-notes/tensor-program-optimization/anatomy-triton-attention/</loc>
+         <lastmod>2025-12-07</lastmod>
+    </url>
+    <url>
+         <loc>https://zksainx.github.io/paper-notes/tensor-program-optimization/ansor/</loc>
+         <lastmod>2025-12-07</lastmod>
+    </url>
+    <url>
+         <loc>https://zksainx.github.io/paper-notes/tensor-program-optimization/gpu-performance-portability/</loc>
+         <lastmod>2025-12-07</lastmod>
+    </url>
+    <url>
+         <loc>https://zksainx.github.io/paper-notes/tensor-program-optimization/learned-performance-model-tpu/</loc>
+         <lastmod>2025-12-07</lastmod>
+    </url>
+    <url>
+         <loc>https://zksainx.github.io/paper-notes/tensor-program-optimization/learning-optimize-tensor-programs/</loc>
+         <lastmod>2025-12-07</lastmod>
+    </url>
+    <url>
+         <loc>https://zksainx.github.io/paper-notes/tensor-program-optimization/metatune/</loc>
          <lastmod>2025-12-07</lastmod>
     </url>
 </urlset>
