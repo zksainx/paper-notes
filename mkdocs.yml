@@ -85,7 +85,7 @@ extra_css:
 
 # Navigation
 nav:
-  - 首页: index.md
+  - Home: index.md
   - Simulation:
       - simulation/index.md
       - AMALI: simulation/amali.md
@@ -115,7 +115,7 @@ nav:
       - Bullet: intra-gpu-multiplexing/bullet.md
       - Nexus: intra-gpu-multiplexing/nexus.md
       - PD-Multiplexing: intra-gpu-multiplexing/pd-multiplex.md
-  - 关于: about.md
+  - About: about.md
 
 # Copyright
-copyright: Copyright &copy; 2024 zksainx
+copyright: Copyright &copy; 2025 zksainx

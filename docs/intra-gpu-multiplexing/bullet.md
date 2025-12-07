@@ -4,7 +4,7 @@
 
 **Authors**: Zejia Lin, Hongxin Xu, Guanyi Chen  
 **Institution**: Sun Yat-sen University  
-**Conference**: arXiv 2025  
+**Conference**: ASPLOS 2026  
 **Paper Link**: [arXiv:2504.19516](https://arxiv.org/abs/2504.19516)
 
 </div>
