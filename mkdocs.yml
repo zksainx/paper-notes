@@ -1,5 +1,5 @@
-site_name: 论文笔记
-site_description: 个人论文阅读笔记整理
+site_name: Paper Notes
+site_description: Personal paper reading notes organization
 site_author: zksainx
 site_url: https://zksainx.github.io/paper-notes/
 
@@ -19,7 +19,7 @@ theme:
       accent: indigo
       toggle:
         icon: material/brightness-7
-        name: 切换至深色模式
+        name: Switch to Dark Mode
     # Dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
@@ -27,7 +27,7 @@ theme:
       accent: indigo
       toggle:
         icon: material/brightness-4
-        name: 切换至浅色模式
+        name: Switch to Light Mode
 
   features:
     - navigation.instant      # 即时加载
