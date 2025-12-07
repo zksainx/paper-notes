@@ -1,0 +1,28 @@
+/* 自定义样式 */
+
+/* 调整论文元信息样式 */
+.paper-meta {
+  background-color: var(--md-code-bg-color);
+  padding: 1rem;
+  border-radius: 0.2rem;
+  margin-bottom: 1rem;
+}
+
+.paper-meta strong {
+  color: var(--md-primary-fg-color);
+}
+
+/* 调整标签样式 */
+.paper-tags {
+  margin: 1rem 0;
+}
+
+.paper-tag {
+  display: inline-block;
+  background-color: var(--md-primary-fg-color);
+  color: white;
+  padding: 0.2rem 0.6rem;
+  border-radius: 0.2rem;
+  margin-right: 0.5rem;
+  font-size: 0.85rem;
+}

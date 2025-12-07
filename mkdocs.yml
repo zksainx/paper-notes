@@ -1,0 +1,100 @@
+site_name: 论文笔记
+site_description: 个人论文阅读笔记整理
+site_author: Your Name
+site_url: https://your-username.github.io/paper-notes/
+
+# Repository
+repo_name: your-username/paper-notes
+repo_url: https://github.com/your-username/paper-notes
+
+# Theme
+theme:
+  name: material
+  language: zh
+  palette:
+    # Light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: 切换至深色模式
+    # Dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: 切换至浅色模式
+
+  features:
+    - navigation.instant      # 即时加载
+    - navigation.tracking     # 锚点跟踪
+    - navigation.tabs         # 顶部标签导航
+    - navigation.sections     # 侧边栏分组
+    - navigation.expand       # 默认展开导航
+    - navigation.top          # 返回顶部按钮
+    - search.suggest          # 搜索建议
+    - search.highlight        # 搜索高亮
+    - search.share            # 搜索分享
+    - content.code.copy       # 代码复制按钮
+    - content.tabs.link       # 内容标签链接
+
+# Plugins
+plugins:
+  - search:
+      lang:
+        - zh
+        - en
+      separator: '[\s\-\.]+'
+
+# Extensions
+markdown_extensions:
+  - admonition              # 提示框
+  - pymdownx.details        # 可折叠提示框
+  - pymdownx.superfences    # 代码块增强
+  - pymdownx.highlight:     # 代码高亮
+      anchor_linenums: true
+  - pymdownx.inlinehilite   # 行内代码高亮
+  - pymdownx.snippets       # 代码片段
+  - pymdownx.tabbed:        # 标签页
+      alternate_style: true
+  - pymdownx.tasklist:      # 任务列表
+      custom_checkbox: true
+  - pymdownx.arithmatex:    # 数学公式
+      generic: true
+  - attr_list               # 属性列表
+  - md_in_html              # HTML中的Markdown
+  - tables                  # 表格
+  - footnotes               # 脚注
+  - toc:                    # 目录
+      permalink: true
+      toc_depth: 3
+
+# Extra JavaScript (for math rendering)
+extra_javascript:
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+# Extra CSS
+extra_css:
+  - stylesheets/extra.css
+
+# Navigation
+nav:
+  - 首页: index.md
+  - 机器学习:
+      - machine-learning/index.md
+      - Attention Is All You Need: machine-learning/attention-is-all-you-need.md
+  - 计算机视觉:
+      - computer-vision/index.md
+      - ResNet 深度残差网络: computer-vision/resnet.md
+  - 自然语言处理:
+      - nlp/index.md
+      - BERT 预训练语言模型: nlp/bert.md
+  - 关于: about.md
+
+# Copyright
+copyright: Copyright &copy; 2024 Your Name
