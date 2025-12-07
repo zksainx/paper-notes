@@ -1,14 +1,15 @@
-# Autotuning
+# Tensor Program Optimization
 
-Papers on automatic performance tuning, compiler optimization, and machine learning-guided optimization for tensor programs and GPU kernels.
+Papers on automatic optimization of tensor programs through compiler techniques, machine learning-guided search, and performance modeling for deep learning workloads.
 
 ## Research Areas
 
-- Tensor program optimization
+- Automated tensor program generation and optimization
+- Machine learning-guided search and autotuning
 - Cost models and performance prediction
-- Search algorithms for program optimization
-- GPU kernel optimization
-- Compiler autotuning
+- GPU kernel synthesis and optimization
+- Compiler-based program transformation
+- Cross-platform performance portability
 
 ## Papers
 

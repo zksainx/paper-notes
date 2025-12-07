@@ -101,7 +101,7 @@ nav:
       - SimAI: simulation/simai.md
       - VIDUR: simulation/vidur.md
       - vTrain: simulation/vtrain.md
-  - Autotuning:
+  - Tensor Program Optimization:
       - autotuning/index.md
       - Ansor: autotuning/ansor.md
       - Learning to Optimize Tensor Programs: autotuning/learning-optimize-tensor-programs.md
