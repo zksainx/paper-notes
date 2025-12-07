@@ -1,11 +1,11 @@
 site_name: 论文笔记
 site_description: 个人论文阅读笔记整理
-site_author: Your Name
-site_url: https://your-username.github.io/paper-notes/
+site_author: zksainx
+site_url: https://zksainx.github.io/paper-notes/
 
 # Repository
-repo_name: your-username/paper-notes
-repo_url: https://github.com/your-username/paper-notes
+repo_name: zksainx/paper-notes
+repo_url: https://github.com/zksainx/paper-notes
 
 # Theme
 theme:
@@ -97,4 +97,4 @@ nav:
   - 关于: about.md
 
 # Copyright
-copyright: Copyright &copy; 2024 Your Name
+copyright: Copyright &copy; 2024 zksainx

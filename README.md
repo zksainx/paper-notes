@@ -13,9 +13,7 @@
 
 ## 在线访问
 
-网站地址：`https://your-username.github.io/paper-notes/`
-
-（请将 `your-username` 替换为您的 GitHub 用户名）
+网站地址：`https://zksainx.github.io/paper-notes/`
 
 ## 本地开发
 
@@ -51,14 +49,7 @@ mkdocs serve
 
 2. **修改配置文件**
 
-   编辑 `mkdocs.yml`，将以下内容替换为您的信息：
-   ```yaml
-   site_url: https://your-username.github.io/paper-notes/
-   repo_name: your-username/paper-notes
-   repo_url: https://github.com/your-username/paper-notes
-   ```
-
-   编辑 `docs/about.md`，填写您的个人信息。
+   配置文件已经更新为您的仓库信息。如需修改，编辑 `mkdocs.yml` 和 `docs/about.md`。
 
 3. **推送代码到 GitHub**
 
@@ -68,7 +59,7 @@ mkdocs serve
    git add .
    git commit -m "初始化论文笔记网站"
    git branch -M main
-   git remote add origin https://github.com/your-username/paper-notes.git
+   git remote add origin https://github.com/zksainx/paper-notes.git
    git push -u origin main
    ```
 
@@ -81,7 +72,7 @@ mkdocs serve
 5. **等待部署完成**
 
    - 查看 **Actions** 标签页，等待工作流运行完成（约 1-2 分钟）
-   - 部署成功后，访问 `https://your-username.github.io/paper-notes/`
+   - 部署成功后，访问 `https://zksainx.github.io/paper-notes/`
 
 ### 后续更新
 
@@ -277,4 +268,4 @@ def hello():
 
 ---
 
-如有问题或建议，欢迎提 [Issue](https://github.com/your-username/paper-notes/issues)！
+如有问题或建议，欢迎提 [Issue](https://github.com/zksainx/paper-notes/issues)！

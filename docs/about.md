@@ -38,9 +38,7 @@
 
 ## 🔗 相关链接
 
-- [GitHub 仓库](https://github.com/your-username/paper-notes)
-- [个人主页](https://your-website.com)
-- [联系方式](mailto:your-email@example.com)
+- [GitHub 仓库](https://github.com/zksainx/paper-notes)
 
 ## 📄 许可协议
 
