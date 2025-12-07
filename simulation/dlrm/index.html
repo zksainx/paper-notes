@@ -12,31 +12,31 @@
         <meta name="author" content="zksainx">
       
       
-        <link rel="canonical" href="https://zksainx.github.io/paper-notes/nlp/">
+        <link rel="canonical" href="https://zksainx.github.io/paper-notes/simulation/dlrm/">
       
       
-        <link rel="prev" href="../machine-learning/attention-is-all-you-need/">
+        <link rel="prev" href="../chakra/">
       
       
-        <link rel="next" href="bert/">
+        <link rel="next" href="../forecasting-llm-inference/">
       
       
         
       
       
-      <link rel="icon" href="../assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
     
     
       
-        <title>自然语言处理 - 论文笔记</title>
+        <title>DLRM - 论文笔记</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.618322db.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.618322db.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -55,9 +55,9 @@
       
     
     
-      <link rel="stylesheet" href="../stylesheets/extra.css">
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -82,7 +82,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#dlrm-deep-learning-recommendation-model-for-personalization-and-recommendation-systems" class="md-skip">
           跳转至
         </a>
       
@@ -96,7 +96,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="页眉">
-    <a href=".." title="论文笔记" class="md-header__button md-logo" aria-label="论文笔记" data-md-component="logo">
+    <a href="../.." title="论文笔记" class="md-header__button md-logo" aria-label="论文笔记" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -116,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              自然语言处理
+              DLRM
             
           </span>
         </div>
@@ -234,7 +234,7 @@
   
   
     <li class="md-tabs__item">
-      <a href=".." class="md-tabs__link">
+      <a href="../.." class="md-tabs__link">
         
   
   
@@ -255,7 +255,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../machine-learning/" class="md-tabs__link">
+        <a href="../../machine-learning/" class="md-tabs__link">
           
   
   
@@ -273,13 +273,11 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="./" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../nlp/" class="md-tabs__link">
           
   
   
@@ -297,11 +295,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../simulation/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
           
   
   
@@ -323,7 +323,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../autotuning/" class="md-tabs__link">
+        <a href="../../autotuning/" class="md-tabs__link">
           
   
   
@@ -343,7 +343,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../about/" class="md-tabs__link">
+      <a href="../../about/" class="md-tabs__link">
         
   
   
@@ -378,7 +378,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="论文笔记" class="md-nav__button md-logo" aria-label="论文笔记" data-md-component="logo">
+    <a href="../.." title="论文笔记" class="md-nav__button md-logo" aria-label="论文笔记" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -408,7 +408,7 @@
   
   
     <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   
@@ -462,7 +462,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../machine-learning/" class="md-nav__link ">
+            <a href="../../machine-learning/" class="md-nav__link ">
               
   
   
@@ -506,7 +506,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../machine-learning/attention-is-all-you-need/" class="md-nav__link">
+      <a href="../../machine-learning/attention-is-all-you-need/" class="md-nav__link">
         
   
   
@@ -538,8 +538,6 @@
       
   
   
-    
-  
   
   
     
@@ -555,23 +553,22 @@
     
     
       
-        
-        
-      
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="./" class="md-nav__link md-nav__link--active">
+            <a href="../../nlp/" class="md-nav__link ">
               
   
   
@@ -589,13 +586,13 @@
             </a>
             
               
-              <label class="md-nav__link md-nav__link--active" for="__nav_3" id="__nav_3_label" tabindex="">
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -615,7 +612,7 @@
   
   
     <li class="md-nav__item">
-      <a href="bert/" class="md-nav__link">
+      <a href="../../nlp/bert/" class="md-nav__link">
         
   
   
@@ -647,6 +644,8 @@
       
   
   
+    
+  
   
   
     
@@ -692,22 +691,23 @@
     
     
       
+        
+        
+      
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../simulation/" class="md-nav__link ">
+            <a href="../" class="md-nav__link ">
               
   
   
@@ -725,13 +725,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             
@@ -751,7 +751,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../simulation/amali/" class="md-nav__link">
+      <a href="../amali/" class="md-nav__link">
         
   
   
@@ -779,7 +779,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../simulation/apex/" class="md-nav__link">
+      <a href="../apex/" class="md-nav__link">
         
   
   
@@ -807,7 +807,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../simulation/astra-sim/" class="md-nav__link">
+      <a href="../astra-sim/" class="md-nav__link">
         
   
   
@@ -835,7 +835,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../simulation/astra-sim-2/" class="md-nav__link">
+      <a href="../astra-sim-2/" class="md-nav__link">
         
   
   
@@ -863,7 +863,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../simulation/chakra/" class="md-nav__link">
+      <a href="../chakra/" class="md-nav__link">
         
   
   
@@ -888,10 +888,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../simulation/dlrm/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DLRM
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -907,6 +934,48 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#abstract" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Abstract
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#core-ideas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Core Ideas
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -919,7 +988,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../simulation/forecasting-llm-inference/" class="md-nav__link">
+      <a href="../forecasting-llm-inference/" class="md-nav__link">
         
   
   
@@ -947,7 +1016,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../simulation/frontier/" class="md-nav__link">
+      <a href="../frontier/" class="md-nav__link">
         
   
   
@@ -975,7 +1044,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../simulation/llmcompass/" class="md-nav__link">
+      <a href="../llmcompass/" class="md-nav__link">
         
   
   
@@ -1003,7 +1072,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../simulation/linear/" class="md-nav__link">
+      <a href="../linear/" class="md-nav__link">
         
   
   
@@ -1031,7 +1100,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../simulation/mystique/" class="md-nav__link">
+      <a href="../mystique/" class="md-nav__link">
         
   
   
@@ -1059,7 +1128,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../simulation/neusight/" class="md-nav__link">
+      <a href="../neusight/" class="md-nav__link">
         
   
   
@@ -1087,7 +1156,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../simulation/simai/" class="md-nav__link">
+      <a href="../simai/" class="md-nav__link">
         
   
   
@@ -1115,7 +1184,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../simulation/universal-performance/" class="md-nav__link">
+      <a href="../universal-performance/" class="md-nav__link">
         
   
   
@@ -1143,7 +1212,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../simulation/vidur/" class="md-nav__link">
+      <a href="../vidur/" class="md-nav__link">
         
   
   
@@ -1171,7 +1240,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../simulation/vtrain/" class="md-nav__link">
+      <a href="../vtrain/" class="md-nav__link">
         
   
   
@@ -1243,7 +1312,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../autotuning/" class="md-nav__link ">
+            <a href="../../autotuning/" class="md-nav__link ">
               
   
   
@@ -1287,7 +1356,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../autotuning/ansor/" class="md-nav__link">
+      <a href="../../autotuning/ansor/" class="md-nav__link">
         
   
   
@@ -1315,7 +1384,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../autotuning/learning-optimize-tensor-programs/" class="md-nav__link">
+      <a href="../../autotuning/learning-optimize-tensor-programs/" class="md-nav__link">
         
   
   
@@ -1343,7 +1412,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../autotuning/learned-performance-model-tpu/" class="md-nav__link">
+      <a href="../../autotuning/learned-performance-model-tpu/" class="md-nav__link">
         
   
   
@@ -1371,7 +1440,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../autotuning/metatune/" class="md-nav__link">
+      <a href="../../autotuning/metatune/" class="md-nav__link">
         
   
   
@@ -1399,7 +1468,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../autotuning/gpu-performance-portability/" class="md-nav__link">
+      <a href="../../autotuning/gpu-performance-portability/" class="md-nav__link">
         
   
   
@@ -1427,7 +1496,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../autotuning/anatomy-triton-attention/" class="md-nav__link">
+      <a href="../../autotuning/anatomy-triton-attention/" class="md-nav__link">
         
   
   
@@ -1462,7 +1531,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../about/" class="md-nav__link">
+      <a href="../../about/" class="md-nav__link">
         
   
   
@@ -1509,30 +1578,24 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#abstract" class="md-nav__link">
     <span class="md-ellipsis">
       
-        📑 论文列表
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="📑 论文列表">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        预训练模型
+        Abstract
       
     </span>
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#core-ideas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Core Ideas
+      
+    </span>
+  </a>
   
 </li>
       
@@ -1556,24 +1619,29 @@
   
 
 
-<h1 id="_1">自然语言处理<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
-<p>本分类收录自然语言处理领域的经典论文和前沿研究，包括但不限于：</p>
-<ul>
-<li>预训练语言模型</li>
-<li>机器翻译</li>
-<li>文本生成</li>
-<li>问答系统</li>
-<li>信息抽取</li>
-<li>对话系统</li>
-</ul>
-<h2 id="_2">📑 论文列表<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<h3 id="_3">预训练模型<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
-<ul>
-<li><a href="bert/">BERT: Pre-training of Deep Bidirectional Transformers</a> - Google AI, NAACL 2019</li>
-<li>提出双向预训练 Transformer 模型，刷新多项 NLP 任务记录</li>
-</ul>
+<h1 id="dlrm-deep-learning-recommendation-model-for-personalization-and-recommendation-systems">DLRM: Deep Learning Recommendation Model for Personalization and Recommendation Systems<a class="headerlink" href="#dlrm-deep-learning-recommendation-model-for-personalization-and-recommendation-systems" title="Permanent link">&para;</a></h1>
+<div class="paper-meta">
+<p><strong>Authors</strong>: Maxim Naumov et al.
+<strong>Institution</strong>: Facebook AI Research
+<strong>Conference</strong>: arXiv 2019
+<strong>Paper Link</strong>: <a href="https://arxiv.org/abs/1906.00091">arXiv:1906.00091</a></p>
+</div>
+<div class="paper-tags">
+<p><span class="paper-tag">Recommendation Systems</span>
+<span class="paper-tag">Deep Learning</span>
+<span class="paper-tag">Embedding Tables</span></p>
+</div>
+<h2 id="abstract">Abstract<a class="headerlink" href="#abstract" title="Permanent link">&para;</a></h2>
+<p>DLRM is a state-of-the-art deep learning recommendation model developed by Facebook that handles both dense and sparse features. It uses specialized parallelization schemes with model parallelism on embedding tables and data parallelism on fully-connected layers.</p>
+<p><strong>Key Contributions</strong>:
+- Novel interaction layer mimicking factorization machines
+- Specialized parallelization scheme for large-scale recommendation
+- Open-source implementation in PyTorch and Caffe2</p>
+<h2 id="core-ideas">Core Ideas<a class="headerlink" href="#core-ideas" title="Permanent link">&para;</a></h2>
+<p>DLRM specifically interacts embeddings in a structured way that significantly reduces model dimensionality by only considering cross-terms produced by dot-products between pairs of embeddings. The model has become part of the popular MLPerf Benchmark and is widely used in production recommendation systems.</p>
 <hr />
-<p><em>持续更新中...</em></p>
+<p><em>Reading date: 2024</em>
+<em>Note status: Completed</em></p>
 
 
 
@@ -1635,10 +1703,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.sections", "navigation.indexes", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "search.share", "content.code.copy", "content.tabs.link"], "search": "../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.sections", "navigation.indexes", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "search.share", "content.code.copy", "content.tabs.link"], "search": "../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      <script src="../../assets/javascripts/bundle.e71a0d61.min.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       

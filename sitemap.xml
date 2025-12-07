@@ -9,11 +9,31 @@
          <lastmod>2025-12-07</lastmod>
     </url>
     <url>
-         <loc>https://zksainx.github.io/paper-notes/computer-vision/</loc>
+         <loc>https://zksainx.github.io/paper-notes/autotuning/</loc>
          <lastmod>2025-12-07</lastmod>
     </url>
     <url>
-         <loc>https://zksainx.github.io/paper-notes/computer-vision/resnet/</loc>
+         <loc>https://zksainx.github.io/paper-notes/autotuning/anatomy-triton-attention/</loc>
+         <lastmod>2025-12-07</lastmod>
+    </url>
+    <url>
+         <loc>https://zksainx.github.io/paper-notes/autotuning/ansor/</loc>
+         <lastmod>2025-12-07</lastmod>
+    </url>
+    <url>
+         <loc>https://zksainx.github.io/paper-notes/autotuning/gpu-performance-portability/</loc>
+         <lastmod>2025-12-07</lastmod>
+    </url>
+    <url>
+         <loc>https://zksainx.github.io/paper-notes/autotuning/learned-performance-model-tpu/</loc>
+         <lastmod>2025-12-07</lastmod>
+    </url>
+    <url>
+         <loc>https://zksainx.github.io/paper-notes/autotuning/learning-optimize-tensor-programs/</loc>
+         <lastmod>2025-12-07</lastmod>
+    </url>
+    <url>
+         <loc>https://zksainx.github.io/paper-notes/autotuning/metatune/</loc>
          <lastmod>2025-12-07</lastmod>
     </url>
     <url>
@@ -30,6 +50,74 @@
     </url>
     <url>
          <loc>https://zksainx.github.io/paper-notes/nlp/bert/</loc>
+         <lastmod>2025-12-07</lastmod>
+    </url>
+    <url>
+         <loc>https://zksainx.github.io/paper-notes/simulation/</loc>
+         <lastmod>2025-12-07</lastmod>
+    </url>
+    <url>
+         <loc>https://zksainx.github.io/paper-notes/simulation/amali/</loc>
+         <lastmod>2025-12-07</lastmod>
+    </url>
+    <url>
+         <loc>https://zksainx.github.io/paper-notes/simulation/apex/</loc>
+         <lastmod>2025-12-07</lastmod>
+    </url>
+    <url>
+         <loc>https://zksainx.github.io/paper-notes/simulation/astra-sim-2/</loc>
+         <lastmod>2025-12-07</lastmod>
+    </url>
+    <url>
+         <loc>https://zksainx.github.io/paper-notes/simulation/astra-sim/</loc>
+         <lastmod>2025-12-07</lastmod>
+    </url>
+    <url>
+         <loc>https://zksainx.github.io/paper-notes/simulation/chakra/</loc>
+         <lastmod>2025-12-07</lastmod>
+    </url>
+    <url>
+         <loc>https://zksainx.github.io/paper-notes/simulation/dlrm/</loc>
+         <lastmod>2025-12-07</lastmod>
+    </url>
+    <url>
+         <loc>https://zksainx.github.io/paper-notes/simulation/forecasting-llm-inference/</loc>
+         <lastmod>2025-12-07</lastmod>
+    </url>
+    <url>
+         <loc>https://zksainx.github.io/paper-notes/simulation/frontier/</loc>
+         <lastmod>2025-12-07</lastmod>
+    </url>
+    <url>
+         <loc>https://zksainx.github.io/paper-notes/simulation/linear/</loc>
+         <lastmod>2025-12-07</lastmod>
+    </url>
+    <url>
+         <loc>https://zksainx.github.io/paper-notes/simulation/llmcompass/</loc>
+         <lastmod>2025-12-07</lastmod>
+    </url>
+    <url>
+         <loc>https://zksainx.github.io/paper-notes/simulation/mystique/</loc>
+         <lastmod>2025-12-07</lastmod>
+    </url>
+    <url>
+         <loc>https://zksainx.github.io/paper-notes/simulation/neusight/</loc>
+         <lastmod>2025-12-07</lastmod>
+    </url>
+    <url>
+         <loc>https://zksainx.github.io/paper-notes/simulation/simai/</loc>
+         <lastmod>2025-12-07</lastmod>
+    </url>
+    <url>
+         <loc>https://zksainx.github.io/paper-notes/simulation/universal-performance/</loc>
+         <lastmod>2025-12-07</lastmod>
+    </url>
+    <url>
+         <loc>https://zksainx.github.io/paper-notes/simulation/vidur/</loc>
+         <lastmod>2025-12-07</lastmod>
+    </url>
+    <url>
+         <loc>https://zksainx.github.io/paper-notes/simulation/vtrain/</loc>
          <lastmod>2025-12-07</lastmod>
     </url>
 </urlset>
