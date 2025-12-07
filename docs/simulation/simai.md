@@ -1,35 +1,35 @@
-# Ansys SimAI: AI for Accelerated Simulation
+# SimAI: Unifying Architecture Design and Performance Tuning for Large-Scale Large Language Model Training with Scalability and Precision
 
 <div class="paper-meta" markdown>
 
-**Authors**: Ansys Inc.
-**Institution**: Ansys Inc.
-**Conference**: Product Release 2024
-**Paper Link**: [Ansys SimAI](https://www.ansys.com/products/simai)
+**Authors**: Xizheng Wang, Qingxu Li, Yichi Xu  
+**Institution**: Alibaba Cloud, Tsinghua University  
+**Conference**: NSDI 2025  
+**Paper Link**: [USENIX](https://www.usenix.org/conference/nsdi25/presentation/wang-xizheng-simai) | [GitHub](https://github.com/aliyun/SimAI)
 
 </div>
 
 <div class="paper-tags" markdown>
-<span class="paper-tag">AI-Powered Simulation</span>
-<span class="paper-tag">Engineering</span>
-<span class="paper-tag">Design Optimization</span>
+<span class="paper-tag">LLM Training</span>
+<span class="paper-tag">Architecture Design</span>
+<span class="paper-tag">Performance Tuning</span>
 </div>
 
 ## Abstract
 
-SimAI is an artificial intelligence platform for simulation that enables training AI models directly with simulation results and geometry input, predicting performance for new designs in a continuous 3D physical field. It reduces the overall design cycle by 10-100X.
+SimAI is the industry's first full-stack, high-precision simulator for AI large-scale training. It aims at precisely and efficiently simulating the LLM training procedure at scale, achieving an average of 98.1% alignment to real-world results under various test scenarios.
 
 **Key Contributions**:
-- Physics-agnostic machine learning for simulation
-- 10-100X speedup in design cycle with full-fidelity accuracy
-- Geometry-based input enabling broader design exploration
-- Covers all physics domains from fluid mechanics to electromagnetics
+- High-fidelity integration of training frameworks, kernel computation, and collective communication
+- Multi-thread acceleration with lock-free global context-sharing
+- Three operation modes: Analytical, Simulation, and Physical
+- Comprehensive modeling of the entire LLM training process
 
 ## Core Ideas
 
-SimAI uses physics-agnostic machine learning techniques to learn data-driven representations of governing equations from previous simulations. Typically requiring 30-100 simulation results for training, it can predict performance for new designs with 2 days of training, enabling rapid design space exploration across automotive, aerospace, and telecommunications applications.
+SimAI supports three major operation modes: (1) SimAI-Analytical for fast simulation using bus bandwidth abstraction, (2) SimAI-Simulation for full-stack simulation with fine-grained network communication modeling using NS3, and (3) SimAI-Physical for physical traffic generation in CPU RDMA cluster environments. The simulator provides detailed modeling of framework, collective communication, and network layers.
 
 ---
 
-*Reading date: 2024*
+*Reading date: 2025*
 *Note status: Completed*

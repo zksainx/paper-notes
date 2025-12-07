@@ -2,9 +2,9 @@
 
 <div class="paper-meta" markdown>
 
-**Authors**: Meta AI Research
-**Institution**: Meta (Facebook)
-**Conference**: Engineering at Meta 2023
+**Authors**: Meta AI Research  
+**Institution**: Meta (Facebook)  
+**Conference**: Engineering at Meta 2023  
 **Paper Link**: [Meta Engineering Blog](https://engineering.fb.com/2023/09/07/networking-traffic/chakra-execution-traces-benchmarking-network-performance-optimization/)
 
 </div>
@@ -31,5 +31,5 @@ Chakra execution traces capture arbitrary distributed ML workloads using a direc
 
 ---
 
-*Reading date: 2024*
+*Reading date: 2025*
 *Note status: Completed*

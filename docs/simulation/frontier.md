@@ -2,9 +2,9 @@
 
 <div class="paper-meta" markdown>
 
-**Authors**: Yicheng Feng, Xin Tan, Kin Hang Sew, Yimin Jiang, Yibo Zhu, Hong Xu
-**Institution**: Multiple Institutions
-**Conference**: arXiv 2025
+**Authors**: Yicheng Feng, Xin Tan, Kin Hang Sew  
+**Institution**: CUHK, ByteDance  
+**Conference**: arXiv 2025  
 **Paper Link**: [arXiv:2508.03148](https://arxiv.org/abs/2508.03148)
 
 </div>
@@ -31,5 +31,5 @@ Frontier follows event-driven and modular design principles with a central Globa
 
 ---
 
-*Reading date: 2024*
+*Reading date: 2025*
 *Note status: Completed*

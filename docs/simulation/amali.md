@@ -2,9 +2,9 @@
 
 <div class="paper-meta" markdown>
 
-**Authors**: Shiheng Cao, Junmin Wu, Junshi Chen, Hong An, Zhibin Yu
-**Institution**: Multiple Institutions
-**Conference**: ISCA 2025
+**Authors**: Shiheng Cao, Junmin Wu, Junshi Chen  
+**Institution**: University of Science and Technology of China (USTC)  
+**Conference**: ISCA 2025  
 **Paper Link**: [ACM DL](https://dl.acm.org/doi/10.1145/3695053.3731064)
 
 </div>
@@ -30,5 +30,5 @@ AMALI reduces mean absolute percentage error (MAPE) from 127.56% to 23.59% compa
 
 ---
 
-*Reading date: 2024*
+*Reading date: 2025*
 *Note status: Completed*

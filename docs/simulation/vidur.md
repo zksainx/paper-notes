@@ -2,9 +2,9 @@
 
 <div class="paper-meta" markdown>
 
-**Authors**: Microsoft Research Team
-**Institution**: Microsoft Research
-**Conference**: MLSys 2024
+**Authors**: Amey Agrawal, Nitin Kedia, Jayashree Mohan  
+**Institution**: Microsoft Research, IISc Bangalore  
+**Conference**: MLSys 2024  
 **Paper Link**: [arXiv:2405.05465](https://arxiv.org/abs/2405.05465)
 
 </div>
@@ -31,5 +31,5 @@ Vidur combines experimental profiling with predictive modeling to evaluate end-t
 
 ---
 
-*Reading date: 2024*
+*Reading date: 2025*
 *Note status: Completed*

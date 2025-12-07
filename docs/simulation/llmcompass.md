@@ -2,10 +2,10 @@
 
 <div class="paper-meta" markdown>
 
-**Authors**: Princeton University Research Team
-**Institution**: Princeton University
-**Conference**: Research Publication 2024
-**Paper Link**: [GitHub](https://github.com/PrincetonUniversity/LLMCompass)
+**Authors**: Hengrui Zhang, August Ning, Rohan Baskar Prabhakar, David Wentzlaff  
+**Institution**: Princeton University  
+**Conference**: ISCA 2024  
+**Paper Link**: [IEEE Xplore](https://doi.org/10.1109/ISCA59077.2024.00082) | [GitHub](https://github.com/PrincetonUniversity/LLMCompass)
 
 </div>
 
@@ -31,5 +31,5 @@ Implemented as a Python library, LLMCompass democratizes hardware design space e
 
 ---
 
-*Reading date: 2024*
+*Reading date: 2025*
 *Note status: Completed*

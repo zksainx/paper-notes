@@ -2,9 +2,9 @@
 
 <div class="paper-meta" markdown>
 
-**Authors**: Research Team
-**Institution**: Multiple Institutions
-**Conference**: ISCA 2023
+**Authors**: Mingyu Liang, Wenyin Fu, Louis Feng  
+**Institution**: Cornell University, Meta  
+**Conference**: ISCA 2023  
 **Paper Link**: [ACM DL](https://dl.acm.org/doi/10.1145/3579371.3589072)
 
 </div>
@@ -30,5 +30,5 @@ Mystique provides a systematic approach to generating benchmarks that accurately
 
 ---
 
-*Reading date: 2024*
+*Reading date: 2025*
 *Note status: Completed*

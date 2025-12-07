@@ -2,9 +2,9 @@
 
 <div class="paper-meta" markdown>
 
-**Authors**: Tianqi Chen, Lianmin Zheng, Eddie Q. Yan, Ziheng Jiang, Thierry Moreau, et al.
-**Institution**: University of Washington, AWS, Cornell
-**Conference**: NeurIPS 2018
+**Authors**: Tianqi Chen, Lianmin Zheng, Eddie Q. Yan, Ziheng Jiang, Thierry Moreau, et al.  
+**Institution**: University of Washington, AWS, Cornell  
+**Conference**: NeurIPS 2018  
 **Paper Link**: [arXiv:1805.08166](https://arxiv.org/abs/1805.08166)
 
 </div>
@@ -31,5 +31,5 @@ AutoTVM addresses the limitation of manually optimized libraries like cuDNN that
 
 ---
 
-*Reading date: 2024*
+*Reading date: 2025*
 *Note status: Completed*

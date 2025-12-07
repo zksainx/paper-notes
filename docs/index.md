@@ -10,17 +10,14 @@
 
 网站按研究领域组织论文笔记：
 
-### [机器学习](machine-learning/index.md)
-包括深度学习基础、优化方法、模型架构等相关论文。
-
-### [自然语言处理](nlp/index.md)
-包含语言模型、文本理解、机器翻译等NLP领域的论文。
-
 ### [Simulation](simulation/index.md)
 Papers on performance modeling, simulation frameworks, and analytical models for ML systems.
 
 ### [Autotuning](autotuning/index.md)
 Papers on automatic performance tuning, compiler optimization, and ML-guided program optimization.
+
+### [Intra-GPU Spatial Multiplexing](intra-gpu-multiplexing/index.md)
+Papers on GPU spatial multiplexing techniques for efficient LLM serving, including prefill-decode disaggregation and dynamic resource partitioning.
 
 ## 🔍 如何使用
 
@@ -45,4 +42,4 @@ Papers on automatic performance tuning, compiler optimization, and ML-guided pro
 
 ---
 
-*最后更新：2024年*
+*最后更新：2025年*

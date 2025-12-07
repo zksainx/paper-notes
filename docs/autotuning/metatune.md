@@ -2,9 +2,9 @@
 
 <div class="paper-meta" markdown>
 
-**Authors**: Jaehun Ryu et al.
-**Institution**: Multiple Institutions
-**Conference**: arXiv 2021
+**Authors**: Jaehun Ryu, Hyojin Sung  
+**Institution**: Samsung Electronics, Seoul National University  
+**Conference**: arXiv 2021  
 **Paper Link**: [arXiv:2102.04199](https://arxiv.org/abs/2102.04199)
 
 </div>
@@ -31,5 +31,5 @@ MetaTune encodes convolution kernel codes as graphs to facilitate meta-learning,
 
 ---
 
-*Reading date: 2024*
+*Reading date: 2025*
 *Note status: Completed*

@@ -2,9 +2,9 @@
 
 <div class="paper-meta" markdown>
 
-**Authors**: Research Team
-**Institution**: Multiple Institutions
-**Conference**: arXiv 2025
+**Authors**: Burkhard Ringlein, Jan van Lunteren, Radu Stoica  
+**Institution**: IBM Research Europe  
+**Conference**: arXiv 2025  
 **Paper Link**: [arXiv:2511.11581](https://arxiv.org/abs/2511.11581)
 
 </div>
@@ -31,5 +31,5 @@ The paper demonstrates how to build production-quality attention kernels using h
 
 ---
 
-*Reading date: 2024*
+*Reading date: 2025*
 *Note status: Completed*

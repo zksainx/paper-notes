@@ -2,9 +2,9 @@
 
 <div class="paper-meta" markdown>
 
-**Authors**: Lianmin Zheng, Chengfan Jia, Minmin Sun, Zhao Wu, Cody Hao Yu, Ameer Haj-Ali, Yida Wang, Jun Yang, Danyang Zhuo, Koushik Sen, Joseph E. Gonzalez, Ion Stoica
-**Institution**: UC Berkeley, University of Washington, AWS
-**Conference**: OSDI 2020
+**Authors**: Lianmin Zheng, Chengfan Jia, Minmin Sun, Zhao Wu, Cody Hao Yu, Ameer Haj-Ali, Yida Wang, Jun Yang, Danyang Zhuo, Koushik Sen, Joseph E. Gonzalez, Ion Stoica  
+**Institution**: UC Berkeley, University of Washington, AWS  
+**Conference**: OSDI 2020  
 **Paper Link**: [arXiv:2006.06762](https://arxiv.org/abs/2006.06762)
 
 </div>
@@ -31,5 +31,5 @@ Unlike AutoTVM which requires manual templates, Ansor takes only tensor expressi
 
 ---
 
-*Reading date: 2024*
+*Reading date: 2025*
 *Note status: Completed*

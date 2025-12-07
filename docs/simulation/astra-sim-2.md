@@ -2,9 +2,9 @@
 
 <div class="paper-meta" markdown>
 
-**Authors**: Collaboration between Intel, Meta, and Georgia Tech
-**Institution**: Intel, Meta, Georgia Tech
-**Conference**: IEEE 2023
+**Authors**: Collaboration between Intel, Meta, and Georgia Tech  
+**Institution**: Intel, Meta, Georgia Tech  
+**Conference**: IEEE 2023  
 **Paper Link**: [arXiv:2303.14006](https://arxiv.org/abs/2303.14006)
 
 </div>
@@ -30,5 +30,5 @@ ASTRA-sim2.0 extends the original framework to handle modern training paradigms 
 
 ---
 
-*Reading date: 2024*
+*Reading date: 2025*
 *Note status: Completed*

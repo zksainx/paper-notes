@@ -2,9 +2,9 @@
 
 <div class="paper-meta" markdown>
 
-**Authors**: Research Team
-**Institution**: KAIST and collaborators
-**Conference**: MICRO 2024
+**Authors**: Jehyeon Bang, Yujeong Choi, Myeongwoo Kim  
+**Institution**: KAIST  
+**Conference**: MICRO 2024  
 **Paper Link**: [arXiv:2312.12391](https://arxiv.org/abs/2312.12391)
 
 </div>
@@ -31,5 +31,5 @@ vTrain addresses limitations of heuristic-based parallel training strategies tha
 
 ---
 
-*Reading date: 2024*
+*Reading date: 2025*
 *Note status: Completed*

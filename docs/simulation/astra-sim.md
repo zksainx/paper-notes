@@ -2,9 +2,9 @@
 
 <div class="paper-meta" markdown>
 
-**Authors**: Collaboration between Intel, Meta, and Georgia Tech
-**Institution**: Intel, Meta, Georgia Tech
-**Conference**: IEEE/Multiple Conferences
+**Authors**: Collaboration between Intel, Meta, and Georgia Tech  
+**Institution**: Intel, Meta, Georgia Tech  
+**Conference**: IEEE/Multiple Conferences  
 **Paper Link**: [ASTRA-sim Website](https://astra-sim.github.io/)
 
 </div>
@@ -30,5 +30,5 @@ ASTRA-sim enables design-space exploration for running large DNN models over fut
 
 ---
 
-*Reading date: 2024*
+*Reading date: 2025*
 *Note status: Completed*

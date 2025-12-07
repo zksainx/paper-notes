@@ -2,9 +2,9 @@
 
 <div class="paper-meta" markdown>
 
-**Authors**: B. Ringlein et al.
-**Institution**: Multiple Institutions
-**Conference**: arXiv 2025
+**Authors**: Burkhard Ringlein, Thomas Parnell, Radu Stoica  
+**Institution**: IBM Research Europe  
+**Conference**: arXiv 2025  
 **Paper Link**: [arXiv:2505.03780](https://arxiv.org/abs/2505.03780)
 
 </div>
@@ -31,5 +31,5 @@ As LLMs grow in complexity, reliance on a single dominant platform limits portab
 
 ---
 
-*Reading date: 2024*
+*Reading date: 2025*
 *Note status: Completed*

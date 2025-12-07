@@ -2,9 +2,9 @@
 
 <div class="paper-meta" markdown>
 
-**Authors**: Google Research Team
-**Institution**: Google
-**Conference**: arXiv 2020
+**Authors**: Samuel J. Kaufman, Phitchaya Mangpo Phothilimthana, Yanqi Zhou  
+**Institution**: Google  
+**Conference**: MLSys 2021  
 **Paper Link**: [arXiv:2008.01040](https://arxiv.org/abs/2008.01040)
 
 </div>
@@ -31,5 +31,5 @@ Accurate hardware performance models are critical for efficient code generation 
 
 ---
 
-*Reading date: 2024*
+*Reading date: 2025*
 *Note status: Completed*

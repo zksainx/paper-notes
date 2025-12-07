@@ -2,9 +2,9 @@
 
 <div class="paper-meta" markdown>
 
-**Authors**: Various Authors
-**Institution**: Multiple Institutions
-**Conference**: arXiv 2024
+**Authors**: Yi-Chien Lin, Woosuk Kwon, Ronald Pineda  
+**Institution**: USC, UC Berkeley, UCLA  
+**Conference**: arXiv 2024  
 **Paper Link**: [arXiv:2411.17651](https://arxiv.org/abs/2411.17651)
 
 </div>
@@ -30,5 +30,5 @@ APEX addresses the challenge of selecting optimal parallel execution plans by ba
 
 ---
 
-*Reading date: 2024*
+*Reading date: 2025*
 *Note status: Completed*

@@ -2,9 +2,9 @@
 
 <div class="paper-meta" markdown>
 
-**Authors**: Research Team
-**Institution**: Multiple Institutions
-**Conference**: ASPLOS 2025
+**Authors**: Seonho Lee, Amar Phanishayee, Divya Mahajan  
+**Institution**: Georgia Tech, Meta  
+**Conference**: ASPLOS 2025  
 **Paper Link**: [arXiv:2407.13853](https://arxiv.org/abs/2407.13853)
 
 </div>
@@ -31,5 +31,5 @@ Unlike prior work that directly predicts kernel latency using machine learning, 
 
 ---
 
-*Reading date: 2024*
+*Reading date: 2025*
 *Note status: Completed*
