@@ -34,6 +34,7 @@ theme:
     - navigation.tracking     # 锚点跟踪
     - navigation.tabs         # 顶部标签导航
     - navigation.sections     # 侧边栏分组
+    - navigation.indexes      # 分类索引页（让分类标题可点击）
     - navigation.expand       # 默认展开导航
     - navigation.top          # 返回顶部按钮
     - search.suggest          # 搜索建议
