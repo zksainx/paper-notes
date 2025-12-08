@@ -3,7 +3,7 @@
 <div class="paper-meta" markdown>
 
 **Authors**: Yicheng Feng, Xin Tan, Kin Hang Sew  
-**Institution**: CUHK, ByteDance  
+**Institution**: CUHK, StepFun  
 **Conference**: arXiv 2025  
 **Paper Link**: [arXiv:2508.03148](https://arxiv.org/abs/2508.03148)
 
