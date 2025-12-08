@@ -12,13 +12,13 @@
         <meta name="author" content="zksainx">
       
       
-        <link rel="canonical" href="https://zksainx.github.io/paper-notes/simulation/neusight/">
+        <link rel="canonical" href="https://zksainx.github.io/paper-notes/tensor-program-optimization/tritonblas/">
       
       
-        <link rel="prev" href="../mystique/">
+        <link rel="prev" href="../metatune/">
       
       
-        <link rel="next" href="../simai/">
+        <link rel="next" href="../gpu-performance-portability/">
       
       
         
@@ -29,7 +29,7 @@
     
     
       
-        <title>NeuSight - Paper Notes</title>
+        <title>tritonBLAS - Paper Notes</title>
       
     
     
@@ -82,7 +82,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#neusight-forecasting-gpu-performance-for-deep-learning-training-and-inference" class="md-skip">
+        <a href="#tritonblas-triton-based-analytical-approach-for-gemm-kernel-parameter-selection" class="md-skip">
           跳转至
         </a>
       
@@ -116,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              NeuSight
+              tritonBLAS
             
           </span>
         </div>
@@ -251,13 +251,11 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../simulation/" class="md-tabs__link">
           
   
   
@@ -275,11 +273,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../tensor-program-optimization/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
           
   
   
@@ -410,8 +410,6 @@
       
   
   
-    
-  
   
   
     
@@ -431,6 +429,462 @@
       
         
       
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../simulation/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Simulation
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Simulation
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../simulation/amali/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AMALI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../simulation/apex/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    APEX
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../simulation/astra-sim/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Astra-Sim
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../simulation/astra-sim-2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Astra-Sim 2.0
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../simulation/chakra/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chakra
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../simulation/frontier/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Frontier
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../simulation/llmcompass/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LLMCompass
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../simulation/linear/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Path Forward Beyond Simulators
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../simulation/mystique/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mystique
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../simulation/neusight/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NeuSight
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../simulation/simai/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SimAI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../simulation/vidur/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VIDUR
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../simulation/vtrain/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    vTrain
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
         
       
         
@@ -463,7 +917,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
           <div class="md-nav__link md-nav__container">
@@ -474,7 +928,7 @@
   <span class="md-ellipsis">
     
   
-    Simulation
+    Tensor Program Optimization
   
 
     
@@ -485,18 +939,18 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_2">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             
   
-    Simulation
+    Tensor Program Optimization
   
 
           </label>
@@ -511,14 +965,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../amali/" class="md-nav__link">
+      <a href="../ansor/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    AMALI
+    Ansor
   
 
     
@@ -539,14 +993,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../apex/" class="md-nav__link">
+      <a href="../learning-optimize-tensor-programs/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    APEX
+    Learning to Optimize Tensor Programs
   
 
     
@@ -567,14 +1021,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../astra-sim/" class="md-nav__link">
+      <a href="../learned-performance-model-tpu/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Astra-Sim
+    Learned Performance Model for TPU
   
 
     
@@ -595,154 +1049,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../astra-sim-2/" class="md-nav__link">
+      <a href="../metatune/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Astra-Sim 2.0
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../chakra/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Chakra
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../frontier/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Frontier
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../llmcompass/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    LLMCompass
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../linear/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Path Forward Beyond Simulators
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../mystique/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Mystique
+    MetaTune
   
 
     
@@ -779,7 +1093,7 @@
   <span class="md-ellipsis">
     
   
-    NeuSight
+    tritonBLAS
   
 
     
@@ -797,7 +1111,7 @@
   <span class="md-ellipsis">
     
   
-    NeuSight
+    tritonBLAS
   
 
     
@@ -860,321 +1174,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../simai/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    SimAI
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../vidur/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    VIDUR
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../vtrain/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    vTrain
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-      
-        
-          
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-      
-      
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
-        
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../../tensor-program-optimization/" class="md-nav__link ">
-              
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Tensor Program Optimization
-  
-
-    
-  </span>
-  
-  
-
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Tensor Program Optimization
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../tensor-program-optimization/ansor/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Ansor
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../tensor-program-optimization/learning-optimize-tensor-programs/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Learning to Optimize Tensor Programs
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../tensor-program-optimization/learned-performance-model-tpu/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Learned Performance Model for TPU
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../tensor-program-optimization/metatune/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    MetaTune
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../tensor-program-optimization/tritonblas/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    tritonBLAS
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../tensor-program-optimization/gpu-performance-portability/" class="md-nav__link">
+      <a href="../gpu-performance-portability/" class="md-nav__link">
         
   
   
@@ -1202,7 +1202,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tensor-program-optimization/anatomy-triton-attention/" class="md-nav__link">
+      <a href="../anatomy-triton-attention/" class="md-nav__link">
         
   
   
@@ -1521,27 +1521,28 @@
   
 
 
-<h1 id="neusight-forecasting-gpu-performance-for-deep-learning-training-and-inference">NeuSight: Forecasting GPU Performance for Deep Learning Training and Inference<a class="headerlink" href="#neusight-forecasting-gpu-performance-for-deep-learning-training-and-inference" title="Permanent link">&para;</a></h1>
+<h1 id="tritonblas-triton-based-analytical-approach-for-gemm-kernel-parameter-selection">tritonBLAS: Triton-based Analytical Approach for GEMM Kernel Parameter Selection<a class="headerlink" href="#tritonblas-triton-based-analytical-approach-for-gemm-kernel-parameter-selection" title="Permanent link">&para;</a></h1>
 <div class="paper-meta">
-<p><strong>Authors</strong>: Seonho Lee, Amar Phanishayee, Divya Mahajan<br />
-<strong>Institution</strong>: Georgia Tech, Meta<br />
-<strong>Conference</strong>: ASPLOS 2025<br />
-<strong>Paper Link</strong>: <a href="https://arxiv.org/abs/2407.13853">arXiv:2407.13853</a></p>
+<p><strong>Authors</strong>: Ryan Swann, Muhammad Osama, Xiaohu Guo<br />
+<strong>Institution</strong>: AMD<br />
+<strong>Conference</strong>: arXiv 2025<br />
+<strong>Paper Link</strong>: <a href="https://arxiv.org/abs/2512.04226">arXiv:2512.04226</a><br />
+<strong>GitHub</strong>: <a href="https://github.com/ROCm/tritonBLAS">ROCm/tritonBLAS</a>  </p>
 </div>
 <div class="paper-tags">
-<p><span class="paper-tag">GPU Performance</span>
-<span class="paper-tag">Deep Learning</span>
-<span class="paper-tag">Performance Forecasting</span></p>
+<p><span class="paper-tag">GEMM Optimization</span>
+<span class="paper-tag">Triton Compiler</span>
+<span class="paper-tag">Analytical Model</span></p>
 </div>
 <h2 id="abstract">Abstract<a class="headerlink" href="#abstract" title="Permanent link">&para;</a></h2>
-<p>NeuSight is a forecasting framework that predicts the performance of diverse deep learning models for both training and inference on unseen GPUs without requiring actual execution on the target GPU. It achieves exceptional accuracy compared to previous approaches.</p>
+<p>tritonBLAS presents a fast and deterministic analytical model that uses architectural parameters like cache hierarchy, and relative code and data placement to generate performant GPU GEMM kernels. It explicitly models the relationship between architectural topology, matrix shapes, and algorithmic blocking behavior to predict near-optimal configurations without runtime autotuning. The system achieves over 95% of autotuning performance while reducing autotuning time to zero.</p>
 <p><strong>Key Contributions</strong>:
-- Reduces latency prediction error from 121.4% and 30.8% to 2.3% for GPT-3 on H100
-- Inference error: 9.7% (vs prior work 220.9%), Training error: 7.3% (vs prior work 725.8%)
-- Tile-based approach predicting device utilization per tile
-- Works for both single-GPU and multi-GPU distributed settings</p>
+- Analytical model for GEMM kernel parameter selection without autotuning
+- Architecture-aware performance modeling using cache hierarchy and data locality
+- 94.7% of exhaustive search efficiency with zero configuration overhead
+- Over 95% performance compared to autotuning-based solutions</p>
 <h2 id="core-ideas">Core Ideas<a class="headerlink" href="#core-ideas" title="Permanent link">&para;</a></h2>
-<p>Unlike prior work that directly predicts kernel latency using machine learning, NeuSight distills kernel execution into tiles, predicts utilization per tile, and determines latency based on GPU architecture performance bounds. This novel approach significantly improves accuracy across various workloads and modern GPUs.</p>
+<p>tritonBLAS eliminates the need for expensive runtime autotuning by using an analytical approach to predict optimal GEMM kernel configurations. The model explicitly captures the interplay between GPU architecture (cache hierarchy, SM count), matrix shapes, tiling hierarchies, and data locality patterns. By modeling these relationships analytically, tritonBLAS can deterministically select near-optimal kernel parameters for any given matrix multiplication workload on AMD Instinct GPUs, achieving comparable performance to exhaustive autotuning search while drastically reducing configuration time.</p>
 <hr />
 <p><em>Reading date: 2025</em>
 <em>Note status: Completed</em></p>
