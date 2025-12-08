@@ -25,6 +25,7 @@ Papers on automatic optimization of tensor programs through compiler techniques,
 
 ### GPU Kernel Optimization & Portability
 
+- [tritonBLAS](tritonblas.md) - Analytical approach for GEMM kernel parameter selection without autotuning (AMD, 2025)
 - [GPU Performance Portability](gpu-performance-portability.md) - Autotuning for cross-vendor GPU portability (2025)
 - [Anatomy of Triton Attention Kernel](anatomy-triton-attention.md) - Building high-performance attention kernels with Triton (2025)
 

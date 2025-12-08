@@ -107,6 +107,7 @@ nav:
       - Learning to Optimize Tensor Programs: tensor-program-optimization/learning-optimize-tensor-programs.md
       - Learned Performance Model for TPU: tensor-program-optimization/learned-performance-model-tpu.md
       - MetaTune: tensor-program-optimization/metatune.md
+      - tritonBLAS: tensor-program-optimization/tritonblas.md
       - GPU Performance Portability: tensor-program-optimization/gpu-performance-portability.md
       - Anatomy of Triton Attention Kernel: tensor-program-optimization/anatomy-triton-attention.md
   - Intra-GPU Spatial Multiplexing:
