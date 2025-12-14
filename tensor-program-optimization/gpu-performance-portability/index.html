@@ -1602,67 +1602,67 @@
 <h2 id="abstract">Abstract<a class="headerlink" href="#abstract" title="Permanent link">&para;</a></h2>
 <p>This paper makes the case for combining just-in-time (JIT) compilation with comprehensive kernel parameter autotuning to enable portable LLM inference with state-of-the-art performance without code changes, addressing vendor lock-in and hardware portability challenges.</p>
 <h2 id="q1-can-autotuning-enable-portable-sota-performance">Q1: Can Autotuning enable portable SOTA performance?<a class="headerlink" href="#q1-can-autotuning-enable-portable-sota-performance" title="Permanent link">&para;</a></h2>
-<p><strong>（自动调优能否实现可移植的 SOTA 性能？）</strong></p>
-<p><strong>结论：是的。自动调优的 Triton 内核在极低的代码量下，能在不同平台上展现出广泛的竞争力。</strong></p>
+<p><strong>(自动调优能否实现可移植的 SOTA 性能?)</strong></p>
+<p><strong>结论: 是的. 自动调优的 Triton 内核在极低的代码量下, 能在不同平台上展现出广泛的竞争力.</strong></p>
 <ul>
-<li><strong>总体效率</strong>：代码量（LoC）不到 SOTA 实现的 2%。</li>
-<li><strong>性能上限</strong>：在最佳情况下，比 SOTA（flash_attn）快 <strong>2.3倍</strong>。</li>
-<li><strong>性能下限</strong>：在最差情况下（无任何手动优化），仍能达到 SOTA 性能的 <strong>78%</strong>。</li>
-<li><strong>平台表现</strong>：<ul>
-<li><strong>AMD MI250</strong>：自动调优内核始终优于通过 hipify 交叉编译的 CUDA 代码（平均快 <strong>20%</strong> 以上）。</li>
-<li><strong>NVIDIA A100</strong>：在大多数场景下达到 SOTA 基线的 <strong>91%−98%</strong>。（小负载下的性能差距归因于 Triton 编译器未充分利用 FP16 优化，而非调优参数问题）。</li>
+<li><strong>总体效率</strong>: 代码量(LoC)不到 SOTA 实现的 2%.</li>
+<li><strong>性能上限</strong>: 在最佳情况下, 比 SOTA(flash_attn)快 <strong>2.3倍</strong>.</li>
+<li><strong>性能下限</strong>: 在最差情况下(无任何手动优化), 仍能达到 SOTA 性能的 <strong>78%</strong>.</li>
+<li><strong>平台表现</strong>:<ul>
+<li><strong>AMD MI250</strong>: 自动调优内核始终优于通过 hipify 交叉编译的 CUDA 代码(平均快 <strong>20%</strong> 以上).</li>
+<li><strong>NVIDIA A100</strong>: 在大多数场景下达到 SOTA 基线的 <strong>91%-98%</strong>.(小负载下的性能差距归因于 Triton 编译器未充分利用 FP16 优化, 而非调优参数问题).</li>
 </ul>
 </li>
 </ul>
 <hr />
 <h2 id="q2-is-autotuning-necessary">Q2: Is autotuning necessary?<a class="headerlink" href="#q2-is-autotuning-necessary" title="Permanent link">&para;</a></h2>
-<p><strong>（自动调优是否必要？）</strong></p>
-<p><strong>结论：绝对必要。简单的配置复用行不通，自动调优是挖掘编译器潜力的关键。</strong></p>
+<p><strong>(自动调优是否必要?)</strong></p>
+<p><strong>结论: 绝对必要. 简单的配置复用行不通, 自动调优是挖掘编译器潜力的关键.</strong></p>
 <ul>
-<li><strong>配置不可复用性 (Non-portability)</strong>：<ul>
-<li>将一个 GPU 上的最优配置直接用于另一个 GPU，会导致严重的性能下降（仅剩原性能的 <strong>7%</strong>，即下降一个数量级）。</li>
-<li>部分配置在异构平台上甚至是无效的（invalid）。</li>
+<li><strong>配置不可复用性 (Non-portability)</strong>:<ul>
+<li>将一个 GPU 上的最优配置直接用于另一个 GPU, 会导致严重的性能下降(仅剩原性能的 <strong>7%</strong>, 即下降一个数量级).</li>
+<li>部分配置在异构平台上甚至是无效的(invalid).</li>
 </ul>
 </li>
-<li><strong>代码生成优势</strong>：<ul>
-<li><strong>深度优化</strong>：自动调优不仅仅是选择参数，它能触发 JIT 编译器进行手动模板无法实现的优化（如循环展开、软件流水线）。</li>
-<li><strong>指令多样性</strong>：分析显示，自动调优生成的汇编代码比手动 CUDA 模板更复杂、指令更丰富（唯一指令数 <strong>475 vs 224</strong>），表明其探索了更广阔的解空间。</li>
+<li><strong>代码生成优势</strong>:<ul>
+<li><strong>深度优化</strong>: 自动调优不仅仅是选择参数, 它能触发 JIT 编译器进行手动模板无法实现的优化(如循环展开, 软件流水线).</li>
+<li><strong>指令多样性</strong>: 分析显示, 自动调优生成的汇编代码比手动 CUDA 模板更复杂, 指令更丰富(唯一指令数 <strong>475 vs 224</strong>), 表明其探索了更广阔的解空间.</li>
 </ul>
 </li>
 </ul>
 <hr />
 <h2 id="q3-why-is-triton-autotuning-not-used-in-practice">Q3: Why is Triton autotuning not used in practice?<a class="headerlink" href="#q3-why-is-triton-autotuning-not-used-in-practice" title="Permanent link">&para;</a></h2>
-<p><strong>（为什么 Triton 自动调优在实践中未被广泛采用？）</strong></p>
-<p><strong>结论：尽管有效，但现有的实现存在工程和生态上的阻碍。目前主流框架（如 vLLM, sglang）很少使用它。</strong></p>
+<p><strong>(为什么 Triton 自动调优在实践中未被广泛采用?)</strong></p>
+<p><strong>结论: 尽管有效, 但现有的实现存在工程和生态上的阻碍. 目前主流框架(如 vLLM, sglang)很少使用它.</strong></p>
 <p>主要原因有三点:</p>
 <ol>
 <li><strong>运行时开销大</strong>:<ul>
-<li>内置自动调优器需要按顺序尝试所有配置，每次都需要 JIT 编译和执行，开销巨大。</li>
-<li>调优结果无法跨进程缓存，每次重启进程都需要重新调优。</li>
+<li>内置自动调优器需要按顺序尝试所有配置, 每次都需要 JIT 编译和执行, 开销巨大.</li>
+<li>调优结果无法跨进程缓存, 每次重启进程都需要重新调优.</li>
 </ul>
 </li>
 <li><strong>社区优先级不同</strong>:<ul>
-<li>工业界和研究界的首要目标通常是在“事实标准平台”（NVIDIA）上跑出高性能，跨平台移植性是次要目标。</li>
-<li>代码成熟度不足。</li>
+<li>工业界和研究界的首要目标通常是在"事实标准平台"(NVIDIA)上跑出高性能, 跨平台移植性是次要目标.</li>
+<li>代码成熟度不足.</li>
 </ul>
 </li>
 <li><strong>仍需人工干预</strong>:<ul>
-<li>自动调优仍需开发者手动提供“配置搜索列表”。</li>
-<li>依赖程序员直觉定义的搜索空间往往不是最优的，可能导致近 <strong>20%</strong> 的性能差距。</li>
+<li>自动调优仍需开发者手动提供"配置搜索列表".</li>
+<li>依赖程序员直觉定义的搜索空间往往不是最优的, 可能导致近 <strong>20%</strong> 的性能差距.</li>
 </ul>
 </li>
 </ol>
 <hr />
 <h2 id="q4-what-are-the-gaps-towards-practical-autotuning">Q4: What are the gaps towards practical autotuning?<a class="headerlink" href="#q4-what-are-the-gaps-towards-practical-autotuning" title="Permanent link">&para;</a></h2>
-<p><strong>（实现实用化自动调优还存在哪些差距？）</strong></p>
-<p><strong>结论：为了让自动调优真正落地，需要解决以下四个技术缺口：</strong></p>
+<p><strong>(实现实用化自动调优还存在哪些差距?)</strong></p>
+<p><strong>结论: 为了让自动调优真正落地, 需要解决以下四个技术缺口:</strong></p>
 <ol>
-<li><strong>更好的 API</strong>：开发者需要高层级的 API 来更方便地定义内核参数配置空间及其依赖关系。</li>
-<li><strong>高效的搜索算法</strong>：目前的搜索空间巨大（每种 Tensor 形状可达 1000 种配置），需要先进的搜索方法来替代暴力搜索，以减少调优时间。</li>
-<li><strong>可复用的缓存机制</strong>：调优结果必须能够持久化缓存，并包含环境依赖信息，以避免重复调优。</li>
-<li><strong>将调优移出关键路径</strong>：<ul>
-<li><strong>离线调优 (Ahead-of-time)</strong>：作为开发流程的一部分提前完成。</li>
-<li><strong>闲时调优</strong>：利用 GPU 空闲时间根据工作负载指标进行调优。</li>
+<li><strong>更好的 API</strong>: 开发者需要高层级的 API 来更方便地定义内核参数配置空间及其依赖关系.</li>
+<li><strong>高效的搜索算法</strong>: 目前的搜索空间巨大(每种 Tensor 形状可达 1000 种配置), 需要先进的搜索方法来替代暴力搜索, 以减少调优时间.</li>
+<li><strong>可复用的缓存机制</strong>: 调优结果必须能够持久化缓存, 并包含环境依赖信息, 以避免重复调优.</li>
+<li><strong>将调优移出关键路径</strong>:<ul>
+<li><strong>离线调优 (Ahead-of-time)</strong>: 作为开发流程的一部分提前完成.</li>
+<li><strong>闲时调优</strong>: 利用 GPU 空闲时间根据工作负载指标进行调优.</li>
 </ul>
 </li>
 </ol>
