@@ -12,13 +12,9 @@
         <meta name="author" content="zksainx">
       
       
-        <link rel="canonical" href="https://zksainx.github.io/paper-notes/simulation/llmcompass/">
+        <link rel="canonical" href="https://zksainx.github.io/paper-notes/tensor-program-optimization/cuda-L2/">
       
       
-        <link rel="prev" href="../frontier/">
-      
-      
-        <link rel="next" href="../linear/">
       
       
         
@@ -29,7 +25,7 @@
     
     
       
-        <title>LLMCompass - Paper Notes</title>
+        <title>CUDA-L2: Surpassing cuBLAS Performance for Matrix Multiplication through Reinforcement Learning - Paper Notes</title>
       
     
     
@@ -82,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#llmcompass-enabling-efficient-hardware-design-for-large-language-model-inference" class="md-skip">
+        <a href="#cuda-l2-surpassing-cublas-performance-for-matrix-multiplication-through-reinforcement-learning" class="md-skip">
           跳转至
         </a>
       
@@ -116,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              LLMCompass
+              CUDA-L2: Surpassing cuBLAS Performance for Matrix Multiplication through Reinforcement Learning
             
           </span>
         </div>
@@ -251,13 +247,11 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../simulation/" class="md-tabs__link">
           
   
   
@@ -279,7 +273,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../tensor-program-optimization/" class="md-tabs__link">
+        <a href="../" class="md-tabs__link">
           
   
   
@@ -410,8 +404,6 @@
       
   
   
-    
-  
   
   
     
@@ -451,23 +443,22 @@
     
     
       
-        
-        
-      
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
+            <a href="../../simulation/" class="md-nav__link ">
               
   
   
@@ -485,13 +476,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -511,7 +502,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../amali/" class="md-nav__link">
+      <a href="../../simulation/amali/" class="md-nav__link">
         
   
   
@@ -539,7 +530,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../apex/" class="md-nav__link">
+      <a href="../../simulation/apex/" class="md-nav__link">
         
   
   
@@ -567,7 +558,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../astra-sim/" class="md-nav__link">
+      <a href="../../simulation/astra-sim/" class="md-nav__link">
         
   
   
@@ -595,7 +586,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../astra-sim-2/" class="md-nav__link">
+      <a href="../../simulation/astra-sim-2/" class="md-nav__link">
         
   
   
@@ -623,7 +614,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../chakra/" class="md-nav__link">
+      <a href="../../simulation/chakra/" class="md-nav__link">
         
   
   
@@ -651,7 +642,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../frontier/" class="md-nav__link">
+      <a href="../../simulation/frontier/" class="md-nav__link">
         
   
   
@@ -676,37 +667,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    LLMCompass
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../simulation/llmcompass/" class="md-nav__link">
         
   
   
@@ -722,48 +686,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#abstract" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Abstract
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#core-ideas" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Core Ideas
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -776,7 +698,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../linear/" class="md-nav__link">
+      <a href="../../simulation/linear/" class="md-nav__link">
         
   
   
@@ -804,7 +726,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../mystique/" class="md-nav__link">
+      <a href="../../simulation/mystique/" class="md-nav__link">
         
   
   
@@ -832,7 +754,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../neusight/" class="md-nav__link">
+      <a href="../../simulation/neusight/" class="md-nav__link">
         
   
   
@@ -860,7 +782,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../simai/" class="md-nav__link">
+      <a href="../../simulation/simai/" class="md-nav__link">
         
   
   
@@ -888,7 +810,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../vidur/" class="md-nav__link">
+      <a href="../../simulation/vidur/" class="md-nav__link">
         
   
   
@@ -916,7 +838,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../vtrain/" class="md-nav__link">
+      <a href="../../simulation/vtrain/" class="md-nav__link">
         
   
   
@@ -990,7 +912,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../tensor-program-optimization/" class="md-nav__link ">
+            <a href="../" class="md-nav__link ">
               
   
   
@@ -1034,7 +956,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tensor-program-optimization/ansor/" class="md-nav__link">
+      <a href="../ansor/" class="md-nav__link">
         
   
   
@@ -1062,7 +984,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tensor-program-optimization/learning-optimize-tensor-programs/" class="md-nav__link">
+      <a href="../learning-optimize-tensor-programs/" class="md-nav__link">
         
   
   
@@ -1090,7 +1012,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tensor-program-optimization/learned-performance-model-tpu/" class="md-nav__link">
+      <a href="../learned-performance-model-tpu/" class="md-nav__link">
         
   
   
@@ -1118,7 +1040,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tensor-program-optimization/metatune/" class="md-nav__link">
+      <a href="../metatune/" class="md-nav__link">
         
   
   
@@ -1146,7 +1068,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tensor-program-optimization/tritonblas/" class="md-nav__link">
+      <a href="../tritonblas/" class="md-nav__link">
         
   
   
@@ -1174,7 +1096,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tensor-program-optimization/gpu-performance-portability/" class="md-nav__link">
+      <a href="../gpu-performance-portability/" class="md-nav__link">
         
   
   
@@ -1202,7 +1124,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tensor-program-optimization/anatomy-triton-attention/" class="md-nav__link">
+      <a href="../anatomy-triton-attention/" class="md-nav__link">
         
   
   
@@ -1501,6 +1423,290 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#1-introduction-motivation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Introduction &amp; Motivation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Introduction &amp; Motivation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-problem-background" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 Problem Background
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-research-question" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2 Research Question
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-preliminaries" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Preliminaries
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Preliminaries">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-hgemm-definition" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 HGEMM Definition
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-baselines" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 Baselines
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-cuda-l2-framework" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. CUDA-L2 Framework
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. CUDA-L2 Framework">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-relation-to-cuda-l1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 Relation to CUDA-L1
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-training-pipeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 Training Pipeline
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-experimental-results" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Experimental Results
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Experimental Results">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-overall-performance-a100" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 Overall Performance (A100)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-effect-of-problem-size" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 Effect of Problem Size
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-optimization-techniques-discovered-by-cuda-l2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Optimization Techniques Discovered by CUDA-L2
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Optimization Techniques Discovered by CUDA-L2">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-abstraction-selection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 Abstraction Selection
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-non-divisible-tiling-via-padding" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 Non-divisible Tiling via Padding
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-advanced-kernel-techniques" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3 Advanced Kernel Techniques
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-analysis-of-learned-policies" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Analysis of Learned Policies
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Analysis of Learned Policies">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-tile-size-selection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1 Tile Size Selection
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-pipeline-stage-count" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2 Pipeline Stage Count
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63-block-swizzle-usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3 Block Swizzle Usage
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-conclusion-impact" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Conclusion &amp; Impact
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Conclusion &amp; Impact">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Takeaways
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1521,27 +1727,248 @@
   
 
 
-<h1 id="llmcompass-enabling-efficient-hardware-design-for-large-language-model-inference">LLMCompass: Enabling Efficient Hardware Design for Large Language Model Inference<a class="headerlink" href="#llmcompass-enabling-efficient-hardware-design-for-large-language-model-inference" title="Permanent link">&para;</a></h1>
+<h1 id="cuda-l2-surpassing-cublas-performance-for-matrix-multiplication-through-reinforcement-learning">CUDA-L2: Surpassing cuBLAS Performance for Matrix Multiplication through Reinforcement Learning<a class="headerlink" href="#cuda-l2-surpassing-cublas-performance-for-matrix-multiplication-through-reinforcement-learning" title="Permanent link">&para;</a></h1>
 <div class="paper-meta">
-<p><strong>Authors</strong>: Hengrui Zhang, August Ning, Rohan Baskar Prabhakar, David Wentzlaff<br />
-<strong>Institution</strong>: Princeton University<br />
-<strong>Conference</strong>: ISCA 2024<br />
-<strong>Paper Link</strong>: <a href="https://doi.org/10.1109/ISCA59077.2024.00082">IEEE Xplore</a> | <a href="https://github.com/PrincetonUniversity/LLMCompass">GitHub</a></p>
+<p><strong>Authors</strong>: Songqiao Su, Xiaofei Sun, Xiaoya Li, Albert Wang, Jiwei Li, Chris Shum<br />
+<strong>Institution</strong>: DeepReinforce Team<br />
+<strong>Year</strong>: 2025<br />
+<strong>Paper Link</strong>: <a href="https://arxiv.org/abs/2512.02551">arXiv:2512.02551</a><br />
+<strong>GitHub</strong>: <a href="https://github.com/deepreinforce-ai/CUDA-L2">deepreinforce-ai/CUDA-L2</a></p>
 </div>
 <div class="paper-tags">
-<p><span class="paper-tag">Hardware Design</span>
-<span class="paper-tag">LLM Inference</span>
-<span class="paper-tag">Design Space Exploration</span></p>
+<p><span class="paper-tag">CUDA Optimization</span>
+<span class="paper-tag">Matrix Multiplication</span>
+<span class="paper-tag">Reinforcement Learning</span>
+<span class="paper-tag">HGEMM</span>
+<span class="paper-tag">cuBLAS / cuBLASLt</span></p>
 </div>
+<hr />
 <h2 id="abstract">Abstract<a class="headerlink" href="#abstract" title="Permanent link">&para;</a></h2>
-<p>LLMCompass is a hardware evaluation framework for LLM inference workloads that is fast, accurate, versatile, and able to describe and evaluate different hardware designs. It includes an automatic mapper to find performance-optimal mapping and scheduling.</p>
-<p><strong>Key Contributions</strong>:
-- Average 10.9% error rate for operator latency estimation, 4.1% for LLM inference
-- Area-based cost model for architectural design space exploration
-- Can simulate 4-NVIDIA A100 GPU node running GPT-3 175B in 16 minutes
-- Identifies designs achieving 3.41x improvement in performance/cost vs A100</p>
+<p>Matrix Multiplication (MatMul) 是 LLM 训练与推理中最核心、最耗时的算子之一，其 CUDA Kernel 也是 GPU 上<strong>人工优化程度最高</strong>的计算单元。尽管 NVIDIA 提供了高度优化的闭源库（cuBLAS、cuBLASLt），在大规模、多维度配置空间（M, N, K）下，<strong>人工调参难以系统性覆盖所有最优解</strong>。</p>
+<p>本文提出 <strong>CUDA-L2</strong>，一个基于 <strong>LLM + Reinforcement Learning (RL)</strong> 的自动化 HGEMM（Half-precision GEMM）优化系统。CUDA-L2 在 <strong>1,000 种 (M, N, K) 配置</strong>上系统性探索 kernel 设计空间，在 <strong>NVIDIA A100</strong> 上 <strong>显著超越 cuBLAS 与 cuBLASLt（包括 AutoTuning）</strong>，首次证明：  </p>
+<blockquote>
+<p>即便是高度专家化、接近硬件极限的 HGEMM Kernel，仍可通过 LLM-guided RL 获得稳定、可复现的性能提升。</p>
+</blockquote>
+<hr />
 <h2 id="core-ideas">Core Ideas<a class="headerlink" href="#core-ideas" title="Permanent link">&para;</a></h2>
-<p>Implemented as a Python library, LLMCompass democratizes hardware design space exploration research with fully open-source tools. It enables architects to reason about design choices through combined performance and area modeling, making it suitable for exploring cost-effective hardware accelerators for LLM workloads.</p>
+<p>CUDA-L2 是 CUDA-L1 在 <strong>高难度、强结构算子（HGEMM）</strong> 场景下的系统性扩展，其核心思想包括：</p>
+<ol>
+<li><strong>将 CUDA kernel 优化视为连续决策问题</strong>，使用 execution speed 作为 RL reward；</li>
+<li><strong>从通用 kernel → 专用 HGEMM kernel 的分阶段 RL 训练</strong>；</li>
+<li><strong>引入 Nsight Compute (NCU) profiling 指标作为上下文信息</strong>，避免纯黑盒优化；</li>
+<li><strong>通过 Contrastive RL 学习“为什么这个 kernel 更快”</strong>，而非仅拟合 reward。</li>
+</ol>
+<hr />
+<h2 id="1-introduction-motivation">1. Introduction &amp; Motivation<a class="headerlink" href="#1-introduction-motivation" title="Permanent link">&para;</a></h2>
+<h3 id="11-problem-background">1.1 Problem Background<a class="headerlink" href="#11-problem-background" title="Permanent link">&para;</a></h3>
+<ul>
+<li>HGEMM 在 Attention 与 FFN 中占据主要计算比例；</li>
+<li>不同 (M, N, K)、layout（NN / TN）、accumulator precision 会导致<strong>完全不同的最优 kernel</strong>；</li>
+<li>cuBLAS / cuBLASLt 已高度优化，但：</li>
+<li>依赖 heuristic 或有限 AutoTuning；</li>
+<li>难以跨配置、跨场景系统性最优。</li>
+</ul>
+<p>现实证据：即便专家团队（如 TensorRT-LLM）针对单一模型精调，仍可获得 <strong>~13% 提升</strong>。</p>
+<h3 id="12-research-question">1.2 Research Question<a class="headerlink" href="#12-research-question" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>是否可以通过自动化方法，在<strong>无需人工枚举与专家经验</strong>的前提下，系统性超越 cuBLAS / cuBLASLt？</p>
+</blockquote>
+<p>CUDA-L2 给出的答案是 <strong>Yes</strong>。</p>
+<hr />
+<h2 id="2-preliminaries">2. Preliminaries<a class="headerlink" href="#2-preliminaries" title="Permanent link">&para;</a></h2>
+<h3 id="21-hgemm-definition">2.1 HGEMM Definition<a class="headerlink" href="#21-hgemm-definition" title="Permanent link">&para;</a></h3>
+<ul>
+<li>输入：  </li>
+<li>A ∈ ℝ<sup>M×K</sup>, B ∈ ℝ<sup>K×N</sup>  </li>
+<li>输出：  </li>
+<li>C = AB（FP16 input，Tensor Core acceleration）</li>
+<li>Kernel 采用典型 <strong>tiled GEMM</strong> 结构：</li>
+<li>Global → Shared Memory</li>
+<li>Shared → Registers</li>
+<li>Tensor Core MMA</li>
+<li>Epilogue 写回</li>
+</ul>
+<h3 id="22-baselines">2.2 Baselines<a class="headerlink" href="#22-baselines" title="Permanent link">&para;</a></h3>
+<p>CUDA-L2 对比以下主流实现：</p>
+<ul>
+<li><strong>torch.matmul</strong></li>
+<li><strong>cuBLAS</strong></li>
+<li>NN / TN / max(NN, TN)</li>
+<li><strong>cuBLASLt</strong></li>
+<li>heuristic</li>
+<li>AutoTuning（≤100 candidates）</li>
+</ul>
+<hr />
+<h2 id="3-cuda-l2-framework">3. CUDA-L2 Framework<a class="headerlink" href="#3-cuda-l2-framework" title="Permanent link">&para;</a></h2>
+<h3 id="31-relation-to-cuda-l1">3.1 Relation to CUDA-L1<a class="headerlink" href="#31-relation-to-cuda-l1" title="Permanent link">&para;</a></h3>
+<p>CUDA-L2 继承 CUDA-L1 的三段式结构，但针对 HGEMM 做出关键增强：</p>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>CUDA-L1</th>
+<th>CUDA-L2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Kernel 类型</td>
+<td>KernelBench</td>
+<td>专注 HGEMM</td>
+</tr>
+<tr>
+<td>训练数据</td>
+<td>Benchmark kernel</td>
+<td>大规模 CUDA library</td>
+</tr>
+<tr>
+<td>Context</td>
+<td>Execution time</td>
+<td>+ NCU profiling</td>
+</tr>
+<tr>
+<td>搜索空间</td>
+<td>小</td>
+<td>极大（MNK × tile × pipeline）</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="32-training-pipeline">3.2 Training Pipeline<a class="headerlink" href="#32-training-pipeline" title="Permanent link">&para;</a></h3>
+<h4 id="321-continued-pretraining">3.2.1 Continued Pretraining<a class="headerlink" href="#321-continued-pretraining" title="Permanent link">&para;</a></h4>
+<ul>
+<li>数据来源：</li>
+<li>PyTorch / ATen / CUTLASS</li>
+<li>NVIDIA 官方示例</li>
+<li>Web CUDA code</li>
+<li>构造：</li>
+<li>Instruction + Retrieved Context + CUDA code</li>
+<li>目标：</li>
+<li>补齐模型对 <strong>现代 CUDA / CuTe / CUTLASS</strong> 的知识缺口</li>
+</ul>
+<hr />
+<h4 id="322-general-kernel-rl">3.2.2 General Kernel RL<a class="headerlink" href="#322-general-kernel-rl" title="Permanent link">&para;</a></h4>
+<ul>
+<li>覆盖线性代数、Conv、Reduction、Attention 等；</li>
+<li>Reward：平均 speedup；</li>
+<li>算法：<strong>Contrastive RL + GRPO</strong>；</li>
+<li>目的：建立通用 CUDA 优化能力。</li>
+</ul>
+<hr />
+<h4 id="323-hgemm-specific-rl">3.2.3 HGEMM-Specific RL<a class="headerlink" href="#323-hgemm-specific-rl" title="Permanent link">&para;</a></h4>
+<p>这是 CUDA-L2 的<strong>核心阶段</strong>。</p>
+<p><strong>Reward 定义</strong>：</p>
+<div class="arithmatex">\[
+r = \frac{1}{N} \sum_{i=1}^N \left(\frac{t_{ref}}{t_{custom}} - \alpha \cdot diff_i \right) - \beta \cdot L
+\]</div>
+<p>其中：
+* <code>diff</code>：与 FP32 reference 的最大误差；
+* <code>L</code>：代码长度惩罚；
+* Context 包含 <strong>NCU metrics</strong>（SM occupancy、memory throughput、cache hit）。</p>
+<hr />
+<h2 id="4-experimental-results">4. Experimental Results<a class="headerlink" href="#4-experimental-results" title="Permanent link">&para;</a></h2>
+<h3 id="41-overall-performance-a100">4.1 Overall Performance (A100)<a class="headerlink" href="#41-overall-performance-a100" title="Permanent link">&para;</a></h3>
+<p><strong>Offline Mode</strong>（back-to-back execution）：</p>
+<ul>
+<li>+22.0% vs torch.matmul</li>
+<li>+19.2% vs cuBLAS-max</li>
+<li>+16.8% vs cuBLASLt-heuristic</li>
+<li><strong>+11.4% vs cuBLASLt-AutoTuning</strong></li>
+</ul>
+<p><strong>Server Mode</strong>（real-time inference）：</p>
+<ul>
+<li>提升进一步扩大至 <strong>+15.9% ~ +28.7%</strong></li>
+</ul>
+<hr />
+<h3 id="42-effect-of-problem-size">4.2 Effect of Problem Size<a class="headerlink" href="#42-effect-of-problem-size" title="Permanent link">&para;</a></h3>
+<ul>
+<li>小矩阵（GPU 未饱和）：<strong>1.3–1.4×</strong></li>
+<li>大矩阵（compute-bound）：趋近 1.0×</li>
+</ul>
+<p>结论：  </p>
+<blockquote>
+<p>CUDA-L2 尤其擅长挖掘 <strong>memory-bound / underutilized</strong> 场景的隐藏性能空间。</p>
+</blockquote>
+<hr />
+<h2 id="5-optimization-techniques-discovered-by-cuda-l2">5. Optimization Techniques Discovered by CUDA-L2<a class="headerlink" href="#5-optimization-techniques-discovered-by-cuda-l2" title="Permanent link">&para;</a></h2>
+<h3 id="51-abstraction-selection">5.1 Abstraction Selection<a class="headerlink" href="#51-abstraction-selection" title="Permanent link">&para;</a></h3>
+<ul>
+<li>小规模：raw WMMA（低开销）</li>
+<li>大规模：CuTe abstractions（复杂 pipeline）</li>
+</ul>
+<p>RL 自动权衡 <strong>代码长度 vs 性能潜力</strong>。</p>
+<hr />
+<h3 id="52-non-divisible-tiling-via-padding">5.2 Non-divisible Tiling via Padding<a class="headerlink" href="#52-non-divisible-tiling-via-padding" title="Permanent link">&para;</a></h3>
+<ul>
+<li>允许 BM / BN <strong>不整除维度</strong></li>
+<li>通过 zero-padding 换取更优 tile shape</li>
+<li>示例：</li>
+<li>M=8192 → BM=160（padding 1.6%）</li>
+<li><strong>+15.2% over cuBLASLt</strong></li>
+</ul>
+<p>这是<strong>人类工程师极少采用</strong>的策略。</p>
+<hr />
+<h3 id="53-advanced-kernel-techniques">5.3 Advanced Kernel Techniques<a class="headerlink" href="#53-advanced-kernel-techniques" title="Permanent link">&para;</a></h3>
+<p>CUDA-L2 熟练组合并参数化：</p>
+<ul>
+<li>Shared Memory Swizzle</li>
+<li>Multi-stage Pipelining</li>
+<li>Async Copy</li>
+<li>Register Accumulation</li>
+<li>Block Swizzle</li>
+<li>Epilogue Fusion</li>
+</ul>
+<p>并进一步发现<strong>变体策略</strong>：</p>
+<h4 id="531-double-buffered-register-fragments">5.3.1 Double-Buffered Register Fragments<a class="headerlink" href="#531-double-buffered-register-fragments" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Ping-pong buffer 隐藏 latency</li>
+</ul>
+<h4 id="532-aggressive-multi-step-prefetch">5.3.2 Aggressive Multi-step Prefetch<a class="headerlink" href="#532-aggressive-multi-step-prefetch" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Prefetch 多个 K iteration</li>
+</ul>
+<h4 id="533-direct-register-to-shared-epilogue">5.3.3 Direct Register-to-Shared Epilogue<a class="headerlink" href="#533-direct-register-to-shared-epilogue" title="Permanent link">&para;</a></h4>
+<ul>
+<li>消除中间 tensor</li>
+<li>使用 128-bit wide copy</li>
+</ul>
+<h4 id="534-staggered-ab-prefetch-scheduling">5.3.4 Staggered A/B Prefetch Scheduling<a class="headerlink" href="#534-staggered-ab-prefetch-scheduling" title="Permanent link">&para;</a></h4>
+<ul>
+<li>A-prefetch → MMA → B-prefetch</li>
+<li>提高 ILP</li>
+</ul>
+<hr />
+<h2 id="6-analysis-of-learned-policies">6. Analysis of Learned Policies<a class="headerlink" href="#6-analysis-of-learned-policies" title="Permanent link">&para;</a></h2>
+<h3 id="61-tile-size-selection">6.1 Tile Size Selection<a class="headerlink" href="#61-tile-size-selection" title="Permanent link">&para;</a></h3>
+<ul>
+<li>BM ∝ M，BN ∝ N（强相关）</li>
+<li>BK 与 K 相关性弱 → 受 register / pipeline 约束</li>
+</ul>
+<h3 id="62-pipeline-stage-count">6.2 Pipeline Stage Count<a class="headerlink" href="#62-pipeline-stage-count" title="Permanent link">&para;</a></h3>
+<ul>
+<li>K 小：2–3 stages</li>
+<li>K 大（&gt;8K）：6+ stages</li>
+</ul>
+<h3 id="63-block-swizzle-usage">6.3 Block Swizzle Usage<a class="headerlink" href="#63-block-swizzle-usage" title="Permanent link">&para;</a></h3>
+<ul>
+<li>小问题：可选</li>
+<li>大问题：几乎必选（99%）</li>
+<li>stride 与 problem scale 强相关</li>
+</ul>
+<hr />
+<h2 id="7-conclusion-impact">7. Conclusion &amp; Impact<a class="headerlink" href="#7-conclusion-impact" title="Permanent link">&para;</a></h2>
+<p>CUDA-L2 首次在 <strong>大规模 HGEMM 配置空间</strong> 上系统性超越 <strong>cuBLASLt-AutoTuning</strong>，表明：</p>
+<ul>
+<li><strong>LLM-guided RL 可以超越人类专家 + 手工 heuristics</strong></li>
+<li>即便是“已被榨干”的核心算子，仍存在结构性优化空间</li>
+<li>自动化 kernel discovery 是未来 GPU 编程的重要方向</li>
+</ul>
+<h3 id="key-takeaways">Key Takeaways<a class="headerlink" href="#key-takeaways" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Contrastive RL 对性能优化至关重要  </li>
+<li>Execution + Profiling feedback &gt; 静态规则  </li>
+<li>RL 能发现反直觉但有效的 kernel 设计  </li>
+</ul>
 <hr />
 <p><em>Reading date: 2025</em>
 <em>Note status: Completed</em></p>
