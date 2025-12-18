@@ -15,6 +15,10 @@
         <link rel="canonical" href="https://zksainx.github.io/paper-notes/tensor-program-optimization/cuda-L2/">
       
       
+        <link rel="prev" href="../cuda-L1/">
+      
+      
+        <link rel="next" href="../tritonblas/">
       
       
         
@@ -25,7 +29,7 @@
     
     
       
-        <title>CUDA-L2: Surpassing cuBLAS Performance for Matrix Multiplication through Reinforcement Learning - Paper Notes</title>
+        <title>CUDA-L2 - Paper Notes</title>
       
     
     
@@ -112,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              CUDA-L2: Surpassing cuBLAS Performance for Matrix Multiplication through Reinforcement Learning
+              CUDA-L2
             
           </span>
         </div>
@@ -269,10 +273,12 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
+      <li class="md-tabs__item md-tabs__item--active">
         <a href="../" class="md-tabs__link">
           
   
@@ -870,6 +876,8 @@
       
   
   
+    
+  
   
   
     
@@ -893,22 +901,27 @@
       
         
       
+        
+      
+        
+      
     
     
     
+      
+        
+        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
           <div class="md-nav__link md-nav__container">
@@ -930,13 +943,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1056,6 +1069,415 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cuda-L1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CUDA-L1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CUDA-L2
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CUDA-L2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#abstract" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Abstract
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#core-ideas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Core Ideas
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-introduction-motivation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Introduction &amp; Motivation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Introduction &amp; Motivation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-problem-background" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 Problem Background
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-research-question" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2 Research Question
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-preliminaries" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Preliminaries
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Preliminaries">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-hgemm-definition" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 HGEMM Definition
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-baselines" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 Baselines
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-cuda-l2-framework" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. CUDA-L2 Framework
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. CUDA-L2 Framework">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-relation-to-cuda-l1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 Relation to CUDA-L1
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-training-pipeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 Training Pipeline
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-experimental-results" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Experimental Results
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Experimental Results">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-overall-performance-a100" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 Overall Performance (A100)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-effect-of-problem-size" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 Effect of Problem Size
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-optimization-techniques-discovered-by-cuda-l2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Optimization Techniques Discovered by CUDA-L2
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Optimization Techniques Discovered by CUDA-L2">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-abstraction-selection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 Abstraction Selection
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-non-divisible-tiling-via-padding" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 Non-divisible Tiling via Padding
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-advanced-kernel-techniques" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3 Advanced Kernel Techniques
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-analysis-of-learned-policies" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Analysis of Learned Policies
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Analysis of Learned Policies">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-tile-size-selection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1 Tile Size Selection
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-pipeline-stage-count" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2 Pipeline Stage Count
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63-block-swizzle-usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3 Block Swizzle Usage
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-conclusion-impact" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Conclusion &amp; Impact
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Conclusion &amp; Impact">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Takeaways
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
