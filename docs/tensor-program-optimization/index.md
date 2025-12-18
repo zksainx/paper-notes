@@ -25,6 +25,8 @@ Papers on automatic optimization of tensor programs through compiler techniques,
 
 ### GPU Kernel Optimization & Portability
 
+- [CUDA-L1](cuda-L1.md) - Automated CUDA optimization via contrastive reinforcement learning (DeepReinforce, 2025)
+- [CUDA-L2](cuda-L2.md) - Surpassing cuBLAS performance for HGEMM via reinforcement learning (DeepReinforce, 2025)
 - [tritonBLAS](tritonblas.md) - Analytical approach for GEMM kernel parameter selection without autotuning (AMD, 2025)
 - [GPU Performance Portability](gpu-performance-portability.md) - Autotuning for cross-vendor GPU portability (2025)
 - [Anatomy of Triton Attention Kernel](anatomy-triton-attention.md) - Building high-performance attention kernels with Triton (2025)
