@@ -107,6 +107,8 @@ nav:
       - Learning to Optimize Tensor Programs: tensor-program-optimization/learning-optimize-tensor-programs.md
       - Learned Performance Model for TPU: tensor-program-optimization/learned-performance-model-tpu.md
       - MetaTune: tensor-program-optimization/metatune.md
+      - CUDA-L1: tensor-program-optimization/cuda-L1.md
+      - CUDA-L2: tensor-program-optimization/cuda-L2.md
       - tritonBLAS: tensor-program-optimization/tritonblas.md
       - GPU Performance Portability: tensor-program-optimization/gpu-performance-portability.md
       - Anatomy of Triton Attention Kernel: tensor-program-optimization/anatomy-triton-attention.md
