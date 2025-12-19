@@ -25,9 +25,17 @@ This paper develops a state-of-the-art paged attention kernel using exclusively 
 - Parameter auto-tuning for optimal performance
 - Open-sourced kernels adopted as default in vLLM for AMD GPUs
 
-## Core Ideas
+## Kernel Parameter Autotuning
 
-The paper demonstrates how to build production-quality attention kernels using high-level Triton code through systematic optimization. Triton enables writing GPU kernels in Python while abstracting away CUDA threading complexities like memory coalescing and tensor core scheduling. The resulting kernel achieves competitive or better performance than vendor-optimized implementations while maintaining cross-platform portability.
+通过运行微基准测试（Microbenchmarks）进行“经验性试错”来锁定最佳内核参数(BLOCK_SIZE, num_stages)，从而在大幅缩减编译器所需处理的参数搜索空间的同时，以极低的人工成本实现了远超纯编译器静态分析的优化深度与跨硬件性能可移植性 。
+
+
+## Implementation Details
+
+
+
+
+
 
 ---
 
