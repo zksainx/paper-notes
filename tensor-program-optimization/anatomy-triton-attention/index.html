@@ -1264,10 +1264,21 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#core-ideas" class="md-nav__link">
+  <a href="#kernel-parameter-autotuning" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Core Ideas
+        Kernel Parameter Autotuning
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implementation-details" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Implementation Details
       
     </span>
   </a>
@@ -1551,10 +1562,21 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#core-ideas" class="md-nav__link">
+  <a href="#kernel-parameter-autotuning" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Core Ideas
+        Kernel Parameter Autotuning
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implementation-details" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Implementation Details
       
     </span>
   </a>
@@ -1600,8 +1622,9 @@
 - High-level approach with algorithmic and system-level improvements
 - Parameter auto-tuning for optimal performance
 - Open-sourced kernels adopted as default in vLLM for AMD GPUs</p>
-<h2 id="core-ideas">Core Ideas<a class="headerlink" href="#core-ideas" title="Permanent link">&para;</a></h2>
-<p>The paper demonstrates how to build production-quality attention kernels using high-level Triton code through systematic optimization. Triton enables writing GPU kernels in Python while abstracting away CUDA threading complexities like memory coalescing and tensor core scheduling. The resulting kernel achieves competitive or better performance than vendor-optimized implementations while maintaining cross-platform portability.</p>
+<h2 id="kernel-parameter-autotuning">Kernel Parameter Autotuning<a class="headerlink" href="#kernel-parameter-autotuning" title="Permanent link">&para;</a></h2>
+<p>通过运行微基准测试（Microbenchmarks）进行“经验性试错”来锁定最佳内核参数(BLOCK_SIZE, num_stages)，从而在大幅缩减编译器所需处理的参数搜索空间的同时，以极低的人工成本实现了远超纯编译器静态分析的优化深度与跨硬件性能可移植性 。</p>
+<h2 id="implementation-details">Implementation Details<a class="headerlink" href="#implementation-details" title="Permanent link">&para;</a></h2>
 <hr />
 <p><em>Reading date: 2025</em>
 <em>Note status: Completed</em></p>
