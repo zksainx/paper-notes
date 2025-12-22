@@ -905,6 +905,8 @@
       
         
       
+        
+      
     
     
     
@@ -969,6 +971,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../learning-optimize-tensor-programs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Learning to Optimize Tensor Programs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../ansor/" class="md-nav__link">
         
   
@@ -997,14 +1027,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../learning-optimize-tensor-programs/" class="md-nav__link">
+      <a href="../roller/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Learning to Optimize Tensor Programs
+    Roller
   
 
     
@@ -1275,13 +1305,41 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#implementation-details" class="md-nav__link">
+  <a href="#autotuning-and-portability" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Implementation Details
+        Autotuning and Portability
       
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Autotuning and Portability">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-disadvantages-of-current-autotuning" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 当前自动调优方法的局限性 (Disadvantages of Current Autotuning)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-vllm-triton-backend-usage-of-autotuning-in-the-vllm-triton-backend" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 vllm-triton-backend 的调优方案 (Usage of autotuning in the vllm-triton-backend)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1573,13 +1631,41 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#implementation-details" class="md-nav__link">
+  <a href="#autotuning-and-portability" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Implementation Details
+        Autotuning and Portability
       
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Autotuning and Portability">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-disadvantages-of-current-autotuning" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 当前自动调优方法的局限性 (Disadvantages of Current Autotuning)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-vllm-triton-backend-usage-of-autotuning-in-the-vllm-triton-backend" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 vllm-triton-backend 的调优方案 (Usage of autotuning in the vllm-triton-backend)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1624,7 +1710,61 @@
 - Open-sourced kernels adopted as default in vLLM for AMD GPUs</p>
 <h2 id="kernel-parameter-autotuning">Kernel Parameter Autotuning<a class="headerlink" href="#kernel-parameter-autotuning" title="Permanent link">&para;</a></h2>
 <p>通过运行微基准测试（Microbenchmarks）进行“经验性试错”来锁定最佳内核参数(BLOCK_SIZE, num_stages)，从而在大幅缩减编译器所需处理的参数搜索空间的同时，以极低的人工成本实现了远超纯编译器静态分析的优化深度与跨硬件性能可移植性 。</p>
-<h2 id="implementation-details">Implementation Details<a class="headerlink" href="#implementation-details" title="Permanent link">&para;</a></h2>
+<h2 id="autotuning-and-portability">Autotuning and Portability<a class="headerlink" href="#autotuning-and-portability" title="Permanent link">&para;</a></h2>
+<h3 id="51-disadvantages-of-current-autotuning">5.1 当前自动调优方法的局限性 (Disadvantages of Current Autotuning)<a class="headerlink" href="#51-disadvantages-of-current-autotuning" title="Permanent link">&para;</a></h3>
+<p>尽管自动调优（Autotuning）有助于 Triton 内核在不同硬件上实现性能可移植性，但在实际生产环境（如 vLLM）中存在显著缺陷：</p>
+<ul>
+<li>
+<p><strong>巨大的调优时间开销</strong>：</p>
+<ul>
+<li>Triton 内核的自动调优通常伴随着巨大的时间成本，例如为了达到最佳性能，对每种 GPU 类型进行深度调优可能需要近 24 小时。</li>
+<li>这种开销使得在每次推理服务启动或持续集成（CI）流程中运行自动调优变得不可行。</li>
+</ul>
+</li>
+<li>
+<p><strong>缓存机制的灵活性不足</strong>：</p>
+<ul>
+<li>虽然缓存调优结果可以减少开销，但通常仅在遇到完全相同的“场景”（即张量形状、步长等参数组合完全一致）时有效。</li>
+<li>一旦输入参数发生微小变化（例如序列长度从 32 变为 33），缓存就会失效，从而触发重新调优。</li>
+</ul>
+</li>
+<li>
+<p><strong>运行时延迟增加</strong>：</p>
+<ul>
+<li>即使所有场景都已预先调优并缓存，在运行时查找最佳配置通常会增加数十微秒（tens of micro-seconds）的内核启动时间，这会抵消优化后的内核在处理短请求时带来的性能收益。</li>
+</ul>
+</li>
+<li>
+<p><strong>与 CUDA/HIP Graphs 不兼容</strong>：</p>
+<ul>
+<li>CUDA/HIP Graphs 记录一次静态执行图后便重复回放，无法在每次执行时动态查询 Triton 自动调优器来选择配置，因此无法直接使用标准的自动调优流程。</li>
+</ul>
+</li>
+</ul>
+<h3 id="52-vllm-triton-backend-usage-of-autotuning-in-the-vllm-triton-backend">5.2 vllm-triton-backend 的调优方案 (Usage of autotuning in the vllm-triton-backend)<a class="headerlink" href="#52-vllm-triton-backend-usage-of-autotuning-in-the-vllm-triton-backend" title="Permanent link">&para;</a></h3>
+<p>为了解决上述限制，作者采用了一种“两步走”的方案，通过离线调优生成静态启发式规则：</p>
+<ul>
+<li>
+<p><strong>第一步：基于微基准测试的离线调优</strong>：</p>
+<ul>
+<li><strong>脱离运行时环境</strong>：开发了一个微基准测试（Micro-benchmark）框架，在 vLLM 运行环境之外对内核进行独立调优。</li>
+<li><strong>模拟真实场景</strong>：微基准测试不局限于固定形状的输入，而是模拟真实推理服务中变化的上下文长度、提示词长度和批量大小，并据此调整内核。</li>
+<li><strong>避免启动开销</strong>：这种方法避免了增加 vLLM 的启动延迟或 CI 流水线的成本。</li>
+</ul>
+</li>
+<li>
+<p><strong>第二步：构建启发式决策树 (Decision Trees)</strong>：</p>
+<ul>
+<li><strong>导出为规则</strong>：分析离线调优的结果，将其转化为简单的 <code>if-else</code> 决策树（即启发式规则），直接硬编码在后端代码中（例如根据序列长度决定 Block 大小）。</li>
+<li><strong>方案优势</strong>：<ul>
+<li><strong>消除查找开销</strong>：决策树在运行时极其高效，避免了查表的延迟，同时也支持 CUDA/HIP Graphs 的使用。</li>
+<li><strong>泛化能力强</strong>：相比于只能通过精确匹配命中缓存的机制，决策树可以为调优缓存中不存在的场景（即未被显式调优过的中间值）提供优化配置。</li>
+<li><strong>减少调优工作量</strong>：只需针对平均情况和边缘情况进行调优，生成的规则即可覆盖并适用于大多数场景。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 <hr />
 <p><em>Reading date: 2025</em>
 <em>Note status: Completed</em></p>
