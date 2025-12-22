@@ -103,8 +103,9 @@ nav:
       - vTrain: simulation/vtrain.md
   - Tensor Program Optimization:
       - tensor-program-optimization/index.md
-      - Ansor: tensor-program-optimization/ansor.md
       - Learning to Optimize Tensor Programs: tensor-program-optimization/learning-optimize-tensor-programs.md
+      - Ansor: tensor-program-optimization/ansor.md
+      - Roller: tensor-program-optimization/roller.md
       - Learned Performance Model for TPU: tensor-program-optimization/learned-performance-model-tpu.md
       - MetaTune: tensor-program-optimization/metatune.md
       - CUDA-L1: tensor-program-optimization/cuda-L1.md
