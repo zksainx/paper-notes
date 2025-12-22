@@ -15,8 +15,9 @@ Papers on automatic optimization of tensor programs through compiler techniques,
 
 ### Tensor Program Optimization
 
-- [Ansor](ansor.md) - Automatic tensor program generation for deep learning (OSDI 2020, TVM)
 - [Learning to Optimize Tensor Programs](learning-optimize-tensor-programs.md) - AutoTVM framework (NeurIPS 2018)
+- [Ansor](ansor.md) - Automatic tensor program generation for deep learning (OSDI 2020, TVM)
+- [ROLLER](roller.md) - Fast and efficient tensor compilation via construction-based approach (OSDI 2022, Microsoft)
 
 ### Cost Models & Performance Prediction
 
