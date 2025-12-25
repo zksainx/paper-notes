@@ -119,6 +119,7 @@ nav:
       - Bullet: intra-gpu-multiplexing/bullet.md
       - Nexus: intra-gpu-multiplexing/nexus.md
       - PD-Multiplexing: intra-gpu-multiplexing/pd-multiplex.md
+      - DuetServe: intra-gpu-multiplexing/duetserve.md
   - About: about.md
 
 # Copyright

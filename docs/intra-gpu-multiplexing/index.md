@@ -16,3 +16,4 @@ Papers on GPU spatial multiplexing techniques for efficient LLM serving, includi
 - [Bullet](bullet.md) - Dynamic spatial-temporal orchestration for GPU utilization
 - [Nexus](nexus.md) - Proactive intra-GPU disaggregation of prefill and decode
 - [PD-Multiplexing](pd-multiplex.md) - SLO-oriented LLM serving with phase multiplexing
+- [DuetServe](duetserve.md) - Adaptive GPU multiplexing for prefill-decode isolation
