@@ -12,13 +12,13 @@
         <meta name="author" content="zksainx">
       
       
-        <link rel="canonical" href="https://zksainx.github.io/paper-notes/simulation/vtrain/">
+        <link rel="canonical" href="https://zksainx.github.io/paper-notes/intra-gpu-multiplexing/duetserve/">
       
       
-        <link rel="prev" href="../vidur/">
+        <link rel="prev" href="../pd-multiplex/">
       
       
-        <link rel="next" href="../../tensor-program-optimization/">
+        <link rel="next" href="../../about/">
       
       
         
@@ -29,7 +29,7 @@
     
     
       
-        <title>vTrain - Paper Notes</title>
+        <title>DuetServe - Paper Notes</title>
       
     
     
@@ -82,7 +82,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#vtrain-a-simulation-framework-for-evaluating-cost-effective-and-compute-optimal-large-language-model-training" class="md-skip">
+        <a href="#duetserve-harmonizing-prefill-and-decode-for-llm-serving-via-adaptive-gpu-multiplexing" class="md-skip">
           跳转至
         </a>
       
@@ -116,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              vTrain
+              DuetServe
             
           </span>
         </div>
@@ -251,13 +251,11 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../simulation/" class="md-tabs__link">
           
   
   
@@ -297,11 +295,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../intra-gpu-multiplexing/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
           
   
   
@@ -410,8 +410,6 @@
       
   
   
-    
-  
   
   
     
@@ -451,23 +449,22 @@
     
     
       
-        
-        
-      
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
+            <a href="../../simulation/" class="md-nav__link ">
               
   
   
@@ -485,13 +482,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -511,7 +508,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../amali/" class="md-nav__link">
+      <a href="../../simulation/amali/" class="md-nav__link">
         
   
   
@@ -539,7 +536,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../apex/" class="md-nav__link">
+      <a href="../../simulation/apex/" class="md-nav__link">
         
   
   
@@ -567,7 +564,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../astra-sim/" class="md-nav__link">
+      <a href="../../simulation/astra-sim/" class="md-nav__link">
         
   
   
@@ -595,7 +592,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../astra-sim-2/" class="md-nav__link">
+      <a href="../../simulation/astra-sim-2/" class="md-nav__link">
         
   
   
@@ -623,7 +620,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../chakra/" class="md-nav__link">
+      <a href="../../simulation/chakra/" class="md-nav__link">
         
   
   
@@ -651,7 +648,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../frontier/" class="md-nav__link">
+      <a href="../../simulation/frontier/" class="md-nav__link">
         
   
   
@@ -679,7 +676,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../llmcompass/" class="md-nav__link">
+      <a href="../../simulation/llmcompass/" class="md-nav__link">
         
   
   
@@ -707,7 +704,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../linear/" class="md-nav__link">
+      <a href="../../simulation/linear/" class="md-nav__link">
         
   
   
@@ -735,7 +732,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../mystique/" class="md-nav__link">
+      <a href="../../simulation/mystique/" class="md-nav__link">
         
   
   
@@ -763,7 +760,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../neusight/" class="md-nav__link">
+      <a href="../../simulation/neusight/" class="md-nav__link">
         
   
   
@@ -791,7 +788,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../simai/" class="md-nav__link">
+      <a href="../../simulation/simai/" class="md-nav__link">
         
   
   
@@ -819,7 +816,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../vidur/" class="md-nav__link">
+      <a href="../../simulation/vidur/" class="md-nav__link">
         
   
   
@@ -844,37 +841,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    vTrain
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../simulation/vtrain/" class="md-nav__link">
         
   
   
@@ -890,48 +860,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#abstract" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Abstract
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#core-ideas" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Core Ideas
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1324,6 +1252,8 @@
       
   
   
+    
+  
   
   
     
@@ -1347,22 +1277,23 @@
     
     
       
+        
+        
+      
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../intra-gpu-multiplexing/" class="md-nav__link ">
+            <a href="../" class="md-nav__link ">
               
   
   
@@ -1380,13 +1311,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1406,7 +1337,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../intra-gpu-multiplexing/nanoflow/" class="md-nav__link">
+      <a href="../nanoflow/" class="md-nav__link">
         
   
   
@@ -1434,7 +1365,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../intra-gpu-multiplexing/bullet/" class="md-nav__link">
+      <a href="../bullet/" class="md-nav__link">
         
   
   
@@ -1462,7 +1393,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../intra-gpu-multiplexing/nexus/" class="md-nav__link">
+      <a href="../nexus/" class="md-nav__link">
         
   
   
@@ -1490,7 +1421,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../intra-gpu-multiplexing/pd-multiplex/" class="md-nav__link">
+      <a href="../pd-multiplex/" class="md-nav__link">
         
   
   
@@ -1515,10 +1446,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../intra-gpu-multiplexing/duetserve/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DuetServe
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1534,6 +1492,48 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#abstract" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Abstract
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#core-ideas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Core Ideas
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1641,27 +1641,28 @@
   
 
 
-<h1 id="vtrain-a-simulation-framework-for-evaluating-cost-effective-and-compute-optimal-large-language-model-training">vTrain: A Simulation Framework for Evaluating Cost-Effective and Compute-Optimal Large Language Model Training<a class="headerlink" href="#vtrain-a-simulation-framework-for-evaluating-cost-effective-and-compute-optimal-large-language-model-training" title="Permanent link">&para;</a></h1>
+<h1 id="duetserve-harmonizing-prefill-and-decode-for-llm-serving-via-adaptive-gpu-multiplexing">DuetServe: Harmonizing Prefill and Decode for LLM Serving via Adaptive GPU Multiplexing<a class="headerlink" href="#duetserve-harmonizing-prefill-and-decode-for-llm-serving-via-adaptive-gpu-multiplexing" title="Permanent link">&para;</a></h1>
 <div class="paper-meta">
-<p><strong>Authors</strong>: Jehyeon Bang, Yujeong Choi, Myeongwoo Kim<br />
-<strong>Institution</strong>: KAIST<br />
-<strong>Conference</strong>: MICRO 2024<br />
-<strong>Paper Link</strong>: <a href="https://arxiv.org/abs/2312.12391">arXiv:2312.12391</a></p>
+<p><strong>Authors</strong>: Lei Gao, Chaoyi Jiang, Hossein Entezari Zarch, Daniel Wong, Murali Annavaram<br />
+<strong>Institution</strong>: University of Southern California, UC Riverside<br />
+<strong>Conference</strong>: arXiv 2025<br />
+<strong>Paper Link</strong>: <a href="https://arxiv.org/">arXiv</a></p>
 </div>
 <div class="paper-tags">
-<p><span class="paper-tag">LLM Training</span>
-<span class="paper-tag">Cost Optimization</span>
-<span class="paper-tag">Training Simulation</span></p>
+<p><span class="paper-tag">LLM Serving</span>
+<span class="paper-tag">GPU Multiplexing</span>
+<span class="paper-tag">Prefill-Decode Isolation</span></p>
 </div>
 <h2 id="abstract">Abstract<a class="headerlink" href="#abstract" title="Permanent link">&para;</a></h2>
-<p>vTrain is a profiling-driven simulator providing a fast yet accurate software framework to determine efficient and cost-effective LLM training system configurations. It addresses the critical challenge of training large models cost-effectively by exploring the parallelization design space.</p>
+<p>DuetServe 是一个统一的 LLM serving 框架，能够在单个 GPU 内实现 disaggregation 级别的隔离。系统默认运行在 aggregated 模式，当预测到 TBT (Time-Between-Tokens) 可能降级时，动态激活 SM 级别的 GPU 空间复用。</p>
 <p><strong>Key Contributions</strong>:
-- Fast design space exploration (under 200 seconds for full exploration)
-- Identifies competitive training plans within minutes
-- Supports multi-tenant GPU cluster scheduling optimization
-- Determines compute-optimal model architectures given fixed compute budget</p>
+- 提出 attention-aware roofline model 预测迭代延迟，提前检测潜在 TBT 违规
+- 动态 GPU 分区优化器，确定 prefill 和 decode 之间的最优 SM 分配
+- 无中断执行引擎，通过 look-ahead decode scheduling 和异步 kernel dispatch 消除 CPU-GPU 同步开销
+- 相比 SOTA 框架，在保持低 TBT 延迟的同时实现最高 1.3x 的吞吐量提升</p>
 <h2 id="core-ideas">Core Ideas<a class="headerlink" href="#core-ideas" title="Permanent link">&para;</a></h2>
-<p>vTrain addresses limitations of heuristic-based parallel training strategies that leave significant performance on the table, wasting millions of dollars in training costs. Through case studies, it demonstrates effectiveness in evaluating optimal parallelization strategies balancing training time and cost, efficient multi-tenant scheduling, and compute-optimal model architecture selection.</p>
+<p>现有 LLM serving 方法面临两难：aggregated 方式会导致 prefill 和 decode 之间的干扰，降低 TBT；disaggregated 方式虽然改善延迟，但因模型复制和 KV cache 传输而浪费资源。</p>
+<p>DuetServe 的核心思想是通过细粒度的 SM 级分区，在单 GPU 内按需解耦 prefill 和 decode 执行。系统将 GPU SMs 划分为逻辑上独立的"子 GPU"，仅在干扰威胁延迟 SLO 时隔离 prefill 和 decode 工作负载，否则恢复到完全共享执行。</p>
 <hr />
 <p><em>Reading date: 2025</em>
 <em>Note status: Completed</em></p>
