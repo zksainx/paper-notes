@@ -30,9 +30,13 @@ KernelBand formulates kernel optimization as a hierarchical multi-armed bandit (
 ### Problem Formulation
 
 **Kernel Optimization Problem**: Given operation O and hardware H, find implementation k* that minimizes execution time:
-$$k^* = \arg\min_{k \in \mathcal{K}} \mathcal{T}(k, \mathcal{H})$$
+
+$$
+k^* = \arg\min_{k \in \mathcal{K}} \mathcal{T}(k, \mathcal{H})
+$$
 
 **Hierarchical MAB Formulation**:
+
 - At iteration t, agent selects: (i) kernel $k_t \in C_t$, (ii) strategy $s_t \in S$
 - Action: $a_t = (k_t, s_t)$ treated as single arm
 - Reward: $r_t = 1 - \frac{\mathcal{T}(k_{t+1}, \mathcal{H})}{\mathcal{T}(k_t, \mathcal{H})}$ (relative speedup)
@@ -50,7 +54,10 @@ $$k^* = \arg\min_{k \in \mathcal{K}} \mathcal{T}(k, \mathcal{H})$$
 ```
 
 Each strategy s maintains logistic head for compatibility:
-$$\psi(s, \phi(k)) = \sigma(w_s^T \phi(k) + b_s) \in [0,1]$$
+
+$$
+\psi(s, \phi(k)) = \sigma(w_s^T \phi(k) + b_s) \in [0,1]
+$$
 
 **2. Runtime Behavior Clustering**
 
@@ -65,7 +72,10 @@ Partition into K=3 clusters using incremental k-means++, enabling knowledge tran
 **3. Hierarchical UCB Algorithm**
 
 Three-term UCB surrogate:
-$$\text{UCB}_{c(k),s}(t) = \underbrace{\hat{\mu}_{c(k),s}}_{\text{exploitation}} + \underbrace{\sqrt{\frac{2\ln t}{n_{c(k),s}}}}_{\text{exploration}} + \underbrace{\alpha \psi(s, \phi(k))}_{\text{profiling bias}}$$
+
+$$
+\text{UCB}_{c(k),s}(t) = \underbrace{\hat{\mu}_{c(k),s}}_{\text{exploitation}} + \underbrace{\sqrt{\frac{2\ln t}{n_{c(k),s}}}}_{\text{exploration}} + \underbrace{\alpha \psi(s, \phi(k))}_{\text{profiling bias}}
+$$
 
 ### Algorithm Overview
 
@@ -86,7 +96,10 @@ $$\text{UCB}_{c(k),s}(t) = \underbrace{\hat{\mu}_{c(k),s}}_{\text{exploitation}}
 ### Regret Guarantee
 
 Under cluster-similarity assumption:
-$$\mathbb{E}[\text{Regret}(T)] \leq 3|S|\sqrt{8T \ln T} + T\epsilon_{\text{cluster}} + T\alpha\epsilon_{\text{profile}}$$
+
+$$
+\mathbb{E}[\text{Regret}(T)] \leq 3|S|\sqrt{8T \ln T} + T\epsilon_{\text{cluster}} + T\alpha\epsilon_{\text{profile}}
+$$
 
 Scales with number of clusters (3) rather than pool size |Cₜ|.
 
@@ -95,13 +108,16 @@ Scales with number of clusters (3) rather than pool size |Cₜ|.
 **Setup**: RTX 4090 / A100, DeepSeek-V3.2 / GPT-5.1, TritonBench L1+L2 (29 kernels)
 
 **Main Results** (Best-of-iteration, RTX 4090 + DeepSeek-V3.2):
+
 | Method | Iter 0 | Iter 3 | Iter 6 | Iter 9 |
 |--------|--------|--------|--------|--------|
 | GEAK | 0.70x/7% | 1.66x/25% | 2.15x/25% | 2.40x/32% |
 | **KernelBand** | **2.28x/29%** | **3.15x/46%** | **7.54x/46%** | **9.78x/54%** |
+
 *(Format: Speedup/Fast@1)*
 
 **Cross-Platform Results** (Iter 9, Best-of-iteration):
+
 | Platform | GEAK | KernelBand |
 |----------|------|------------|
 | 4090 + DeepSeek | 2.40x/32% | 9.78x/54% |
@@ -113,12 +129,14 @@ Scales with number of clusters (3) rather than pool size |Cₜ|.
 ### Case Study: seeded_dropout Kernel
 
 **Optimization progression**:
+
 1. Baseline: fixed BLOCK_SIZE configuration
 2. First breakthrough: autotuning with adaptive block sizing and warp-level parallelism
 3. Second breakthrough: vectorized loads/stores with tunable vector widths
 4. Refinements: simplified vectorized memory access to reduce instruction overhead
 
 **Key advantages demonstrated**:
+
 - Hierarchical MAB prevented catastrophic regression by maintaining diverse candidates
 - Profiling-guided selection identified memory bandwidth as primary bottleneck
 - Runtime clustering enabled knowledge transfer from similar memory-bound kernels

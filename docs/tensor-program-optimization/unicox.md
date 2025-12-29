@@ -21,6 +21,7 @@
 UniCoX is a unified cost model specifically designed for tensorized program tuning across diverse hardware accelerators. It addresses the lack of cost models for tensorized programs (programs that leverage hardware intrinsics like Tensor Cores, AVX512, NEON) by proposing unified feature representation and transfer prediction strategies.
 
 **Key Contributions**:
+
 - Unified cross-accelerator feature representation for tensorized programs using attention-based AST feature mining
 - Transfer prediction strategy combining lifelong learning (cross-semantic) and transfer learning (cross-performance)
 - TensorizeSetX dataset covering 18 intrinsics across 6 hardware platforms
@@ -41,23 +42,26 @@ UniCoX is a unified cost model specifically designed for tensorized program tuni
 ### Three Design Requirements
 
 **Feature Representation**:
-1. **Req 1**: Extract key software schedule features affecting performance
-2. **Req 2**: Design intrinsic representations aligned with key schedules
-3. **Req 3**: Unified representation across hardware platforms
+
+- **Req 1**: Extract key software schedule features affecting performance
+- **Req 2**: Design intrinsic representations aligned with key schedules
+- **Req 3**: Unified representation across hardware platforms
 
 **Transfer Prediction**:
-4. **Req 4**: Cross-semantic transfer (new intrinsic semantics)
-5. **Req 5**: Cross-performance transfer (microarchitecture upgrades)
-6. **Req 6**: Efficient data sampling strategies
+
+- **Req 4**: Cross-semantic transfer (new intrinsic semantics)
+- **Req 5**: Cross-performance transfer (microarchitecture upgrades)
+- **Req 6**: Efficient data sampling strategies
 
 ### Unified Feature Representation
-
 Uses a behavior template abstracting tensorized programs into three stages:
+
 - **Load**: Read data through multi-level caches
 - **Compute**: Execute tensorized operations via intrinsics
 - **Store**: Write results back to memory
 
 Each behavior represented by three vectors:
+
 - `loopnest`: loop structures (loopid, extent, schedule)
 - `affine`: index expressions
 - `buffer/intrinsic`: data access or intrinsic configuration
@@ -65,6 +69,7 @@ Each behavior represented by three vectors:
 ### Key Schedule Mining via Attention
 
 Applied TLP (Token-Level Performance) to tensorized programs (TDTLP) and analyzed attention matrices. Key schedules identified:
+
 - `Split`, `SamplePerfectTile`: Loop tiling
 - `SampleCategorical`: Vectorization, unroll, parallel binding
 - `CacheWrite`, `ComputeInline`: Behavior modification
@@ -72,11 +77,13 @@ Applied TLP (Token-Level Performance) to tensorized programs (TDTLP) and analyze
 ### Transfer Prediction Strategy
 
 **Cross-Semantic (Lifelong Learning)**:
+
 - Uses EWC (Elastic Weight Consolidation) to prevent catastrophic forgetting
 - Loss function: $L'(\theta) = L(\theta) + \lambda \sum_i b_i(\theta_i - \theta_i^b)^2$
 - Data sampling: Prioritize subgraphs with more intrinsic calls
 
 **Cross-Performance (Transfer Learning)**:
+
 - Pre-train on low-performance implementation, fine-tune on high-performance
 - Data sampling: Prioritize subgraphs with significant ranking shifts (Kendall tau)
 
@@ -91,6 +98,7 @@ Applied TLP (Token-Level Performance) to tensorized programs (TDTLP) and analyze
 **Platforms**: NVIDIA A100/T4 GPU, Intel Xeon 8488C/8369B, ARM Yitian710, FPGA PYNQ
 
 **Key Results**:
+
 - State-of-the-art prediction accuracy (Top-1: 0.93, Top-5: 0.99 on some tasks)
 - Cross-semantic transfer maintains accuracy on old semantics while learning new ones
 - Cross-performance transfer achieves comparable accuracy with 40-50% training data

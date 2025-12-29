@@ -21,6 +21,7 @@
 TritonForge is a profiling-guided framework for automated Triton kernel optimization that integrates kernel analysis, runtime profiling, and iterative code transformation. By incorporating feedback from Nsight Compute profiling results, the system identifies performance bottlenecks, proposes targeted code modifications, and evaluates their impact automatically.
 
 **Key Contributions**:
+
 - LLM-guided kernel generation and optimization with structured profiling feedback
 - Profiling-aware code improvements translating low-level metrics into actionable transformations
 - Automated performance evaluation pipeline reducing reliance on manual profiling expertise
@@ -31,6 +32,7 @@ TritonForge is a profiling-guided framework for automated Triton kernel optimiza
 ### Architecture Overview
 
 TritonForge consists of two main stages:
+
 1. **Test Generator**: LLM agent that understands Triton code semantics and generates performance tests under specific NVTX range labels
 2. **Kernel Optimizer**: LLM agent that reads performance metrics from Nsight Compute and generates optimized Triton code
 
@@ -60,6 +62,7 @@ NVTX markers isolate the Triton kernel region of interest for precise profiling.
 ### Case Study: GEMV Restructuring
 
 **Baseline bottleneck** (identified via profiling):
+
 - Memory throughput: 52.24% of peak
 - Compute throughput: 5.92% (ALUs under-utilized)
 - Occupancy: 37.5%
@@ -75,6 +78,7 @@ acc[n0:n0+Nt] += tl.sum(b_tile * a_tile[None, :], axis=1)
 ```
 
 **Results after optimization**:
+
 - Memory throughput: 90.76%
 - Compute throughput: 15.00%
 - L2 Cache throughput: 71.52%
@@ -85,6 +89,7 @@ acc[n0:n0+Nt] += tl.sum(b_tile * a_tile[None, :], axis=1)
 **Platform**: NVIDIA H100 GPU (96GB), Triton 3.4, Gemini-2.5-Pro
 
 **Overall Results on TritonBench (131 kernels)**:
+
 | Category | Success Rate | Avg. Speedup |
 |----------|-------------|--------------|
 | Q1 (shortest) | 42.3% | 2.25x |
@@ -94,6 +99,7 @@ acc[n0:n0+Nt] += tl.sum(b_tile * a_tile[None, :], axis=1)
 | **Overall** | **42.7%** | **1.76x** |
 
 **Ablation Study** (36 kernels):
+
 | Method | Avg. Speedup | Success Rate |
 |--------|-------------|--------------|
 | TritonForge (full) | 1.51x | 42.3% |

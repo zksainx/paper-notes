@@ -53,11 +53,13 @@ Four core modules:
 ### Benchmarks
 
 **TritonBench-revised**: 184 kernels adapted from TritonBench-G with stricter testing:
+
 - Fixed 37 kernels with AMD GPU errors
 - Added tolerance-based tensor comparison instead of STDOUT string comparison
 - Ensured consistent seed for random tensor generation
 
 **ROCm Triton Benchmark**: 30 real-world kernels from open-source AMD repositories:
+
 - ROCm/triton, ROCm/aiter, ROCm/aotriton, ROCm/vllm, ROCm/pytorch, ROCm/xformers, etc.
 
 ### Evaluation Metrics
@@ -69,12 +71,14 @@ Four core modules:
 ## Experimental Results
 
 **Baseline (Direct LLM Prompting)**:
+
 | Model | Call Acc (0/1-shot) | Exec Acc (0/1-shot) | Speedup |
 |-------|---------------------|---------------------|---------|
 | GPT4.1 | 14.67% / 19.02% | 8.70% / 14.13% | 0.52 / 0.53 |
 | Gemini 2.5 Pro | 20.65% / 21.74% | 14.13% / 16.85% | 1.33 / 0.96 |
 
 **GEAK Results on TritonBench-revised (MI300)**:
+
 | Difficulty | Total | Exec Accuracy | Avg. Speedup |
 |------------|-------|---------------|--------------|
 | Level 1 | 3 | 100.0% | 1.16x |
@@ -90,6 +94,7 @@ Four core modules:
 - 3x+ improvement through iterative refinement
 
 **Module Ablation**:
+
 | Knowledge | 1-shot | Optimizer | Call Acc | Exec Acc | Speedup |
 |-----------|--------|-----------|----------|----------|---------|
 | - | - | - | 14.67% | 8.70% | 0.52 |
@@ -100,11 +105,13 @@ Four core modules:
 ## Case Study: Flip Kernel (2.26x speedup)
 
 **Expert-written code limitations**:
+
 - Double memory access pattern (load → flip in registers → store)
 - High register pressure holding entire block
 - Limited flexibility with `tl.flip()` behavior
 
 **GEAK optimization**:
+
 - Single-pass operation: read from flipped positions, write directly to destination
 - Lower register usage, better cache efficiency
 - Explicit masking for boundary conditions
