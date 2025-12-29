@@ -12,13 +12,13 @@
         <meta name="author" content="zksainx">
       
       
-        <link rel="canonical" href="https://zksainx.github.io/paper-notes/simulation/linear/">
+        <link rel="canonical" href="https://zksainx.github.io/paper-notes/tensor-program-optimization/tritonforge/">
       
       
-        <link rel="prev" href="../llmcompass/">
+        <link rel="prev" href="../anatomy-triton-attention/">
       
       
-        <link rel="next" href="../mystique/">
+        <link rel="next" href="../geak/">
       
       
         
@@ -29,7 +29,7 @@
     
     
       
-        <title>Path Forward Beyond Simulators - Paper Notes</title>
+        <title>TritonForge - Paper Notes</title>
       
     
     
@@ -82,7 +82,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#path-forward-beyond-simulators-fast-and-accurate-gpu-execution-time-prediction-for-dnn-workloads" class="md-skip">
+        <a href="#tritonforge-profiling-guided-framework-for-automated-triton-kernel-optimization" class="md-skip">
           跳转至
         </a>
       
@@ -116,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Path Forward Beyond Simulators
+              TritonForge
             
           </span>
         </div>
@@ -251,13 +251,11 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../simulation/" class="md-tabs__link">
           
   
   
@@ -275,11 +273,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../tensor-program-optimization/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
           
   
   
@@ -410,6 +410,472 @@
       
   
   
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../simulation/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Simulation
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Simulation
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../simulation/amali/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AMALI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../simulation/apex/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    APEX
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../simulation/astra-sim/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Astra-Sim
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../simulation/astra-sim-2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Astra-Sim 2.0
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../simulation/chakra/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chakra
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../simulation/frontier/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Frontier
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../simulation/llmcompass/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LLMCompass
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../simulation/linear/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Path Forward Beyond Simulators
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../simulation/mystique/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mystique
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../simulation/neusight/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NeuSight
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../simulation/simai/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SimAI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../simulation/vidur/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VIDUR
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../simulation/vtrain/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    vTrain
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
     
   
   
@@ -419,6 +885,8 @@
       
         
           
+        
+      
         
       
         
@@ -463,7 +931,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
           <div class="md-nav__link md-nav__container">
@@ -474,7 +942,7 @@
   <span class="md-ellipsis">
     
   
-    Simulation
+    Tensor Program Optimization
   
 
     
@@ -485,18 +953,18 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_2">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             
   
-    Simulation
+    Tensor Program Optimization
   
 
           </label>
@@ -511,14 +979,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../amali/" class="md-nav__link">
+      <a href="../learning-optimize-tensor-programs/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    AMALI
+    Learning to Optimize Tensor Programs
   
 
     
@@ -539,14 +1007,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../apex/" class="md-nav__link">
+      <a href="../ansor/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    APEX
+    Ansor
   
 
     
@@ -567,14 +1035,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../astra-sim/" class="md-nav__link">
+      <a href="../roller/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Astra-Sim
+    Roller
   
 
     
@@ -595,14 +1063,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../astra-sim-2/" class="md-nav__link">
+      <a href="../learned-performance-model-tpu/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Astra-Sim 2.0
+    Learned Performance Model for TPU
   
 
     
@@ -623,14 +1091,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../chakra/" class="md-nav__link">
+      <a href="../metatune/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Chakra
+    MetaTune
   
 
     
@@ -651,14 +1119,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../frontier/" class="md-nav__link">
+      <a href="../unicox/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Frontier
+    UniCoX
   
 
     
@@ -679,14 +1147,126 @@
   
   
     <li class="md-nav__item">
-      <a href="../llmcompass/" class="md-nav__link">
+      <a href="../cuda-L1/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    LLMCompass
+    CUDA-L1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cuda-L2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CUDA-L2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tritonblas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    tritonBLAS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gpu-performance-portability/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GPU Performance Portability
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../anatomy-triton-attention/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Anatomy of Triton Attention Kernel
   
 
     
@@ -723,7 +1303,7 @@
   <span class="md-ellipsis">
     
   
-    Path Forward Beyond Simulators
+    TritonForge
   
 
     
@@ -741,7 +1321,7 @@
   <span class="md-ellipsis">
     
   
-    Path Forward Beyond Simulators
+    TritonForge
   
 
     
@@ -786,6 +1366,78 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Core Ideas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#architecture-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Architecture Overview
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#optimization-pipeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Optimization Pipeline
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#profiling-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Profiling Integration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#case-study-gemv-restructuring" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Case Study: GEMV Restructuring
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#experimental-results" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Experimental Results
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limitations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Limitations
+      
+    </span>
+  </a>
+  
 </li>
       
     </ul>
@@ -804,587 +1456,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../mystique/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Mystique
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../neusight/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    NeuSight
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../simai/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    SimAI
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../vidur/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    VIDUR
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../vtrain/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    vTrain
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-      
-        
-          
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-      
-      
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
-        
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../../tensor-program-optimization/" class="md-nav__link ">
-              
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Tensor Program Optimization
-  
-
-    
-  </span>
-  
-  
-
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Tensor Program Optimization
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../tensor-program-optimization/learning-optimize-tensor-programs/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Learning to Optimize Tensor Programs
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../tensor-program-optimization/ansor/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Ansor
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../tensor-program-optimization/roller/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Roller
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../tensor-program-optimization/learned-performance-model-tpu/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Learned Performance Model for TPU
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../tensor-program-optimization/metatune/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    MetaTune
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../tensor-program-optimization/unicox/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    UniCoX
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../tensor-program-optimization/cuda-L1/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    CUDA-L1
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../tensor-program-optimization/cuda-L2/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    CUDA-L2
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../tensor-program-optimization/tritonblas/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    tritonBLAS
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../tensor-program-optimization/gpu-performance-portability/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    GPU Performance Portability
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../tensor-program-optimization/anatomy-triton-attention/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Anatomy of Triton Attention Kernel
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../tensor-program-optimization/tritonforge/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    TritonForge
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../tensor-program-optimization/geak/" class="md-nav__link">
+      <a href="../geak/" class="md-nav__link">
         
   
   
@@ -1412,7 +1484,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tensor-program-optimization/kernelband/" class="md-nav__link">
+      <a href="../kernelband/" class="md-nav__link">
         
   
   
@@ -1739,6 +1811,78 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Core Ideas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#architecture-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Architecture Overview
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#optimization-pipeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Optimization Pipeline
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#profiling-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Profiling Integration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#case-study-gemv-restructuring" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Case Study: GEMV Restructuring
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#experimental-results" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Experimental Results
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limitations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Limitations
+      
+    </span>
+  </a>
+  
 </li>
       
     </ul>
@@ -1761,29 +1905,119 @@
   
 
 
-<h1 id="path-forward-beyond-simulators-fast-and-accurate-gpu-execution-time-prediction-for-dnn-workloads">Path Forward Beyond Simulators: Fast and Accurate GPU Execution Time Prediction for DNN Workloads<a class="headerlink" href="#path-forward-beyond-simulators-fast-and-accurate-gpu-execution-time-prediction-for-dnn-workloads" title="Permanent link">&para;</a></h1>
+<h1 id="tritonforge-profiling-guided-framework-for-automated-triton-kernel-optimization">TritonForge: Profiling-Guided Framework for Automated Triton Kernel Optimization<a class="headerlink" href="#tritonforge-profiling-guided-framework-for-automated-triton-kernel-optimization" title="Permanent link">&para;</a></h1>
 <div class="paper-meta">
-<p><strong>Authors</strong>: Ying Li, Yifan Sun, Adwait Jog<br />
-<strong>Institution</strong>: Multiple Institutions<br />
-<strong>Conference</strong>: MICRO 2023<br />
-<strong>Paper Link</strong>: <a href="https://dl.acm.org/doi/10.1145/3613424.3614277">ACM DL</a></p>
+<p><strong>Authors</strong>: Haonan Li, Keyu Man, Partha Kanuparthy, Hanning Chen, Wei Sun, Sreen Tallam, Chenguang Zhu, Kevin Zhu, Zhiyun Qian<br />
+<strong>Institution</strong>: UC Riverside, Meta, UC Irvine<br />
+<strong>Conference</strong>: arXiv 2025<br />
+<strong>Paper Link</strong>: <a href="https://arxiv.org/abs/2512.09196">arXiv:2512.09196</a></p>
 </div>
 <div class="paper-tags">
-<p><span class="paper-tag">GPU Performance</span>
-<span class="paper-tag">DNN Prediction</span>
-<span class="paper-tag">Linear Regression</span></p>
+<p><span class="paper-tag">Triton</span>
+<span class="paper-tag">LLM for Code</span>
+<span class="paper-tag">GPU Kernel Optimization</span>
+<span class="paper-tag">Profiling</span></p>
 </div>
 <h2 id="abstract">Abstract<a class="headerlink" href="#abstract" title="Permanent link">&para;</a></h2>
-<p>This paper proposes a fast, linear-regression-based execution time predictor for DNNs as an alternative to slow simulators. It predicts new DNN performance with 7% error and new GPU performance with 15.2% error, offering a practical solution for modeling large-scale systems and DNNs.</p>
+<p>TritonForge is a profiling-guided framework for automated Triton kernel optimization that integrates kernel analysis, runtime profiling, and iterative code transformation. By incorporating feedback from Nsight Compute profiling results, the system identifies performance bottlenecks, proposes targeted code modifications, and evaluates their impact automatically.</p>
 <p><strong>Key Contributions</strong>:
-- Fast linear-regression-based DNN execution time predictor
-- Multiple performance models: End-to-End (E2E), Layer-Wise (LW), Kernel-Wise (KW), and Inter-GPU Kernel-Wise (IGKW)
-- Large-scale dataset with 646 models from HuggingFace, TorchVision
-- Practical alternative to time-consuming simulators</p>
+- LLM-guided kernel generation and optimization with structured profiling feedback
+- Profiling-aware code improvements translating low-level metrics into actionable transformations
+- Automated performance evaluation pipeline reducing reliance on manual profiling expertise
+- Achieves up to 5x performance improvement over baseline, with 42.7% success rate on TritonBench</p>
 <h2 id="core-ideas">Core Ideas<a class="headerlink" href="#core-ideas" title="Permanent link">&para;</a></h2>
-<p>Simulators are becoming increasingly impractical for modeling today's large-scale systems and DNNs due to long simulation times. This work collects execution time data for DNNs, layers, and kernels on various GPUs, then develops lightweight regression models that maintain acceptable accuracy while dramatically reducing prediction time compared to full simulation approaches.</p>
+<h3 id="architecture-overview">Architecture Overview<a class="headerlink" href="#architecture-overview" title="Permanent link">&para;</a></h3>
+<p>TritonForge consists of two main stages:
+1. <strong>Test Generator</strong>: LLM agent that understands Triton code semantics and generates performance tests under specific NVTX range labels
+2. <strong>Kernel Optimizer</strong>: LLM agent that reads performance metrics from Nsight Compute and generates optimized Triton code</p>
+<p>Additional component: <strong>Fault-Aware Remediation Agent</strong> for reviewing and fixing compilation/runtime errors.</p>
+<h3 id="optimization-pipeline">Optimization Pipeline<a class="headerlink" href="#optimization-pipeline" title="Permanent link">&para;</a></h3>
+<p>The kernel optimization loop includes:</p>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Input</th>
+<th>Output</th>
+<th>Role</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Initialization-and-Proposal</td>
+<td>Device capabilities, kernel source, performance report</td>
+<td>Proposal kernel</td>
+<td>Generate candidate refinements (tiling, num_warps, vectorization, memory layout)</td>
+</tr>
+<tr>
+<td>Fault-Aware Remediation</td>
+<td>Kernel, diagnostic logs</td>
+<td>Repaired kernel</td>
+<td>Fix compilation/runtime failures using LLM edits</td>
+</tr>
+<tr>
+<td>Performance-Arbiter</td>
+<td>Profiler report, best-so-far report</td>
+<td>Decision (accept/continue/finish)</td>
+<td>Multi-criteria decision based on speedup, robustness, resource limits</td>
+</tr>
+<tr>
+<td>Targeted-Refinement-Hint</td>
+<td>Previous and new reports</td>
+<td>Refined kernel</td>
+<td>Convert profiler deltas into actionable feedback</td>
+</tr>
+</tbody>
+</table>
+<h3 id="profiling-integration">Profiling Integration<a class="headerlink" href="#profiling-integration" title="Permanent link">&para;</a></h3>
+<p>Uses NVIDIA Nsight Compute to collect hardware-level metrics:
+- Memory throughput and efficiency
+- Compute throughput
+- Kernel occupancy
+- L2 cache throughput</p>
+<p>NVTX markers isolate the Triton kernel region of interest for precise profiling.</p>
+<h3 id="case-study-gemv-restructuring">Case Study: GEMV Restructuring<a class="headerlink" href="#case-study-gemv-restructuring" title="Permanent link">&para;</a></h3>
+<p><strong>Baseline bottleneck</strong> (identified via profiling):
+- Memory throughput: 52.24% of peak
+- Compute throughput: 5.92% (ALUs under-utilized)
+- Occupancy: 37.5%</p>
+<p><strong>TritonForge optimization</strong>: Restructured from broadcast-based expansion to GEMV-style streamed reduction:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># Before: 3D broadcast prior to reduction</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="n">expanded_a</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">tl</span><span class="o">.</span><span class="n">broadcast</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="n">acc</span> <span class="o">+=</span> <span class="n">tl</span><span class="o">.</span><span class="n">trans</span><span class="p">(</span><span class="n">tl</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">expanded_a</span> <span class="o">*</span> <span class="n">b</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">2</span><span class="p">))</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="c1"># After: Tile-wise accumulation</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="n">acc</span><span class="p">[</span><span class="n">n0</span><span class="p">:</span><span class="n">n0</span><span class="o">+</span><span class="n">Nt</span><span class="p">]</span> <span class="o">+=</span> <span class="n">tl</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">b_tile</span> <span class="o">*</span> <span class="n">a_tile</span><span class="p">[</span><span class="kc">None</span><span class="p">,</span> <span class="p">:],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</code></pre></div></p>
+<p><strong>Results after optimization</strong>:
+- Memory throughput: 90.76%
+- Compute throughput: 15.00%
+- L2 Cache throughput: 71.52%
+- <strong>1.74x speedup</strong></p>
+<h2 id="experimental-results">Experimental Results<a class="headerlink" href="#experimental-results" title="Permanent link">&para;</a></h2>
+<p><strong>Platform</strong>: NVIDIA H100 GPU (96GB), Triton 3.4, Gemini-2.5-Pro</p>
+<p><strong>Overall Results on TritonBench (131 kernels)</strong>:
+| Category | Success Rate | Avg. Speedup |
+|----------|-------------|--------------|
+| Q1 (shortest) | 42.3% | 2.25x |
+| Q2 | 40.0% | 1.40x |
+| Q3 | 42.8% | 1.62x |
+| Q4 (longest) | 45.5% | 2.05x |
+| <strong>Overall</strong> | <strong>42.7%</strong> | <strong>1.76x</strong> |</p>
+<p><strong>Ablation Study</strong> (36 kernels):
+| Method | Avg. Speedup | Success Rate |
+|--------|-------------|--------------|
+| TritonForge (full) | 1.51x | 42.3% |
+| LLM E2E (w/o profiling) | 1.33x | 22.8% |
+| LLM One-shot | 2.91x | 11.4% |</p>
+<h2 id="limitations">Limitations<a class="headerlink" href="#limitations" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Iterative optimization may get stuck in semantically-equivalent but performance-neutral variants</li>
+<li>LLM exploration space is shallow once obvious structural fixes are exhausted</li>
+<li>Absence of strong gradient-like feedback from profiling signals limits convergence</li>
+</ul>
 <hr />
-<p><em>Reading date: 2025</em>
+<p><em>Reading date: 2025-12</em>
 <em>Note status: Completed</em></p>
 
 

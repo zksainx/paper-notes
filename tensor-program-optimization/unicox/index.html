@@ -12,13 +12,13 @@
         <meta name="author" content="zksainx">
       
       
-        <link rel="canonical" href="https://zksainx.github.io/paper-notes/simulation/linear/">
+        <link rel="canonical" href="https://zksainx.github.io/paper-notes/tensor-program-optimization/unicox/">
       
       
-        <link rel="prev" href="../llmcompass/">
+        <link rel="prev" href="../metatune/">
       
       
-        <link rel="next" href="../mystique/">
+        <link rel="next" href="../cuda-L1/">
       
       
         
@@ -29,7 +29,7 @@
     
     
       
-        <title>Path Forward Beyond Simulators - Paper Notes</title>
+        <title>UniCoX - Paper Notes</title>
       
     
     
@@ -82,7 +82,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#path-forward-beyond-simulators-fast-and-accurate-gpu-execution-time-prediction-for-dnn-workloads" class="md-skip">
+        <a href="#unicox-a-unified-cost-model-for-tensorized-program-tuning-across-ubiquitous-accelerators" class="md-skip">
           跳转至
         </a>
       
@@ -116,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Path Forward Beyond Simulators
+              UniCoX
             
           </span>
         </div>
@@ -251,13 +251,11 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../simulation/" class="md-tabs__link">
           
   
   
@@ -275,11 +273,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../tensor-program-optimization/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
           
   
   
@@ -410,6 +410,472 @@
       
   
   
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../simulation/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Simulation
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Simulation
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../simulation/amali/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AMALI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../simulation/apex/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    APEX
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../simulation/astra-sim/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Astra-Sim
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../simulation/astra-sim-2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Astra-Sim 2.0
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../simulation/chakra/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chakra
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../simulation/frontier/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Frontier
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../simulation/llmcompass/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LLMCompass
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../simulation/linear/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Path Forward Beyond Simulators
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../simulation/mystique/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mystique
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../simulation/neusight/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NeuSight
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../simulation/simai/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SimAI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../simulation/vidur/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VIDUR
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../simulation/vtrain/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    vTrain
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
     
   
   
@@ -419,6 +885,8 @@
       
         
           
+        
+      
         
       
         
@@ -463,7 +931,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
           <div class="md-nav__link md-nav__container">
@@ -474,7 +942,7 @@
   <span class="md-ellipsis">
     
   
-    Simulation
+    Tensor Program Optimization
   
 
     
@@ -485,18 +953,18 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_2">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             
   
-    Simulation
+    Tensor Program Optimization
   
 
           </label>
@@ -511,14 +979,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../amali/" class="md-nav__link">
+      <a href="../learning-optimize-tensor-programs/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    AMALI
+    Learning to Optimize Tensor Programs
   
 
     
@@ -539,14 +1007,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../apex/" class="md-nav__link">
+      <a href="../ansor/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    APEX
+    Ansor
   
 
     
@@ -567,14 +1035,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../astra-sim/" class="md-nav__link">
+      <a href="../roller/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Astra-Sim
+    Roller
   
 
     
@@ -595,14 +1063,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../astra-sim-2/" class="md-nav__link">
+      <a href="../learned-performance-model-tpu/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Astra-Sim 2.0
+    Learned Performance Model for TPU
   
 
     
@@ -623,70 +1091,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../chakra/" class="md-nav__link">
+      <a href="../metatune/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Chakra
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../frontier/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Frontier
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../llmcompass/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    LLMCompass
+    MetaTune
   
 
     
@@ -723,7 +1135,7 @@
   <span class="md-ellipsis">
     
   
-    Path Forward Beyond Simulators
+    UniCoX
   
 
     
@@ -741,7 +1153,7 @@
   <span class="md-ellipsis">
     
   
-    Path Forward Beyond Simulators
+    UniCoX
   
 
     
@@ -786,6 +1198,100 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Core Ideas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#problem-tensorized-vs-normal-programs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problem: Tensorized vs Normal Programs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#three-design-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Three Design Requirements
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unified-feature-representation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Unified Feature Representation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-schedule-mining-via-attention" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Schedule Mining via Attention
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transfer-prediction-strategy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Transfer Prediction Strategy
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#model-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Model Architecture
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#experimental-results" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Experimental Results
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limitations-future-work" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Limitations &amp; Future Work
+      
+    </span>
+  </a>
+  
 </li>
       
     </ul>
@@ -804,419 +1310,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../mystique/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Mystique
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../neusight/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    NeuSight
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../simai/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    SimAI
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../vidur/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    VIDUR
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../vtrain/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    vTrain
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-      
-        
-          
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-      
-      
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
-        
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../../tensor-program-optimization/" class="md-nav__link ">
-              
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Tensor Program Optimization
-  
-
-    
-  </span>
-  
-  
-
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Tensor Program Optimization
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../tensor-program-optimization/learning-optimize-tensor-programs/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Learning to Optimize Tensor Programs
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../tensor-program-optimization/ansor/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Ansor
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../tensor-program-optimization/roller/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Roller
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../tensor-program-optimization/learned-performance-model-tpu/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Learned Performance Model for TPU
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../tensor-program-optimization/metatune/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    MetaTune
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../tensor-program-optimization/unicox/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    UniCoX
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../tensor-program-optimization/cuda-L1/" class="md-nav__link">
+      <a href="../cuda-L1/" class="md-nav__link">
         
   
   
@@ -1244,7 +1338,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tensor-program-optimization/cuda-L2/" class="md-nav__link">
+      <a href="../cuda-L2/" class="md-nav__link">
         
   
   
@@ -1272,7 +1366,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tensor-program-optimization/tritonblas/" class="md-nav__link">
+      <a href="../tritonblas/" class="md-nav__link">
         
   
   
@@ -1300,7 +1394,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tensor-program-optimization/gpu-performance-portability/" class="md-nav__link">
+      <a href="../gpu-performance-portability/" class="md-nav__link">
         
   
   
@@ -1328,7 +1422,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tensor-program-optimization/anatomy-triton-attention/" class="md-nav__link">
+      <a href="../anatomy-triton-attention/" class="md-nav__link">
         
   
   
@@ -1356,7 +1450,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tensor-program-optimization/tritonforge/" class="md-nav__link">
+      <a href="../tritonforge/" class="md-nav__link">
         
   
   
@@ -1384,7 +1478,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tensor-program-optimization/geak/" class="md-nav__link">
+      <a href="../geak/" class="md-nav__link">
         
   
   
@@ -1412,7 +1506,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tensor-program-optimization/kernelband/" class="md-nav__link">
+      <a href="../kernelband/" class="md-nav__link">
         
   
   
@@ -1739,6 +1833,100 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Core Ideas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#problem-tensorized-vs-normal-programs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problem: Tensorized vs Normal Programs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#three-design-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Three Design Requirements
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unified-feature-representation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Unified Feature Representation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-schedule-mining-via-attention" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Schedule Mining via Attention
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transfer-prediction-strategy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Transfer Prediction Strategy
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#model-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Model Architecture
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#experimental-results" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Experimental Results
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limitations-future-work" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Limitations &amp; Future Work
+      
+    </span>
+  </a>
+  
 </li>
       
     </ul>
@@ -1761,29 +1949,115 @@
   
 
 
-<h1 id="path-forward-beyond-simulators-fast-and-accurate-gpu-execution-time-prediction-for-dnn-workloads">Path Forward Beyond Simulators: Fast and Accurate GPU Execution Time Prediction for DNN Workloads<a class="headerlink" href="#path-forward-beyond-simulators-fast-and-accurate-gpu-execution-time-prediction-for-dnn-workloads" title="Permanent link">&para;</a></h1>
+<h1 id="unicox-a-unified-cost-model-for-tensorized-program-tuning-across-ubiquitous-accelerators">UniCoX: A Unified Cost Model for Tensorized Program Tuning Across Ubiquitous Accelerators<a class="headerlink" href="#unicox-a-unified-cost-model-for-tensorized-program-tuning-across-ubiquitous-accelerators" title="Permanent link">&para;</a></h1>
 <div class="paper-meta">
-<p><strong>Authors</strong>: Ying Li, Yifan Sun, Adwait Jog<br />
-<strong>Institution</strong>: Multiple Institutions<br />
-<strong>Conference</strong>: MICRO 2023<br />
-<strong>Paper Link</strong>: <a href="https://dl.acm.org/doi/10.1145/3613424.3614277">ACM DL</a></p>
+<p><strong>Authors</strong>: Zihan Wang, Lei Gong, Wenqi Lou, Teng Wang, Qianyu Cheng, Xianglan Chen, Chao Wang, Xuehai Zhou<br />
+<strong>Institution</strong>: University of Science and Technology of China, Suzhou Institute for Advanced Research<br />
+<strong>Conference</strong>: IEEE Transactions on Computers, Vol. 75, No. 1, January 2026<br />
+<strong>Paper Link</strong>: <a href="https://doi.org/10.1109/TC.2025.3626148">IEEE TC</a></p>
 </div>
 <div class="paper-tags">
-<p><span class="paper-tag">GPU Performance</span>
-<span class="paper-tag">DNN Prediction</span>
-<span class="paper-tag">Linear Regression</span></p>
+<p><span class="paper-tag">Cost Model</span>
+<span class="paper-tag">Tensorized Programs</span>
+<span class="paper-tag">Transfer Learning</span>
+<span class="paper-tag">Lifelong Learning</span></p>
 </div>
 <h2 id="abstract">Abstract<a class="headerlink" href="#abstract" title="Permanent link">&para;</a></h2>
-<p>This paper proposes a fast, linear-regression-based execution time predictor for DNNs as an alternative to slow simulators. It predicts new DNN performance with 7% error and new GPU performance with 15.2% error, offering a practical solution for modeling large-scale systems and DNNs.</p>
+<p>UniCoX is a unified cost model specifically designed for tensorized program tuning across diverse hardware accelerators. It addresses the lack of cost models for tensorized programs (programs that leverage hardware intrinsics like Tensor Cores, AVX512, NEON) by proposing unified feature representation and transfer prediction strategies.</p>
 <p><strong>Key Contributions</strong>:
-- Fast linear-regression-based DNN execution time predictor
-- Multiple performance models: End-to-End (E2E), Layer-Wise (LW), Kernel-Wise (KW), and Inter-GPU Kernel-Wise (IGKW)
-- Large-scale dataset with 646 models from HuggingFace, TorchVision
-- Practical alternative to time-consuming simulators</p>
+- Unified cross-accelerator feature representation for tensorized programs using attention-based AST feature mining
+- Transfer prediction strategy combining lifelong learning (cross-semantic) and transfer learning (cross-performance)
+- TensorizeSetX dataset covering 18 intrinsics across 6 hardware platforms
+- Achieves 11.3x search time speedup and 1.9x inference speed improvement in TVM MetaSchedule</p>
 <h2 id="core-ideas">Core Ideas<a class="headerlink" href="#core-ideas" title="Permanent link">&para;</a></h2>
-<p>Simulators are becoming increasingly impractical for modeling today's large-scale systems and DNNs due to long simulation times. This work collects execution time data for DNNs, layers, and kernels on various GPUs, then develops lightweight regression models that maintain acceptable accuracy while dramatically reducing prediction time compared to full simulation approaches.</p>
+<h3 id="problem-tensorized-vs-normal-programs">Problem: Tensorized vs Normal Programs<a class="headerlink" href="#problem-tensorized-vs-normal-programs" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>Normal Tensor Program</th>
+<th>Tensorized Program</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Execution</td>
+<td>Arithmetic Operations</td>
+<td>Hardware Intrinsics</td>
+</tr>
+<tr>
+<td>Data Type</td>
+<td>Float32</td>
+<td>Mixed Precision</td>
+</tr>
+<tr>
+<td>Rate of Change</td>
+<td>Gradual</td>
+<td>Rapid Growth</td>
+</tr>
+<tr>
+<td>Diversity</td>
+<td>Platform only</td>
+<td>Intrinsic + Platform</td>
+</tr>
+<tr>
+<td>Behavior</td>
+<td>Freedom</td>
+<td>Relatively Fixed</td>
+</tr>
+</tbody>
+</table>
+<h3 id="three-design-requirements">Three Design Requirements<a class="headerlink" href="#three-design-requirements" title="Permanent link">&para;</a></h3>
+<p><strong>Feature Representation</strong>:
+1. <strong>Req 1</strong>: Extract key software schedule features affecting performance
+2. <strong>Req 2</strong>: Design intrinsic representations aligned with key schedules
+3. <strong>Req 3</strong>: Unified representation across hardware platforms</p>
+<p><strong>Transfer Prediction</strong>:
+4. <strong>Req 4</strong>: Cross-semantic transfer (new intrinsic semantics)
+5. <strong>Req 5</strong>: Cross-performance transfer (microarchitecture upgrades)
+6. <strong>Req 6</strong>: Efficient data sampling strategies</p>
+<h3 id="unified-feature-representation">Unified Feature Representation<a class="headerlink" href="#unified-feature-representation" title="Permanent link">&para;</a></h3>
+<p>Uses a behavior template abstracting tensorized programs into three stages:
+- <strong>Load</strong>: Read data through multi-level caches
+- <strong>Compute</strong>: Execute tensorized operations via intrinsics
+- <strong>Store</strong>: Write results back to memory</p>
+<p>Each behavior represented by three vectors:
+- <code>loopnest</code>: loop structures (loopid, extent, schedule)
+- <code>affine</code>: index expressions
+- <code>buffer/intrinsic</code>: data access or intrinsic configuration</p>
+<h3 id="key-schedule-mining-via-attention">Key Schedule Mining via Attention<a class="headerlink" href="#key-schedule-mining-via-attention" title="Permanent link">&para;</a></h3>
+<p>Applied TLP (Token-Level Performance) to tensorized programs (TDTLP) and analyzed attention matrices. Key schedules identified:
+- <code>Split</code>, <code>SamplePerfectTile</code>: Loop tiling
+- <code>SampleCategorical</code>: Vectorization, unroll, parallel binding
+- <code>CacheWrite</code>, <code>ComputeInline</code>: Behavior modification</p>
+<h3 id="transfer-prediction-strategy">Transfer Prediction Strategy<a class="headerlink" href="#transfer-prediction-strategy" title="Permanent link">&para;</a></h3>
+<p><strong>Cross-Semantic (Lifelong Learning)</strong>:
+- Uses EWC (Elastic Weight Consolidation) to prevent catastrophic forgetting
+- Loss function: <span class="arithmatex">\(L'(\theta) = L(\theta) + \lambda \sum_i b_i(\theta_i - \theta_i^b)^2\)</span>
+- Data sampling: Prioritize subgraphs with more intrinsic calls</p>
+<p><strong>Cross-Performance (Transfer Learning)</strong>:
+- Pre-train on low-performance implementation, fine-tune on high-performance
+- Data sampling: Prioritize subgraphs with significant ranking shifts (Kendall tau)</p>
+<h3 id="model-architecture">Model Architecture<a class="headerlink" href="#model-architecture" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Behavior-aligned encoding with 2n+1 fully connected layers</li>
+<li>Attention layer for learning behavior relationships</li>
+<li>Lambda rank loss for training</li>
+</ul>
+<h2 id="experimental-results">Experimental Results<a class="headerlink" href="#experimental-results" title="Permanent link">&para;</a></h2>
+<p><strong>Platforms</strong>: NVIDIA A100/T4 GPU, Intel Xeon 8488C/8369B, ARM Yitian710, FPGA PYNQ</p>
+<p><strong>Key Results</strong>:
+- State-of-the-art prediction accuracy (Top-1: 0.93, Top-5: 0.99 on some tasks)
+- Cross-semantic transfer maintains accuracy on old semantics while learning new ones
+- Cross-performance transfer achieves comparable accuracy with 40-50% training data
+- Search-based: 11.3x faster tuning time, 1.9x inference speedup vs online model</p>
+<h2 id="limitations-future-work">Limitations &amp; Future Work<a class="headerlink" href="#limitations-future-work" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Current approach focuses on performance estimation; future work aims for direct prediction of optimal intrinsic + schedule combinations</li>
+<li>End-to-end decision making without exhaustive search</li>
+</ul>
 <hr />
-<p><em>Reading date: 2025</em>
+<p><em>Reading date: 2025-12</em>
 <em>Note status: Completed</em></p>
 
 
