@@ -108,11 +108,15 @@ nav:
       - Roller: tensor-program-optimization/roller.md
       - Learned Performance Model for TPU: tensor-program-optimization/learned-performance-model-tpu.md
       - MetaTune: tensor-program-optimization/metatune.md
+      - UniCoX: tensor-program-optimization/unicox.md
       - CUDA-L1: tensor-program-optimization/cuda-L1.md
       - CUDA-L2: tensor-program-optimization/cuda-L2.md
       - tritonBLAS: tensor-program-optimization/tritonblas.md
       - GPU Performance Portability: tensor-program-optimization/gpu-performance-portability.md
       - Anatomy of Triton Attention Kernel: tensor-program-optimization/anatomy-triton-attention.md
+      - TritonForge: tensor-program-optimization/tritonforge.md
+      - GEAK: tensor-program-optimization/geak.md
+      - KernelBand: tensor-program-optimization/kernelband.md
   - Intra-GPU Spatial Multiplexing:
       - intra-gpu-multiplexing/index.md
       - NanoFlow: intra-gpu-multiplexing/nanoflow.md

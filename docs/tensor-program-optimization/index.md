@@ -23,6 +23,13 @@ Papers on automatic optimization of tensor programs through compiler techniques,
 
 - [MetaTune](metatune.md) - Meta-learning based cost model for fast autotuning (2021)
 - [Learned Performance Model for TPU](learned-performance-model-tpu.md) - ML-based TPU performance modeling (Google, 2020)
+- [UniCoX](unicox.md) - Unified cost model for tensorized program tuning across accelerators (IEEE TC, 2026)
+
+### LLM-based Kernel Generation & Optimization
+
+- [TritonForge](tritonforge.md) - Profiling-guided framework for automated Triton kernel optimization (Meta, 2025)
+- [GEAK](geak.md) - Triton kernel AI agent & evaluation benchmarks for AMD GPUs (AMD, 2025)
+- [KernelBand](kernelband.md) - Hierarchical multi-armed bandit for LLM-based kernel optimization (PKU, 2025)
 
 ### GPU Kernel Optimization & Portability
 
