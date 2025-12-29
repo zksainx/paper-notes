@@ -1964,11 +1964,13 @@
 </div>
 <h2 id="abstract">Abstract<a class="headerlink" href="#abstract" title="Permanent link">&para;</a></h2>
 <p>UniCoX is a unified cost model specifically designed for tensorized program tuning across diverse hardware accelerators. It addresses the lack of cost models for tensorized programs (programs that leverage hardware intrinsics like Tensor Cores, AVX512, NEON) by proposing unified feature representation and transfer prediction strategies.</p>
-<p><strong>Key Contributions</strong>:
-- Unified cross-accelerator feature representation for tensorized programs using attention-based AST feature mining
-- Transfer prediction strategy combining lifelong learning (cross-semantic) and transfer learning (cross-performance)
-- TensorizeSetX dataset covering 18 intrinsics across 6 hardware platforms
-- Achieves 11.3x search time speedup and 1.9x inference speed improvement in TVM MetaSchedule</p>
+<p><strong>Key Contributions</strong>:</p>
+<ul>
+<li>Unified cross-accelerator feature representation for tensorized programs using attention-based AST feature mining</li>
+<li>Transfer prediction strategy combining lifelong learning (cross-semantic) and transfer learning (cross-performance)</li>
+<li>TensorizeSetX dataset covering 18 intrinsics across 6 hardware platforms</li>
+<li>Achieves 11.3x search time speedup and 1.9x inference speed improvement in TVM MetaSchedule</li>
+</ul>
 <h2 id="core-ideas">Core Ideas<a class="headerlink" href="#core-ideas" title="Permanent link">&para;</a></h2>
 <h3 id="problem-tensorized-vs-normal-programs">Problem: Tensorized vs Normal Programs<a class="headerlink" href="#problem-tensorized-vs-normal-programs" title="Permanent link">&para;</a></h3>
 <table>
@@ -2008,36 +2010,50 @@
 </tbody>
 </table>
 <h3 id="three-design-requirements">Three Design Requirements<a class="headerlink" href="#three-design-requirements" title="Permanent link">&para;</a></h3>
-<p><strong>Feature Representation</strong>:
-1. <strong>Req 1</strong>: Extract key software schedule features affecting performance
-2. <strong>Req 2</strong>: Design intrinsic representations aligned with key schedules
-3. <strong>Req 3</strong>: Unified representation across hardware platforms</p>
-<p><strong>Transfer Prediction</strong>:
-4. <strong>Req 4</strong>: Cross-semantic transfer (new intrinsic semantics)
-5. <strong>Req 5</strong>: Cross-performance transfer (microarchitecture upgrades)
-6. <strong>Req 6</strong>: Efficient data sampling strategies</p>
+<p><strong>Feature Representation</strong>:</p>
+<ul>
+<li><strong>Req 1</strong>: Extract key software schedule features affecting performance</li>
+<li><strong>Req 2</strong>: Design intrinsic representations aligned with key schedules</li>
+<li><strong>Req 3</strong>: Unified representation across hardware platforms</li>
+</ul>
+<p><strong>Transfer Prediction</strong>:</p>
+<ul>
+<li><strong>Req 4</strong>: Cross-semantic transfer (new intrinsic semantics)</li>
+<li><strong>Req 5</strong>: Cross-performance transfer (microarchitecture upgrades)</li>
+<li><strong>Req 6</strong>: Efficient data sampling strategies</li>
+</ul>
 <h3 id="unified-feature-representation">Unified Feature Representation<a class="headerlink" href="#unified-feature-representation" title="Permanent link">&para;</a></h3>
-<p>Uses a behavior template abstracting tensorized programs into three stages:
-- <strong>Load</strong>: Read data through multi-level caches
-- <strong>Compute</strong>: Execute tensorized operations via intrinsics
-- <strong>Store</strong>: Write results back to memory</p>
-<p>Each behavior represented by three vectors:
-- <code>loopnest</code>: loop structures (loopid, extent, schedule)
-- <code>affine</code>: index expressions
-- <code>buffer/intrinsic</code>: data access or intrinsic configuration</p>
+<p>Uses a behavior template abstracting tensorized programs into three stages:</p>
+<ul>
+<li><strong>Load</strong>: Read data through multi-level caches</li>
+<li><strong>Compute</strong>: Execute tensorized operations via intrinsics</li>
+<li><strong>Store</strong>: Write results back to memory</li>
+</ul>
+<p>Each behavior represented by three vectors:</p>
+<ul>
+<li><code>loopnest</code>: loop structures (loopid, extent, schedule)</li>
+<li><code>affine</code>: index expressions</li>
+<li><code>buffer/intrinsic</code>: data access or intrinsic configuration</li>
+</ul>
 <h3 id="key-schedule-mining-via-attention">Key Schedule Mining via Attention<a class="headerlink" href="#key-schedule-mining-via-attention" title="Permanent link">&para;</a></h3>
-<p>Applied TLP (Token-Level Performance) to tensorized programs (TDTLP) and analyzed attention matrices. Key schedules identified:
-- <code>Split</code>, <code>SamplePerfectTile</code>: Loop tiling
-- <code>SampleCategorical</code>: Vectorization, unroll, parallel binding
-- <code>CacheWrite</code>, <code>ComputeInline</code>: Behavior modification</p>
+<p>Applied TLP (Token-Level Performance) to tensorized programs (TDTLP) and analyzed attention matrices. Key schedules identified:</p>
+<ul>
+<li><code>Split</code>, <code>SamplePerfectTile</code>: Loop tiling</li>
+<li><code>SampleCategorical</code>: Vectorization, unroll, parallel binding</li>
+<li><code>CacheWrite</code>, <code>ComputeInline</code>: Behavior modification</li>
+</ul>
 <h3 id="transfer-prediction-strategy">Transfer Prediction Strategy<a class="headerlink" href="#transfer-prediction-strategy" title="Permanent link">&para;</a></h3>
-<p><strong>Cross-Semantic (Lifelong Learning)</strong>:
-- Uses EWC (Elastic Weight Consolidation) to prevent catastrophic forgetting
-- Loss function: <span class="arithmatex">\(L'(\theta) = L(\theta) + \lambda \sum_i b_i(\theta_i - \theta_i^b)^2\)</span>
-- Data sampling: Prioritize subgraphs with more intrinsic calls</p>
-<p><strong>Cross-Performance (Transfer Learning)</strong>:
-- Pre-train on low-performance implementation, fine-tune on high-performance
-- Data sampling: Prioritize subgraphs with significant ranking shifts (Kendall tau)</p>
+<p><strong>Cross-Semantic (Lifelong Learning)</strong>:</p>
+<ul>
+<li>Uses EWC (Elastic Weight Consolidation) to prevent catastrophic forgetting</li>
+<li>Loss function: <span class="arithmatex">\(L'(\theta) = L(\theta) + \lambda \sum_i b_i(\theta_i - \theta_i^b)^2\)</span></li>
+<li>Data sampling: Prioritize subgraphs with more intrinsic calls</li>
+</ul>
+<p><strong>Cross-Performance (Transfer Learning)</strong>:</p>
+<ul>
+<li>Pre-train on low-performance implementation, fine-tune on high-performance</li>
+<li>Data sampling: Prioritize subgraphs with significant ranking shifts (Kendall tau)</li>
+</ul>
 <h3 id="model-architecture">Model Architecture<a class="headerlink" href="#model-architecture" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Behavior-aligned encoding with 2n+1 fully connected layers</li>
@@ -2046,11 +2062,13 @@
 </ul>
 <h2 id="experimental-results">Experimental Results<a class="headerlink" href="#experimental-results" title="Permanent link">&para;</a></h2>
 <p><strong>Platforms</strong>: NVIDIA A100/T4 GPU, Intel Xeon 8488C/8369B, ARM Yitian710, FPGA PYNQ</p>
-<p><strong>Key Results</strong>:
-- State-of-the-art prediction accuracy (Top-1: 0.93, Top-5: 0.99 on some tasks)
-- Cross-semantic transfer maintains accuracy on old semantics while learning new ones
-- Cross-performance transfer achieves comparable accuracy with 40-50% training data
-- Search-based: 11.3x faster tuning time, 1.9x inference speedup vs online model</p>
+<p><strong>Key Results</strong>:</p>
+<ul>
+<li>State-of-the-art prediction accuracy (Top-1: 0.93, Top-5: 0.99 on some tasks)</li>
+<li>Cross-semantic transfer maintains accuracy on old semantics while learning new ones</li>
+<li>Cross-performance transfer achieves comparable accuracy with 40-50% training data</li>
+<li>Search-based: 11.3x faster tuning time, 1.9x inference speedup vs online model</li>
+</ul>
 <h2 id="limitations-future-work">Limitations &amp; Future Work<a class="headerlink" href="#limitations-future-work" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Current approach focuses on performance estimation; future work aims for direct prediction of optimal intrinsic + schedule combinations</li>
@@ -2125,7 +2143,7 @@
     
       <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
-        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script src="../../javascripts/mathjax.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       

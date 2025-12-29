@@ -1960,13 +1960,17 @@
 - Superior performance on TritonBench with fewer tokens and consistent improvement without saturation</p>
 <h2 id="core-ideas">Core Ideas<a class="headerlink" href="#core-ideas" title="Permanent link">&para;</a></h2>
 <h3 id="problem-formulation">Problem Formulation<a class="headerlink" href="#problem-formulation" title="Permanent link">&para;</a></h3>
-<p><strong>Kernel Optimization Problem</strong>: Given operation O and hardware H, find implementation k* that minimizes execution time:
-$<span class="arithmatex">\(k^* = \arg\min_{k \in \mathcal{K}} \mathcal{T}(k, \mathcal{H})\)</span>$</p>
-<p><strong>Hierarchical MAB Formulation</strong>:
-- At iteration t, agent selects: (i) kernel <span class="arithmatex">\(k_t \in C_t\)</span>, (ii) strategy <span class="arithmatex">\(s_t \in S\)</span>
-- Action: <span class="arithmatex">\(a_t = (k_t, s_t)\)</span> treated as single arm
-- Reward: <span class="arithmatex">\(r_t = 1 - \frac{\mathcal{T}(k_{t+1}, \mathcal{H})}{\mathcal{T}(k_t, \mathcal{H})}\)</span> (relative speedup)
-- Failed kernels receive <span class="arithmatex">\(r_t = -1\)</span></p>
+<p><strong>Kernel Optimization Problem</strong>: Given operation O and hardware H, find implementation k* that minimizes execution time:</p>
+<div class="arithmatex">\[
+k^* = \arg\min_{k \in \mathcal{K}} \mathcal{T}(k, \mathcal{H})
+\]</div>
+<p><strong>Hierarchical MAB Formulation</strong>:</p>
+<ul>
+<li>At iteration t, agent selects: (i) kernel <span class="arithmatex">\(k_t \in C_t\)</span>, (ii) strategy <span class="arithmatex">\(s_t \in S\)</span></li>
+<li>Action: <span class="arithmatex">\(a_t = (k_t, s_t)\)</span> treated as single arm</li>
+<li>Reward: <span class="arithmatex">\(r_t = 1 - \frac{\mathcal{T}(k_{t+1}, \mathcal{H})}{\mathcal{T}(k_t, \mathcal{H})}\)</span> (relative speedup)</li>
+<li>Failed kernels receive <span class="arithmatex">\(r_t = -1\)</span></li>
+</ul>
 <h3 id="three-key-mechanisms">Three Key Mechanisms<a class="headerlink" href="#three-key-mechanisms" title="Permanent link">&para;</a></h3>
 <p><strong>1. Profiling-Guided Strategy Selection</strong></p>
 <p>9-dimensional profiling vector per kernel:
@@ -1974,8 +1978,10 @@ $<span class="arithmatex">\(k^* = \arg\min_{k \in \mathcal{K}} \mathcal{T}(k, \m
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>        reg_per_thread, shared_conflicts, load_store_coalesced,
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>        tensor_core_util]
 </code></pre></div></p>
-<p>Each strategy s maintains logistic head for compatibility:
-$<span class="arithmatex">\(\psi(s, \phi(k)) = \sigma(w_s^T \phi(k) + b_s) \in [0,1]\)</span>$</p>
+<p>Each strategy s maintains logistic head for compatibility:</p>
+<div class="arithmatex">\[
+\psi(s, \phi(k)) = \sigma(w_s^T \phi(k) + b_s) \in [0,1]
+\]</div>
 <p><strong>2. Runtime Behavior Clustering</strong></p>
 <p>6-dimensional runtime feature vector:
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>ρ(k) = [log T(k), log mem_footprint(k), arithmetic_intensity(k),
@@ -1983,8 +1989,10 @@ $<span class="arithmatex">\(\psi(s, \phi(k)) = \sigma(w_s^T \phi(k) + b_s) \in [
 </code></pre></div></p>
 <p>Partition into K=3 clusters using incremental k-means++, enabling knowledge transfer across similar kernels.</p>
 <p><strong>3. Hierarchical UCB Algorithm</strong></p>
-<p>Three-term UCB surrogate:
-$<span class="arithmatex">\(\text{UCB}_{c(k),s}(t) = \underbrace{\hat{\mu}_{c(k),s}}_{\text{exploitation}} + \underbrace{\sqrt{\frac{2\ln t}{n_{c(k),s}}}}_{\text{exploration}} + \underbrace{\alpha \psi(s, \phi(k))}_{\text{profiling bias}}\)</span>$</p>
+<p>Three-term UCB surrogate:</p>
+<div class="arithmatex">\[
+\text{UCB}_{c(k),s}(t) = \underbrace{\hat{\mu}_{c(k),s}}_{\text{exploitation}} + \underbrace{\sqrt{\frac{2\ln t}{n_{c(k),s}}}}_{\text{exploration}} + \underbrace{\alpha \psi(s, \phi(k))}_{\text{profiling bias}}
+\]</div>
 <h3 id="algorithm-overview">Algorithm Overview<a class="headerlink" href="#algorithm-overview" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>1: Initialize candidate pool C₁ = {k₀}
 <a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>2: for t = 1 to T do
@@ -1999,34 +2007,84 @@ $<span class="arithmatex">\(\text{UCB}_{c(k),s}(t) = \underbrace{\hat{\mu}_{c(k)
 <a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>11: return argmin T(k, H) over k ∈ C_T
 </code></pre></div>
 <h3 id="regret-guarantee">Regret Guarantee<a class="headerlink" href="#regret-guarantee" title="Permanent link">&para;</a></h3>
-<p>Under cluster-similarity assumption:
-$<span class="arithmatex">\(\mathbb{E}[\text{Regret}(T)] \leq 3|S|\sqrt{8T \ln T} + T\epsilon_{\text{cluster}} + T\alpha\epsilon_{\text{profile}}\)</span>$</p>
+<p>Under cluster-similarity assumption:</p>
+<div class="arithmatex">\[
+\mathbb{E}[\text{Regret}(T)] \leq 3|S|\sqrt{8T \ln T} + T\epsilon_{\text{cluster}} + T\alpha\epsilon_{\text{profile}}
+\]</div>
 <p>Scales with number of clusters (3) rather than pool size |Cₜ|.</p>
 <h2 id="experimental-results">Experimental Results<a class="headerlink" href="#experimental-results" title="Permanent link">&para;</a></h2>
 <p><strong>Setup</strong>: RTX 4090 / A100, DeepSeek-V3.2 / GPT-5.1, TritonBench L1+L2 (29 kernels)</p>
-<p><strong>Main Results</strong> (Best-of-iteration, RTX 4090 + DeepSeek-V3.2):
-| Method | Iter 0 | Iter 3 | Iter 6 | Iter 9 |
-|--------|--------|--------|--------|--------|
-| GEAK | 0.70x/7% | 1.66x/25% | 2.15x/25% | 2.40x/32% |
-| <strong>KernelBand</strong> | <strong>2.28x/29%</strong> | <strong>3.15x/46%</strong> | <strong>7.54x/46%</strong> | <strong>9.78x/54%</strong> |
-<em>(Format: Speedup/Fast@1)</em></p>
-<p><strong>Cross-Platform Results</strong> (Iter 9, Best-of-iteration):
-| Platform | GEAK | KernelBand |
-|----------|------|------------|
-| 4090 + DeepSeek | 2.40x/32% | 9.78x/54% |
-| 4090 + GPT-5.1 | 1.13x/24% | 12.06x/52% |
-| A100 + DeepSeek | 3.22x/21% | 22.30x/72% |</p>
+<p><strong>Main Results</strong> (Best-of-iteration, RTX 4090 + DeepSeek-V3.2):</p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Iter 0</th>
+<th>Iter 3</th>
+<th>Iter 6</th>
+<th>Iter 9</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GEAK</td>
+<td>0.70x/7%</td>
+<td>1.66x/25%</td>
+<td>2.15x/25%</td>
+<td>2.40x/32%</td>
+</tr>
+<tr>
+<td><strong>KernelBand</strong></td>
+<td><strong>2.28x/29%</strong></td>
+<td><strong>3.15x/46%</strong></td>
+<td><strong>7.54x/46%</strong></td>
+<td><strong>9.78x/54%</strong></td>
+</tr>
+</tbody>
+</table>
+<p><em>(Format: Speedup/Fast@1)</em></p>
+<p><strong>Cross-Platform Results</strong> (Iter 9, Best-of-iteration):</p>
+<table>
+<thead>
+<tr>
+<th>Platform</th>
+<th>GEAK</th>
+<th>KernelBand</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>4090 + DeepSeek</td>
+<td>2.40x/32%</td>
+<td>9.78x/54%</td>
+</tr>
+<tr>
+<td>4090 + GPT-5.1</td>
+<td>1.13x/24%</td>
+<td>12.06x/52%</td>
+</tr>
+<tr>
+<td>A100 + DeepSeek</td>
+<td>3.22x/21%</td>
+<td>22.30x/72%</td>
+</tr>
+</tbody>
+</table>
 <p><strong>Scalability</strong> (20 iterations): KernelBand continues improving while GEAK saturates around iteration 10.</p>
 <h3 id="case-study-seeded_dropout-kernel">Case Study: seeded_dropout Kernel<a class="headerlink" href="#case-study-seeded_dropout-kernel" title="Permanent link">&para;</a></h3>
-<p><strong>Optimization progression</strong>:
-1. Baseline: fixed BLOCK_SIZE configuration
-2. First breakthrough: autotuning with adaptive block sizing and warp-level parallelism
-3. Second breakthrough: vectorized loads/stores with tunable vector widths
-4. Refinements: simplified vectorized memory access to reduce instruction overhead</p>
-<p><strong>Key advantages demonstrated</strong>:
-- Hierarchical MAB prevented catastrophic regression by maintaining diverse candidates
-- Profiling-guided selection identified memory bandwidth as primary bottleneck
-- Runtime clustering enabled knowledge transfer from similar memory-bound kernels</p>
+<p><strong>Optimization progression</strong>:</p>
+<ol>
+<li>Baseline: fixed BLOCK_SIZE configuration</li>
+<li>First breakthrough: autotuning with adaptive block sizing and warp-level parallelism</li>
+<li>Second breakthrough: vectorized loads/stores with tunable vector widths</li>
+<li>Refinements: simplified vectorized memory access to reduce instruction overhead</li>
+</ol>
+<p><strong>Key advantages demonstrated</strong>:</p>
+<ul>
+<li>Hierarchical MAB prevented catastrophic regression by maintaining diverse candidates</li>
+<li>Profiling-guided selection identified memory bandwidth as primary bottleneck</li>
+<li>Runtime clustering enabled knowledge transfer from similar memory-bound kernels</li>
+</ul>
 <h2 id="limitations-future-work">Limitations &amp; Future Work<a class="headerlink" href="#limitations-future-work" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Distinctive challenges: non-stationary rewards, contextual strategy effectiveness, large action space, expensive evaluations</li>
@@ -2101,7 +2159,7 @@ $<span class="arithmatex">\(\mathbb{E}[\text{Regret}(T)] \leq 3|S|\sqrt{8T \ln T
     
       <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
-        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script src="../../javascripts/mathjax.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       

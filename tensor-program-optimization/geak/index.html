@@ -1940,12 +1940,16 @@
 <p><strong>Debugging Trap Prevention</strong>: Limits debugging attempts per code snippet (<code>max_perf_debug_num</code>); if exceeded, discard current approach and generate fresh code</p>
 <p><strong>Parallel Scaling</strong>: Multiple GEAK instances run in parallel with temperature=1 for diversity; combined with sequential scaling yields additional improvements</p>
 <h3 id="benchmarks">Benchmarks<a class="headerlink" href="#benchmarks" title="Permanent link">&para;</a></h3>
-<p><strong>TritonBench-revised</strong>: 184 kernels adapted from TritonBench-G with stricter testing:
-- Fixed 37 kernels with AMD GPU errors
-- Added tolerance-based tensor comparison instead of STDOUT string comparison
-- Ensured consistent seed for random tensor generation</p>
-<p><strong>ROCm Triton Benchmark</strong>: 30 real-world kernels from open-source AMD repositories:
-- ROCm/triton, ROCm/aiter, ROCm/aotriton, ROCm/vllm, ROCm/pytorch, ROCm/xformers, etc.</p>
+<p><strong>TritonBench-revised</strong>: 184 kernels adapted from TritonBench-G with stricter testing:</p>
+<ul>
+<li>Fixed 37 kernels with AMD GPU errors</li>
+<li>Added tolerance-based tensor comparison instead of STDOUT string comparison</li>
+<li>Ensured consistent seed for random tensor generation</li>
+</ul>
+<p><strong>ROCm Triton Benchmark</strong>: 30 real-world kernels from open-source AMD repositories:</p>
+<ul>
+<li>ROCm/triton, ROCm/aiter, ROCm/aotriton, ROCm/vllm, ROCm/pytorch, ROCm/xformers, etc.</li>
+</ul>
 <h3 id="evaluation-metrics">Evaluation Metrics<a class="headerlink" href="#evaluation-metrics" title="Permanent link">&para;</a></h3>
 <ul>
 <li><strong>Call Accuracy</strong>: Fraction that compile and run without errors</li>
@@ -1953,40 +1957,139 @@
 <li><strong>Speedup</strong>: Ratio of reference kernel latency to generated kernel latency</li>
 </ul>
 <h2 id="experimental-results">Experimental Results<a class="headerlink" href="#experimental-results" title="Permanent link">&para;</a></h2>
-<p><strong>Baseline (Direct LLM Prompting)</strong>:
-| Model | Call Acc (0/1-shot) | Exec Acc (0/1-shot) | Speedup |
-|-------|---------------------|---------------------|---------|
-| GPT4.1 | 14.67% / 19.02% | 8.70% / 14.13% | 0.52 / 0.53 |
-| Gemini 2.5 Pro | 20.65% / 21.74% | 14.13% / 16.85% | 1.33 / 0.96 |</p>
-<p><strong>GEAK Results on TritonBench-revised (MI300)</strong>:
-| Difficulty | Total | Exec Accuracy | Avg. Speedup |
-|------------|-------|---------------|--------------|
-| Level 1 | 3 | 100.0% | 1.16x |
-| Level 2 | 27 | 81.48% | 1.69x |
-| Level 3 | 65 | 63.08% | 3.02x |
-| Level 4 | 84 | 40.48% | 2.86x |
-| <strong>Overall</strong> | <strong>184</strong> | <strong>54.89%</strong> | <strong>2.59x</strong> |</p>
+<p><strong>Baseline (Direct LLM Prompting)</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>Model</th>
+<th>Call Acc (0/1-shot)</th>
+<th>Exec Acc (0/1-shot)</th>
+<th>Speedup</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GPT4.1</td>
+<td>14.67% / 19.02%</td>
+<td>8.70% / 14.13%</td>
+<td>0.52 / 0.53</td>
+</tr>
+<tr>
+<td>Gemini 2.5 Pro</td>
+<td>20.65% / 21.74%</td>
+<td>14.13% / 16.85%</td>
+<td>1.33 / 0.96</td>
+</tr>
+</tbody>
+</table>
+<p><strong>GEAK Results on TritonBench-revised (MI300)</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>Difficulty</th>
+<th>Total</th>
+<th>Exec Accuracy</th>
+<th>Avg. Speedup</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Level 1</td>
+<td>3</td>
+<td>100.0%</td>
+<td>1.16x</td>
+</tr>
+<tr>
+<td>Level 2</td>
+<td>27</td>
+<td>81.48%</td>
+<td>1.69x</td>
+</tr>
+<tr>
+<td>Level 3</td>
+<td>65</td>
+<td>63.08%</td>
+<td>3.02x</td>
+</tr>
+<tr>
+<td>Level 4</td>
+<td>84</td>
+<td>40.48%</td>
+<td>2.86x</td>
+</tr>
+<tr>
+<td><strong>Overall</strong></td>
+<td><strong>184</strong></td>
+<td><strong>54.89%</strong></td>
+<td><strong>2.59x</strong></td>
+</tr>
+</tbody>
+</table>
 <p><strong>GEAK on ROCm Benchmark</strong>: 63.33% execution accuracy, 0.92x speedup</p>
 <p><strong>Sequential Scaling Effect</strong> (TritonBench on MI250):
 - iter0: 13.04% exec accuracy → iter19: 44.02% exec accuracy
 - 3x+ improvement through iterative refinement</p>
-<p><strong>Module Ablation</strong>:
-| Knowledge | 1-shot | Optimizer | Call Acc | Exec Acc | Speedup |
-|-----------|--------|-----------|----------|----------|---------|
-| - | - | - | 14.67% | 8.70% | 0.52 |
-| ✓ | - | - | 52.72% | 20.11% | 0.86 |
-| ✓ | ✓ | - | 54.35% | 27.17% | 0.99 |
-| ✓ | ✓ | ✓ | 56.52% | 40.76% | 1.45 |</p>
+<p><strong>Module Ablation</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>Knowledge</th>
+<th>1-shot</th>
+<th>Optimizer</th>
+<th>Call Acc</th>
+<th>Exec Acc</th>
+<th>Speedup</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>14.67%</td>
+<td>8.70%</td>
+<td>0.52</td>
+</tr>
+<tr>
+<td>✓</td>
+<td>-</td>
+<td>-</td>
+<td>52.72%</td>
+<td>20.11%</td>
+<td>0.86</td>
+</tr>
+<tr>
+<td>✓</td>
+<td>✓</td>
+<td>-</td>
+<td>54.35%</td>
+<td>27.17%</td>
+<td>0.99</td>
+</tr>
+<tr>
+<td>✓</td>
+<td>✓</td>
+<td>✓</td>
+<td>56.52%</td>
+<td>40.76%</td>
+<td>1.45</td>
+</tr>
+</tbody>
+</table>
 <h2 id="case-study-flip-kernel-226x-speedup">Case Study: Flip Kernel (2.26x speedup)<a class="headerlink" href="#case-study-flip-kernel-226x-speedup" title="Permanent link">&para;</a></h2>
-<p><strong>Expert-written code limitations</strong>:
-- Double memory access pattern (load → flip in registers → store)
-- High register pressure holding entire block
-- Limited flexibility with <code>tl.flip()</code> behavior</p>
-<p><strong>GEAK optimization</strong>:
-- Single-pass operation: read from flipped positions, write directly to destination
-- Lower register usage, better cache efficiency
-- Explicit masking for boundary conditions
-- Coalesced memory access pattern</p>
+<p><strong>Expert-written code limitations</strong>:</p>
+<ul>
+<li>Double memory access pattern (load → flip in registers → store)</li>
+<li>High register pressure holding entire block</li>
+<li>Limited flexibility with <code>tl.flip()</code> behavior</li>
+</ul>
+<p><strong>GEAK optimization</strong>:</p>
+<ul>
+<li>Single-pass operation: read from flipped positions, write directly to destination</li>
+<li>Lower register usage, better cache efficiency</li>
+<li>Explicit masking for boundary conditions</li>
+<li>Coalesced memory access pattern</li>
+</ul>
 <hr />
 <p><em>Reading date: 2025-12</em>
 <em>Note status: Completed</em></p>
@@ -2056,7 +2159,7 @@
     
       <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
-        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script src="../../javascripts/mathjax.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       

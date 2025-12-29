@@ -1920,16 +1920,20 @@
 </div>
 <h2 id="abstract">Abstract<a class="headerlink" href="#abstract" title="Permanent link">&para;</a></h2>
 <p>TritonForge is a profiling-guided framework for automated Triton kernel optimization that integrates kernel analysis, runtime profiling, and iterative code transformation. By incorporating feedback from Nsight Compute profiling results, the system identifies performance bottlenecks, proposes targeted code modifications, and evaluates their impact automatically.</p>
-<p><strong>Key Contributions</strong>:
-- LLM-guided kernel generation and optimization with structured profiling feedback
-- Profiling-aware code improvements translating low-level metrics into actionable transformations
-- Automated performance evaluation pipeline reducing reliance on manual profiling expertise
-- Achieves up to 5x performance improvement over baseline, with 42.7% success rate on TritonBench</p>
+<p><strong>Key Contributions</strong>:</p>
+<ul>
+<li>LLM-guided kernel generation and optimization with structured profiling feedback</li>
+<li>Profiling-aware code improvements translating low-level metrics into actionable transformations</li>
+<li>Automated performance evaluation pipeline reducing reliance on manual profiling expertise</li>
+<li>Achieves up to 5x performance improvement over baseline, with 42.7% success rate on TritonBench</li>
+</ul>
 <h2 id="core-ideas">Core Ideas<a class="headerlink" href="#core-ideas" title="Permanent link">&para;</a></h2>
 <h3 id="architecture-overview">Architecture Overview<a class="headerlink" href="#architecture-overview" title="Permanent link">&para;</a></h3>
-<p>TritonForge consists of two main stages:
-1. <strong>Test Generator</strong>: LLM agent that understands Triton code semantics and generates performance tests under specific NVTX range labels
-2. <strong>Kernel Optimizer</strong>: LLM agent that reads performance metrics from Nsight Compute and generates optimized Triton code</p>
+<p>TritonForge consists of two main stages:</p>
+<ol>
+<li><strong>Test Generator</strong>: LLM agent that understands Triton code semantics and generates performance tests under specific NVTX range labels</li>
+<li><strong>Kernel Optimizer</strong>: LLM agent that reads performance metrics from Nsight Compute and generates optimized Triton code</li>
+</ol>
 <p>Additional component: <strong>Fault-Aware Remediation Agent</strong> for reviewing and fixing compilation/runtime errors.</p>
 <h3 id="optimization-pipeline">Optimization Pipeline<a class="headerlink" href="#optimization-pipeline" title="Permanent link">&para;</a></h3>
 <p>The kernel optimization loop includes:</p>
@@ -1977,10 +1981,12 @@
 - L2 cache throughput</p>
 <p>NVTX markers isolate the Triton kernel region of interest for precise profiling.</p>
 <h3 id="case-study-gemv-restructuring">Case Study: GEMV Restructuring<a class="headerlink" href="#case-study-gemv-restructuring" title="Permanent link">&para;</a></h3>
-<p><strong>Baseline bottleneck</strong> (identified via profiling):
-- Memory throughput: 52.24% of peak
-- Compute throughput: 5.92% (ALUs under-utilized)
-- Occupancy: 37.5%</p>
+<p><strong>Baseline bottleneck</strong> (identified via profiling):</p>
+<ul>
+<li>Memory throughput: 52.24% of peak</li>
+<li>Compute throughput: 5.92% (ALUs under-utilized)</li>
+<li>Occupancy: 37.5%</li>
+</ul>
 <p><strong>TritonForge optimization</strong>: Restructured from broadcast-based expansion to GEMV-style streamed reduction:
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># Before: 3D broadcast prior to reduction</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="n">expanded_a</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">tl</span><span class="o">.</span><span class="n">broadcast</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
@@ -1989,27 +1995,79 @@
 <a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="c1"># After: Tile-wise accumulation</span>
 <a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="n">acc</span><span class="p">[</span><span class="n">n0</span><span class="p">:</span><span class="n">n0</span><span class="o">+</span><span class="n">Nt</span><span class="p">]</span> <span class="o">+=</span> <span class="n">tl</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">b_tile</span> <span class="o">*</span> <span class="n">a_tile</span><span class="p">[</span><span class="kc">None</span><span class="p">,</span> <span class="p">:],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 </code></pre></div></p>
-<p><strong>Results after optimization</strong>:
-- Memory throughput: 90.76%
-- Compute throughput: 15.00%
-- L2 Cache throughput: 71.52%
-- <strong>1.74x speedup</strong></p>
+<p><strong>Results after optimization</strong>:</p>
+<ul>
+<li>Memory throughput: 90.76%</li>
+<li>Compute throughput: 15.00%</li>
+<li>L2 Cache throughput: 71.52%</li>
+<li><strong>1.74x speedup</strong></li>
+</ul>
 <h2 id="experimental-results">Experimental Results<a class="headerlink" href="#experimental-results" title="Permanent link">&para;</a></h2>
 <p><strong>Platform</strong>: NVIDIA H100 GPU (96GB), Triton 3.4, Gemini-2.5-Pro</p>
-<p><strong>Overall Results on TritonBench (131 kernels)</strong>:
-| Category | Success Rate | Avg. Speedup |
-|----------|-------------|--------------|
-| Q1 (shortest) | 42.3% | 2.25x |
-| Q2 | 40.0% | 1.40x |
-| Q3 | 42.8% | 1.62x |
-| Q4 (longest) | 45.5% | 2.05x |
-| <strong>Overall</strong> | <strong>42.7%</strong> | <strong>1.76x</strong> |</p>
-<p><strong>Ablation Study</strong> (36 kernels):
-| Method | Avg. Speedup | Success Rate |
-|--------|-------------|--------------|
-| TritonForge (full) | 1.51x | 42.3% |
-| LLM E2E (w/o profiling) | 1.33x | 22.8% |
-| LLM One-shot | 2.91x | 11.4% |</p>
+<p><strong>Overall Results on TritonBench (131 kernels)</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Success Rate</th>
+<th>Avg. Speedup</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Q1 (shortest)</td>
+<td>42.3%</td>
+<td>2.25x</td>
+</tr>
+<tr>
+<td>Q2</td>
+<td>40.0%</td>
+<td>1.40x</td>
+</tr>
+<tr>
+<td>Q3</td>
+<td>42.8%</td>
+<td>1.62x</td>
+</tr>
+<tr>
+<td>Q4 (longest)</td>
+<td>45.5%</td>
+<td>2.05x</td>
+</tr>
+<tr>
+<td><strong>Overall</strong></td>
+<td><strong>42.7%</strong></td>
+<td><strong>1.76x</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Ablation Study</strong> (36 kernels):</p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Avg. Speedup</th>
+<th>Success Rate</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TritonForge (full)</td>
+<td>1.51x</td>
+<td>42.3%</td>
+</tr>
+<tr>
+<td>LLM E2E (w/o profiling)</td>
+<td>1.33x</td>
+<td>22.8%</td>
+</tr>
+<tr>
+<td>LLM One-shot</td>
+<td>2.91x</td>
+<td>11.4%</td>
+</tr>
+</tbody>
+</table>
 <h2 id="limitations">Limitations<a class="headerlink" href="#limitations" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Iterative optimization may get stuck in semantically-equivalent but performance-neutral variants</li>
@@ -2085,7 +2143,7 @@
     
       <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
-        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script src="../../javascripts/mathjax.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       

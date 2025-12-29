@@ -1284,6 +1284,283 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#design-goals" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Design Goals
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#methodology" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Methodology
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Methodology">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-hierarchical-tiling-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Hierarchical Tiling Structure
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-quantifying-parallelism-spatial-loop-unroll" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Quantifying Parallelism (Spatial Loop Unroll)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-quantifying-locality" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Quantifying Locality
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-tradeoffs-between-parallelism-and-locality" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Tradeoffs between Parallelism and Locality
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-formulas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Formulas
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Key Formulas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#algorithm-3-compute-latency-of-shared-memory-tile" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Algorithm 3: Compute Latency of Shared Memory Tile
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#algorithm-4-compute-active-cus-in-last-timestep" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Algorithm 4: Compute Active CUs in Last Timestep
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#algorithm-5-estimate-cache-hit-rate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Algorithm 5: Estimate Cache Hit Rate
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#algorithm-7-memory-latency-of-loop-iteration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Algorithm 7: Memory Latency of Loop Iteration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#algorithm-8-output-tile-latency" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Algorithm 8: Output Tile Latency
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#algorithm-9-total-gemm-latency" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Algorithm 9: Total GEMM Latency
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#performance-results" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Performance Results
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Performance Results">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#selection-efficiency" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Selection Efficiency
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#selection-time-comparison" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Selection Time Comparison
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vs-pytorch" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        vs PyTorch
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limitations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Limitations
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Limitations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#model-limitations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Model Limitations
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#implementation-limitations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Implementation Limitations
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#autotuning-limitations-addressed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Autotuning Limitations Addressed
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#future-work" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Future Work
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#related-work" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Related Work
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1741,6 +2018,283 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#design-goals" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Design Goals
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#methodology" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Methodology
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Methodology">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-hierarchical-tiling-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Hierarchical Tiling Structure
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-quantifying-parallelism-spatial-loop-unroll" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Quantifying Parallelism (Spatial Loop Unroll)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-quantifying-locality" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Quantifying Locality
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-tradeoffs-between-parallelism-and-locality" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Tradeoffs between Parallelism and Locality
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-formulas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Formulas
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Key Formulas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#algorithm-3-compute-latency-of-shared-memory-tile" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Algorithm 3: Compute Latency of Shared Memory Tile
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#algorithm-4-compute-active-cus-in-last-timestep" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Algorithm 4: Compute Active CUs in Last Timestep
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#algorithm-5-estimate-cache-hit-rate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Algorithm 5: Estimate Cache Hit Rate
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#algorithm-7-memory-latency-of-loop-iteration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Algorithm 7: Memory Latency of Loop Iteration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#algorithm-8-output-tile-latency" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Algorithm 8: Output Tile Latency
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#algorithm-9-total-gemm-latency" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Algorithm 9: Total GEMM Latency
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#performance-results" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Performance Results
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Performance Results">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#selection-efficiency" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Selection Efficiency
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#selection-time-comparison" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Selection Time Comparison
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vs-pytorch" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        vs PyTorch
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limitations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Limitations
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Limitations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#model-limitations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Model Limitations
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#implementation-limitations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Implementation Limitations
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#autotuning-limitations-addressed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Autotuning Limitations Addressed
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#future-work" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Future Work
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#related-work" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Related Work
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1763,26 +2317,270 @@
 
 <h1 id="tritonblas-triton-based-analytical-approach-for-gemm-kernel-parameter-selection">tritonBLAS: Triton-based Analytical Approach for GEMM Kernel Parameter Selection<a class="headerlink" href="#tritonblas-triton-based-analytical-approach-for-gemm-kernel-parameter-selection" title="Permanent link">&para;</a></h1>
 <div class="paper-meta">
-<p><strong>Authors</strong>: Ryan Swann, Muhammad Osama, Xiaohu Guo<br />
-<strong>Institution</strong>: AMD<br />
-<strong>Conference</strong>: arXiv 2025<br />
-<strong>Paper Link</strong>: <a href="https://arxiv.org/abs/2512.04226">arXiv:2512.04226</a><br />
-<strong>GitHub</strong>: <a href="https://github.com/ROCm/tritonBLAS">ROCm/tritonBLAS</a>  </p>
+<p><strong>Authors</strong>: Ryan Swann, Muhammad Osama, Xiaohu Guo, Bryant Nelson, Lixun Zhang, Alex Brown, Yen Ong, Ali Yazdani, Sean Siddens, Ganesh Dasika, Alex Underwood
+<strong>Institution</strong>: AMD
+<strong>Conference</strong>: arXiv 2025
+<strong>Paper Link</strong>: <a href="https://arxiv.org/abs/2512.04226">arXiv:2512.04226</a>
+<strong>GitHub</strong>: <a href="https://github.com/ROCm/tritonBLAS">ROCm/tritonBLAS</a></p>
 </div>
 <div class="paper-tags">
 <p><span class="paper-tag">GEMM Optimization</span>
 <span class="paper-tag">Triton Compiler</span>
-<span class="paper-tag">Analytical Model</span></p>
+<span class="paper-tag">Analytical Model</span>
+<span class="paper-tag">Zero Autotuning</span></p>
 </div>
 <h2 id="abstract">Abstract<a class="headerlink" href="#abstract" title="Permanent link">&para;</a></h2>
 <p>tritonBLAS presents a fast and deterministic analytical model that uses architectural parameters like cache hierarchy, and relative code and data placement to generate performant GPU GEMM kernels. It explicitly models the relationship between architectural topology, matrix shapes, and algorithmic blocking behavior to predict near-optimal configurations without runtime autotuning. The system achieves over 95% of autotuning performance while reducing autotuning time to zero.</p>
-<p><strong>Key Contributions</strong>:
-- Analytical model for GEMM kernel parameter selection without autotuning
-- Architecture-aware performance modeling using cache hierarchy and data locality
-- 94.7% of exhaustive search efficiency with zero configuration overhead
-- Over 95% performance compared to autotuning-based solutions</p>
+<p><strong>Key Contributions</strong>:</p>
+<ul>
+<li>Analytical model for GEMM kernel parameter selection without autotuning</li>
+<li>Architecture-aware performance modeling using cache hierarchy and data locality</li>
+<li>94.7% of exhaustive search efficiency with zero configuration overhead</li>
+<li>Over 95% performance compared to autotuning-based solutions</li>
+<li>Architecture portability with lightweight calibration (only need to update bandwidth/latency parameters)</li>
+</ul>
 <h2 id="core-ideas">Core Ideas<a class="headerlink" href="#core-ideas" title="Permanent link">&para;</a></h2>
 <p>tritonBLAS eliminates the need for expensive runtime autotuning by using an analytical approach to predict optimal GEMM kernel configurations. The model explicitly captures the interplay between GPU architecture (cache hierarchy, SM count), matrix shapes, tiling hierarchies, and data locality patterns. By modeling these relationships analytically, tritonBLAS can deterministically select near-optimal kernel parameters for any given matrix multiplication workload on AMD Instinct GPUs, achieving comparable performance to exhaustive autotuning search while drastically reducing configuration time.</p>
+<h2 id="design-goals">Design Goals<a class="headerlink" href="#design-goals" title="Permanent link">&para;</a></h2>
+<ol>
+<li><strong>Achieve Near-Optimal Performance</strong>: Select GEMM parameters for near-optimal performance across wide range of matrix shapes</li>
+<li><strong>No-Tuning Required</strong>: General-purpose model applicable without exhaustive autotuning</li>
+<li><strong>Lightweight and Fast</strong>: Runtime model guidance without impacting performance</li>
+<li><strong>Deterministic</strong>: Same results for same inputs, ensuring reproducibility</li>
+<li><strong>Architecture-Portable</strong>: Agnostic to GPU micro-architecture, minimal adjustments needed</li>
+</ol>
+<h2 id="methodology">Methodology<a class="headerlink" href="#methodology" title="Permanent link">&para;</a></h2>
+<h3 id="1-hierarchical-tiling-structure">1. Hierarchical Tiling Structure<a class="headerlink" href="#1-hierarchical-tiling-structure" title="Permanent link">&para;</a></h3>
+<p>The model captures tiling structures arranged in a hierarchy from instruction-level to system-level:</p>
+<table>
+<thead>
+<tr>
+<th>Memory Tiling Scope</th>
+<th>Compute Scope</th>
+<th>Physical Scope</th>
+<th>Logical</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Instruction</td>
+<td>Matrix Core</td>
+<td>Matrix Core</td>
+<td>Instruction</td>
+</tr>
+<tr>
+<td>Register</td>
+<td>SIMD</td>
+<td>SIMD</td>
+<td>Wave</td>
+</tr>
+<tr>
+<td>Shared Memory</td>
+<td>Compute Unit</td>
+<td>Compute Unit</td>
+<td>Workgroup</td>
+</tr>
+<tr>
+<td>L2</td>
+<td>Group of CU</td>
+<td>XCD</td>
+<td>None</td>
+</tr>
+<tr>
+<td>LLC</td>
+<td>All CUs</td>
+<td>Device</td>
+<td>None</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Five Tiling Levels</strong>:</p>
+<ol>
+<li><strong>Instruction Level Tile</strong>: Tile size consumed by matrix instruction (wmma, mfma) in each SIMD</li>
+<li><strong>Warp/Wavefront (Register) Level Tile</strong>: Set of instruction tiles processed by a SIMD over time</li>
+<li><strong>Workgroup/Thread block (Shared Memory) Level Tile</strong>: Tile stored in software managed memory between SIMDs</li>
+<li><strong>Cache Tile</strong>: Hardware managed memories with shared memory tiles in their scope</li>
+<li><strong>Global Problem</strong>: Total problem unrolled over space (CUs) and time</li>
+</ol>
+<h3 id="2-quantifying-parallelism-spatial-loop-unroll">2. Quantifying Parallelism (Spatial Loop Unroll)<a class="headerlink" href="#2-quantifying-parallelism-spatial-loop-unroll" title="Permanent link">&para;</a></h3>
+<p>Three levels of parallelism are considered:</p>
+<ul>
+<li><strong>Matrix/Tensor Core-level</strong>: Defined by GPU architects as latency of matrix instruction</li>
+<li><strong>Within Compute Unit</strong>: Parallelized over SIMDs belonging to a CU</li>
+<li><strong>Across Compute Units (Occupancy)</strong>: Utilization of all CUs in the system</li>
+</ul>
+<p><strong>Key Insight</strong>: Only the final timestep has "under-occupancy" (tail occupancy / wave quantization problem). Full occupancy can be assumed for all but the last timestep.</p>
+<h3 id="3-quantifying-locality">3. Quantifying Locality<a class="headerlink" href="#3-quantifying-locality" title="Permanent link">&para;</a></h3>
+<p>Two types of data locality:</p>
+<ul>
+<li><strong>Software Managed</strong>: Programmer-controlled memory (shared memory) with explicit data movement</li>
+<li><strong>Hardware Managed</strong>: Caches with transparent data placement</li>
+</ul>
+<p><strong>Reuse Analysis</strong>: In workgroup tile, the <span class="arithmatex">\(M \times K\)</span> tile is reused <span class="arithmatex">\(N\)</span> times and the <span class="arithmatex">\(N \times K\)</span> tile is reused <span class="arithmatex">\(M\)</span> times.</p>
+<h3 id="4-tradeoffs-between-parallelism-and-locality">4. Tradeoffs between Parallelism and Locality<a class="headerlink" href="#4-tradeoffs-between-parallelism-and-locality" title="Permanent link">&para;</a></h3>
+<p>The model identifies competing bottlenecks as rooflines:</p>
+<ul>
+<li><strong>Load/Store Issue Rate Bound</strong>: Not enough load/store units occupied<ul>
+<li><em>Solution</em>: Increase load/store unit occupancy</li>
+</ul>
+</li>
+<li><strong>Software Managed Memory Bandwidth Bound</strong>: Bound by loads from shared memory<ul>
+<li><em>Solution</em>: Increase register tile size for better reuse</li>
+</ul>
+</li>
+<li><strong>Cache Bandwidth Bound</strong>: Limited by hardware cache bandwidth<ul>
+<li><em>Solution</em>: Increase data reuse in software managed memory</li>
+</ul>
+</li>
+<li><strong>Under-Occupied Compute Bound</strong>: High utilization but low occupancy<ul>
+<li><em>Solution</em>: Unroll K-loop or change tile size</li>
+</ul>
+</li>
+<li><strong>Max Parallelism Compute Bound</strong>: All CUs occupied with high matrix instruction utilization (optimal state)</li>
+</ul>
+<h2 id="key-formulas">Key Formulas<a class="headerlink" href="#key-formulas" title="Permanent link">&para;</a></h2>
+<h3 id="algorithm-3-compute-latency-of-shared-memory-tile">Algorithm 3: Compute Latency of Shared Memory Tile<a class="headerlink" href="#algorithm-3-compute-latency-of-shared-memory-tile" title="Permanent link">&para;</a></h3>
+<div class="arithmatex">\[N_{MI,M} = \lceil \frac{MT_M}{MI_M} \rceil, \quad N_{MI,N} = \lceil \frac{MT_N}{MI_N} \rceil, \quad N_{MI,K} = \lceil \frac{MT_K}{MI_K} \rceil\]</div>
+<div class="arithmatex">\[N_{MI} = N_{MI,M} \times N_{MI,N} \times N_{MI,K}\]</div>
+<div class="arithmatex">\[L_{MT} = L_{MI} \times N_{MI}\]</div>
+<p>Where:
+- <span class="arithmatex">\(MI_M, MI_N, MI_K\)</span>: Dimensions of Matrix/Tensor Instruction
+- <span class="arithmatex">\(MT_M, MT_N, MT_K\)</span>: Dimensions of Shared Memory Tile
+- <span class="arithmatex">\(L_{MI}\)</span>: Latency of a matrix instruction
+- <span class="arithmatex">\(L_{MT}\)</span>: Compute latency per Shared Memory Tile</p>
+<h3 id="algorithm-4-compute-active-cus-in-last-timestep">Algorithm 4: Compute Active CUs in Last Timestep<a class="headerlink" href="#algorithm-4-compute-active-cus-in-last-timestep" title="Permanent link">&para;</a></h3>
+<div class="arithmatex">\[n_{MT,M} = \lceil \frac{M}{MT_M} \rceil, \quad n_{MT,N} = \lceil \frac{N}{MT_N} \rceil\]</div>
+<div class="arithmatex">\[T_{out} = n_{MT,M} \times n_{MT,N}\]</div>
+<div class="arithmatex">\[\omega = \lceil \frac{T_{out}}{N_{CU}} \rceil\]</div>
+<div class="arithmatex">\[active\_cu = T_{out} \mod N_{CU}\]</div>
+<p>Where <span class="arithmatex">\(\omega\)</span> is the number of waves and <span class="arithmatex">\(active\_cu\)</span> is the number of active CUs in the last wave.</p>
+<h3 id="algorithm-5-estimate-cache-hit-rate">Algorithm 5: Estimate Cache Hit Rate<a class="headerlink" href="#algorithm-5-estimate-cache-hit-rate" title="Permanent link">&para;</a></h3>
+<div class="arithmatex">\[U = (m_t \cdot MT + n_t \cdot NT) \cdot KT \quad \text{(Uncached reads)}\]</div>
+<div class="arithmatex">\[R = (m_t \cdot n_t) \cdot (MT + NT) \cdot KT \quad \text{(Total reads)}\]</div>
+<div class="arithmatex">\[h = 1 - \frac{U}{R} \quad \text{(Hit rate)}\]</div>
+<p>Where <span class="arithmatex">\(m_t, n_t\)</span> are cache-tile dimensions.</p>
+<h3 id="algorithm-7-memory-latency-of-loop-iteration">Algorithm 7: Memory Latency of Loop Iteration<a class="headerlink" href="#algorithm-7-memory-latency-of-loop-iteration" title="Permanent link">&para;</a></h3>
+<div class="arithmatex">\[L_{CU\_lat} = \frac{Ld_{CU}}{R_{L1}}\]</div>
+<div class="arithmatex">\[T = Ld_{CU} \times C \quad \text{(Total loads across active CUs)}\]</div>
+<div class="arithmatex">\[L_1 = \frac{T}{R_1}, \quad T_2 = (1-H_1) \cdot T, \quad L_2 = \frac{T_2}{R_2}\]</div>
+<div class="arithmatex">\[T_M = (1-H_2) \cdot T_2, \quad L_{MEM} = \frac{T_M}{R_{MEM}} + L_{lat}\]</div>
+<div class="arithmatex">\[L_{mem} = \max(L_{CU\_lat}, L_1, L_2, L_{MEM})\]</div>
+<p>Where <span class="arithmatex">\(H_1, H_2\)</span> are hit rates, <span class="arithmatex">\(R_1, R_2, R_{MEM}\)</span> are bandwidths.</p>
+<h3 id="algorithm-8-output-tile-latency">Algorithm 8: Output Tile Latency<a class="headerlink" href="#algorithm-8-output-tile-latency" title="Permanent link">&para;</a></h3>
+<div class="arithmatex">\[L_{prologue} = L_{mem}\]</div>
+<div class="arithmatex">\[L_{epilogue} = \frac{a \cdot m_t \cdot n_t}{R_{mem}}\]</div>
+<div class="arithmatex">\[L_{loopiter} = \max(L_{compute}, L_{mem})\]</div>
+<div class="arithmatex">\[I = \lceil K/k_t \rceil - 1\]</div>
+<div class="arithmatex">\[L_{tile} = L_{prologue} + L_{epilogue} + (L_{loopiter} \times I)\]</div>
+<h3 id="algorithm-9-total-gemm-latency">Algorithm 9: Total GEMM Latency<a class="headerlink" href="#algorithm-9-total-gemm-latency" title="Permanent link">&para;</a></h3>
+<div class="arithmatex">\[n_m = \lceil M/m_t \rceil, \quad n_n = \lceil N/n_t \rceil\]</div>
+<div class="arithmatex">\[N_{waves} = \lceil \frac{n_m \times n_n}{N_{CU}} \rceil\]</div>
+<div class="arithmatex">\[L_{total} = N_{waves} \times L_{tile}\]</div>
+<h2 id="performance-results">Performance Results<a class="headerlink" href="#performance-results" title="Permanent link">&para;</a></h2>
+<h3 id="selection-efficiency">Selection Efficiency<a class="headerlink" href="#selection-efficiency" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>94.7%</strong> selection efficiency relative to exhaustive search over 150,000 random problem sizes</li>
+<li>Most data points clustered near optimal, with more variation at lower arithmetic intensities (latency-bound problems)</li>
+</ul>
+<h3 id="selection-time-comparison">Selection Time Comparison<a class="headerlink" href="#selection-time-comparison" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Problem Size</th>
+<th>Triton Autotuning (s)</th>
+<th>tritonBLAS (s)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>512 × 512 × 512</td>
+<td>11.965</td>
+<td>0.000070</td>
+</tr>
+<tr>
+<td>1024 × 1024 × 1024</td>
+<td>11.928</td>
+<td>0.000057</td>
+</tr>
+<tr>
+<td>4096 × 4096 × 4096</td>
+<td>13.537</td>
+<td>0.000055</td>
+</tr>
+<tr>
+<td>16384 × 16384 × 16384</td>
+<td>1383.594</td>
+<td>0.000054</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>5-6 orders of magnitude faster</strong> than autotuning (50-80 μs vs 10-50 seconds)</li>
+<li>tritonBLAS complexity: <span class="arithmatex">\(O(T)\)</span> vs Autotuning: <span class="arithmatex">\(O(T \cdot M \cdot N \cdot K)\)</span></li>
+</ul>
+<h3 id="vs-pytorch">vs PyTorch<a class="headerlink" href="#vs-pytorch" title="Permanent link">&para;</a></h3>
+<ul>
+<li>On average <strong>3% better</strong> than PyTorch's matrix multiplication on MI300X</li>
+<li>On Llama3 matrix sizes: maximum 1.10× speedup, outperforming PyTorch in 10 cases</li>
+<li>Average 13.9% slower on Llama3 workloads (still competitive)</li>
+</ul>
+<h2 id="limitations">Limitations<a class="headerlink" href="#limitations" title="Permanent link">&para;</a></h2>
+<h3 id="model-limitations">Model Limitations<a class="headerlink" href="#model-limitations" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p><strong>Not a Comprehensive Latency Predictor</strong>: Only captures latency "trends" for comparative evaluation, not absolute latency prediction</p>
+</li>
+<li>
+<p><strong>Single-GPU Only</strong>: Focuses on kernel implementations within a single GPU, not intended for distributed/multi-GPU environments</p>
+</li>
+<li>
+<p><strong>GEMM Only</strong>: Not intended for other GEMM-like algorithms such as attention mechanisms</p>
+</li>
+<li>
+<p><strong>Simplified Cache Model</strong>:</p>
+</li>
+<li>Does not model set associativity or replacement behavior</li>
+<li>Only compares tile-level working-set to effective cache capacity</li>
+<li>Limited influence on large, regular GEMM access patterns</li>
+</ol>
+<h3 id="implementation-limitations">Implementation Limitations<a class="headerlink" href="#implementation-limitations" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p><strong>Triton Tile Constraints</strong>: Triton does not support non-power-of-2 tile dimensions, limiting options for managing tile quantization (unlike vendor libraries like PyTorch which allow arbitrary increments)</p>
+</li>
+<li>
+<p><strong>Selection Efficiency Gap</strong>: ~5% average gap from optimal exhaustive search</p>
+</li>
+<li>
+<p><strong>Performance Gap on Some Workloads</strong>: Average 13.9% slower than PyTorch on Llama3 key matrices</p>
+</li>
+</ol>
+<h3 id="autotuning-limitations-addressed">Autotuning Limitations Addressed<a class="headerlink" href="#autotuning-limitations-addressed" title="Permanent link">&para;</a></h3>
+<p>The paper identifies problems with autotuning that tritonBLAS solves:</p>
+<ul>
+<li>Dynamic tensor shapes varying run-to-run</li>
+<li>Real-time constraints requiring low latency (online inference, control systems)</li>
+<li>High cost/power consumption applications like LLM training</li>
+</ul>
+<h2 id="future-work">Future Work<a class="headerlink" href="#future-work" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<p><strong>Non-GEMM Workloads</strong>: Explore extension to attention mechanisms and other GEMM-like algorithms</p>
+</li>
+<li>
+<p><strong>Multi-GPU and Multi-Node</strong>: Extend to distributed system environments</p>
+</li>
+<li>
+<p><strong>Broader Algorithm Classes</strong>: Foundation for extending analytical approach to other tensor operations</p>
+</li>
+</ol>
+<h2 id="related-work">Related Work<a class="headerlink" href="#related-work" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>CUTLASS/cuBLAS</strong>: Hand-engineered heuristics, closed-source, NVIDIA-specific</li>
+<li><strong>Ansor/AutoTVM</strong>: Combine analytical estimates with learned correction terms, rely on data-driven fitting</li>
+<li><strong>DeLTA</strong>: Locality-aware roofline predicting L1/L2 traffic, but analyzes predefined configurations rather than selecting them</li>
+</ul>
+<p><strong>tritonBLAS Advantage</strong>: Uses only calibrated hardware bandwidths and instruction latencies to directly rank and select tile shapes, enabling microsecond overhead and deterministic selection.</p>
 <hr />
 <p><em>Reading date: 2025</em>
 <em>Note status: Completed</em></p>
@@ -1852,7 +2650,7 @@
     
       <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
-        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script src="../../javascripts/mathjax.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
