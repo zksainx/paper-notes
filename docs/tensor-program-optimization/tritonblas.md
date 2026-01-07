@@ -2,11 +2,11 @@
 
 <div class="paper-meta" markdown>
 
-**Authors**: Ryan Swann, Muhammad Osama, Xiaohu Guo, Bryant Nelson, Lixun Zhang, Alex Brown, Yen Ong, Ali Yazdani, Sean Siddens, Ganesh Dasika, Alex Underwood
-**Institution**: AMD
-**Conference**: arXiv 2025
-**Paper Link**: [arXiv:2512.04226](https://arxiv.org/abs/2512.04226)
-**GitHub**: [ROCm/tritonBLAS](https://github.com/ROCm/tritonBLAS)
+**Authors**: Ryan Swann, Muhammad Osama, Xiaohu Guo, Bryant Nelson, Lixun Zhang, Alex Brown, Yen Ong, Ali Yazdani, Sean Siddens, Ganesh Dasika, Alex Underwood  
+**Institution**: AMD  
+**Conference**: arXiv 2025  
+**Paper Link**: [arXiv:2512.04226](https://arxiv.org/abs/2512.04226)  
+**GitHub**: [ROCm/tritonBLAS](https://github.com/ROCm/tritonBLAS)  
 
 </div>
 
