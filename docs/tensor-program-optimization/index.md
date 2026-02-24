@@ -30,6 +30,7 @@ Papers on automatic optimization of tensor programs through compiler techniques,
 - [TritonForge](tritonforge.md) - Profiling-guided framework for automated Triton kernel optimization (Meta, 2025)
 - [GEAK](geak.md) - Triton kernel AI agent & evaluation benchmarks for AMD GPUs (AMD, 2025)
 - [KernelBand](kernelband.md) - Hierarchical multi-armed bandit for LLM-based kernel optimization (PKU, 2025)
+- [KernelBlaster](kernelblaster.md) - Memory-augmented in-context RL for continual CUDA optimization (NVIDIA/Berkeley, 2026)
 
 ### GPU Kernel Optimization & Portability
 
