@@ -2,10 +2,10 @@
 
 <div class="paper-meta" markdown>
 
-**Authors**: Kris Shengjun Dong, Sahil Modi, Dima Nikiforov, Sana Damani, Edward Lin, Siva Kumar Sastry Hari, Christos Kozyrakis 
-**Institution**: NVIDIA, University of California Berkeley 
-**Conference**: arXiv 2026 
-**Paper Link**: [arXiv:2602.14293](https://arxiv.org/abs/2602.14293) 
+**Authors**: Kris Shengjun Dong, Sahil Modi, Dima Nikiforov, Sana Damani, Edward Lin, Siva Kumar Sastry Hari, Christos Kozyrakis  
+**Institution**: NVIDIA, University of California Berkeley  
+**Conference**: arXiv 2026  
+**Paper Link**: [arXiv:2602.14293](https://arxiv.org/abs/2602.14293)  
 
 </div>
 
