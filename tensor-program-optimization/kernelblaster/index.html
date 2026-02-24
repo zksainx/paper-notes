@@ -12,13 +12,13 @@
         <meta name="author" content="zksainx">
       
       
-        <link rel="canonical" href="https://zksainx.github.io/paper-notes/simulation/frontier/">
+        <link rel="canonical" href="https://zksainx.github.io/paper-notes/tensor-program-optimization/kernelblaster/">
       
       
-        <link rel="prev" href="../chakra/">
+        <link rel="prev" href="../kernelband/">
       
       
-        <link rel="next" href="../llmcompass/">
+        <link rel="next" href="../../intra-gpu-multiplexing/">
       
       
         
@@ -29,7 +29,7 @@
     
     
       
-        <title>Frontier - Paper Notes</title>
+        <title>KernelBlaster - Paper Notes</title>
       
     
     
@@ -82,7 +82,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#frontier-simulating-the-next-generation-of-llm-inference-systems" class="md-skip">
+        <a href="#kernelblaster-continual-cross-task-cuda-optimization-via-memory-augmented-in-context-reinforcement-learning" class="md-skip">
           跳转至
         </a>
       
@@ -116,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Frontier
+              KernelBlaster
             
           </span>
         </div>
@@ -251,13 +251,11 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../simulation/" class="md-tabs__link">
           
   
   
@@ -275,11 +273,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../tensor-program-optimization/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
           
   
   
@@ -410,6 +410,472 @@
       
   
   
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../simulation/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Simulation
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Simulation
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../simulation/amali/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AMALI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../simulation/apex/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    APEX
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../simulation/astra-sim/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Astra-Sim
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../simulation/astra-sim-2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Astra-Sim 2.0
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../simulation/chakra/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chakra
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../simulation/frontier/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Frontier
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../simulation/llmcompass/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LLMCompass
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../simulation/linear/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Path Forward Beyond Simulators
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../simulation/mystique/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mystique
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../simulation/neusight/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NeuSight
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../simulation/simai/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SimAI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../simulation/vidur/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VIDUR
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../simulation/vtrain/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    vTrain
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
     
   
   
@@ -419,6 +885,10 @@
       
         
           
+        
+      
+        
+      
         
       
         
@@ -463,7 +933,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
           <div class="md-nav__link md-nav__container">
@@ -474,7 +944,7 @@
   <span class="md-ellipsis">
     
   
-    Simulation
+    Tensor Program Optimization
   
 
     
@@ -485,18 +955,18 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_2">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             
   
-    Simulation
+    Tensor Program Optimization
   
 
           </label>
@@ -511,14 +981,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../amali/" class="md-nav__link">
+      <a href="../learning-optimize-tensor-programs/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    AMALI
+    Learning to Optimize Tensor Programs
   
 
     
@@ -539,14 +1009,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../apex/" class="md-nav__link">
+      <a href="../ansor/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    APEX
+    Ansor
   
 
     
@@ -567,14 +1037,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../astra-sim/" class="md-nav__link">
+      <a href="../roller/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Astra-Sim
+    Roller
   
 
     
@@ -595,14 +1065,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../astra-sim-2/" class="md-nav__link">
+      <a href="../learned-performance-model-tpu/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Astra-Sim 2.0
+    Learned Performance Model for TPU
   
 
     
@@ -623,14 +1093,266 @@
   
   
     <li class="md-nav__item">
-      <a href="../chakra/" class="md-nav__link">
+      <a href="../metatune/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Chakra
+    MetaTune
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unicox/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UniCoX
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cuda-L1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CUDA-L1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cuda-L2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CUDA-L2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tritonblas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    tritonBLAS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gpu-performance-portability/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GPU Performance Portability
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../anatomy-triton-attention/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Anatomy of Triton Attention Kernel
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tritonforge/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TritonForge
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../geak/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GEAK
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kernelband/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    KernelBand
   
 
     
@@ -667,7 +1389,7 @@
   <span class="md-ellipsis">
     
   
-    Frontier
+    KernelBlaster
   
 
     
@@ -685,7 +1407,7 @@
   <span class="md-ellipsis">
     
   
-    Frontier
+    KernelBlaster
   
 
     
@@ -730,734 +1452,95 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Core Ideas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#maic-rl" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MAIC-RL 框架概览
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#in-context-reinforcement-learning-icrl" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        In-Context Reinforcement Learning (ICRL)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#persistent-cuda-knowledge-base" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Persistent CUDA Knowledge Base
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#profile-guided-textual-gradient-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Profile-Guided Textual Gradient Flow
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        跨任务学习与硬件适配
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#experimental-results" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Experimental Results
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limitations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Limitations
+      
+    </span>
+  </a>
+  
 </li>
       
     </ul>
   
 </nav>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../llmcompass/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    LLMCompass
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../linear/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Path Forward Beyond Simulators
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../mystique/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Mystique
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../neusight/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    NeuSight
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../simai/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    SimAI
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../vidur/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    VIDUR
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../vtrain/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    vTrain
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-      
-        
-          
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-      
-      
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
-        
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../../tensor-program-optimization/" class="md-nav__link ">
-              
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Tensor Program Optimization
-  
-
-    
-  </span>
-  
-  
-
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Tensor Program Optimization
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../tensor-program-optimization/learning-optimize-tensor-programs/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Learning to Optimize Tensor Programs
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../tensor-program-optimization/ansor/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Ansor
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../tensor-program-optimization/roller/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Roller
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../tensor-program-optimization/learned-performance-model-tpu/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Learned Performance Model for TPU
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../tensor-program-optimization/metatune/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    MetaTune
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../tensor-program-optimization/unicox/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    UniCoX
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../tensor-program-optimization/cuda-L1/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    CUDA-L1
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../tensor-program-optimization/cuda-L2/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    CUDA-L2
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../tensor-program-optimization/tritonblas/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    tritonBLAS
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../tensor-program-optimization/gpu-performance-portability/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    GPU Performance Portability
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../tensor-program-optimization/anatomy-triton-attention/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Anatomy of Triton Attention Kernel
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../tensor-program-optimization/tritonforge/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    TritonForge
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../tensor-program-optimization/geak/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    GEAK
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../tensor-program-optimization/kernelband/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    KernelBand
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../tensor-program-optimization/kernelblaster/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    KernelBlaster
-  
-
-    
-  </span>
-  
-  
-
-      </a>
     </li>
   
 
@@ -1769,6 +1852,89 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Core Ideas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#maic-rl" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MAIC-RL 框架概览
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#in-context-reinforcement-learning-icrl" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        In-Context Reinforcement Learning (ICRL)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#persistent-cuda-knowledge-base" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Persistent CUDA Knowledge Base
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#profile-guided-textual-gradient-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Profile-Guided Textual Gradient Flow
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        跨任务学习与硬件适配
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#experimental-results" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Experimental Results
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limitations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Limitations
+      
+    </span>
+  </a>
+  
 </li>
       
     </ul>
@@ -1791,29 +1957,114 @@
   
 
 
-<h1 id="frontier-simulating-the-next-generation-of-llm-inference-systems">Frontier: Simulating the Next Generation of LLM Inference Systems<a class="headerlink" href="#frontier-simulating-the-next-generation-of-llm-inference-systems" title="Permanent link">&para;</a></h1>
+<h1 id="kernelblaster-continual-cross-task-cuda-optimization-via-memory-augmented-in-context-reinforcement-learning">KernelBlaster: Continual Cross-Task CUDA Optimization via Memory-Augmented In-Context Reinforcement Learning<a class="headerlink" href="#kernelblaster-continual-cross-task-cuda-optimization-via-memory-augmented-in-context-reinforcement-learning" title="Permanent link">&para;</a></h1>
 <div class="paper-meta">
-<p><strong>Authors</strong>: Yicheng Feng, Xin Tan, Kin Hang Sew<br />
-<strong>Institution</strong>: CUHK, StepFun<br />
-<strong>Conference</strong>: arXiv 2025<br />
-<strong>Paper Link</strong>: <a href="https://arxiv.org/abs/2508.03148">arXiv:2508.03148</a></p>
+<p><strong>Authors</strong>: Kris Shengjun Dong, Sahil Modi, Dima Nikiforov, Sana Damani, Edward Lin, Siva Kumar Sastry Hari, Christos Kozyrakis 
+<strong>Institution</strong>: NVIDIA, University of California Berkeley 
+<strong>Conference</strong>: arXiv 2026 
+<strong>Paper Link</strong>: <a href="https://arxiv.org/abs/2602.14293">arXiv:2602.14293</a> </p>
 </div>
 <div class="paper-tags">
-<p><span class="paper-tag">LLM Inference</span>
-<span class="paper-tag">MoE Models</span>
-<span class="paper-tag">Disaggregated Systems</span></p>
+<p><span class="paper-tag">CUDA</span>
+<span class="paper-tag">Reinforcement Learning</span>
+<span class="paper-tag">LLM for Code</span>
+<span class="paper-tag">Kernel Optimization</span>
+<span class="paper-tag">Cross-Task Learning</span></p>
 </div>
 <h2 id="abstract">Abstract<a class="headerlink" href="#abstract" title="Permanent link">&para;</a></h2>
-<p>Frontier is a high-fidelity simulator designed for next-generation LLM inference systems. It handles the growing complexity of Mixture-of-Experts (MoE) models and disaggregated architectures that decouple components like prefill/decode or attention/FFN for heterogeneous scaling.</p>
-<p><strong>Key Contributions</strong>:
-- Unified framework for both co-located and disaggregated systems
-- Native support for MoE inference with expert parallelism
-- Simulation of complex workflows like cross-cluster expert routing
-- Advanced pipelining strategies for latency hiding</p>
+<p>KernelBlaster 提出了 MAIC-RL（Memory-Augmented In-context Reinforcement Learning）框架，用于自动化 CUDA 代码优化。与以往独立优化每个 kernel 的方法不同，KernelBlaster 通过构建可检索的 Persistent CUDA Knowledge Base，使 LLM agent 能够从历史优化经验中学习，并在未来任务中做出系统性的决策。框架采用 profile-guided 的 textual gradient 机制，在不更新模型权重的情况下实现推理时学习。</p>
+<p><strong>Key Contributions</strong>:</p>
+<ul>
+<li>提出 In-Context Reinforcement Learning (ICRL) 框架，将 CUDA 优化问题建模为 RL 问题，使用 textual gradient 从 profiling 数据中捕获语义信息，实现推理时学习</li>
+<li>构建 Persistent CUDA Knowledge Base，采用层次化表示将代码实例按性能状态分类，实现高效的优化候选遍历</li>
+<li>实现跨任务长期学习，在生成优化 kernel 的同时聚合跨问题知识，生成可复用的 artifact，加速新问题和新 GPU 平台上的收敛</li>
+<li>开源 textual RL agentic 框架，包含基线 CUDA kernel、初始化数据库和测试工具</li>
+</ul>
 <h2 id="core-ideas">Core Ideas<a class="headerlink" href="#core-ideas" title="Permanent link">&para;</a></h2>
-<p>Frontier follows event-driven and modular design principles with a central GlobalController and modular ClusterWorkers. It achieves predicted throughput within 19.0% to 23.2% relative error margin, providing accurate performance trends for system-of-systems nature of modern LLM serving.</p>
+<h3 id="maic-rl">MAIC-RL 框架概览<a class="headerlink" href="#maic-rl" title="Permanent link">&para;</a></h3>
+<p>KernelBlaster 的核心是一个 agentic 工作流，由三个关键组件构成：</p>
+<ol>
+<li><strong>LLM Agent</strong>: 负责生成和优化 CUDA 代码，基于 profiling 反馈和知识库检索结果进行迭代改进</li>
+<li><strong>Profile-Guided Feedback</strong>: 从 GPU profiler 收集硬件级性能指标，转化为 textual gradient 指导优化方向</li>
+<li><strong>Persistent CUDA Knowledge Base</strong>: 存储和组织历史优化经验，支持跨任务知识检索和复用</li>
+</ol>
+<p>整体流程：Agent 接收优化任务 → 从知识库检索相关经验 → 生成候选优化代码 → Profiling 评估 → Textual gradient 反馈 → 迭代优化 → 将新知识写回知识库。</p>
+<h3 id="in-context-reinforcement-learning-icrl">In-Context Reinforcement Learning (ICRL)<a class="headerlink" href="#in-context-reinforcement-learning-icrl" title="Permanent link">&para;</a></h3>
+<p>传统 RL 方法通过反向传播更新模型权重来学习策略，成本高昂且难以泛化。KernelBlaster 采用 ICRL 方法：</p>
+<ul>
+<li><strong>Textual Gradient</strong>: 将 profiling 数据（如内存带宽利用率、计算吞吐量、occupancy 等）转化为自然语言描述的优化建议，作为"梯度"信号指导 LLM 的下一步优化</li>
+<li><strong>推理时学习</strong>: 所有学习发生在 LLM 的上下文窗口内，无需微调或权重更新，相比传统 RL 方法收敛更快</li>
+<li><strong>语义丰富性</strong>: Textual gradient 能够捕获比数值 reward 更丰富的语义信息，例如"shared memory bank conflict 导致带宽下降"比单纯的 speedup 数值提供更多可操作的优化方向</li>
+</ul>
+<h3 id="persistent-cuda-knowledge-base">Persistent CUDA Knowledge Base<a class="headerlink" href="#persistent-cuda-knowledge-base" title="Permanent link">&para;</a></h3>
+<p>知识库采用层次化结构组织优化经验：</p>
+<ul>
+<li><strong>Performance State 分类</strong>: 将代码实例按性能表现分为不同状态（如 baseline、partially optimized、highly optimized），形成可扩展的表示</li>
+<li><strong>层次化表示</strong>: 在有限的模型上下文中高效利用空间，避免将所有历史代码直接放入 prompt</li>
+<li><strong>检索机制</strong>: 根据当前任务特征（算子类型、数据规模、硬件目标等）检索最相关的历史优化经验</li>
+<li><strong>持久化</strong>: 知识库作为独立 artifact 存在，可跨会话、跨任务持续积累</li>
+</ul>
+<h3 id="profile-guided-textual-gradient-flow">Profile-Guided Textual Gradient Flow<a class="headerlink" href="#profile-guided-textual-gradient-flow" title="Permanent link">&para;</a></h3>
+<p>优化流程的核心循环：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>1. 生成/修改 CUDA kernel
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>2. 编译并在目标 GPU 上执行
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>3. 收集 profiling 数据（内存吞吐、计算利用率、occupancy 等）
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>4. 将 profiling 数据转化为 textual gradient（自然语言优化建议）
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>5. LLM agent 基于 textual gradient 生成下一版本优化代码
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>6. 重复直到收敛或达到迭代上限
+</code></pre></div>
+<p>这种 profile-guided 方法使 agent 能够系统性地探索高潜力优化策略，而非简单的代码重写。</p>
+<h3 id="_1">跨任务学习与硬件适配<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
+<p>KernelBlaster 的独特之处在于同时完成两个目标：</p>
+<ul>
+<li><strong>即时优化</strong>: 为当前任务生成高性能 CUDA kernel</li>
+<li><strong>知识积累</strong>: 将优化过程中获得的经验聚合到知识库中</li>
+</ul>
+<p>知识库可针对不同应用领域和 GPU 架构进行特化（如 NVIDIA Ampere vs. Hopper），使 agent 能够将积累的经验有效应用于未来未见过的问题。这解决了手动优化的可扩展性瓶颈——例如 FlashAttention-2 移植到 H100 时性能下降约 47%，需要重新设计才能恢复效率（FlashAttention-3）。</p>
+<h2 id="experimental-results">Experimental Results<a class="headerlink" href="#experimental-results" title="Permanent link">&para;</a></h2>
+<p><strong>Benchmark</strong>: KernelBench (Level 1/2/3)</p>
+<p><strong>主要结果</strong>（相对 PyTorch baseline 的几何平均加速比）：</p>
+<table>
+<thead>
+<tr>
+<th>Benchmark Level</th>
+<th>任务类型</th>
+<th>Geometric Mean Speedup</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>KernelBench L1</td>
+<td>单算子优化</td>
+<td>1.43x</td>
+</tr>
+<tr>
+<td>KernelBench L2</td>
+<td>复杂算子组合</td>
+<td>2.50x</td>
+</tr>
+<tr>
+<td>KernelBench L3</td>
+<td>完整模型加速</td>
+<td>1.50x</td>
+</tr>
+</tbody>
+</table>
+<p><strong>关键观察</strong>:</p>
+<ul>
+<li>L2 上取得最大加速比（2.50x），表明框架在处理复杂算子组合时优势明显</li>
+<li>跨任务知识积累使 agent 能够系统性地探索高潜力优化策略，超越简单的代码重写</li>
+<li>Profile-guided textual gradient 机制引导 agent 关注真正的性能瓶颈</li>
+</ul>
+<h2 id="limitations">Limitations<a class="headerlink" href="#limitations" title="Permanent link">&para;</a></h2>
+<ul>
+<li>框架依赖高质量的 profiling 反馈，profiler 的精度和覆盖范围直接影响优化效果</li>
+<li>知识库的检索质量取决于任务特征的表示和匹配算法</li>
+<li>论文主要在 KernelBench 上评估，对更广泛的实际工作负载的泛化能力有待验证</li>
+<li>开源代码库尚未在论文发布时同步释出（将在后续版本中发布）</li>
+</ul>
 <hr />
-<p><em>Reading date: 2025</em>
+<p><em>Reading date: 2026-02</em>
 <em>Note status: Completed</em></p>
 
 
