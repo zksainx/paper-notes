@@ -12,25 +12,31 @@
         <meta name="author" content="zksainx">
       
       
+        <link rel="canonical" href="https://zksainx.github.io/paper-notes/tensor-program-optimization/tritonbench/">
       
+      
+        <link rel="prev" href="../kernelblaster/">
+      
+      
+        <link rel="next" href="../../intra-gpu-multiplexing/">
       
       
         
       
       
-      <link rel="icon" href="/paper-notes/assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.3">
     
     
       
-        <title>Paper Notes</title>
+        <title>TritonBench - Paper Notes</title>
       
     
     
-      <link rel="stylesheet" href="/paper-notes/assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="/paper-notes/assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -49,9 +55,9 @@
       
     
     
-      <link rel="stylesheet" href="/paper-notes/stylesheets/extra.css">
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
     
-    <script>__md_scope=new URL("/paper-notes/",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -75,6 +81,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#tritonbench-benchmarking-large-language-model-capabilities-for-generating-triton-operators" class="md-skip">
+          跳转至
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -85,7 +96,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="页眉">
-    <a href="/paper-notes/." title="Paper Notes" class="md-header__button md-logo" aria-label="Paper Notes" data-md-component="logo">
+    <a href="../.." title="Paper Notes" class="md-header__button md-logo" aria-label="Paper Notes" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -105,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              TritonBench
             
           </span>
         </div>
@@ -223,7 +234,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="/paper-notes/." class="md-tabs__link">
+      <a href="../.." class="md-tabs__link">
         
   
   
@@ -244,7 +255,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/paper-notes/simulation/" class="md-tabs__link">
+        <a href="../../simulation/" class="md-tabs__link">
           
   
   
@@ -262,11 +273,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="/paper-notes/tensor-program-optimization/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
           
   
   
@@ -288,7 +301,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/paper-notes/intra-gpu-multiplexing/" class="md-tabs__link">
+        <a href="../../intra-gpu-multiplexing/" class="md-tabs__link">
           
   
   
@@ -308,7 +321,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="/paper-notes/about/" class="md-tabs__link">
+      <a href="../../about/" class="md-tabs__link">
         
   
   
@@ -343,7 +356,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/paper-notes/." title="Paper Notes" class="md-nav__button md-logo" aria-label="Paper Notes" data-md-component="logo">
+    <a href="../.." title="Paper Notes" class="md-nav__button md-logo" aria-label="Paper Notes" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -373,7 +386,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/paper-notes/." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   
@@ -451,7 +464,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="/paper-notes/simulation/" class="md-nav__link ">
+            <a href="../../simulation/" class="md-nav__link ">
               
   
   
@@ -495,7 +508,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/paper-notes/simulation/amali/" class="md-nav__link">
+      <a href="../../simulation/amali/" class="md-nav__link">
         
   
   
@@ -523,7 +536,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/paper-notes/simulation/apex/" class="md-nav__link">
+      <a href="../../simulation/apex/" class="md-nav__link">
         
   
   
@@ -551,7 +564,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/paper-notes/simulation/astra-sim/" class="md-nav__link">
+      <a href="../../simulation/astra-sim/" class="md-nav__link">
         
   
   
@@ -579,7 +592,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/paper-notes/simulation/astra-sim-2/" class="md-nav__link">
+      <a href="../../simulation/astra-sim-2/" class="md-nav__link">
         
   
   
@@ -607,7 +620,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/paper-notes/simulation/chakra/" class="md-nav__link">
+      <a href="../../simulation/chakra/" class="md-nav__link">
         
   
   
@@ -635,7 +648,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/paper-notes/simulation/frontier/" class="md-nav__link">
+      <a href="../../simulation/frontier/" class="md-nav__link">
         
   
   
@@ -663,7 +676,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/paper-notes/simulation/llmcompass/" class="md-nav__link">
+      <a href="../../simulation/llmcompass/" class="md-nav__link">
         
   
   
@@ -691,7 +704,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/paper-notes/simulation/linear/" class="md-nav__link">
+      <a href="../../simulation/linear/" class="md-nav__link">
         
   
   
@@ -719,7 +732,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/paper-notes/simulation/mystique/" class="md-nav__link">
+      <a href="../../simulation/mystique/" class="md-nav__link">
         
   
   
@@ -747,7 +760,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/paper-notes/simulation/neusight/" class="md-nav__link">
+      <a href="../../simulation/neusight/" class="md-nav__link">
         
   
   
@@ -775,7 +788,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/paper-notes/simulation/simai/" class="md-nav__link">
+      <a href="../../simulation/simai/" class="md-nav__link">
         
   
   
@@ -803,7 +816,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/paper-notes/simulation/vidur/" class="md-nav__link">
+      <a href="../../simulation/vidur/" class="md-nav__link">
         
   
   
@@ -831,7 +844,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/paper-notes/simulation/vtrain/" class="md-nav__link">
+      <a href="../../simulation/vtrain/" class="md-nav__link">
         
   
   
@@ -863,6 +876,8 @@
       
   
   
+    
+  
   
   
     
@@ -908,22 +923,23 @@
     
     
       
+        
+        
+      
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="/paper-notes/tensor-program-optimization/" class="md-nav__link ">
+            <a href="../" class="md-nav__link ">
               
   
   
@@ -941,13 +957,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -967,7 +983,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/paper-notes/tensor-program-optimization/learning-optimize-tensor-programs/" class="md-nav__link">
+      <a href="../learning-optimize-tensor-programs/" class="md-nav__link">
         
   
   
@@ -995,7 +1011,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/paper-notes/tensor-program-optimization/ansor/" class="md-nav__link">
+      <a href="../ansor/" class="md-nav__link">
         
   
   
@@ -1023,7 +1039,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/paper-notes/tensor-program-optimization/roller/" class="md-nav__link">
+      <a href="../roller/" class="md-nav__link">
         
   
   
@@ -1051,7 +1067,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/paper-notes/tensor-program-optimization/learned-performance-model-tpu/" class="md-nav__link">
+      <a href="../learned-performance-model-tpu/" class="md-nav__link">
         
   
   
@@ -1079,7 +1095,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/paper-notes/tensor-program-optimization/metatune/" class="md-nav__link">
+      <a href="../metatune/" class="md-nav__link">
         
   
   
@@ -1107,7 +1123,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/paper-notes/tensor-program-optimization/unicox/" class="md-nav__link">
+      <a href="../unicox/" class="md-nav__link">
         
   
   
@@ -1135,7 +1151,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/paper-notes/tensor-program-optimization/cuda-L1/" class="md-nav__link">
+      <a href="../cuda-L1/" class="md-nav__link">
         
   
   
@@ -1163,7 +1179,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/paper-notes/tensor-program-optimization/cuda-L2/" class="md-nav__link">
+      <a href="../cuda-L2/" class="md-nav__link">
         
   
   
@@ -1191,7 +1207,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/paper-notes/tensor-program-optimization/tritonblas/" class="md-nav__link">
+      <a href="../tritonblas/" class="md-nav__link">
         
   
   
@@ -1219,7 +1235,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/paper-notes/tensor-program-optimization/gpu-performance-portability/" class="md-nav__link">
+      <a href="../gpu-performance-portability/" class="md-nav__link">
         
   
   
@@ -1247,7 +1263,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/paper-notes/tensor-program-optimization/anatomy-triton-attention/" class="md-nav__link">
+      <a href="../anatomy-triton-attention/" class="md-nav__link">
         
   
   
@@ -1275,7 +1291,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/paper-notes/tensor-program-optimization/tritonforge/" class="md-nav__link">
+      <a href="../tritonforge/" class="md-nav__link">
         
   
   
@@ -1303,7 +1319,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/paper-notes/tensor-program-optimization/geak/" class="md-nav__link">
+      <a href="../geak/" class="md-nav__link">
         
   
   
@@ -1331,7 +1347,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/paper-notes/tensor-program-optimization/kernelband/" class="md-nav__link">
+      <a href="../kernelband/" class="md-nav__link">
         
   
   
@@ -1359,7 +1375,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/paper-notes/tensor-program-optimization/kernelblaster/" class="md-nav__link">
+      <a href="../kernelblaster/" class="md-nav__link">
         
   
   
@@ -1384,10 +1400,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="/paper-notes/tensor-program-optimization/tritonbench/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TritonBench
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1403,6 +1446,170 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#abstract" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Abstract
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#core-ideas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Core Ideas
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Core Ideas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#benchmark" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Benchmark 设计动机
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tritonbench-g" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TRITONBENCH-G：真实世界算子通道
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tritonbench-tpytorch" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TRITONBENCH-T：PyTorch 对齐算子通道
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        评估指标体系
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#experimental-results" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Experimental Results
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Experimental Results">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tritonbench-g_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TRITONBENCH-G 主要结果
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tritonbench-t" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TRITONBENCH-T 主要结果
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        关键发现
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        错误模式分析
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limitations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Limitations
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1457,7 +1664,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="/paper-notes/intra-gpu-multiplexing/" class="md-nav__link ">
+            <a href="../../intra-gpu-multiplexing/" class="md-nav__link ">
               
   
   
@@ -1501,7 +1708,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/paper-notes/intra-gpu-multiplexing/nanoflow/" class="md-nav__link">
+      <a href="../../intra-gpu-multiplexing/nanoflow/" class="md-nav__link">
         
   
   
@@ -1529,7 +1736,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/paper-notes/intra-gpu-multiplexing/bullet/" class="md-nav__link">
+      <a href="../../intra-gpu-multiplexing/bullet/" class="md-nav__link">
         
   
   
@@ -1557,7 +1764,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/paper-notes/intra-gpu-multiplexing/nexus/" class="md-nav__link">
+      <a href="../../intra-gpu-multiplexing/nexus/" class="md-nav__link">
         
   
   
@@ -1585,7 +1792,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/paper-notes/intra-gpu-multiplexing/pd-multiplex/" class="md-nav__link">
+      <a href="../../intra-gpu-multiplexing/pd-multiplex/" class="md-nav__link">
         
   
   
@@ -1613,7 +1820,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/paper-notes/intra-gpu-multiplexing/duetserve/" class="md-nav__link">
+      <a href="../../intra-gpu-multiplexing/duetserve/" class="md-nav__link">
         
   
   
@@ -1648,7 +1855,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/paper-notes/about/" class="md-nav__link">
+      <a href="../../about/" class="md-nav__link">
         
   
   
@@ -1685,6 +1892,160 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#abstract" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Abstract
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#core-ideas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Core Ideas
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Core Ideas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#benchmark" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Benchmark 设计动机
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tritonbench-g" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TRITONBENCH-G：真实世界算子通道
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tritonbench-tpytorch" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TRITONBENCH-T：PyTorch 对齐算子通道
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        评估指标体系
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#experimental-results" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Experimental Results
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Experimental Results">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tritonbench-g_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TRITONBENCH-G 主要结果
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tritonbench-t" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TRITONBENCH-T 主要结果
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        关键发现
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        错误模式分析
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limitations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Limitations
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -1697,8 +2058,305 @@
               
               <article class="md-content__inner md-typeset">
                 
-  <h1>404 - Not found</h1>
+                  
 
+
+  
+  
+
+
+<h1 id="tritonbench-benchmarking-large-language-model-capabilities-for-generating-triton-operators">TritonBench: Benchmarking Large Language Model Capabilities for Generating Triton Operators<a class="headerlink" href="#tritonbench-benchmarking-large-language-model-capabilities-for-generating-triton-operators" title="Permanent link">&para;</a></h1>
+<div class="paper-meta">
+<p><strong>Authors</strong>: Jianling Li, Shangzhan Li, Zhenye Gao, Qi Shi, Yuxuan Li, Zefan Wang, Jiacheng Huang, Haojie Wang, Jianrong Wang, Xu Han, Zhiyuan Liu, Maosong Sun<br />
+<strong>Institution</strong>: Tianjin University, Harbin Institute of Technology, HKUST (Guangzhou), Tsinghua University<br />
+<strong>Conference</strong>: arXiv 2025<br />
+<strong>Paper Link</strong>: <a href="https://arxiv.org/abs/2502.14752">arXiv:2502.14752</a><br />
+<strong>GitHub</strong>: <a href="https://github.com/thunlp/TritonBench">thunlp/TritonBench</a>  </p>
+</div>
+<div class="paper-tags">
+<p><span class="paper-tag">Triton</span>
+<span class="paper-tag">Benchmark</span>
+<span class="paper-tag">LLM for Code</span>
+<span class="paper-tag">Kernel Optimization</span>
+<span class="paper-tag">GPU Programming</span></p>
+</div>
+<h2 id="abstract">Abstract<a class="headerlink" href="#abstract" title="Permanent link">&para;</a></h2>
+<p>TritonBench 是首个针对 Triton 算子生成的综合性 benchmark，用于系统评估 LLM 生成 Triton 代码的能力。与传统代码 benchmark 仅关注功能正确性不同，TritonBench 同时评估生成代码在 NVIDIA GPU 上的执行效率，更贴合工业需求。</p>
+<p><strong>Key Contributions</strong>:</p>
+<ul>
+<li>提出双通道评估框架：TRITONBENCH-G（184 个来自 GitHub 的真实算子）和 TRITONBENCH-T（166 个对齐 PyTorch 接口的算子）</li>
+<li>引入性能感知评估指标：除正确性外，还评估 Speed Up 和 GPU Efficiency</li>
+<li>对主流 LLM 进行全面评估，揭示当前模型在 Triton 代码生成上的显著不足</li>
+<li>开源 benchmark 框架及评估工具</li>
+</ul>
+<h2 id="core-ideas">Core Ideas<a class="headerlink" href="#core-ideas" title="Permanent link">&para;</a></h2>
+<h3 id="benchmark">Benchmark 设计动机<a class="headerlink" href="#benchmark" title="Permanent link">&para;</a></h3>
+<p>Triton 作为高层 Python-like GPU 编程语言，在 vLLM、LightLLM、Liger-kernel、unsloth 等主流 LLM 框架中被广泛采用。然而：</p>
+<ul>
+<li>编写高性能 Triton 算子仍需大量手动调优（指针算术、内存访问模式等）</li>
+<li>现有 LLM 在通用代码生成上表现出色，但对 Triton 这类 DSL 缺乏规范理解和 GPU 编程经验</li>
+<li>缺乏针对 Triton 的系统性评估框架——现有代码 benchmark 主要面向通用语言且仅关注正确性</li>
+</ul>
+<h3 id="tritonbench-g">TRITONBENCH-G：真实世界算子通道<a class="headerlink" href="#tritonbench-g" title="Permanent link">&para;</a></h3>
+<p>从 GitHub 爬取 Triton 相关仓库（&gt;100 stars，共 95 个仓库、845 个 Python 文件），经过多轮筛选构建：</p>
+<ol>
+<li><strong>数据收集</strong>: Prompt-based 过滤 → 250 个候选文件 → 人工审查（补全缺失组件、去重、调试）→ 184 个高质量算子</li>
+<li><strong>难度分级</strong>: d1-d5 五个难度等级，由 LLM 初评 + 两位领域专家人工验证</li>
+<li><strong>质量评估</strong>: 平均 GPU Efficiency 43.0%，其中 19.6% 的专业开发者编写的算子 GPU 效率低于 10%</li>
+<li><strong>测试设计</strong>: 基于 tensor 的测试输入（非标量），平均每个算子 3.6 个测试分支</li>
+</ol>
+<p>算子分布以高频操作为主：Attention (20.0%)、MatMul (10.9%)、LayerNorm (6.5%)、SoftMax (3.8%)</p>
+<h3 id="tritonbench-tpytorch">TRITONBENCH-T：PyTorch 对齐算子通道<a class="headerlink" href="#tritonbench-tpytorch" title="Permanent link">&para;</a></h3>
+<p>作为 TRITONBENCH-G 的补充，覆盖公开源中代表性不足的算子：</p>
+<ol>
+<li><strong>构建流程</strong>: 从 PyTorch (v2.6.0) 中筛选需要 GPU 交互的算子 → 按 The Stack V2 中的使用频率分为高频/低频各 40 个 → 组合融合为 166 个算子</li>
+<li><strong>融合策略</strong>: 常见算子组合、常见+非常见组合、非常见算子组合，确保前序算子输出可作为后续算子输入</li>
+<li><strong>指令来源</strong>: 直接从 PyTorch 文档提取（vs. TRITONBENCH-G 的 LLM 生成 + 专家验证）</li>
+</ol>
+<h3 id="_1">评估指标体系<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>指标</th>
+<th>说明</th>
+<th>适用通道</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Similarity (CodeBLEU)</td>
+<td>文本级相似度，N-gram/语法/数据流各权重 0.25</td>
+<td>G</td>
+</tr>
+<tr>
+<td>Call Accuracy</td>
+<td>代码能否无错运行</td>
+<td>G, T</td>
+</tr>
+<tr>
+<td>Execution Accuracy</td>
+<td>输入输出行为是否正确</td>
+<td>G, T</td>
+</tr>
+<tr>
+<td>Speed Up</td>
+<td>正确执行算子相对参考实现的加速比 <span class="arithmatex">\(\text{SpeedUp} = t_{\text{ref}} / t_{\text{gen}}\)</span></td>
+<td>G, T</td>
+</tr>
+<tr>
+<td>GPU Efficiency</td>
+<td>GPU 资源利用率（实测 GB/s 或 TFLOPS / A100 理论峰值）</td>
+<td>G</td>
+</tr>
+</tbody>
+</table>
+<h2 id="experimental-results">Experimental Results<a class="headerlink" href="#experimental-results" title="Permanent link">&para;</a></h2>
+<h3 id="tritonbench-g_1">TRITONBENCH-G 主要结果<a class="headerlink" href="#tritonbench-g_1" title="Permanent link">&para;</a></h3>
+<p>评估平台：NVIDIA A100。格式为 zero-shot / one-shot。</p>
+<table>
+<thead>
+<tr>
+<th>Model</th>
+<th>Size</th>
+<th>Execution Accuracy</th>
+<th>Speed Up</th>
+<th>GPU Efficiency</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Qwen2.5-Coder</td>
+<td>7B</td>
+<td>0.00 / 0.00</td>
+<td>0.00 / 0.00</td>
+<td>0.00 / 0.00</td>
+</tr>
+<tr>
+<td>DeepSeek-Coder</td>
+<td>6.7B</td>
+<td>0.00 / 0.00</td>
+<td>0.00 / 0.00</td>
+<td>0.00 / 0.00</td>
+</tr>
+<tr>
+<td>Qwen2.5-Coder-sft</td>
+<td>7B</td>
+<td>4.89 / 10.87</td>
+<td>1.56 / 1.22</td>
+<td>51.71 / 46.70</td>
+</tr>
+<tr>
+<td>DeepSeek-Coder-sft</td>
+<td>6.7B</td>
+<td>9.87 / 11.96</td>
+<td>1.03 / 1.11</td>
+<td>47.68 / 42.26</td>
+</tr>
+<tr>
+<td>GPT-4o</td>
+<td>-</td>
+<td>10.33 / 16.84</td>
+<td>0.97 / 1.19</td>
+<td>48.80 / 53.33</td>
+</tr>
+<tr>
+<td>Claude-3.5-Sonnet</td>
+<td>-</td>
+<td>9.79 / 19.57</td>
+<td>0.90 / 1.54</td>
+<td>59.31 / 49.32</td>
+</tr>
+<tr>
+<td>Qwen2.5-72B</td>
+<td>72B</td>
+<td>10.87 / 16.31</td>
+<td>0.96 / 1.19</td>
+<td>23.28 / 49.40</td>
+</tr>
+<tr>
+<td>DeepSeek-R1</td>
+<td>685B</td>
+<td>13.05 / 22.83</td>
+<td>1.11 / 1.22</td>
+<td>44.83 / 46.70</td>
+</tr>
+<tr>
+<td>GPT-o1</td>
+<td>-</td>
+<td>14.23 / <strong>23.91</strong></td>
+<td>0.92 / 1.14</td>
+<td>54.25 / 46.37</td>
+</tr>
+</tbody>
+</table>
+<h3 id="tritonbench-t">TRITONBENCH-T 主要结果<a class="headerlink" href="#tritonbench-t" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Model</th>
+<th>Size</th>
+<th>Execution Accuracy</th>
+<th>Speed Up</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Qwen2.5-Coder</td>
+<td>7B</td>
+<td>0.00 / 0.00</td>
+<td>0.00 / 0.00</td>
+</tr>
+<tr>
+<td>DeepSeek-Coder</td>
+<td>6.7B</td>
+<td>0.00 / 1.81</td>
+<td>0.00 / 0.94</td>
+</tr>
+<tr>
+<td>Qwen2.5-Coder-sft</td>
+<td>7B</td>
+<td>17.47 / 15.67</td>
+<td>0.98 / 0.92</td>
+</tr>
+<tr>
+<td>DeepSeek-Coder-sft</td>
+<td>6.7B</td>
+<td>19.28 / 16.26</td>
+<td>0.91 / 0.85</td>
+</tr>
+<tr>
+<td>GPT-4o</td>
+<td>-</td>
+<td>36.75 / 32.53</td>
+<td>0.98 / 0.94</td>
+</tr>
+<tr>
+<td>Claude-3.5-Sonnet</td>
+<td>-</td>
+<td>29.52 / 33.70</td>
+<td>0.93 / 0.89</td>
+</tr>
+<tr>
+<td>Qwen2.5-72B</td>
+<td>72B</td>
+<td>30.12 / 16.30</td>
+<td>1.07 / 0.92</td>
+</tr>
+<tr>
+<td>DeepSeek-R1</td>
+<td>685B</td>
+<td><strong>53.01</strong> / 45.78</td>
+<td>1.03 / <strong>1.91</strong></td>
+</tr>
+<tr>
+<td>GPT-o1</td>
+<td>-</td>
+<td>32.53 / 43.37</td>
+<td>1.21 / 1.10</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_2">关键发现<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>领域专用模型 vs 通用模型</strong>: 未经微调的 7B 领域模型（Qwen2.5-Coder、DeepSeek-Coder）在 TRITONBENCH-G 上执行准确率为 0%；经 8K 语料微调后显著提升</li>
+<li><strong>最强模型</strong>: DeepSeek-R1 和 GPT-o1 表现最优，GPT-o1 在 G 通道 one-shot 达到 23.91%，DeepSeek-R1 在 T 通道 zero-shot 达到 53.01%</li>
+<li><strong>One-shot 效果</strong>: 高质量示例对 Triton 生成至关重要，G 通道 zero-shot → one-shot 提升约 10%</li>
+<li><strong>难度差异</strong>: TRITONBENCH-T 整体比 G 简单，因 G 以 d3/d4 高难度算子为主</li>
+<li><strong>性能加速来源</strong>: T 通道的加速主要来自算子融合，减少冗余内存读写</li>
+</ul>
+<h3 id="_3">错误模式分析<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<p>论文将 16 种错误类型归为 4 大类：</p>
+<table>
+<thead>
+<tr>
+<th>错误类别</th>
+<th>包含类型</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Syntax</td>
+<td>SyntaxError, IndentationError</td>
+</tr>
+<tr>
+<td>Attr&amp;Type</td>
+<td>AttributeError, TypeError, NotImplementedError</td>
+</tr>
+<tr>
+<td>Name&amp;Ref</td>
+<td>NameError, KeyError, IndexError, ModuleNotFoundError, ImportError</td>
+</tr>
+<tr>
+<td>Run&amp;Logc</td>
+<td>ValueError, RuntimeError, AssertionError, CompilationError 等</td>
+</tr>
+</tbody>
+</table>
+<p>关键观察：One-shot 设置下 Syntax 和 Name&amp;Ref 错误增加，但 Run&amp;Logc 错误显著减少，说明示例有助于理解逻辑结构和 Triton 规范。DeepSeek-R1 对语法错误更鲁棒，GPT-o1 对逻辑错误处理更好。</p>
+<h2 id="limitations">Limitations<a class="headerlink" href="#limitations" title="Permanent link">&para;</a></h2>
+<ul>
+<li>所有评估仅在 NVIDIA A100 上进行，未覆盖其他 GPU 架构（如 H100、AMD MI300X）</li>
+<li>Benchmark 规模有限（G: 184, T: 166），可能无法完全代表 Triton 算子开发的全部场景</li>
+<li>TRITONBENCH-G 以高频算子为主（Attention 20%、MatMul 10.9%），长尾算子覆盖不足</li>
+<li>评估仅考虑单次生成，未探索迭代优化或 agentic 工作流的效果</li>
+<li>微调数据仅 8K 样本，更大规模的领域数据可能带来更显著的提升</li>
+</ul>
+<hr />
+<p><em>Reading date: 2025-02</em>
+<em>Note status: Completed</em></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
               </article>
             </div>
           
@@ -1747,12 +2405,12 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "/paper-notes/", "features": ["navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.sections", "navigation.indexes", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "search.share", "content.code.copy", "content.tabs.link"], "search": "/paper-notes/assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.sections", "navigation.indexes", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "search.share", "content.code.copy", "content.tabs.link"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
     
     
-      <script src="/paper-notes/assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
-        <script src="/paper-notes/javascripts/mathjax.js"></script>
+        <script src="../../javascripts/mathjax.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
