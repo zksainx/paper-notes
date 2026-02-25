@@ -5,7 +5,8 @@
 **Authors**: Jianghui Wang, Vinay Joshi, Saptarshi Majumder, Xu Chao, Bin Ding, Ziqiong Liu, Pratik Prabhanjan Brahma, Dong Li, Zicheng Liu, Emad Barsoum  
 **Institution**: AMD  
 **Conference**: arXiv 2025  
-**Paper Link**: [arXiv:2507.23194](https://arxiv.org/abs/2507.23194)
+**Paper Link**: [arXiv:2507.23194](https://arxiv.org/abs/2507.23194)  
+**GitHub**: [AMD-AGI/GEAK](https://github.com/AMD-AGI/GEAK)
 
 </div>
 

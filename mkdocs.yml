@@ -118,6 +118,7 @@ nav:
       - GEAK: tensor-program-optimization/geak.md
       - KernelBand: tensor-program-optimization/kernelband.md
       - KernelBlaster: tensor-program-optimization/kernelblaster.md
+      - TritonBench: tensor-program-optimization/tritonbench.md
   - Intra-GPU Spatial Multiplexing:
       - intra-gpu-multiplexing/index.md
       - NanoFlow: intra-gpu-multiplexing/nanoflow.md
