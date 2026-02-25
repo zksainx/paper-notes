@@ -5,7 +5,7 @@
 **Authors**: Haonan Li, Keyu Man, Partha Kanuparthy, Hanning Chen, Wei Sun, Sreen Tallam, Chenguang Zhu, Kevin Zhu, Zhiyun Qian  
 **Institution**: UC Riverside, Meta, UC Irvine  
 **Conference**: arXiv 2025  
-**Paper Link**: [arXiv:2512.09196](https://arxiv.org/abs/2512.09196)
+**Paper Link**: [arXiv:2512.09196](https://arxiv.org/abs/2512.09196)  
 **GitHub**: [RLsys-Foundation/TritonForge](https://github.com/RLsys-Foundation/TritonForge)
 
 </div>
