@@ -48,16 +48,28 @@ Papers on LLM-driven generation, profiling-guided refinement, and automated opti
 
 - [GEAK](geak.md) - Modular Triton kernel agent for AMD GPUs with revised benchmarks, Reflexion-style debugging, and optimization modules
 
+### Multi-Agent Systems
+
+- [Astra](astra.md) - Four-agent CUDA optimization workflow for real SGLang kernels with testing, profiling, planning, and coding roles
+- [STARK](stark.md) - Strategic plan/code/debug agent team with grounded edits and tree-memory search for KernelBench optimization
+- [cuPilot](cupilot.md) - Strategy-coordinated multi-agent CUDA evolution framework with roofline-guided prompting and RAG-based strategy initialization
+
 ### Search and Reinforcement Frameworks
 
 - [CUDA-LLM](cuda-llm.md) - Feature Search and Reinforcement loop that iteratively repairs and accelerates CUDA kernels using compilation, correctness, and runtime feedback
+- [MaxCode](maxcode.md) - Max-reward RL framework that augments code optimization search with critique, best-so-far reward, and optional reward-to-go guidance
 
 ### Natural-Language Transformation Systems
 
 - [PEAK](peak.md) - Natural-language transformation framework for iterative GPU kernel performance engineering across CUDA, HIP, and HLSL
 
+### DSL and Performance Bounds
+
+- [DSL-SOL](dsl-sol.md) - `$\mu$CUTLASS` DSL plus SOL-guided MANTIS workflow for efficient KernelBench optimization, scheduling, and integrity checking
+
 ### Profiling-Guided Optimization
 
+- [CudaForge](cudaforge.md) - Training-free coder-judge workflow that uses curated Nsight metrics and GPU specs for iterative CUDA optimization
 - [TritonForge](tritonforge.md) - Iterative Triton kernel optimization with LLM agents, Nsight feedback, and automated remediation
 
 ---

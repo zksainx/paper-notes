@@ -117,15 +117,21 @@ nav:
       - automated-kernel-generation/index.md
       - AVO: automated-kernel-generation/avo.md
       - AscendKernelGen: automated-kernel-generation/ascendkernelgen.md
+      - Astra: automated-kernel-generation/astra.md
       - CUDA-LLM: automated-kernel-generation/cuda-llm.md
+      - CudaForge: automated-kernel-generation/cudaforge.md
+      - cuPilot: automated-kernel-generation/cupilot.md
+      - MaxCode: automated-kernel-generation/maxcode.md
       - EvoEngineer: automated-kernel-generation/evoengineer.md
       - GEAK: automated-kernel-generation/geak.md
+      - DSL-SOL: automated-kernel-generation/dsl-sol.md
       - K-Search: automated-kernel-generation/k-search.md
       - KernelBand: automated-kernel-generation/kernelband.md
       - KernelBlaster: automated-kernel-generation/kernelblaster.md
       - KernelEvolve: automated-kernel-generation/kernelevolve.md
       - KernelSkill: automated-kernel-generation/kernelskill.md
       - PEAK: automated-kernel-generation/peak.md
+      - STARK: automated-kernel-generation/stark.md
       - TritonForge: automated-kernel-generation/tritonforge.md
   - Intra-GPU Spatial Multiplexing:
       - intra-gpu-multiplexing/index.md
