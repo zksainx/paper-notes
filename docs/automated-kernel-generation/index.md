@@ -12,6 +12,10 @@ Papers on LLM-driven generation, profiling-guided refinement, and automated opti
 
 ## Papers
 
+### NPU Kernel Generation
+
+- [AscendKernelGen](ascendkernelgen.md) - Domain-adaptive framework for Ascend NPU kernel generation with reasoning data, post-training, and hardware-grounded evaluation
+
 ### Evolutionary Population Design
 
 - [EvoEngineer](evoengineer.md) - Systematic LLM-based code evolution framework that separates traverse strategy from population management for CUDA kernel optimization

@@ -116,6 +116,7 @@ nav:
   - Automated Kernel Generation:
       - automated-kernel-generation/index.md
       - AVO: automated-kernel-generation/avo.md
+      - AscendKernelGen: automated-kernel-generation/ascendkernelgen.md
       - CUDA-LLM: automated-kernel-generation/cuda-llm.md
       - EvoEngineer: automated-kernel-generation/evoengineer.md
       - GEAK: automated-kernel-generation/geak.md
