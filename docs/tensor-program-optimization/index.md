@@ -25,18 +25,12 @@ Papers on automatic optimization of tensor programs through compiler techniques,
 - [Learned Performance Model for TPU](learned-performance-model-tpu.md) - ML-based TPU performance modeling (Google, 2020)
 - [UniCoX](unicox.md) - Unified cost model for tensorized program tuning across accelerators (IEEE TC, 2026)
 
-### LLM-based Kernel Generation & Optimization
+### LLM-based Kernel Benchmarking
 
-- [TritonForge](tritonforge.md) - Profiling-guided framework for automated Triton kernel optimization (Meta, 2025)
-- [GEAK](geak.md) - Triton kernel AI agent & evaluation benchmarks for AMD GPUs (AMD, 2025)
-- [KernelBand](kernelband.md) - Hierarchical multi-armed bandit for LLM-based kernel optimization (PKU, 2025)
-- [KernelBlaster](kernelblaster.md) - Memory-augmented in-context RL for continual CUDA optimization (NVIDIA/Berkeley, 2026)
 - [TritonBench](tritonbench.md) - 首个 Triton 算子生成综合 benchmark，双通道评估 LLM 代码生成能力 (Tsinghua/TJU, 2025)
 
 ### GPU Kernel Optimization & Portability
 
-- [CUDA-L1](cuda-L1.md) - Automated CUDA optimization via contrastive reinforcement learning (DeepReinforce, 2025)
-- [CUDA-L2](cuda-L2.md) - Surpassing cuBLAS performance for HGEMM via reinforcement learning (DeepReinforce, 2025)
 - [tritonBLAS](tritonblas.md) - Analytical approach for GEMM kernel parameter selection without autotuning (AMD, 2025)
 - [GPU Performance Portability](gpu-performance-portability.md) - Autotuning for cross-vendor GPU portability (2025)
 - [Anatomy of Triton Attention Kernel](anatomy-triton-attention.md) - Building high-performance attention kernels with Triton (2025)

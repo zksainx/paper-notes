@@ -20,6 +20,9 @@ Papers on performance modeling, simulation frameworks, and analytical models for
 ### [Tensor Program Optimization](tensor-program-optimization/index.md)
 Papers on automated tensor program optimization through compiler techniques, ML-guided search, and performance modeling for deep learning workloads.
 
+### [Automated Kernel Generation](automated-kernel-generation/index.md)
+Papers on LLM-driven generation, profiling-guided refinement, and automated optimization of GPU kernels and low-level code.
+
 ### [Intra-GPU Spatial Multiplexing](intra-gpu-multiplexing/index.md)
 Papers on GPU spatial multiplexing techniques for efficient LLM serving, including prefill-decode disaggregation and dynamic resource partitioning.
 
