@@ -12,13 +12,13 @@
         <meta name="author" content="zksainx">
       
       
-        <link rel="canonical" href="https://zksainx.github.io/paper-notes/tensor-program-optimization/anatomy-triton-attention/">
+        <link rel="canonical" href="https://zksainx.github.io/paper-notes/automated-kernel-generation/astra/">
       
       
-        <link rel="prev" href="../gpu-performance-portability/">
+        <link rel="prev" href="../ascendkernelgen/">
       
       
-        <link rel="next" href="../tritonbench/">
+        <link rel="next" href="../cuda-llm/">
       
       
         
@@ -29,7 +29,7 @@
     
     
       
-        <title>Anatomy of Triton Attention Kernel - Paper Notes</title>
+        <title>Astra - Paper Notes</title>
       
     
     
@@ -82,7 +82,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#the-anatomy-of-a-triton-attention-kernel" class="md-skip">
+        <a href="#astra-a-multi-agent-system-for-gpu-kernel-performance-optimization" class="md-skip">
           跳转至
         </a>
       
@@ -116,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Anatomy of Triton Attention Kernel
+              Astra
             
           </span>
         </div>
@@ -273,13 +273,11 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../tensor-program-optimization/" class="md-tabs__link">
           
   
   
@@ -297,11 +295,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../automated-kernel-generation/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
           
   
   
@@ -898,6 +898,382 @@
       
   
   
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../tensor-program-optimization/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tensor Program Optimization
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Tensor Program Optimization
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tensor-program-optimization/learning-optimize-tensor-programs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Learning to Optimize Tensor Programs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tensor-program-optimization/ansor/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ansor
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tensor-program-optimization/roller/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Roller
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tensor-program-optimization/learned-performance-model-tpu/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Learned Performance Model for TPU
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tensor-program-optimization/metatune/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MetaTune
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tensor-program-optimization/unicox/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UniCoX
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tensor-program-optimization/tritonblas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    tritonBLAS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tensor-program-optimization/gpu-performance-portability/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GPU Performance Portability
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tensor-program-optimization/anatomy-triton-attention/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Anatomy of Triton Attention Kernel
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tensor-program-optimization/tritonbench/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TritonBench
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
     
   
   
@@ -907,6 +1283,22 @@
       
         
           
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
         
       
         
@@ -945,7 +1337,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
         
           
           <div class="md-nav__link md-nav__container">
@@ -956,7 +1348,7 @@
   <span class="md-ellipsis">
     
   
-    Tensor Program Optimization
+    Automated Kernel Generation
   
 
     
@@ -967,18 +1359,18 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_3">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             
   
-    Tensor Program Optimization
+    Automated Kernel Generation
   
 
           </label>
@@ -993,14 +1385,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../learning-optimize-tensor-programs/" class="md-nav__link">
+      <a href="../avo/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Learning to Optimize Tensor Programs
+    AVO
   
 
     
@@ -1021,182 +1413,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../ansor/" class="md-nav__link">
+      <a href="../ascendkernelgen/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Ansor
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../roller/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Roller
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../learned-performance-model-tpu/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Learned Performance Model for TPU
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../metatune/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    MetaTune
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../unicox/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    UniCoX
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../tritonblas/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    tritonBLAS
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../gpu-performance-portability/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    GPU Performance Portability
+    AscendKernelGen
   
 
     
@@ -1233,7 +1457,7 @@
   <span class="md-ellipsis">
     
   
-    Anatomy of Triton Attention Kernel
+    Astra
   
 
     
@@ -1251,7 +1475,7 @@
   <span class="md-ellipsis">
     
   
-    Anatomy of Triton Attention Kernel
+    Astra
   
 
     
@@ -1277,10 +1501,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#abstract" class="md-nav__link">
+  <a href="#background" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Abstract
+        Background
       
     </span>
   </a>
@@ -1288,33 +1512,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#kernel-parameter-autotuning" class="md-nav__link">
+  <a href="#methodology" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Kernel Parameter Autotuning
+        Methodology
       
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#autotuning-and-portability" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Autotuning and Portability
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Autotuning and Portability">
+    <nav class="md-nav" aria-label="Methodology">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#51-disadvantages-of-current-autotuning" class="md-nav__link">
+  <a href="#system-overview" class="md-nav__link">
     <span class="md-ellipsis">
       
-        5.1 当前自动调优方法的局限性 (Disadvantages of Current Autotuning)
+        System Overview
       
     </span>
   </a>
@@ -1322,10 +1535,21 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#52-vllm-triton-backend-usage-of-autotuning-in-the-vllm-triton-backend" class="md-nav__link">
+  <a href="#pipeline-structure" class="md-nav__link">
     <span class="md-ellipsis">
       
-        5.2 vllm-triton-backend 的调优方案 (Usage of autotuning in the vllm-triton-backend)
+        Pipeline Structure
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-design-choices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Design Choices
       
     </span>
   </a>
@@ -1334,6 +1558,78 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#experiment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Experiment
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Experiment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#experimental-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Experimental Setup
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#headline-results" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Headline Results
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multi-agent-vs-single-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Multi-Agent vs. Single-Agent
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#case-study-signals" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Case Study Signals
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limitation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Limitation
+      
+    </span>
+  </a>
   
 </li>
       
@@ -1353,231 +1649,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tritonbench/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    TritonBench
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-      
-        
-          
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-      
-      
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
-        
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../../automated-kernel-generation/" class="md-nav__link ">
-              
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Automated Kernel Generation
-  
-
-    
-  </span>
-  
-  
-
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Automated Kernel Generation
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../automated-kernel-generation/avo/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    AVO
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../automated-kernel-generation/ascendkernelgen/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    AscendKernelGen
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../automated-kernel-generation/astra/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Astra
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../automated-kernel-generation/cuda-llm/" class="md-nav__link">
+      <a href="../cuda-llm/" class="md-nav__link">
         
   
   
@@ -1605,7 +1677,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../automated-kernel-generation/cudaforge/" class="md-nav__link">
+      <a href="../cudaforge/" class="md-nav__link">
         
   
   
@@ -1633,7 +1705,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../automated-kernel-generation/cupilot/" class="md-nav__link">
+      <a href="../cupilot/" class="md-nav__link">
         
   
   
@@ -1661,7 +1733,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../automated-kernel-generation/maxcode/" class="md-nav__link">
+      <a href="../maxcode/" class="md-nav__link">
         
   
   
@@ -1689,7 +1761,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../automated-kernel-generation/evoengineer/" class="md-nav__link">
+      <a href="../evoengineer/" class="md-nav__link">
         
   
   
@@ -1717,7 +1789,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../automated-kernel-generation/geak/" class="md-nav__link">
+      <a href="../geak/" class="md-nav__link">
         
   
   
@@ -1745,7 +1817,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../automated-kernel-generation/dsl-sol/" class="md-nav__link">
+      <a href="../dsl-sol/" class="md-nav__link">
         
   
   
@@ -1773,7 +1845,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../automated-kernel-generation/k-search/" class="md-nav__link">
+      <a href="../k-search/" class="md-nav__link">
         
   
   
@@ -1801,7 +1873,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../automated-kernel-generation/kernelband/" class="md-nav__link">
+      <a href="../kernelband/" class="md-nav__link">
         
   
   
@@ -1829,7 +1901,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../automated-kernel-generation/kernelblaster/" class="md-nav__link">
+      <a href="../kernelblaster/" class="md-nav__link">
         
   
   
@@ -1857,7 +1929,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../automated-kernel-generation/kernelevolve/" class="md-nav__link">
+      <a href="../kernelevolve/" class="md-nav__link">
         
   
   
@@ -1885,7 +1957,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../automated-kernel-generation/kernelskill/" class="md-nav__link">
+      <a href="../kernelskill/" class="md-nav__link">
         
   
   
@@ -1913,7 +1985,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../automated-kernel-generation/peak/" class="md-nav__link">
+      <a href="../peak/" class="md-nav__link">
         
   
   
@@ -1941,7 +2013,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../automated-kernel-generation/stark/" class="md-nav__link">
+      <a href="../stark/" class="md-nav__link">
         
   
   
@@ -1969,7 +2041,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../automated-kernel-generation/tritonforge/" class="md-nav__link">
+      <a href="../tritonforge/" class="md-nav__link">
         
   
   
@@ -2277,10 +2349,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#abstract" class="md-nav__link">
+  <a href="#background" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Abstract
+        Background
       
     </span>
   </a>
@@ -2288,33 +2360,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#kernel-parameter-autotuning" class="md-nav__link">
+  <a href="#methodology" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Kernel Parameter Autotuning
+        Methodology
       
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#autotuning-and-portability" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Autotuning and Portability
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Autotuning and Portability">
+    <nav class="md-nav" aria-label="Methodology">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#51-disadvantages-of-current-autotuning" class="md-nav__link">
+  <a href="#system-overview" class="md-nav__link">
     <span class="md-ellipsis">
       
-        5.1 当前自动调优方法的局限性 (Disadvantages of Current Autotuning)
+        System Overview
       
     </span>
   </a>
@@ -2322,10 +2383,21 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#52-vllm-triton-backend-usage-of-autotuning-in-the-vllm-triton-backend" class="md-nav__link">
+  <a href="#pipeline-structure" class="md-nav__link">
     <span class="md-ellipsis">
       
-        5.2 vllm-triton-backend 的调优方案 (Usage of autotuning in the vllm-triton-backend)
+        Pipeline Structure
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-design-choices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Design Choices
       
     </span>
   </a>
@@ -2334,6 +2406,78 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#experiment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Experiment
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Experiment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#experimental-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Experimental Setup
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#headline-results" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Headline Results
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multi-agent-vs-single-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Multi-Agent vs. Single-Agent
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#case-study-signals" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Case Study Signals
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limitation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Limitation
+      
+    </span>
+  </a>
   
 </li>
       
@@ -2357,84 +2501,299 @@
   
 
 
-<h1 id="the-anatomy-of-a-triton-attention-kernel">The Anatomy of a Triton Attention Kernel<a class="headerlink" href="#the-anatomy-of-a-triton-attention-kernel" title="Permanent link">&para;</a></h1>
+<h1 id="astra-a-multi-agent-system-for-gpu-kernel-performance-optimization">Astra: A Multi-Agent System for GPU Kernel Performance Optimization<a class="headerlink" href="#astra-a-multi-agent-system-for-gpu-kernel-performance-optimization" title="Permanent link">&para;</a></h1>
 <div class="paper-meta">
-<p><strong>Authors</strong>: Burkhard Ringlein, Jan van Lunteren, Radu Stoica<br />
-<strong>Institution</strong>: IBM Research Europe<br />
-<strong>Conference</strong>: arXiv 2025<br />
-<strong>Paper Link</strong>: <a href="https://arxiv.org/abs/2511.11581">arXiv:2511.11581</a></p>
+<p><strong>Authors</strong>: Anne Ouyang, Azalia Mirhoseini, Ke Wang, Alex Aiken<br />
+<strong>Conference</strong>: arXiv<br />
+<strong>Year</strong>: 2025<br />
+<strong>Paper Link</strong>: <a href="https://arxiv.org/abs/2509.07506">arXiv:2509.07506</a><br />
+<strong>GitHub</strong>: <a href="https://github.com/Anjiang-Wei/Astra">Anjiang-Wei/Astra</a>  </p>
 </div>
 <div class="paper-tags">
-<p><span class="paper-tag">Triton</span>
-<span class="paper-tag">Attention Mechanism</span>
-<span class="paper-tag">GPU Kernels</span></p>
+<p><span class="paper-tag">Multi-Agent Systems</span>
+<span class="paper-tag">CUDA Optimization</span>
+<span class="paper-tag">SGLang</span></p>
 </div>
-<h2 id="abstract">Abstract<a class="headerlink" href="#abstract" title="Permanent link">&para;</a></h2>
-<p>This paper develops a state-of-the-art paged attention kernel using exclusively OpenAI's Triton language, achieving state-of-the-art performance on both NVIDIA and AMD GPUs. It brings Triton attention kernel performance from 19.7% to 105.9% of state-of-the-art through systematic optimizations.</p>
-<p><strong>Key Contributions</strong>:
-- Feature-complete cross-platform paged attention kernel
-- High-level approach with algorithmic and system-level improvements
-- Parameter auto-tuning for optimal performance
-- Open-sourced kernels adopted as default in vLLM for AMD GPUs</p>
-<h2 id="kernel-parameter-autotuning">Kernel Parameter Autotuning<a class="headerlink" href="#kernel-parameter-autotuning" title="Permanent link">&para;</a></h2>
-<p>通过运行微基准测试（Microbenchmarks）进行“经验性试错”来锁定最佳内核参数(BLOCK_SIZE, num_stages)，从而在大幅缩减编译器所需处理的参数搜索空间的同时，以极低的人工成本实现了远超纯编译器静态分析的优化深度与跨硬件性能可移植性 。</p>
-<h2 id="autotuning-and-portability">Autotuning and Portability<a class="headerlink" href="#autotuning-and-portability" title="Permanent link">&para;</a></h2>
-<h3 id="51-disadvantages-of-current-autotuning">5.1 当前自动调优方法的局限性 (Disadvantages of Current Autotuning)<a class="headerlink" href="#51-disadvantages-of-current-autotuning" title="Permanent link">&para;</a></h3>
-<p>尽管自动调优（Autotuning）有助于 Triton 内核在不同硬件上实现性能可移植性，但在实际生产环境（如 vLLM）中存在显著缺陷：</p>
+<h2 id="background">Background<a class="headerlink" href="#background" title="Permanent link">&para;</a></h2>
+<p>Astra studies GPU kernel optimization in a setting closer to production deployment than benchmark-style code generation. Instead of translating PyTorch modules into CUDA, it starts from existing CUDA kernels already used inside SGLang and tries to improve their runtime while preserving exact behavior. This removes the translation problem and focuses the system entirely on the optimization loop.</p>
+<p>The main claim is that kernel optimization is naturally multi-stage. A useful workflow needs representative test construction, correctness checking, runtime profiling, diagnosis, planning, and code rewriting. A single LLM can attempt all of these tasks, but the paper argues that performance optimization benefits from role specialization because failures in one stage, such as poor test inputs, can mislead the entire search process.</p>
+<p><strong>Key Takeaways</strong></p>
 <ul>
-<li>
-<p><strong>巨大的调优时间开销</strong>：</p>
+<li>Astra decomposes CUDA optimization into four specialized agent roles rather than using one monolithic coding agent.</li>
+<li>The system works directly on real kernels from SGLang, then reintegrates the optimized versions back into the framework.</li>
+<li>On three production kernels, Astra reaches 1.32x average speedup with zero-shot prompting using <code>o4-mini</code>, outperforming a single-agent baseline at 1.08x.</li>
+</ul>
+<h2 id="methodology">Methodology<a class="headerlink" href="#methodology" title="Permanent link">&para;</a></h2>
+<p>Astra is an iterative multi-agent pipeline for optimizing an existing CUDA kernel <code>S</code> into a faster implementation <code>S'</code> while preserving correctness. The paper defines correctness through agreement with the baseline kernel on a finite test suite, allowing a tolerance for floating-point deviations, and reports performance using geometric mean speedup across representative tensor shapes.</p>
+<p>The system runs for <code>R = 5</code> rounds. It first constructs an initial test suite and profiles the baseline kernel. Each round then cycles through planning, code generation, correctness testing, and profiling, while logging the candidate code, correctness status, and measured performance. A manual pre-processing step extracts stand-alone kernels from SGLang before optimization, and a manual post-processing step patches optimized kernels back into SGLang for final validation against the original framework behavior.</p>
+<h3 id="system-overview">System Overview<a class="headerlink" href="#system-overview" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Input</th>
+<th>Output</th>
+<th>Role</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Testing Agent</td>
+<td>Baseline kernel or candidate kernel</td>
+<td>Test suite and correctness result</td>
+<td>Builds representative tests and rejects functionally incorrect candidates</td>
+</tr>
+<tr>
+<td>Profiling Agent</td>
+<td>Candidate kernel plus test inputs</td>
+<td>Runtime measurements</td>
+<td>Measures execution time and provides performance feedback</td>
+</tr>
+<tr>
+<td>Planning Agent</td>
+<td>Correctness and profiling feedback</td>
+<td>Optimization suggestions</td>
+<td>Decides what transformation to try next</td>
+</tr>
+<tr>
+<td>Coding Agent</td>
+<td>Current kernel plus plan</td>
+<td>Revised CUDA kernel</td>
+<td>Applies the proposed rewrite</td>
+</tr>
+<tr>
+<td>Optimization Log</td>
+<td>Per-round artifacts</td>
+<td><code>(round, code, correctness, performance)</code> records</td>
+<td>Tracks search history across rounds</td>
+</tr>
+</tbody>
+</table>
+<h3 id="pipeline-structure">Pipeline Structure<a class="headerlink" href="#pipeline-structure" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Stage</th>
+<th>What Happens</th>
+<th>Why It Matters</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Pre-processing</td>
+<td>Manually extract and simplify SGLang kernels into stand-alone CUDA programs</td>
+<td>Makes the optimization target executable outside framework internals</td>
+</tr>
+<tr>
+<td>Initialization</td>
+<td>Construct initial tests and baseline profiling results</td>
+<td>Establishes a correctness and runtime reference point</td>
+</tr>
+<tr>
+<td>Iterative Optimization</td>
+<td>Planning -&gt; coding -&gt; testing -&gt; profiling for 5 rounds</td>
+<td>Lets agents refine kernels using both correctness and performance feedback</td>
+</tr>
+<tr>
+<td>Post-processing</td>
+<td>Monkey-patch optimized kernels back into SGLang and validate against original behavior</td>
+<td>Confirms that improvements survive framework reintegration</td>
+</tr>
+</tbody>
+</table>
+<h3 id="key-design-choices">Key Design Choices<a class="headerlink" href="#key-design-choices" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Triton 内核的自动调优通常伴随着巨大的时间成本，例如为了达到最佳性能，对每种 GPU 类型进行深度调优可能需要近 24 小时。</li>
-<li>这种开销使得在每次推理服务启动或持续集成（CI）流程中运行自动调优变得不可行。</li>
+<li>Astra uses role specialization instead of a single general-purpose agent.</li>
+<li>The target is optimization of existing kernels, not end-to-end synthesis from Python or PyTorch.</li>
+<li>Final correctness is checked with manually designed evaluation tests rather than only the testing agent's generated suite.</li>
+<li>Speedup is reported as a geometric mean across realistic tensor shapes taken from deployed LLMs.</li>
 </ul>
-</li>
-<li>
-<p><strong>缓存机制的灵活性不足</strong>：</p>
-<ul>
-<li>虽然缓存调优结果可以减少开销，但通常仅在遇到完全相同的“场景”（即张量形状、步长等参数组合完全一致）时有效。</li>
-<li>一旦输入参数发生微小变化（例如序列长度从 32 变为 33），缓存就会失效，从而触发重新调优。</li>
-</ul>
-</li>
-<li>
-<p><strong>运行时延迟增加</strong>：</p>
-<ul>
-<li>即使所有场景都已预先调优并缓存，在运行时查找最佳配置通常会增加数十微秒（tens of micro-seconds）的内核启动时间，这会抵消优化后的内核在处理短请求时带来的性能收益。</li>
-</ul>
-</li>
-<li>
-<p><strong>与 CUDA/HIP Graphs 不兼容</strong>：</p>
-<ul>
-<li>CUDA/HIP Graphs 记录一次静态执行图后便重复回放，无法在每次执行时动态查询 Triton 自动调优器来选择配置，因此无法直接使用标准的自动调优流程。</li>
-</ul>
-</li>
-</ul>
-<h3 id="52-vllm-triton-backend-usage-of-autotuning-in-the-vllm-triton-backend">5.2 vllm-triton-backend 的调优方案 (Usage of autotuning in the vllm-triton-backend)<a class="headerlink" href="#52-vllm-triton-backend-usage-of-autotuning-in-the-vllm-triton-backend" title="Permanent link">&para;</a></h3>
-<p>为了解决上述限制，作者采用了一种“两步走”的方案，通过离线调优生成静态启发式规则：</p>
-<ul>
-<li>
-<p><strong>第一步：基于微基准测试的离线调优</strong>：</p>
-<ul>
-<li><strong>脱离运行时环境</strong>：开发了一个微基准测试（Micro-benchmark）框架，在 vLLM 运行环境之外对内核进行独立调优。</li>
-<li><strong>模拟真实场景</strong>：微基准测试不局限于固定形状的输入，而是模拟真实推理服务中变化的上下文长度、提示词长度和批量大小，并据此调整内核。</li>
-<li><strong>避免启动开销</strong>：这种方法避免了增加 vLLM 的启动延迟或 CI 流水线的成本。</li>
-</ul>
-</li>
-<li>
-<p><strong>第二步：构建启发式决策树 (Decision Trees)</strong>：</p>
-<ul>
-<li><strong>导出为规则</strong>：分析离线调优的结果，将其转化为简单的 <code>if-else</code> 决策树（即启发式规则），直接硬编码在后端代码中（例如根据序列长度决定 Block 大小）。</li>
-<li><strong>方案优势</strong>：<ul>
-<li><strong>消除查找开销</strong>：决策树在运行时极其高效，避免了查表的延迟，同时也支持 CUDA/HIP Graphs 的使用。</li>
-<li><strong>泛化能力强</strong>：相比于只能通过精确匹配命中缓存的机制，决策树可以为调优缓存中不存在的场景（即未被显式调优过的中间值）提供优化配置。</li>
-<li><strong>减少调优工作量</strong>：只需针对平均情况和边缘情况进行调优，生成的规则即可覆盖并适用于大多数场景。</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
+<h2 id="experiment">Experiment<a class="headerlink" href="#experiment" title="Permanent link">&para;</a></h2>
+<h3 id="experimental-setup">Experimental Setup<a class="headerlink" href="#experimental-setup" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Framework Target</td>
+<td>SGLang</td>
+</tr>
+<tr>
+<td>Kernels</td>
+<td><code>merge_attn_states_lse</code>, <code>fused_add_rmsnorm</code>, <code>silu_and_mul</code></td>
+</tr>
+<tr>
+<td>Model</td>
+<td>OpenAI <code>o4-mini</code></td>
+</tr>
+<tr>
+<td>Agent Framework</td>
+<td>OpenAI Agents SDK</td>
+</tr>
+<tr>
+<td>Hardware</td>
+<td>NVIDIA H100</td>
+</tr>
+<tr>
+<td>Optimization Rounds</td>
+<td>5</td>
+</tr>
+<tr>
+<td>Runtime Measurement</td>
+<td>20 warm-up runs + 100 measured repetitions per shape</td>
+</tr>
+<tr>
+<td>Shape Selection</td>
+<td>Common dimensions from LLaMA-7B, 13B, and 70B style workloads</td>
+</tr>
+<tr>
+<td>Metrics</td>
+<td>Correctness and geometric-mean speedup</td>
+</tr>
+</tbody>
+</table>
+<h3 id="headline-results">Headline Results<a class="headerlink" href="#headline-results" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Kernel</th>
+<th>Time-Base (us)</th>
+<th>Time-Opt. (us)</th>
+<th>Speedup</th>
+<th>Correct</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>merge_attn_states_lse</code></td>
+<td>31.4</td>
+<td>24.9</td>
+<td>1.26x</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td><code>fused_add_rmsnorm</code></td>
+<td>41.3</td>
+<td>33.1</td>
+<td>1.25x</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td><code>silu_and_mul</code></td>
+<td>20.1</td>
+<td>13.8</td>
+<td>1.46x</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td><strong>Average</strong></td>
+<td><strong>30.9</strong></td>
+<td><strong>23.9</strong></td>
+<td><strong>1.32x</strong></td>
+<td><strong>Yes</strong></td>
+</tr>
+</tbody>
+</table>
+<p>The gains are modest but credible because they are measured on existing production kernels rather than on synthetic translation tasks. The best improvement appears on <code>silu_and_mul</code>, while all three kernels remain correct after optimization and framework-level reintegration.</p>
+<h3 id="multi-agent-vs-single-agent">Multi-Agent vs. Single-Agent<a class="headerlink" href="#multi-agent-vs-single-agent" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Kernel</th>
+<th>Speedup - Single Agent</th>
+<th>Speedup - Multi-Agent</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>merge_attn_states_lse</code></td>
+<td>0.73x</td>
+<td>1.26x</td>
+</tr>
+<tr>
+<td><code>fused_add_rmsnorm</code></td>
+<td>1.18x</td>
+<td>1.25x</td>
+</tr>
+<tr>
+<td><code>silu_and_mul</code></td>
+<td>1.48x</td>
+<td>1.46x</td>
+</tr>
+<tr>
+<td><strong>Average</strong></td>
+<td><strong>1.08x</strong></td>
+<td><strong>1.32x</strong></td>
+</tr>
+</tbody>
+</table>
+<p>The comparison isolates the value of specialization. The largest difference appears on the most complex kernel, <code>merge_attn_states_lse</code>, where the single-agent setup regresses to 0.73x because poor test construction distorts profiling feedback. On the simplest kernel, the two approaches are nearly tied, which suggests that role decomposition matters most when the optimization workflow itself becomes brittle.</p>
+<h3 id="case-study-signals">Case Study Signals<a class="headerlink" href="#case-study-signals" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Kernel</th>
+<th>Main Optimization Pattern</th>
+<th>Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>merge_attn_states_lse</code></td>
+<td>Hoist loop-invariant exponential and normalization work out of the hot inner loop</td>
+<td>Reduces repeated expensive operations and improves throughput</td>
+</tr>
+<tr>
+<td><code>fused_add_rmsnorm</code></td>
+<td>Replace shared-memory-only reduction with warp-level intrinsics plus short shared-memory phase</td>
+<td>Cuts synchronization overhead and memory traffic</td>
+</tr>
+<tr>
+<td><code>silu_and_mul</code></td>
+<td>Use <code>__half2</code> vectorized loads and fast math intrinsics such as <code>__expf</code> and reciprocal-multiply</td>
+<td>Improves both memory bandwidth and arithmetic efficiency</td>
+</tr>
+</tbody>
+</table>
+<p>The case studies show that Astra is not only tuning launch parameters. It performs structural rewrites, introduces warp intrinsics, changes memory-access granularity, and substitutes lower-latency device intrinsics. The paper also reports shape-by-shape speedups, where some inputs reach 1.57x while others drop to 1.00x, so the average gains are not uniformly distributed across all workloads.</p>
+<h2 id="limitation">Limitation<a class="headerlink" href="#limitation" title="Permanent link">&para;</a></h2>
+<p>The paper is explicit that Astra is an early system rather than a fully automated optimizer. Its current evaluation is small, and the surrounding workflow still requires substantial manual engineering.</p>
+<table>
+<thead>
+<tr>
+<th>Limitation</th>
+<th>Why It Matters</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Only three kernels are evaluated</td>
+<td>The evidence is promising but too narrow to establish broad generalization</td>
+</tr>
+<tr>
+<td>The workflow is SGLang-specific</td>
+<td>It is unclear how much of the pipeline transfers directly to other serving or training stacks</td>
+</tr>
+<tr>
+<td>Pre-processing and post-processing are manual</td>
+<td>Extracting stand-alone kernels and reintegrating them back into the framework remains a major bottleneck</td>
+</tr>
+<tr>
+<td>Final correctness uses manually designed tests</td>
+<td>This improves confidence, but also means the system is not yet fully autonomous end to end</td>
+</tr>
+<tr>
+<td>Shape robustness is uneven</td>
+<td>Some shapes see large gains, while others are neutral, so the optimizer is not shape-specialized or uniformly strong</td>
+</tr>
+</tbody>
+</table>
 <hr />
-<p><em>Reading date: 2025</em>
+<p><em>Reading date: 2026-04</em>
 <em>Note status: Completed</em></p>
 
 

@@ -12,13 +12,13 @@
         <meta name="author" content="zksainx">
       
       
-        <link rel="canonical" href="https://zksainx.github.io/paper-notes/tensor-program-optimization/anatomy-triton-attention/">
+        <link rel="canonical" href="https://zksainx.github.io/paper-notes/automated-kernel-generation/cudaforge/">
       
       
-        <link rel="prev" href="../gpu-performance-portability/">
+        <link rel="prev" href="../cuda-llm/">
       
       
-        <link rel="next" href="../tritonbench/">
+        <link rel="next" href="../cupilot/">
       
       
         
@@ -29,7 +29,7 @@
     
     
       
-        <title>Anatomy of Triton Attention Kernel - Paper Notes</title>
+        <title>CudaForge - Paper Notes</title>
       
     
     
@@ -82,7 +82,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#the-anatomy-of-a-triton-attention-kernel" class="md-skip">
+        <a href="#cudaforge-an-agent-framework-with-hardware-feedback-for-cuda-kernel-optimization" class="md-skip">
           跳转至
         </a>
       
@@ -116,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Anatomy of Triton Attention Kernel
+              CudaForge
             
           </span>
         </div>
@@ -273,13 +273,11 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../tensor-program-optimization/" class="md-tabs__link">
           
   
   
@@ -297,11 +295,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../automated-kernel-generation/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
           
   
   
@@ -898,6 +898,382 @@
       
   
   
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../tensor-program-optimization/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tensor Program Optimization
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Tensor Program Optimization
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tensor-program-optimization/learning-optimize-tensor-programs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Learning to Optimize Tensor Programs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tensor-program-optimization/ansor/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ansor
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tensor-program-optimization/roller/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Roller
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tensor-program-optimization/learned-performance-model-tpu/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Learned Performance Model for TPU
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tensor-program-optimization/metatune/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MetaTune
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tensor-program-optimization/unicox/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UniCoX
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tensor-program-optimization/tritonblas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    tritonBLAS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tensor-program-optimization/gpu-performance-portability/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GPU Performance Portability
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tensor-program-optimization/anatomy-triton-attention/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Anatomy of Triton Attention Kernel
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tensor-program-optimization/tritonbench/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TritonBench
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
     
   
   
@@ -907,6 +1283,22 @@
       
         
           
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
         
       
         
@@ -945,7 +1337,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
         
           
           <div class="md-nav__link md-nav__container">
@@ -956,7 +1348,7 @@
   <span class="md-ellipsis">
     
   
-    Tensor Program Optimization
+    Automated Kernel Generation
   
 
     
@@ -967,18 +1359,18 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_3">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             
   
-    Tensor Program Optimization
+    Automated Kernel Generation
   
 
           </label>
@@ -993,14 +1385,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../learning-optimize-tensor-programs/" class="md-nav__link">
+      <a href="../avo/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Learning to Optimize Tensor Programs
+    AVO
   
 
     
@@ -1021,14 +1413,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../ansor/" class="md-nav__link">
+      <a href="../ascendkernelgen/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Ansor
+    AscendKernelGen
   
 
     
@@ -1049,14 +1441,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../roller/" class="md-nav__link">
+      <a href="../astra/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Roller
+    Astra
   
 
     
@@ -1077,126 +1469,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../learned-performance-model-tpu/" class="md-nav__link">
+      <a href="../cuda-llm/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Learned Performance Model for TPU
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../metatune/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    MetaTune
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../unicox/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    UniCoX
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../tritonblas/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    tritonBLAS
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../gpu-performance-portability/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    GPU Performance Portability
+    CUDA-LLM
   
 
     
@@ -1233,7 +1513,7 @@
   <span class="md-ellipsis">
     
   
-    Anatomy of Triton Attention Kernel
+    CudaForge
   
 
     
@@ -1251,7 +1531,7 @@
   <span class="md-ellipsis">
     
   
-    Anatomy of Triton Attention Kernel
+    CudaForge
   
 
     
@@ -1277,10 +1557,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#abstract" class="md-nav__link">
+  <a href="#background" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Abstract
+        Background
       
     </span>
   </a>
@@ -1288,33 +1568,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#kernel-parameter-autotuning" class="md-nav__link">
+  <a href="#methodology" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Kernel Parameter Autotuning
+        Methodology
       
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#autotuning-and-portability" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Autotuning and Portability
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Autotuning and Portability">
+    <nav class="md-nav" aria-label="Methodology">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#51-disadvantages-of-current-autotuning" class="md-nav__link">
+  <a href="#system-overview" class="md-nav__link">
     <span class="md-ellipsis">
       
-        5.1 当前自动调优方法的局限性 (Disadvantages of Current Autotuning)
+        System Overview
       
     </span>
   </a>
@@ -1322,10 +1591,21 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#52-vllm-triton-backend-usage-of-autotuning-in-the-vllm-triton-backend" class="md-nav__link">
+  <a href="#key-design-choices" class="md-nav__link">
     <span class="md-ellipsis">
       
-        5.2 vllm-triton-backend 的调优方案 (Usage of autotuning in the vllm-triton-backend)
+        Key Design Choices
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#optimization-loop" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Optimization Loop
       
     </span>
   </a>
@@ -1334,6 +1614,78 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#experiment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Experiment
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Experiment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#experimental-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Experimental Setup
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#headline-results" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Headline Results
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comparative-and-scaling-results" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Comparative and Scaling Results
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cost-metrics-and-generalization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cost, Metrics, and Generalization
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limitation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Limitation
+      
+    </span>
+  </a>
   
 </li>
       
@@ -1353,287 +1705,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tritonbench/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    TritonBench
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-      
-        
-          
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-      
-      
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
-        
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../../automated-kernel-generation/" class="md-nav__link ">
-              
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Automated Kernel Generation
-  
-
-    
-  </span>
-  
-  
-
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Automated Kernel Generation
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../automated-kernel-generation/avo/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    AVO
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../automated-kernel-generation/ascendkernelgen/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    AscendKernelGen
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../automated-kernel-generation/astra/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Astra
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../automated-kernel-generation/cuda-llm/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    CUDA-LLM
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../automated-kernel-generation/cudaforge/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    CudaForge
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../automated-kernel-generation/cupilot/" class="md-nav__link">
+      <a href="../cupilot/" class="md-nav__link">
         
   
   
@@ -1661,7 +1733,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../automated-kernel-generation/maxcode/" class="md-nav__link">
+      <a href="../maxcode/" class="md-nav__link">
         
   
   
@@ -1689,7 +1761,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../automated-kernel-generation/evoengineer/" class="md-nav__link">
+      <a href="../evoengineer/" class="md-nav__link">
         
   
   
@@ -1717,7 +1789,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../automated-kernel-generation/geak/" class="md-nav__link">
+      <a href="../geak/" class="md-nav__link">
         
   
   
@@ -1745,7 +1817,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../automated-kernel-generation/dsl-sol/" class="md-nav__link">
+      <a href="../dsl-sol/" class="md-nav__link">
         
   
   
@@ -1773,7 +1845,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../automated-kernel-generation/k-search/" class="md-nav__link">
+      <a href="../k-search/" class="md-nav__link">
         
   
   
@@ -1801,7 +1873,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../automated-kernel-generation/kernelband/" class="md-nav__link">
+      <a href="../kernelband/" class="md-nav__link">
         
   
   
@@ -1829,7 +1901,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../automated-kernel-generation/kernelblaster/" class="md-nav__link">
+      <a href="../kernelblaster/" class="md-nav__link">
         
   
   
@@ -1857,7 +1929,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../automated-kernel-generation/kernelevolve/" class="md-nav__link">
+      <a href="../kernelevolve/" class="md-nav__link">
         
   
   
@@ -1885,7 +1957,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../automated-kernel-generation/kernelskill/" class="md-nav__link">
+      <a href="../kernelskill/" class="md-nav__link">
         
   
   
@@ -1913,7 +1985,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../automated-kernel-generation/peak/" class="md-nav__link">
+      <a href="../peak/" class="md-nav__link">
         
   
   
@@ -1941,7 +2013,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../automated-kernel-generation/stark/" class="md-nav__link">
+      <a href="../stark/" class="md-nav__link">
         
   
   
@@ -1969,7 +2041,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../automated-kernel-generation/tritonforge/" class="md-nav__link">
+      <a href="../tritonforge/" class="md-nav__link">
         
   
   
@@ -2277,10 +2349,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#abstract" class="md-nav__link">
+  <a href="#background" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Abstract
+        Background
       
     </span>
   </a>
@@ -2288,33 +2360,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#kernel-parameter-autotuning" class="md-nav__link">
+  <a href="#methodology" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Kernel Parameter Autotuning
+        Methodology
       
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#autotuning-and-portability" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Autotuning and Portability
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Autotuning and Portability">
+    <nav class="md-nav" aria-label="Methodology">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#51-disadvantages-of-current-autotuning" class="md-nav__link">
+  <a href="#system-overview" class="md-nav__link">
     <span class="md-ellipsis">
       
-        5.1 当前自动调优方法的局限性 (Disadvantages of Current Autotuning)
+        System Overview
       
     </span>
   </a>
@@ -2322,10 +2383,21 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#52-vllm-triton-backend-usage-of-autotuning-in-the-vllm-triton-backend" class="md-nav__link">
+  <a href="#key-design-choices" class="md-nav__link">
     <span class="md-ellipsis">
       
-        5.2 vllm-triton-backend 的调优方案 (Usage of autotuning in the vllm-triton-backend)
+        Key Design Choices
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#optimization-loop" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Optimization Loop
       
     </span>
   </a>
@@ -2334,6 +2406,78 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#experiment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Experiment
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Experiment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#experimental-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Experimental Setup
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#headline-results" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Headline Results
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comparative-and-scaling-results" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Comparative and Scaling Results
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cost-metrics-and-generalization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cost, Metrics, and Generalization
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limitation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Limitation
+      
+    </span>
+  </a>
   
 </li>
       
@@ -2357,84 +2501,332 @@
   
 
 
-<h1 id="the-anatomy-of-a-triton-attention-kernel">The Anatomy of a Triton Attention Kernel<a class="headerlink" href="#the-anatomy-of-a-triton-attention-kernel" title="Permanent link">&para;</a></h1>
+<h1 id="cudaforge-an-agent-framework-with-hardware-feedback-for-cuda-kernel-optimization">CudaForge: An Agent Framework with Hardware Feedback for CUDA Kernel Optimization<a class="headerlink" href="#cudaforge-an-agent-framework-with-hardware-feedback-for-cuda-kernel-optimization" title="Permanent link">&para;</a></h1>
 <div class="paper-meta">
-<p><strong>Authors</strong>: Burkhard Ringlein, Jan van Lunteren, Radu Stoica<br />
-<strong>Institution</strong>: IBM Research Europe<br />
-<strong>Conference</strong>: arXiv 2025<br />
-<strong>Paper Link</strong>: <a href="https://arxiv.org/abs/2511.11581">arXiv:2511.11581</a></p>
+<p><strong>Authors</strong>: Zijian Zhang, Rong Wang, Shiyang Li, Yuebo Luo, Mingyi Hong, Caiwen Ding<br />
+<strong>Institution</strong>: University of Minnesota, Twin Cities<br />
+<strong>Conference</strong>: arXiv<br />
+<strong>Year</strong>: 2025<br />
+<strong>Paper Link</strong>: <a href="https://arxiv.org/abs/2511.01884">arXiv:2511.01884</a><br />
+<strong>GitHub</strong>: <a href="https://github.com/OptimAI-Lab/CudaForge">OptimAI-Lab/CudaForge</a>  </p>
 </div>
 <div class="paper-tags">
-<p><span class="paper-tag">Triton</span>
-<span class="paper-tag">Attention Mechanism</span>
-<span class="paper-tag">GPU Kernels</span></p>
+<p><span class="paper-tag">Hardware Feedback</span>
+<span class="paper-tag">CUDA Optimization</span>
+<span class="paper-tag">Multi-Agent Systems</span></p>
 </div>
-<h2 id="abstract">Abstract<a class="headerlink" href="#abstract" title="Permanent link">&para;</a></h2>
-<p>This paper develops a state-of-the-art paged attention kernel using exclusively OpenAI's Triton language, achieving state-of-the-art performance on both NVIDIA and AMD GPUs. It brings Triton attention kernel performance from 19.7% to 105.9% of state-of-the-art through systematic optimizations.</p>
-<p><strong>Key Contributions</strong>:
-- Feature-complete cross-platform paged attention kernel
-- High-level approach with algorithmic and system-level improvements
-- Parameter auto-tuning for optimal performance
-- Open-sourced kernels adopted as default in vLLM for AMD GPUs</p>
-<h2 id="kernel-parameter-autotuning">Kernel Parameter Autotuning<a class="headerlink" href="#kernel-parameter-autotuning" title="Permanent link">&para;</a></h2>
-<p>通过运行微基准测试（Microbenchmarks）进行“经验性试错”来锁定最佳内核参数(BLOCK_SIZE, num_stages)，从而在大幅缩减编译器所需处理的参数搜索空间的同时，以极低的人工成本实现了远超纯编译器静态分析的优化深度与跨硬件性能可移植性 。</p>
-<h2 id="autotuning-and-portability">Autotuning and Portability<a class="headerlink" href="#autotuning-and-portability" title="Permanent link">&para;</a></h2>
-<h3 id="51-disadvantages-of-current-autotuning">5.1 当前自动调优方法的局限性 (Disadvantages of Current Autotuning)<a class="headerlink" href="#51-disadvantages-of-current-autotuning" title="Permanent link">&para;</a></h3>
-<p>尽管自动调优（Autotuning）有助于 Triton 内核在不同硬件上实现性能可移植性，但在实际生产环境（如 vLLM）中存在显著缺陷：</p>
+<h2 id="background">Background<a class="headerlink" href="#background" title="Permanent link">&para;</a></h2>
+<p>CudaForge addresses a practical gap in LLM-based CUDA optimization. Existing approaches either rely on direct one-shot generation, which often fails on correctness or performance, or use reinforcement learning and complex agentic pipelines that remain expensive and difficult to generalize. The paper argues that one key missing ingredient is explicit hardware feedback. Human CUDA engineers do not optimize blindly: they iterate through correctness testing, runtime profiling, bottleneck diagnosis, and targeted revision. CudaForge tries to reproduce this loop at inference time without any additional training.</p>
+<p>The system is built around a simple claim: a lightweight training-free workflow can outperform heavier alternatives if it separates generation from diagnosis and feeds the diagnosis with the right hardware signals. Instead of asking one model to both write and critique kernels, CudaForge splits the work between a Coder and a Judge. The Judge uses GPU specifications and carefully filtered Nsight Compute metrics to identify one critical bottleneck at a time, then sends focused correction or optimization guidance back to the Coder.</p>
+<p><strong>Key Takeaways</strong></p>
 <ul>
-<li>
-<p><strong>巨大的调优时间开销</strong>：</p>
+<li>CudaForge is a two-agent CUDA optimization workflow that combines correctness feedback with hardware-aware optimization feedback.</li>
+<li>The framework does not use the full NCU metric dump; it selects a compact 24-metric subset and then narrows attention to 3-4 critical metrics per round.</li>
+<li>On full KernelBench Levels 1-3, CudaForge reports <code>97.6%</code> correctness and <code>1.68x</code> average speedup over PyTorch, while remaining far cheaper than prior agentic pipelines.</li>
+</ul>
+<h2 id="methodology">Methodology<a class="headerlink" href="#methodology" title="Permanent link">&para;</a></h2>
+<p>CudaForge iterates through a Coder-Judge loop. The Coder produces a candidate CUDA kernel from the task description, previous kernel, and Judge feedback. The candidate is then compiled and executed against correctness tests. If it fails, the Judge enters correction mode and explains the likely bug. If it passes, the system profiles the kernel with Nsight Compute and the Judge enters optimization mode, using both NCU metrics and static GPU specifications to identify the dominant bottleneck and suggest the next targeted improvement.</p>
+<p>The design is deliberately narrow and practical. The Coder does not see the full conversation history, only the previous kernel, task description, and latest feedback. The Judge also operates round-by-round and emits structured JSON feedback. The paper argues that this lightweight memory policy reduces hallucinations, lowers API cost, and keeps the optimization loop focused. A second important design choice is metric selection: instead of passing the full set of NCU metrics, the workflow builds an offline-selected subset of 24 metrics that are strongly correlated with runtime across representative tasks, then asks the Judge to focus on just a few salient ones in each round.</p>
+<h3 id="system-overview">System Overview<a class="headerlink" href="#system-overview" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Input</th>
+<th>Output</th>
+<th>Role</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Coder</td>
+<td>Task description, previous kernel, Judge feedback</td>
+<td>Candidate CUDA kernel</td>
+<td>Generates or refines kernels round by round</td>
+</tr>
+<tr>
+<td>Correctness Tester</td>
+<td>Candidate kernel and reference task</td>
+<td>Compile / run status and numerical result</td>
+<td>Filters invalid kernels before optimization</td>
+</tr>
+<tr>
+<td>Judge</td>
+<td>Candidate kernel, runtime signals, hardware feedback</td>
+<td>JSON correction or optimization guidance</td>
+<td>Diagnoses errors and bottlenecks</td>
+</tr>
+<tr>
+<td>Hardware Feedback Module</td>
+<td>GPU specs plus selected NCU metrics</td>
+<td>Bottleneck evidence</td>
+<td>Grounds the Judge in actual device behavior</td>
+</tr>
+<tr>
+<td>Selection Logic</td>
+<td>All correct candidates across rounds</td>
+<td>Best correct kernel</td>
+<td>Chooses the most efficient valid result</td>
+</tr>
+</tbody>
+</table>
+<h3 id="key-design-choices">Key Design Choices<a class="headerlink" href="#key-design-choices" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Triton 内核的自动调优通常伴随着巨大的时间成本，例如为了达到最佳性能，对每种 GPU 类型进行深度调优可能需要近 24 小时。</li>
-<li>这种开销使得在每次推理服务启动或持续集成（CI）流程中运行自动调优变得不可行。</li>
+<li>Separate generation and diagnosis into two agents instead of using one model to self-refine.</li>
+<li>Use correction mode and optimization mode separately, so correctness repair is not mixed with performance tuning.</li>
+<li>Keep only lightweight round-local memory for both agents.</li>
+<li>Select a compact 24-metric NCU subset offline instead of dumping the full profiler output into the prompt.</li>
+<li>Force the Judge to focus on one dominant bottleneck per round, similar to an expert performance-debugging workflow.</li>
 </ul>
-</li>
-<li>
-<p><strong>缓存机制的灵活性不足</strong>：</p>
-<ul>
-<li>虽然缓存调优结果可以减少开销，但通常仅在遇到完全相同的“场景”（即张量形状、步长等参数组合完全一致）时有效。</li>
-<li>一旦输入参数发生微小变化（例如序列长度从 32 变为 33），缓存就会失效，从而触发重新调优。</li>
-</ul>
-</li>
-<li>
-<p><strong>运行时延迟增加</strong>：</p>
-<ul>
-<li>即使所有场景都已预先调优并缓存，在运行时查找最佳配置通常会增加数十微秒（tens of micro-seconds）的内核启动时间，这会抵消优化后的内核在处理短请求时带来的性能收益。</li>
-</ul>
-</li>
-<li>
-<p><strong>与 CUDA/HIP Graphs 不兼容</strong>：</p>
-<ul>
-<li>CUDA/HIP Graphs 记录一次静态执行图后便重复回放，无法在每次执行时动态查询 Triton 自动调优器来选择配置，因此无法直接使用标准的自动调优流程。</li>
-</ul>
-</li>
-</ul>
-<h3 id="52-vllm-triton-backend-usage-of-autotuning-in-the-vllm-triton-backend">5.2 vllm-triton-backend 的调优方案 (Usage of autotuning in the vllm-triton-backend)<a class="headerlink" href="#52-vllm-triton-backend-usage-of-autotuning-in-the-vllm-triton-backend" title="Permanent link">&para;</a></h3>
-<p>为了解决上述限制，作者采用了一种“两步走”的方案，通过离线调优生成静态启发式规则：</p>
-<ul>
-<li>
-<p><strong>第一步：基于微基准测试的离线调优</strong>：</p>
-<ul>
-<li><strong>脱离运行时环境</strong>：开发了一个微基准测试（Micro-benchmark）框架，在 vLLM 运行环境之外对内核进行独立调优。</li>
-<li><strong>模拟真实场景</strong>：微基准测试不局限于固定形状的输入，而是模拟真实推理服务中变化的上下文长度、提示词长度和批量大小，并据此调整内核。</li>
-<li><strong>避免启动开销</strong>：这种方法避免了增加 vLLM 的启动延迟或 CI 流水线的成本。</li>
-</ul>
-</li>
-<li>
-<p><strong>第二步：构建启发式决策树 (Decision Trees)</strong>：</p>
-<ul>
-<li><strong>导出为规则</strong>：分析离线调优的结果，将其转化为简单的 <code>if-else</code> 决策树（即启发式规则），直接硬编码在后端代码中（例如根据序列长度决定 Block 大小）。</li>
-<li><strong>方案优势</strong>：<ul>
-<li><strong>消除查找开销</strong>：决策树在运行时极其高效，避免了查表的延迟，同时也支持 CUDA/HIP Graphs 的使用。</li>
-<li><strong>泛化能力强</strong>：相比于只能通过精确匹配命中缓存的机制，决策树可以为调优缓存中不存在的场景（即未被显式调优过的中间值）提供优化配置。</li>
-<li><strong>减少调优工作量</strong>：只需针对平均情况和边缘情况进行调优，生成的规则即可覆盖并适用于大多数场景。</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
+<h3 id="optimization-loop">Optimization Loop<a class="headerlink" href="#optimization-loop" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Stage</th>
+<th>What Happens</th>
+<th>Why It Matters</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Initial Generation</td>
+<td>Coder writes a first CUDA candidate from the task prompt and one-shot example</td>
+<td>Produces a concrete kernel to test</td>
+</tr>
+<tr>
+<td>Compilation and Execution</td>
+<td>The system checks syntax and output equivalence to PyTorch with tolerance <code>1e-4</code></td>
+<td>Distinguishes broken kernels from optimizable ones</td>
+</tr>
+<tr>
+<td>Correction Feedback</td>
+<td>Judge explains compile or correctness failures</td>
+<td>Stabilizes correctness before optimization</td>
+</tr>
+<tr>
+<td>NCU Profiling</td>
+<td>Correct kernels are profiled with selected metrics</td>
+<td>Reveals concrete hardware bottlenecks</td>
+</tr>
+<tr>
+<td>Optimization Feedback</td>
+<td>Judge identifies one critical bottleneck and suggests one focused change</td>
+<td>Avoids blind exploration</td>
+</tr>
+<tr>
+<td>Iterative Refinement</td>
+<td>Coder rewrites the kernel using the latest feedback</td>
+<td>Accumulates performance gains over rounds</td>
+</tr>
+</tbody>
+</table>
+<h2 id="experiment">Experiment<a class="headerlink" href="#experiment" title="Permanent link">&para;</a></h2>
+<h3 id="experimental-setup">Experimental Setup<a class="headerlink" href="#experimental-setup" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Benchmark</td>
+<td>KernelBench Levels 1-3</td>
+</tr>
+<tr>
+<td>Full Benchmark Size</td>
+<td>250 tasks</td>
+</tr>
+<tr>
+<td>Stratified Subset</td>
+<td>25 tasks (<code>10/10/5</code> across Levels 1/2/3)</td>
+</tr>
+<tr>
+<td>Default Base Model</td>
+<td>OpenAI-o3 for both Coder and Judge</td>
+</tr>
+<tr>
+<td>Default Max Rounds</td>
+<td><code>N = 10</code></td>
+</tr>
+<tr>
+<td>Main Hardware for Results</td>
+<td>Quadro RTX 6000</td>
+</tr>
+<tr>
+<td>Comparison Hardware</td>
+<td>H200, A100, RTX 4090, RTX 3090</td>
+</tr>
+<tr>
+<td>Correctness Criterion</td>
+<td>Compile + execution pass with numerical tolerance <code>1e-4</code></td>
+</tr>
+<tr>
+<td>Main Baselines</td>
+<td>OpenAI-o3, o3-self-refine, o3-correction, o3-optimization, Kevin-32B, Agentic Baseline</td>
+</tr>
+</tbody>
+</table>
+<h3 id="headline-results">Headline Results<a class="headerlink" href="#headline-results" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Method / Setting</th>
+<th>Correct</th>
+<th>Median</th>
+<th>75th Pctl</th>
+<th>Avg. Perf</th>
+<th>Fast1</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>OpenAI-o3</td>
+<td>57.6%</td>
+<td>0.390</td>
+<td>1.014</td>
+<td>0.680</td>
+<td>31.6%</td>
+</tr>
+<tr>
+<td>o3-self-refine</td>
+<td>90.8%</td>
+<td>1.012</td>
+<td>1.209</td>
+<td>1.107</td>
+<td>55.2%</td>
+</tr>
+<tr>
+<td>o3-correction</td>
+<td>97.6%</td>
+<td>1.031</td>
+<td>1.238</td>
+<td>1.222</td>
+<td>59.6%</td>
+</tr>
+<tr>
+<td>o3-optimization</td>
+<td>88.4%</td>
+<td>1.061</td>
+<td>1.483</td>
+<td>1.509</td>
+<td>64.0%</td>
+</tr>
+<tr>
+<td>CudaForge</td>
+<td>97.6%</td>
+<td>1.107</td>
+<td>1.592</td>
+<td>1.677</td>
+<td>70.8%</td>
+</tr>
+</tbody>
+</table>
+<p>On the full 250-task benchmark, CudaForge is stronger than both the raw base model and every internal ablation. The comparison is especially useful because the ablations isolate the value of each design choice. Correction-only feedback preserves the same correctness rate as CudaForge but leaves substantial performance on the table. Optimization-only feedback improves raw speed when it works, but correctness collapses because invalid kernels are never stabilized. The full workflow is the only variant that combines high correctness with high speedup.</p>
+<h3 id="comparative-and-scaling-results">Comparative and Scaling Results<a class="headerlink" href="#comparative-and-scaling-results" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CudaForge on Levels 1 and 2</td>
+<td><code>98.0%</code> correctness, <code>1.776x</code> performance</td>
+</tr>
+<tr>
+<td>Agentic Baseline on Levels 1 and 2</td>
+<td><code>95.0%</code> correctness, <code>1.490x</code> performance</td>
+</tr>
+<tr>
+<td>CudaForge vs Kevin-32B on H200 (Levels 1 and 2 comparable tasks)</td>
+<td><code>98.0% / 1.662x</code> vs <code>82.0% / 1.10x</code></td>
+</tr>
+<tr>
+<td>Level 3 only on RTX 6000</td>
+<td><code>96%</code> correctness, <code>1.283x</code> performance</td>
+</tr>
+<tr>
+<td>Scaling rounds from 10 to 30 on subset</td>
+<td>average speedup rises to <code>2.271x</code></td>
+</tr>
+</tbody>
+</table>
+<p>These results support two different claims. First, a training-free hardware-guided agent can beat both a strong RL system and a stronger but more expensive prior agentic baseline. Second, the workflow has meaningful test-time scaling: more rounds continue to improve speed, though with diminishing returns after around 10 iterations.</p>
+<h3 id="cost-metrics-and-generalization">Cost, Metrics, and Generalization<a class="headerlink" href="#cost-metrics-and-generalization" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Average API cost per kernel</td>
+<td><code>$0.30</code></td>
+</tr>
+<tr>
+<td>Average wall-clock time per kernel on one RTX 6000</td>
+<td><code>26.5</code> minutes</td>
+</tr>
+<tr>
+<td>Prior agentic baseline reference</td>
+<td>about <code>6 H100 hours</code> and <code>$5</code> per kernel</td>
+</tr>
+<tr>
+<td>Full NCU metrics variant on subset</td>
+<td>worse performance, about <code>40</code> minutes and <code>$1</code> per kernel</td>
+</tr>
+<tr>
+<td>Cross-GPU subset results</td>
+<td><code>100%</code> correctness on RTX 6000, RTX 4090, A100, and RTX 3090</td>
+</tr>
+<tr>
+<td>Best reported cross-GPU average perf</td>
+<td><code>1.841x</code> on A100</td>
+</tr>
+</tbody>
+</table>
+<p>The metric-selection result is an important part of the paper. Passing all NCU metrics to the Judge does not help; it hurts both quality and cost. The selected 24-metric subset gives the Judge enough hardware context to diagnose bottlenecks without drowning it in redundant signals. The cross-GPU results then show why the hardware-feedback design matters: because the Judge receives device-specific specs and profiler outputs, the workflow can retarget its reasoning to different GPUs without retraining.</p>
+<h2 id="limitation">Limitation<a class="headerlink" href="#limitation" title="Permanent link">&para;</a></h2>
+<p>The paper is convincing on practical engineering value, but the evidence has several limits.</p>
+<table>
+<thead>
+<tr>
+<th>Limitation</th>
+<th>Why It Matters</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>The main system is centered on NVIDIA tooling and Nsight Compute</td>
+<td>The approach is not obviously portable to non-NVIDIA accelerators without redesigning the feedback interface</td>
+</tr>
+<tr>
+<td>The strongest cost claims compare against a prior agentic baseline reported in a different environment</td>
+<td>The cost gap is compelling but not perfectly apples-to-apples</td>
+</tr>
+<tr>
+<td>The Kevin comparison is explicitly not fully fair or reproducible</td>
+<td>The paper itself notes that Kevin-32B is not open-sourced, so the comparison has unavoidable uncertainty</td>
+</tr>
+<tr>
+<td>Performance on Level 3 is positive but more modest than Level 2</td>
+<td>The workflow remains noticeably stronger on easier and mid-complexity kernels than on full architecture tasks</td>
+</tr>
+<tr>
+<td>Manual inspection is still used for “fake kernels” in related systems</td>
+<td>This suggests benchmark integrity remains a broader open problem beyond this workflow</td>
+</tr>
+</tbody>
+</table>
+<p>Another constraint is architectural. CudaForge’s Judge is effective because it has carefully designed inputs and a curated metric subset. That makes the workflow practical, but also means the method depends on prompt and metric engineering rather than on a more general learned representation of hardware bottlenecks.</p>
 <hr />
-<p><em>Reading date: 2025</em>
+<p><em>Reading date: 2026-04</em>
 <em>Note status: Completed</em></p>
 
 
