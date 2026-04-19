@@ -12,29 +12,31 @@
         <meta name="author" content="zksainx">
       
       
-        <link rel="canonical" href="https://zksainx.github.io/paper-notes/">
+        <link rel="canonical" href="https://zksainx.github.io/paper-notes/automated-kernel-generation/kernelband/">
       
       
+        <link rel="prev" href="../k-search/">
       
-        <link rel="next" href="simulation/">
+      
+        <link rel="next" href="../kernelblaster/">
       
       
         
       
       
-      <link rel="icon" href="assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
-        <title>Paper Notes</title>
+        <title>KernelBand - Paper Notes</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -53,9 +55,9 @@
       
     
     
-      <link rel="stylesheet" href="stylesheets/extra.css">
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -80,7 +82,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#kernelband-steering-llm-based-kernel-optimization-via-hardware-aware-multi-armed-bandits" class="md-skip">
           跳转至
         </a>
       
@@ -94,7 +96,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="页眉">
-    <a href="." title="Paper Notes" class="md-header__button md-logo" aria-label="Paper Notes" data-md-component="logo">
+    <a href="../.." title="Paper Notes" class="md-header__button md-logo" aria-label="Paper Notes" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -114,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Home
+              KernelBand
             
           </span>
         </div>
@@ -230,11 +232,9 @@
   
   
   
-    
   
-  
-    <li class="md-tabs__item md-tabs__item--active">
-      <a href="." class="md-tabs__link">
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
         
   
   
@@ -255,7 +255,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="simulation/" class="md-tabs__link">
+        <a href="../../simulation/" class="md-tabs__link">
           
   
   
@@ -277,7 +277,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="tensor-program-optimization/" class="md-tabs__link">
+        <a href="../../tensor-program-optimization/" class="md-tabs__link">
           
   
   
@@ -295,11 +295,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="automated-kernel-generation/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
           
   
   
@@ -321,7 +323,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="intra-gpu-multiplexing/" class="md-tabs__link">
+        <a href="../../intra-gpu-multiplexing/" class="md-tabs__link">
           
   
   
@@ -341,7 +343,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="about/" class="md-tabs__link">
+      <a href="../../about/" class="md-tabs__link">
         
   
   
@@ -376,7 +378,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="Paper Notes" class="md-nav__button md-logo" aria-label="Paper Notes" data-md-component="logo">
+    <a href="../.." title="Paper Notes" class="md-nav__button md-logo" aria-label="Paper Notes" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -403,37 +405,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Home
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="." class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
         
   
   
@@ -449,131 +424,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        🎯 网站简介
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        📚 内容分类
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="📚 内容分类">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#simulation" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Simulation
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#tensor-program-optimization" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Tensor Program Optimization
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#automated-kernel-generation" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Automated Kernel Generation
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#intra-gpu-spatial-multiplexing" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Intra-GPU Spatial Multiplexing
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        🔍 如何使用
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        📝 笔记模板
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        🚀 更新日志
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -636,7 +486,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="simulation/" class="md-nav__link ">
+            <a href="../../simulation/" class="md-nav__link ">
               
   
   
@@ -680,7 +530,7 @@
   
   
     <li class="md-nav__item">
-      <a href="simulation/amali/" class="md-nav__link">
+      <a href="../../simulation/amali/" class="md-nav__link">
         
   
   
@@ -708,7 +558,7 @@
   
   
     <li class="md-nav__item">
-      <a href="simulation/apex/" class="md-nav__link">
+      <a href="../../simulation/apex/" class="md-nav__link">
         
   
   
@@ -736,7 +586,7 @@
   
   
     <li class="md-nav__item">
-      <a href="simulation/astra-sim/" class="md-nav__link">
+      <a href="../../simulation/astra-sim/" class="md-nav__link">
         
   
   
@@ -764,7 +614,7 @@
   
   
     <li class="md-nav__item">
-      <a href="simulation/astra-sim-2/" class="md-nav__link">
+      <a href="../../simulation/astra-sim-2/" class="md-nav__link">
         
   
   
@@ -792,7 +642,7 @@
   
   
     <li class="md-nav__item">
-      <a href="simulation/chakra/" class="md-nav__link">
+      <a href="../../simulation/chakra/" class="md-nav__link">
         
   
   
@@ -820,7 +670,7 @@
   
   
     <li class="md-nav__item">
-      <a href="simulation/frontier/" class="md-nav__link">
+      <a href="../../simulation/frontier/" class="md-nav__link">
         
   
   
@@ -848,7 +698,7 @@
   
   
     <li class="md-nav__item">
-      <a href="simulation/llmcompass/" class="md-nav__link">
+      <a href="../../simulation/llmcompass/" class="md-nav__link">
         
   
   
@@ -876,7 +726,7 @@
   
   
     <li class="md-nav__item">
-      <a href="simulation/linear/" class="md-nav__link">
+      <a href="../../simulation/linear/" class="md-nav__link">
         
   
   
@@ -904,7 +754,7 @@
   
   
     <li class="md-nav__item">
-      <a href="simulation/mystique/" class="md-nav__link">
+      <a href="../../simulation/mystique/" class="md-nav__link">
         
   
   
@@ -932,7 +782,7 @@
   
   
     <li class="md-nav__item">
-      <a href="simulation/neusight/" class="md-nav__link">
+      <a href="../../simulation/neusight/" class="md-nav__link">
         
   
   
@@ -960,7 +810,7 @@
   
   
     <li class="md-nav__item">
-      <a href="simulation/simai/" class="md-nav__link">
+      <a href="../../simulation/simai/" class="md-nav__link">
         
   
   
@@ -988,7 +838,7 @@
   
   
     <li class="md-nav__item">
-      <a href="simulation/vidur/" class="md-nav__link">
+      <a href="../../simulation/vidur/" class="md-nav__link">
         
   
   
@@ -1016,7 +866,7 @@
   
   
     <li class="md-nav__item">
-      <a href="simulation/vtrain/" class="md-nav__link">
+      <a href="../../simulation/vtrain/" class="md-nav__link">
         
   
   
@@ -1096,7 +946,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="tensor-program-optimization/" class="md-nav__link ">
+            <a href="../../tensor-program-optimization/" class="md-nav__link ">
               
   
   
@@ -1140,7 +990,7 @@
   
   
     <li class="md-nav__item">
-      <a href="tensor-program-optimization/learning-optimize-tensor-programs/" class="md-nav__link">
+      <a href="../../tensor-program-optimization/learning-optimize-tensor-programs/" class="md-nav__link">
         
   
   
@@ -1168,7 +1018,7 @@
   
   
     <li class="md-nav__item">
-      <a href="tensor-program-optimization/ansor/" class="md-nav__link">
+      <a href="../../tensor-program-optimization/ansor/" class="md-nav__link">
         
   
   
@@ -1196,7 +1046,7 @@
   
   
     <li class="md-nav__item">
-      <a href="tensor-program-optimization/roller/" class="md-nav__link">
+      <a href="../../tensor-program-optimization/roller/" class="md-nav__link">
         
   
   
@@ -1224,7 +1074,7 @@
   
   
     <li class="md-nav__item">
-      <a href="tensor-program-optimization/learned-performance-model-tpu/" class="md-nav__link">
+      <a href="../../tensor-program-optimization/learned-performance-model-tpu/" class="md-nav__link">
         
   
   
@@ -1252,7 +1102,7 @@
   
   
     <li class="md-nav__item">
-      <a href="tensor-program-optimization/metatune/" class="md-nav__link">
+      <a href="../../tensor-program-optimization/metatune/" class="md-nav__link">
         
   
   
@@ -1280,7 +1130,7 @@
   
   
     <li class="md-nav__item">
-      <a href="tensor-program-optimization/unicox/" class="md-nav__link">
+      <a href="../../tensor-program-optimization/unicox/" class="md-nav__link">
         
   
   
@@ -1308,7 +1158,7 @@
   
   
     <li class="md-nav__item">
-      <a href="tensor-program-optimization/tritonblas/" class="md-nav__link">
+      <a href="../../tensor-program-optimization/tritonblas/" class="md-nav__link">
         
   
   
@@ -1336,7 +1186,7 @@
   
   
     <li class="md-nav__item">
-      <a href="tensor-program-optimization/gpu-performance-portability/" class="md-nav__link">
+      <a href="../../tensor-program-optimization/gpu-performance-portability/" class="md-nav__link">
         
   
   
@@ -1364,7 +1214,7 @@
   
   
     <li class="md-nav__item">
-      <a href="tensor-program-optimization/anatomy-triton-attention/" class="md-nav__link">
+      <a href="../../tensor-program-optimization/anatomy-triton-attention/" class="md-nav__link">
         
   
   
@@ -1392,7 +1242,7 @@
   
   
     <li class="md-nav__item">
-      <a href="tensor-program-optimization/tritonbench/" class="md-nav__link">
+      <a href="../../tensor-program-optimization/tritonbench/" class="md-nav__link">
         
   
   
@@ -1424,6 +1274,8 @@
       
   
   
+    
+  
   
   
     
@@ -1459,22 +1311,23 @@
     
     
       
+        
+        
+      
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="automated-kernel-generation/" class="md-nav__link ">
+            <a href="../" class="md-nav__link ">
               
   
   
@@ -1492,13 +1345,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1518,7 +1371,7 @@
   
   
     <li class="md-nav__item">
-      <a href="automated-kernel-generation/avo/" class="md-nav__link">
+      <a href="../avo/" class="md-nav__link">
         
   
   
@@ -1546,7 +1399,7 @@
   
   
     <li class="md-nav__item">
-      <a href="automated-kernel-generation/cuda-llm/" class="md-nav__link">
+      <a href="../cuda-llm/" class="md-nav__link">
         
   
   
@@ -1574,7 +1427,7 @@
   
   
     <li class="md-nav__item">
-      <a href="automated-kernel-generation/evoengineer/" class="md-nav__link">
+      <a href="../evoengineer/" class="md-nav__link">
         
   
   
@@ -1602,7 +1455,7 @@
   
   
     <li class="md-nav__item">
-      <a href="automated-kernel-generation/geak/" class="md-nav__link">
+      <a href="../geak/" class="md-nav__link">
         
   
   
@@ -1630,7 +1483,7 @@
   
   
     <li class="md-nav__item">
-      <a href="automated-kernel-generation/k-search/" class="md-nav__link">
+      <a href="../k-search/" class="md-nav__link">
         
   
   
@@ -1655,10 +1508,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="automated-kernel-generation/kernelband/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    KernelBand
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1674,6 +1554,159 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#background" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Background
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#methodology" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Methodology
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Methodology">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#system-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        System Overview
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#core-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Core Design
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#optimization-strategy-set" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Optimization Strategy Set
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#experiment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Experiment
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Experiment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#experimental-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Experimental Setup
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#headline-results" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Headline Results
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cross-model-generalization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cross-Model Generalization
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ablation-study" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ablation Study
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limitation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Limitation
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1686,7 +1719,7 @@
   
   
     <li class="md-nav__item">
-      <a href="automated-kernel-generation/kernelblaster/" class="md-nav__link">
+      <a href="../kernelblaster/" class="md-nav__link">
         
   
   
@@ -1714,7 +1747,7 @@
   
   
     <li class="md-nav__item">
-      <a href="automated-kernel-generation/kernelevolve/" class="md-nav__link">
+      <a href="../kernelevolve/" class="md-nav__link">
         
   
   
@@ -1742,7 +1775,7 @@
   
   
     <li class="md-nav__item">
-      <a href="automated-kernel-generation/kernelskill/" class="md-nav__link">
+      <a href="../kernelskill/" class="md-nav__link">
         
   
   
@@ -1770,7 +1803,7 @@
   
   
     <li class="md-nav__item">
-      <a href="automated-kernel-generation/peak/" class="md-nav__link">
+      <a href="../peak/" class="md-nav__link">
         
   
   
@@ -1798,7 +1831,7 @@
   
   
     <li class="md-nav__item">
-      <a href="automated-kernel-generation/tritonforge/" class="md-nav__link">
+      <a href="../tritonforge/" class="md-nav__link">
         
   
   
@@ -1868,7 +1901,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="intra-gpu-multiplexing/" class="md-nav__link ">
+            <a href="../../intra-gpu-multiplexing/" class="md-nav__link ">
               
   
   
@@ -1912,7 +1945,7 @@
   
   
     <li class="md-nav__item">
-      <a href="intra-gpu-multiplexing/nanoflow/" class="md-nav__link">
+      <a href="../../intra-gpu-multiplexing/nanoflow/" class="md-nav__link">
         
   
   
@@ -1940,7 +1973,7 @@
   
   
     <li class="md-nav__item">
-      <a href="intra-gpu-multiplexing/bullet/" class="md-nav__link">
+      <a href="../../intra-gpu-multiplexing/bullet/" class="md-nav__link">
         
   
   
@@ -1968,7 +2001,7 @@
   
   
     <li class="md-nav__item">
-      <a href="intra-gpu-multiplexing/nexus/" class="md-nav__link">
+      <a href="../../intra-gpu-multiplexing/nexus/" class="md-nav__link">
         
   
   
@@ -1996,7 +2029,7 @@
   
   
     <li class="md-nav__item">
-      <a href="intra-gpu-multiplexing/pd-multiplex/" class="md-nav__link">
+      <a href="../../intra-gpu-multiplexing/pd-multiplex/" class="md-nav__link">
         
   
   
@@ -2024,7 +2057,7 @@
   
   
     <li class="md-nav__item">
-      <a href="intra-gpu-multiplexing/duetserve/" class="md-nav__link">
+      <a href="../../intra-gpu-multiplexing/duetserve/" class="md-nav__link">
         
   
   
@@ -2059,7 +2092,7 @@
   
   
     <li class="md-nav__item">
-      <a href="about/" class="md-nav__link">
+      <a href="../../about/" class="md-nav__link">
         
   
   
@@ -2106,10 +2139,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#background" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🎯 网站简介
+        Background
       
     </span>
   </a>
@@ -2117,22 +2150,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#methodology" class="md-nav__link">
     <span class="md-ellipsis">
       
-        📚 内容分类
+        Methodology
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="📚 内容分类">
+    <nav class="md-nav" aria-label="Methodology">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#simulation" class="md-nav__link">
+  <a href="#system-overview" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Simulation
+        System Overview
       
     </span>
   </a>
@@ -2140,10 +2173,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#tensor-program-optimization" class="md-nav__link">
+  <a href="#core-design" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Tensor Program Optimization
+        Core Design
       
     </span>
   </a>
@@ -2151,21 +2184,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#automated-kernel-generation" class="md-nav__link">
+  <a href="#optimization-strategy-set" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Automated Kernel Generation
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#intra-gpu-spatial-multiplexing" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Intra-GPU Spatial Multiplexing
+        Optimization Strategy Set
       
     </span>
   </a>
@@ -2178,32 +2200,71 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#experiment" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🔍 如何使用
+        Experiment
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Experiment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#experimental-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Experimental Setup
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#headline-results" class="md-nav__link">
     <span class="md-ellipsis">
       
-        📝 笔记模板
+        Headline Results
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#cross-model-generalization" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🚀 更新日志
+        Cross-Model Generalization
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ablation-study" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ablation Study
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limitation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Limitation
       
     </span>
   </a>
@@ -2230,42 +2291,371 @@
   
 
 
-<h1 id="_1">欢迎来到论文笔记<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
-<p>这是一个用于记录和整理论文阅读笔记的个人知识库。</p>
-<h2 id="_2">🎯 网站简介<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<p>本站点记录了我在人工智能、机器学习等领域的论文阅读笔记。每篇笔记包含论文的核心思想、方法总结、实验结果分析以及个人思考。</p>
-<p>大多数性能导向的系统研究可以归纳为“固定资源下的再分配优化”，并伴随着清晰的 trade-off。</p>
-<p>如果系统研究关注的是“资源空间中的最优分配”，那么算法研究关注的是“函数空间中的最优构造”。</p>
-<h2 id="_3">📚 内容分类<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
-<p>网站按研究领域组织论文笔记：</p>
-<h3 id="simulation"><a href="simulation/">Simulation</a><a class="headerlink" href="#simulation" title="Permanent link">&para;</a></h3>
-<p>Papers on performance modeling, simulation frameworks, and analytical models for ML systems.</p>
-<h3 id="tensor-program-optimization"><a href="tensor-program-optimization/">Tensor Program Optimization</a><a class="headerlink" href="#tensor-program-optimization" title="Permanent link">&para;</a></h3>
-<p>Papers on automated tensor program optimization through compiler techniques, ML-guided search, and performance modeling for deep learning workloads.</p>
-<h3 id="automated-kernel-generation"><a href="automated-kernel-generation/">Automated Kernel Generation</a><a class="headerlink" href="#automated-kernel-generation" title="Permanent link">&para;</a></h3>
-<p>Papers on LLM-driven generation, profiling-guided refinement, and automated optimization of GPU kernels and low-level code.</p>
-<h3 id="intra-gpu-spatial-multiplexing"><a href="intra-gpu-multiplexing/">Intra-GPU Spatial Multiplexing</a><a class="headerlink" href="#intra-gpu-spatial-multiplexing" title="Permanent link">&para;</a></h3>
-<p>Papers on GPU spatial multiplexing techniques for efficient LLM serving, including prefill-decode disaggregation and dynamic resource partitioning.</p>
-<h2 id="_4">🔍 如何使用<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<h1 id="kernelband-steering-llm-based-kernel-optimization-via-hardware-aware-multi-armed-bandits">KernelBand: Steering LLM-based Kernel Optimization via Hardware-Aware Multi-Armed Bandits<a class="headerlink" href="#kernelband-steering-llm-based-kernel-optimization-via-hardware-aware-multi-armed-bandits" title="Permanent link">&para;</a></h1>
+<div class="paper-meta">
+<p><strong>Authors</strong>: Dezhi Ran, Shuxiao Xie, Mingfang Ji, Anmin Liu, Mengzhou Wu, Yuan Cao, Yuzhe Guo, Hao Yu, Linyi Li, Yitao Hu, Wei Yang, Tao Xie<br />
+<strong>Institution</strong>: Peking University<br />
+<strong>Conference</strong>: arXiv<br />
+<strong>Year</strong>: 2025<br />
+<strong>Paper Link</strong>: <a href="https://arxiv.org/abs/2511.18868">arXiv:2511.18868</a>  </p>
+</div>
+<div class="paper-tags">
+<p><span class="paper-tag">Bandit Search</span>
+<span class="paper-tag">Hardware-Aware</span>
+<span class="paper-tag">Triton Optimization</span></p>
+</div>
+<h2 id="background">Background<a class="headerlink" href="#background" title="Permanent link">&para;</a></h2>
+<p>KernelBand starts from a precise diagnosis of why LLM-based kernel optimization is hard. Code models are good at generating plausible and often functionally correct code, but kernel optimization is not mainly a generation problem. It is a search problem over a large, discontinuous performance landscape where many candidate transformations are useless, invalid, or locally attractive but globally poor.</p>
+<p>The paper argues that this creates a mismatch between what code LLMs are trained to do and what high-performance kernel optimization actually requires. Instead of relying on heuristic reflection or unguided trial-and-error, KernelBand formulates kernel optimization as a contextual multi-armed bandit problem that explicitly balances exploration and exploitation under hardware constraints.</p>
+<p><strong>Key Takeaways</strong></p>
 <ul>
-<li><strong>浏览分类</strong>：点击顶部导航栏选择感兴趣的研究领域</li>
-<li><strong>搜索论文</strong>：使用右上角的搜索框快速查找特定论文或关键词</li>
-<li><strong>阅读笔记</strong>：每篇笔记包含论文摘要、核心思想、方法介绍和个人理解</li>
+<li>KernelBand reframes LLM-based kernel optimization as a structured search problem instead of a pure generation task.</li>
+<li>The framework uses runtime clustering and hardware-aware pruning to make an expanding action space tractable.</li>
+<li>Across TritonBench-G, three NVIDIA GPUs, and four code LLMs, KernelBand consistently outperforms prior agentic baselines and improves both speedup and Fast@1.</li>
 </ul>
-<h2 id="_5">📝 笔记模板<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
-<p>每篇论文笔记通常包含以下内容：</p>
-<ul>
-<li><strong>论文基本信息</strong>（标题、作者、会议/期刊、年份）</li>
-<li><strong>摘要</strong>：论文要解决的问题和主要贡献</li>
-<li><strong>核心思想</strong>：论文的关键创新点</li>
-<li><strong>方法</strong>：技术细节和实现方式</li>
-<li><strong>实验结果</strong>：主要实验结论</li>
-<li><strong>个人笔记</strong>：个人思考、疑问和延伸阅读</li>
-</ul>
-<h2 id="_6">🚀 更新日志<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
-<p>本网站会持续更新，记录最新阅读的论文。欢迎访问 <a href="https://github.com/zksainx/paper-notes">GitHub 仓库</a> 查看更新历史。</p>
+<h2 id="methodology">Methodology<a class="headerlink" href="#methodology" title="Permanent link">&para;</a></h2>
+<p>KernelBand models optimization as iterative frontier expansion. Starting from a naïve kernel, the system maintains a frontier of promising kernels and repeatedly decides which kernel to expand with which optimization strategy. That decision is cast as a contextual bandit rather than a full RL problem because optimization trajectories are relatively short, rewards are immediately informative, and UCB-style bandits provide clearer sample-efficiency guarantees.</p>
+<p>The main technical challenge is that the action space grows over time. Each action is a pair of an existing kernel and an optimization strategy, so the number of possible actions expands as new kernels are discovered. KernelBand addresses this through three coordinated mechanisms: runtime behavior characterization, dynamic clustering, and a hardware-constrained bandit policy.</p>
+<h3 id="system-overview">System Overview<a class="headerlink" href="#system-overview" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Input</th>
+<th>Output</th>
+<th>Role</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Runtime Behavior Characterization</td>
+<td>Candidate kernel execution</td>
+<td>Behavioral vector and hardware signature</td>
+<td>Encodes bottlenecks and execution traits for downstream decision making</td>
+</tr>
+<tr>
+<td>Dynamic Clustering</td>
+<td>Frontier of candidate kernels</td>
+<td>Kernel clusters</td>
+<td>Groups kernels with similar optimization responses so experience can be shared</td>
+</tr>
+<tr>
+<td>Hardware-Constrained Bandit Policy</td>
+<td>Clustered frontier plus strategy set</td>
+<td>Next cluster-strategy decision</td>
+<td>Balances exploration and exploitation while masking invalid or low-potential strategies</td>
+</tr>
+<tr>
+<td>LLM Transformation Engine</td>
+<td>Selected kernel and optimization strategy</td>
+<td>New candidate kernel</td>
+<td>Applies code transformations such as tiling or vectorization</td>
+</tr>
+<tr>
+<td>Profiling-Guided Pruning</td>
+<td>Nsight Compute throughput signals</td>
+<td>Valid strategy mask</td>
+<td>Filters out actions targeting already saturated resources</td>
+</tr>
+</tbody>
+</table>
+<h3 id="core-design">Core Design<a class="headerlink" href="#core-design" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Design Element</th>
+<th>What It Uses</th>
+<th>Why It Matters</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Behavioral feature vector <code>phi(k)</code></td>
+<td>Normalized time, registers, shared memory, block size, occupancy</td>
+<td>Lets the system cluster kernels with similar optimization behavior</td>
+</tr>
+<tr>
+<td>Hardware signature <code>h(k)</code></td>
+<td>DRAM, L2, and SM throughput from Nsight Compute</td>
+<td>Identifies dominant bottlenecks for pruning</td>
+</tr>
+<tr>
+<td>Periodic re-clustering</td>
+<td>K-Means over behavior vectors</td>
+<td>Keeps the expanding frontier manageable and shares statistics across similar kernels</td>
+</tr>
+<tr>
+<td>Masked UCB policy</td>
+<td>Empirical rewards plus exploration bonus</td>
+<td>Chooses promising cluster-strategy pairs under uncertainty</td>
+</tr>
+<tr>
+<td>Hardware-aware mask</td>
+<td>Saturation threshold over target resource</td>
+<td>Avoids spending budget on physically implausible optimization moves</td>
+</tr>
+</tbody>
+</table>
+<h3 id="optimization-strategy-set">Optimization Strategy Set<a class="headerlink" href="#optimization-strategy-set" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Strategy</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tiling</td>
+<td>Partition computation into cache- and parallelism-friendly tiles</td>
+</tr>
+<tr>
+<td>Vectorization</td>
+<td>Use wider memory operations for better throughput</td>
+</tr>
+<tr>
+<td>Fusion</td>
+<td>Reduce intermediate traffic by combining operations</td>
+</tr>
+<tr>
+<td>Pipeline</td>
+<td>Hide latency through software pipelining</td>
+</tr>
+<tr>
+<td>Reordering</td>
+<td>Change loop or instruction order for better ILP</td>
+</tr>
+<tr>
+<td>Access &amp; Layout</td>
+<td>Improve coalescing and data layout behavior</td>
+</tr>
+</tbody>
+</table>
+<h2 id="experiment">Experiment<a class="headerlink" href="#experiment" title="Permanent link">&para;</a></h2>
+<h3 id="experimental-setup">Experimental Setup<a class="headerlink" href="#experimental-setup" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Benchmark</td>
+<td>Corrected TritonBench-G</td>
+</tr>
+<tr>
+<td>Benchmark Size</td>
+<td>183 kernels after excluding one trivial outlier</td>
+</tr>
+<tr>
+<td>GPU Platforms</td>
+<td>RTX 4090, H20, A100</td>
+</tr>
+<tr>
+<td>Primary Model</td>
+<td>DeepSeek-V3.2</td>
+</tr>
+<tr>
+<td>Additional LLMs</td>
+<td>GPT-5, Claude Opus 4.5, Gemini 3 Flash</td>
+</tr>
+<tr>
+<td>Main Metrics</td>
+<td>Correctness, Fast@1, geometric mean speedup</td>
+</tr>
+<tr>
+<td>Bandit Settings</td>
+<td><code>K=3</code> clusters, re-cluster every <code>tau=10</code>, UCB coefficient <code>c=2.0</code>, 75% saturation threshold</td>
+</tr>
+</tbody>
+</table>
+<h3 id="headline-results">Headline Results<a class="headerlink" href="#headline-results" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Platform</th>
+<th>Method</th>
+<th>Correct (%)</th>
+<th>Fast@1 (%)</th>
+<th>Geometric Mean Speedup</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>RTX 4090</td>
+<td>GEAK</td>
+<td>55.6</td>
+<td>31.1</td>
+<td>1.44x</td>
+</tr>
+<tr>
+<td>RTX 4090</td>
+<td>KernelBand</td>
+<td>77.8</td>
+<td>43.3</td>
+<td>1.74x</td>
+</tr>
+<tr>
+<td>H20</td>
+<td>GEAK</td>
+<td>49.4</td>
+<td>23.8</td>
+<td>1.06x</td>
+</tr>
+<tr>
+<td>H20</td>
+<td>KernelBand</td>
+<td>79.3</td>
+<td>57.3</td>
+<td>1.45x</td>
+</tr>
+<tr>
+<td>A100</td>
+<td>GEAK</td>
+<td>48.0</td>
+<td>38.7</td>
+<td>1.34x</td>
+</tr>
+<tr>
+<td>A100</td>
+<td>KernelBand</td>
+<td>79.8</td>
+<td>60.1</td>
+<td>1.91x</td>
+</tr>
+</tbody>
+</table>
+<p>KernelBand dominates the main benchmark table on all three GPUs. The strongest headline appears on A100, where it reaches 1.91x geometric mean speedup and 79.8% correctness. The paper also highlights 39% to 140% relative Fast@1 improvement over GEAK, which indicates that the framework is not only faster on average, but also much more likely to find an actually accelerated kernel within the optimization budget.</p>
+<h3 id="cross-model-generalization">Cross-Model Generalization<a class="headerlink" href="#cross-model-generalization" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Model</th>
+<th>Method</th>
+<th>Correct (%)</th>
+<th>Fast@1 (%)</th>
+<th>Geometric Mean Speedup</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DeepSeek-V3.2</td>
+<td>KernelBand</td>
+<td>85.0</td>
+<td>67.5</td>
+<td>1.52x</td>
+</tr>
+<tr>
+<td>GPT-5</td>
+<td>KernelBand</td>
+<td>81.6</td>
+<td>65.3</td>
+<td>1.72x</td>
+</tr>
+<tr>
+<td>Claude Opus 4.5</td>
+<td>KernelBand</td>
+<td>89.8</td>
+<td>73.5</td>
+<td>1.82x</td>
+</tr>
+<tr>
+<td>Gemini 3 Flash</td>
+<td>KernelBand</td>
+<td>70.8</td>
+<td>45.8</td>
+<td>1.48x</td>
+</tr>
+</tbody>
+</table>
+<p>The gains are not tied to one specific backbone. Stronger models still help, but KernelBand behaves like an amplifier that improves every tested LLM. Claude Opus 4.5 gives the best overall result in the generalization table, while even the smaller Gemini backend remains comfortably ahead of the corresponding baselines.</p>
+<h3 id="ablation-study">Ablation Study<a class="headerlink" href="#ablation-study" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Configuration</th>
+<th>Correct (%)</th>
+<th>Fast@1 (%)</th>
+<th>Speedup</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>KernelBand (Full)</td>
+<td>87.6</td>
+<td>59.8</td>
+<td>1.48x</td>
+</tr>
+<tr>
+<td>w/o Profiling</td>
+<td>85.4</td>
+<td>56.1</td>
+<td>1.26x</td>
+</tr>
+<tr>
+<td>LLM Strategy Selection</td>
+<td>68.3</td>
+<td>36.6</td>
+<td>0.97x</td>
+</tr>
+<tr>
+<td>w/o Strategy + Raw Profiling</td>
+<td>43.9</td>
+<td>26.8</td>
+<td>1.12x</td>
+</tr>
+<tr>
+<td>w/o Strategy Set</td>
+<td>78.0</td>
+<td>48.8</td>
+<td>1.15x</td>
+</tr>
+<tr>
+<td>BoN baseline</td>
+<td>34.2</td>
+<td>17.1</td>
+<td>0.60x</td>
+</tr>
+</tbody>
+</table>
+<p>The ablation table makes the paper's main claim concrete: structured bandit exploration is the key component. Replacing the bandit policy with LLM semantic strategy selection drives performance below the reference kernel at 0.97x, which is a strong sign that execution statistics and hardware-aware action selection matter more than model intuition alone.</p>
+<h2 id="limitation">Limitation<a class="headerlink" href="#limitation" title="Permanent link">&para;</a></h2>
+<p>KernelBand is strong precisely because it adds structure, profiling, and theory on top of LLM generation. That also means the system is more complex than straightforward prompting, and its benefits depend on runtime measurements and an explicit strategy vocabulary.</p>
+<table>
+<thead>
+<tr>
+<th>Limitation</th>
+<th>Why It Matters</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Profiling is central to the method</td>
+<td>The framework depends on runtime signals such as throughput counters, so it is not a cheap offline-only optimizer</td>
+</tr>
+<tr>
+<td>Strategy set is curated</td>
+<td>KernelBand searches over a refined strategy vocabulary rather than inventing arbitrary new optimization families</td>
+</tr>
+<tr>
+<td>Evaluation remains Triton-centric</td>
+<td>The study is broad across devices and models, but it still focuses on Triton kernels rather than all GPU programming ecosystems</td>
+</tr>
+<tr>
+<td>Bandit assumptions simplify reality</td>
+<td>Lipschitz continuity and bounded gain make the theory tractable, but real optimization landscapes can still be noisier than the formal model</td>
+</tr>
+<tr>
+<td>System complexity is higher than simple prompting</td>
+<td>Clustering, masking, profiling, and UCB improve results, but also increase implementation complexity and tuning burden</td>
+</tr>
+</tbody>
+</table>
 <hr />
-<p><em>最后更新：2025年</em></p>
+<p><em>Reading date: 2026-04</em>
+<em>Note status: Completed</em></p>
 
 
 
@@ -2327,12 +2717,12 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.sections", "navigation.indexes", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "search.share", "content.code.copy", "content.tabs.link"], "search": "assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.sections", "navigation.indexes", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "search.share", "content.code.copy", "content.tabs.link"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
     
     
-      <script src="assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
-        <script src="javascripts/mathjax.js"></script>
+        <script src="../../javascripts/mathjax.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       

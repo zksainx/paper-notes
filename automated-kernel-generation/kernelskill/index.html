@@ -12,29 +12,31 @@
         <meta name="author" content="zksainx">
       
       
-        <link rel="canonical" href="https://zksainx.github.io/paper-notes/">
+        <link rel="canonical" href="https://zksainx.github.io/paper-notes/automated-kernel-generation/kernelskill/">
       
       
+        <link rel="prev" href="../kernelevolve/">
       
-        <link rel="next" href="simulation/">
+      
+        <link rel="next" href="../peak/">
       
       
         
       
       
-      <link rel="icon" href="assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
-        <title>Paper Notes</title>
+        <title>KernelSkill - Paper Notes</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -53,9 +55,9 @@
       
     
     
-      <link rel="stylesheet" href="stylesheets/extra.css">
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -80,7 +82,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#kernelskill-a-multi-agent-framework-for-gpu-kernel-optimization" class="md-skip">
           跳转至
         </a>
       
@@ -94,7 +96,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="页眉">
-    <a href="." title="Paper Notes" class="md-header__button md-logo" aria-label="Paper Notes" data-md-component="logo">
+    <a href="../.." title="Paper Notes" class="md-header__button md-logo" aria-label="Paper Notes" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -114,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Home
+              KernelSkill
             
           </span>
         </div>
@@ -230,11 +232,9 @@
   
   
   
-    
   
-  
-    <li class="md-tabs__item md-tabs__item--active">
-      <a href="." class="md-tabs__link">
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
         
   
   
@@ -255,7 +255,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="simulation/" class="md-tabs__link">
+        <a href="../../simulation/" class="md-tabs__link">
           
   
   
@@ -277,7 +277,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="tensor-program-optimization/" class="md-tabs__link">
+        <a href="../../tensor-program-optimization/" class="md-tabs__link">
           
   
   
@@ -295,11 +295,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="automated-kernel-generation/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
           
   
   
@@ -321,7 +323,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="intra-gpu-multiplexing/" class="md-tabs__link">
+        <a href="../../intra-gpu-multiplexing/" class="md-tabs__link">
           
   
   
@@ -341,7 +343,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="about/" class="md-tabs__link">
+      <a href="../../about/" class="md-tabs__link">
         
   
   
@@ -376,7 +378,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="Paper Notes" class="md-nav__button md-logo" aria-label="Paper Notes" data-md-component="logo">
+    <a href="../.." title="Paper Notes" class="md-nav__button md-logo" aria-label="Paper Notes" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -403,37 +405,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Home
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="." class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
         
   
   
@@ -449,131 +424,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        🎯 网站简介
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        📚 内容分类
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="📚 内容分类">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#simulation" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Simulation
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#tensor-program-optimization" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Tensor Program Optimization
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#automated-kernel-generation" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Automated Kernel Generation
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#intra-gpu-spatial-multiplexing" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Intra-GPU Spatial Multiplexing
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        🔍 如何使用
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        📝 笔记模板
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        🚀 更新日志
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -636,7 +486,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="simulation/" class="md-nav__link ">
+            <a href="../../simulation/" class="md-nav__link ">
               
   
   
@@ -680,7 +530,7 @@
   
   
     <li class="md-nav__item">
-      <a href="simulation/amali/" class="md-nav__link">
+      <a href="../../simulation/amali/" class="md-nav__link">
         
   
   
@@ -708,7 +558,7 @@
   
   
     <li class="md-nav__item">
-      <a href="simulation/apex/" class="md-nav__link">
+      <a href="../../simulation/apex/" class="md-nav__link">
         
   
   
@@ -736,7 +586,7 @@
   
   
     <li class="md-nav__item">
-      <a href="simulation/astra-sim/" class="md-nav__link">
+      <a href="../../simulation/astra-sim/" class="md-nav__link">
         
   
   
@@ -764,7 +614,7 @@
   
   
     <li class="md-nav__item">
-      <a href="simulation/astra-sim-2/" class="md-nav__link">
+      <a href="../../simulation/astra-sim-2/" class="md-nav__link">
         
   
   
@@ -792,7 +642,7 @@
   
   
     <li class="md-nav__item">
-      <a href="simulation/chakra/" class="md-nav__link">
+      <a href="../../simulation/chakra/" class="md-nav__link">
         
   
   
@@ -820,7 +670,7 @@
   
   
     <li class="md-nav__item">
-      <a href="simulation/frontier/" class="md-nav__link">
+      <a href="../../simulation/frontier/" class="md-nav__link">
         
   
   
@@ -848,7 +698,7 @@
   
   
     <li class="md-nav__item">
-      <a href="simulation/llmcompass/" class="md-nav__link">
+      <a href="../../simulation/llmcompass/" class="md-nav__link">
         
   
   
@@ -876,7 +726,7 @@
   
   
     <li class="md-nav__item">
-      <a href="simulation/linear/" class="md-nav__link">
+      <a href="../../simulation/linear/" class="md-nav__link">
         
   
   
@@ -904,7 +754,7 @@
   
   
     <li class="md-nav__item">
-      <a href="simulation/mystique/" class="md-nav__link">
+      <a href="../../simulation/mystique/" class="md-nav__link">
         
   
   
@@ -932,7 +782,7 @@
   
   
     <li class="md-nav__item">
-      <a href="simulation/neusight/" class="md-nav__link">
+      <a href="../../simulation/neusight/" class="md-nav__link">
         
   
   
@@ -960,7 +810,7 @@
   
   
     <li class="md-nav__item">
-      <a href="simulation/simai/" class="md-nav__link">
+      <a href="../../simulation/simai/" class="md-nav__link">
         
   
   
@@ -988,7 +838,7 @@
   
   
     <li class="md-nav__item">
-      <a href="simulation/vidur/" class="md-nav__link">
+      <a href="../../simulation/vidur/" class="md-nav__link">
         
   
   
@@ -1016,7 +866,7 @@
   
   
     <li class="md-nav__item">
-      <a href="simulation/vtrain/" class="md-nav__link">
+      <a href="../../simulation/vtrain/" class="md-nav__link">
         
   
   
@@ -1096,7 +946,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="tensor-program-optimization/" class="md-nav__link ">
+            <a href="../../tensor-program-optimization/" class="md-nav__link ">
               
   
   
@@ -1140,7 +990,7 @@
   
   
     <li class="md-nav__item">
-      <a href="tensor-program-optimization/learning-optimize-tensor-programs/" class="md-nav__link">
+      <a href="../../tensor-program-optimization/learning-optimize-tensor-programs/" class="md-nav__link">
         
   
   
@@ -1168,7 +1018,7 @@
   
   
     <li class="md-nav__item">
-      <a href="tensor-program-optimization/ansor/" class="md-nav__link">
+      <a href="../../tensor-program-optimization/ansor/" class="md-nav__link">
         
   
   
@@ -1196,7 +1046,7 @@
   
   
     <li class="md-nav__item">
-      <a href="tensor-program-optimization/roller/" class="md-nav__link">
+      <a href="../../tensor-program-optimization/roller/" class="md-nav__link">
         
   
   
@@ -1224,7 +1074,7 @@
   
   
     <li class="md-nav__item">
-      <a href="tensor-program-optimization/learned-performance-model-tpu/" class="md-nav__link">
+      <a href="../../tensor-program-optimization/learned-performance-model-tpu/" class="md-nav__link">
         
   
   
@@ -1252,7 +1102,7 @@
   
   
     <li class="md-nav__item">
-      <a href="tensor-program-optimization/metatune/" class="md-nav__link">
+      <a href="../../tensor-program-optimization/metatune/" class="md-nav__link">
         
   
   
@@ -1280,7 +1130,7 @@
   
   
     <li class="md-nav__item">
-      <a href="tensor-program-optimization/unicox/" class="md-nav__link">
+      <a href="../../tensor-program-optimization/unicox/" class="md-nav__link">
         
   
   
@@ -1308,7 +1158,7 @@
   
   
     <li class="md-nav__item">
-      <a href="tensor-program-optimization/tritonblas/" class="md-nav__link">
+      <a href="../../tensor-program-optimization/tritonblas/" class="md-nav__link">
         
   
   
@@ -1336,7 +1186,7 @@
   
   
     <li class="md-nav__item">
-      <a href="tensor-program-optimization/gpu-performance-portability/" class="md-nav__link">
+      <a href="../../tensor-program-optimization/gpu-performance-portability/" class="md-nav__link">
         
   
   
@@ -1364,7 +1214,7 @@
   
   
     <li class="md-nav__item">
-      <a href="tensor-program-optimization/anatomy-triton-attention/" class="md-nav__link">
+      <a href="../../tensor-program-optimization/anatomy-triton-attention/" class="md-nav__link">
         
   
   
@@ -1392,7 +1242,7 @@
   
   
     <li class="md-nav__item">
-      <a href="tensor-program-optimization/tritonbench/" class="md-nav__link">
+      <a href="../../tensor-program-optimization/tritonbench/" class="md-nav__link">
         
   
   
@@ -1424,6 +1274,8 @@
       
   
   
+    
+  
   
   
     
@@ -1459,22 +1311,23 @@
     
     
       
+        
+        
+      
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="automated-kernel-generation/" class="md-nav__link ">
+            <a href="../" class="md-nav__link ">
               
   
   
@@ -1492,13 +1345,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1518,7 +1371,7 @@
   
   
     <li class="md-nav__item">
-      <a href="automated-kernel-generation/avo/" class="md-nav__link">
+      <a href="../avo/" class="md-nav__link">
         
   
   
@@ -1546,7 +1399,7 @@
   
   
     <li class="md-nav__item">
-      <a href="automated-kernel-generation/cuda-llm/" class="md-nav__link">
+      <a href="../cuda-llm/" class="md-nav__link">
         
   
   
@@ -1574,7 +1427,7 @@
   
   
     <li class="md-nav__item">
-      <a href="automated-kernel-generation/evoengineer/" class="md-nav__link">
+      <a href="../evoengineer/" class="md-nav__link">
         
   
   
@@ -1602,7 +1455,7 @@
   
   
     <li class="md-nav__item">
-      <a href="automated-kernel-generation/geak/" class="md-nav__link">
+      <a href="../geak/" class="md-nav__link">
         
   
   
@@ -1630,7 +1483,7 @@
   
   
     <li class="md-nav__item">
-      <a href="automated-kernel-generation/k-search/" class="md-nav__link">
+      <a href="../k-search/" class="md-nav__link">
         
   
   
@@ -1658,7 +1511,7 @@
   
   
     <li class="md-nav__item">
-      <a href="automated-kernel-generation/kernelband/" class="md-nav__link">
+      <a href="../kernelband/" class="md-nav__link">
         
   
   
@@ -1686,7 +1539,7 @@
   
   
     <li class="md-nav__item">
-      <a href="automated-kernel-generation/kernelblaster/" class="md-nav__link">
+      <a href="../kernelblaster/" class="md-nav__link">
         
   
   
@@ -1714,7 +1567,7 @@
   
   
     <li class="md-nav__item">
-      <a href="automated-kernel-generation/kernelevolve/" class="md-nav__link">
+      <a href="../kernelevolve/" class="md-nav__link">
         
   
   
@@ -1739,10 +1592,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="automated-kernel-generation/kernelskill/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    KernelSkill
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1758,6 +1638,159 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#background" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Background
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#methodology" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Methodology
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Methodology">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#system-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        System Overview
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dual-level-memory-bank" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dual-Level Memory Bank
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#long-term-memory-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Long-Term Memory Workflow
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#experiment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Experiment
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Experiment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#experimental-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Experimental Setup
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#headline-results" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Headline Results
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comparison-against-strong-baselines" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Comparison Against Strong Baselines
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ablation-on-memory" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ablation on Memory
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limitation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Limitation
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1770,7 +1803,7 @@
   
   
     <li class="md-nav__item">
-      <a href="automated-kernel-generation/peak/" class="md-nav__link">
+      <a href="../peak/" class="md-nav__link">
         
   
   
@@ -1798,7 +1831,7 @@
   
   
     <li class="md-nav__item">
-      <a href="automated-kernel-generation/tritonforge/" class="md-nav__link">
+      <a href="../tritonforge/" class="md-nav__link">
         
   
   
@@ -1868,7 +1901,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="intra-gpu-multiplexing/" class="md-nav__link ">
+            <a href="../../intra-gpu-multiplexing/" class="md-nav__link ">
               
   
   
@@ -1912,7 +1945,7 @@
   
   
     <li class="md-nav__item">
-      <a href="intra-gpu-multiplexing/nanoflow/" class="md-nav__link">
+      <a href="../../intra-gpu-multiplexing/nanoflow/" class="md-nav__link">
         
   
   
@@ -1940,7 +1973,7 @@
   
   
     <li class="md-nav__item">
-      <a href="intra-gpu-multiplexing/bullet/" class="md-nav__link">
+      <a href="../../intra-gpu-multiplexing/bullet/" class="md-nav__link">
         
   
   
@@ -1968,7 +2001,7 @@
   
   
     <li class="md-nav__item">
-      <a href="intra-gpu-multiplexing/nexus/" class="md-nav__link">
+      <a href="../../intra-gpu-multiplexing/nexus/" class="md-nav__link">
         
   
   
@@ -1996,7 +2029,7 @@
   
   
     <li class="md-nav__item">
-      <a href="intra-gpu-multiplexing/pd-multiplex/" class="md-nav__link">
+      <a href="../../intra-gpu-multiplexing/pd-multiplex/" class="md-nav__link">
         
   
   
@@ -2024,7 +2057,7 @@
   
   
     <li class="md-nav__item">
-      <a href="intra-gpu-multiplexing/duetserve/" class="md-nav__link">
+      <a href="../../intra-gpu-multiplexing/duetserve/" class="md-nav__link">
         
   
   
@@ -2059,7 +2092,7 @@
   
   
     <li class="md-nav__item">
-      <a href="about/" class="md-nav__link">
+      <a href="../../about/" class="md-nav__link">
         
   
   
@@ -2106,10 +2139,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#background" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🎯 网站简介
+        Background
       
     </span>
   </a>
@@ -2117,22 +2150,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#methodology" class="md-nav__link">
     <span class="md-ellipsis">
       
-        📚 内容分类
+        Methodology
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="📚 内容分类">
+    <nav class="md-nav" aria-label="Methodology">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#simulation" class="md-nav__link">
+  <a href="#system-overview" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Simulation
+        System Overview
       
     </span>
   </a>
@@ -2140,10 +2173,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#tensor-program-optimization" class="md-nav__link">
+  <a href="#dual-level-memory-bank" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Tensor Program Optimization
+        Dual-Level Memory Bank
       
     </span>
   </a>
@@ -2151,21 +2184,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#automated-kernel-generation" class="md-nav__link">
+  <a href="#long-term-memory-workflow" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Automated Kernel Generation
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#intra-gpu-spatial-multiplexing" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Intra-GPU Spatial Multiplexing
+        Long-Term Memory Workflow
       
     </span>
   </a>
@@ -2178,32 +2200,71 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#experiment" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🔍 如何使用
+        Experiment
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Experiment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#experimental-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Experimental Setup
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#headline-results" class="md-nav__link">
     <span class="md-ellipsis">
       
-        📝 笔记模板
+        Headline Results
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#comparison-against-strong-baselines" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🚀 更新日志
+        Comparison Against Strong Baselines
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ablation-on-memory" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ablation on Memory
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limitation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Limitation
       
     </span>
   </a>
@@ -2230,42 +2291,301 @@
   
 
 
-<h1 id="_1">欢迎来到论文笔记<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
-<p>这是一个用于记录和整理论文阅读笔记的个人知识库。</p>
-<h2 id="_2">🎯 网站简介<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<p>本站点记录了我在人工智能、机器学习等领域的论文阅读笔记。每篇笔记包含论文的核心思想、方法总结、实验结果分析以及个人思考。</p>
-<p>大多数性能导向的系统研究可以归纳为“固定资源下的再分配优化”，并伴随着清晰的 trade-off。</p>
-<p>如果系统研究关注的是“资源空间中的最优分配”，那么算法研究关注的是“函数空间中的最优构造”。</p>
-<h2 id="_3">📚 内容分类<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
-<p>网站按研究领域组织论文笔记：</p>
-<h3 id="simulation"><a href="simulation/">Simulation</a><a class="headerlink" href="#simulation" title="Permanent link">&para;</a></h3>
-<p>Papers on performance modeling, simulation frameworks, and analytical models for ML systems.</p>
-<h3 id="tensor-program-optimization"><a href="tensor-program-optimization/">Tensor Program Optimization</a><a class="headerlink" href="#tensor-program-optimization" title="Permanent link">&para;</a></h3>
-<p>Papers on automated tensor program optimization through compiler techniques, ML-guided search, and performance modeling for deep learning workloads.</p>
-<h3 id="automated-kernel-generation"><a href="automated-kernel-generation/">Automated Kernel Generation</a><a class="headerlink" href="#automated-kernel-generation" title="Permanent link">&para;</a></h3>
-<p>Papers on LLM-driven generation, profiling-guided refinement, and automated optimization of GPU kernels and low-level code.</p>
-<h3 id="intra-gpu-spatial-multiplexing"><a href="intra-gpu-multiplexing/">Intra-GPU Spatial Multiplexing</a><a class="headerlink" href="#intra-gpu-spatial-multiplexing" title="Permanent link">&para;</a></h3>
-<p>Papers on GPU spatial multiplexing techniques for efficient LLM serving, including prefill-decode disaggregation and dynamic resource partitioning.</p>
-<h2 id="_4">🔍 如何使用<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<h1 id="kernelskill-a-multi-agent-framework-for-gpu-kernel-optimization">KernelSkill: A Multi-Agent Framework for GPU Kernel Optimization<a class="headerlink" href="#kernelskill-a-multi-agent-framework-for-gpu-kernel-optimization" title="Permanent link">&para;</a></h1>
+<div class="paper-meta">
+<p><strong>Authors</strong>: Qitong Sun, Jun Han, Tianlin Li, Zhe Tang, Sheng Chen, Fei Yang, Aishan Liu, Xianglong Liu, Yang Liu<br />
+<strong>Institution</strong>: Tsinghua University and collaborators<br />
+<strong>Conference</strong>: arXiv<br />
+<strong>Year</strong>: 2026<br />
+<strong>Paper Link</strong>: <a href="https://arxiv.org/abs/2603.10085">arXiv:2603.10085</a><br />
+<strong>GitHub</strong>: <a href="https://github.com/0satan0/KernelMem">0satan0/KernelMem</a>  </p>
+</div>
+<div class="paper-tags">
+<p><span class="paper-tag">Memory Bank</span>
+<span class="paper-tag">Multi-Agent</span>
+<span class="paper-tag">KernelBench</span></p>
+</div>
+<h2 id="background">Background<a class="headerlink" href="#background" title="Permanent link">&para;</a></h2>
+<p>KernelSkill is motivated by a practical weakness in many LLM-based kernel optimizers: they leave optimization-method selection to opaque model-internal heuristics. In real kernel engineering, that is a poor fit. Profiling outputs are noisy, bottlenecks shift over time, and many optimizations only make sense when certain structural and runtime preconditions hold. Without explicit knowledge and memory, multi-round refinement tends to waste iterations on mismatched strategies or repeat unproductive repairs.</p>
+<p>The paper proposes an alternative: externalize expert optimization skills and make the optimization process trajectory-aware. Instead of relying on the model to implicitly remember what worked before, KernelSkill introduces a dual-level memory architecture that separates reusable cross-task expertise from per-task short-term refinement state.</p>
+<p><strong>Key Takeaways</strong></p>
 <ul>
-<li><strong>浏览分类</strong>：点击顶部导航栏选择感兴趣的研究领域</li>
-<li><strong>搜索论文</strong>：使用右上角的搜索框快速查找特定论文或关键词</li>
-<li><strong>阅读笔记</strong>：每篇笔记包含论文摘要、核心思想、方法介绍和个人理解</li>
+<li>KernelSkill replaces implicit optimization heuristics with explicit, retrievable optimization skills.</li>
+<li>The framework combines long-term cross-task memory with short-term task-local memory to stabilize both repair and optimization.</li>
+<li>On KernelBench Levels 1–3, KernelSkill reports 100% success and average speedups of 5.44x, 2.82x, and 1.92x over Torch Eager.</li>
 </ul>
-<h2 id="_5">📝 笔记模板<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
-<p>每篇论文笔记通常包含以下内容：</p>
-<ul>
-<li><strong>论文基本信息</strong>（标题、作者、会议/期刊、年份）</li>
-<li><strong>摘要</strong>：论文要解决的问题和主要贡献</li>
-<li><strong>核心思想</strong>：论文的关键创新点</li>
-<li><strong>方法</strong>：技术细节和实现方式</li>
-<li><strong>实验结果</strong>：主要实验结论</li>
-<li><strong>个人笔记</strong>：个人思考、疑问和延伸阅读</li>
-</ul>
-<h2 id="_6">🚀 更新日志<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
-<p>本网站会持续更新，记录最新阅读的论文。欢迎访问 <a href="https://github.com/zksainx/paper-notes">GitHub 仓库</a> 查看更新历史。</p>
+<h2 id="methodology">Methodology<a class="headerlink" href="#methodology" title="Permanent link">&para;</a></h2>
+<p>KernelSkill is a closed-loop multi-agent optimizer. A Generator first produces a correct but not necessarily fast CUDA implementation from a PyTorch reference. A Reviewer then compiles, verifies, and profiles the kernel. Once correctness is established, a Feature Extractor derives static code features, while profiling tools contribute runtime evidence. These signals are used to retrieve candidate optimization methods from long-term memory. A Planner selects and sequences methods, and the Optimizer or Repairer applies them. If compilation or correctness fails, a Diagnoser reasons over the failure and the system iterates again.</p>
+<p>The key architectural contribution is the Memory Bank. Long-term memory stores reusable expert knowledge in a structured, auditable form: normalized profiling fields, derived features, bottleneck rules, method-decision tables, and method-specific implementation guidance. Short-term memory tracks what happened in the current task, including failed repair attempts and already-tried optimization methods, so the system avoids oscillating between the same bad edits.</p>
+<h3 id="system-overview">System Overview<a class="headerlink" href="#system-overview" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Agent / Module</th>
+<th>Input</th>
+<th>Output</th>
+<th>Role</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Generator</td>
+<td>PyTorch reference program</td>
+<td>Initial CUDA implementation</td>
+<td>Produces diverse correct starting kernels without optimizing for speed</td>
+</tr>
+<tr>
+<td>Feature Extractor</td>
+<td>Kernel source code</td>
+<td>Static code features</td>
+<td>Captures structural properties needed for method retrieval</td>
+</tr>
+<tr>
+<td>Reviewer</td>
+<td>Candidate kernel</td>
+<td>Compile status, correctness result, profiling signals</td>
+<td>Provides execution feedback for repair and optimization</td>
+</tr>
+<tr>
+<td>Diagnoser</td>
+<td>Compiler / verifier feedback</td>
+<td>Root-cause diagnosis and repair ideas</td>
+<td>Drives iterative correction when code fails</td>
+</tr>
+<tr>
+<td>Planner</td>
+<td>Retrieved methods, profiling evidence, short-term memory</td>
+<td>Stepwise optimization plan</td>
+<td>Selects and orders candidate optimizations</td>
+</tr>
+<tr>
+<td>Optimizer / Repairer</td>
+<td>Current kernel and plan</td>
+<td>Edited kernel</td>
+<td>Realizes optimization or repair actions in code</td>
+</tr>
+</tbody>
+</table>
+<h3 id="dual-level-memory-bank">Dual-Level Memory Bank<a class="headerlink" href="#dual-level-memory-bank" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Memory Type</th>
+<th>Stored Information</th>
+<th>Main Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Long-term Memory</td>
+<td>Expert optimization rules, bottleneck-method mappings, rationales, implementation cues</td>
+<td>Cross-task method retrieval and interpretable decision making</td>
+</tr>
+<tr>
+<td>Short-term Memory</td>
+<td>Per-task repair history, attempted methods, observed outcomes</td>
+<td>Prevents repeated backtracking and stabilizes multi-round refinement</td>
+</tr>
+</tbody>
+</table>
+<h3 id="long-term-memory-workflow">Long-Term Memory Workflow<a class="headerlink" href="#long-term-memory-workflow" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Step</th>
+<th>Function</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Input aggregation</td>
+<td>Collect NCU metrics, runtime features, and code features</td>
+</tr>
+<tr>
+<td>Metric normalization</td>
+<td>Standardize raw profiler keys via <code>field_mapping</code></td>
+</tr>
+<tr>
+<td>Derived-field computation</td>
+<td>Build higher-level indicators from raw signals</td>
+</tr>
+<tr>
+<td>Headroom tier assignment</td>
+<td>Estimate remaining optimization potential</td>
+</tr>
+<tr>
+<td>Bottleneck identification</td>
+<td>Match the kernel to bottleneck signatures</td>
+</tr>
+<tr>
+<td>Case matching</td>
+<td>Select method candidates via decision rules</td>
+</tr>
+<tr>
+<td>Global rule enforcement</td>
+<td>Remove unsafe or invalid optimization actions</td>
+</tr>
+<tr>
+<td>Method retrieval + LLM assist</td>
+<td>Return candidate methods with rationales and implementation guidance</td>
+</tr>
+</tbody>
+</table>
+<h2 id="experiment">Experiment<a class="headerlink" href="#experiment" title="Permanent link">&para;</a></h2>
+<h3 id="experimental-setup">Experimental Setup<a class="headerlink" href="#experimental-setup" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Benchmark</td>
+<td>KernelBench Levels 1–3</td>
+</tr>
+<tr>
+<td>Main Baselines</td>
+<td>STARK, QiMeng, Astra, PRAGMA, CudaForge, Kevin-32B</td>
+</tr>
+<tr>
+<td>Backbone Model</td>
+<td>ChatGPT-5.1 in the reported best setting</td>
+</tr>
+<tr>
+<td>Main Metrics</td>
+<td>Success rate, average speedup over Torch Eager, Fast1</td>
+</tr>
+<tr>
+<td>Round Budget</td>
+<td>15 refinement rounds for KernelSkill in the main comparison</td>
+</tr>
+<tr>
+<td>Feedback Signals</td>
+<td>Compiler output, verifier result, NCU profiling, runtime features, static code features</td>
+</tr>
+</tbody>
+</table>
+<h3 id="headline-results">Headline Results<a class="headerlink" href="#headline-results" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Level</th>
+<th>Success</th>
+<th>Average Speedup over Torch Eager</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Level 1</td>
+<td>100%</td>
+<td>5.44x</td>
+</tr>
+<tr>
+<td>Level 2</td>
+<td>100%</td>
+<td>2.82x</td>
+</tr>
+<tr>
+<td>Level 3</td>
+<td>100%</td>
+<td>1.92x</td>
+</tr>
+</tbody>
+</table>
+<p>KernelSkill reaches 100% success on all three KernelBench levels while also delivering the best average speedup reported in the paper. The combination matters: several baselines can either be fast on easy cases or remain reliable on hard ones, but KernelSkill is presented as the method that sustains both properties together.</p>
+<h3 id="comparison-against-strong-baselines">Comparison Against Strong Baselines<a class="headerlink" href="#comparison-against-strong-baselines" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Comparison</th>
+<th>Reported Difference</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>vs. STARK on Level 1</td>
+<td>5.44x vs. 3.03x</td>
+</tr>
+<tr>
+<td>vs. STARK on Level 2</td>
+<td>2.82x vs. 2.69x</td>
+</tr>
+<tr>
+<td>vs. STARK on Level 3</td>
+<td>1.92x vs. 1.58x</td>
+</tr>
+<tr>
+<td>vs. profiling-grounded multi-agent baselines</td>
+<td>Consistently higher speedups on Levels 1–3</td>
+</tr>
+<tr>
+<td>vs. training-centric baselines on harder tasks</td>
+<td>More stable success and stronger optimization under increasing difficulty</td>
+</tr>
+</tbody>
+</table>
+<p>The paper emphasizes that KernelSkill is not just marginally better. On Level 1 the gain over STARK is especially large, while on harder tasks the value of explicit memory appears in the framework’s ability to maintain both correctness and meaningful speedup rather than collapsing under noisy refinement loops.</p>
+<h3 id="ablation-on-memory">Ablation on Memory<a class="headerlink" href="#ablation-on-memory" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Variant</th>
+<th>Main Finding</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>w/o memory</td>
+<td>Lower reliability and weaker optimization because the system loses both reusable guidance and trajectory state</td>
+</tr>
+<tr>
+<td>w/o long-term memory</td>
+<td>Smaller speedup gains because method selection becomes less targeted</td>
+</tr>
+<tr>
+<td>w/o short-term memory</td>
+<td>Success drops below 100% because repair and refinement become unstable and repetitive</td>
+</tr>
+</tbody>
+</table>
+<p>The ablation results support the paper's main claim that the two memory layers solve different problems. Long-term memory improves strategic method choice across tasks, while short-term memory prevents cyclical failures and repeated low-value attempts within a task.</p>
+<h2 id="limitation">Limitation<a class="headerlink" href="#limitation" title="Permanent link">&para;</a></h2>
+<p>KernelSkill is strong precisely because it introduces explicit memory and more structure than ordinary prompting. That also means its benefits depend on the quality and coverage of the stored optimization knowledge.</p>
+<table>
+<thead>
+<tr>
+<th>Limitation</th>
+<th>Why It Matters</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Long-term memory coverage matters</td>
+<td>If no relevant case is retrieved, the method falls back toward weaker LLM-only decision making</td>
+</tr>
+<tr>
+<td>Memory curation is nontrivial</td>
+<td>The quality of the deterministic policy and method knowledge depends on careful expert distillation</td>
+</tr>
+<tr>
+<td>More structure means more system complexity</td>
+<td>Multi-agent coordination plus dual memory is harder to build and maintain than simple prompt loops</td>
+</tr>
+<tr>
+<td>Benchmark results may depend on rule quality</td>
+<td>Success can improve because the memory bank captures the benchmark’s common bottleneck-to-method patterns well</td>
+</tr>
+<tr>
+<td>Retrieval quality is now a central bottleneck</td>
+<td>A memory-augmented system can still fail if it retrieves the wrong method family for the current kernel</td>
+</tr>
+</tbody>
+</table>
 <hr />
-<p><em>最后更新：2025年</em></p>
+<p><em>Reading date: 2026-04</em>
+<em>Note status: Completed</em></p>
 
 
 
@@ -2327,12 +2647,12 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.sections", "navigation.indexes", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "search.share", "content.code.copy", "content.tabs.link"], "search": "assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.sections", "navigation.indexes", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "search.share", "content.code.copy", "content.tabs.link"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
     
     
-      <script src="assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
-        <script src="javascripts/mathjax.js"></script>
+        <script src="../../javascripts/mathjax.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       

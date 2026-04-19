@@ -12,29 +12,31 @@
         <meta name="author" content="zksainx">
       
       
-        <link rel="canonical" href="https://zksainx.github.io/paper-notes/">
+        <link rel="canonical" href="https://zksainx.github.io/paper-notes/automated-kernel-generation/peak/">
       
       
+        <link rel="prev" href="../kernelskill/">
       
-        <link rel="next" href="simulation/">
+      
+        <link rel="next" href="../tritonforge/">
       
       
         
       
       
-      <link rel="icon" href="assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
-        <title>Paper Notes</title>
+        <title>PEAK - Paper Notes</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -53,9 +55,9 @@
       
     
     
-      <link rel="stylesheet" href="stylesheets/extra.css">
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -80,7 +82,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#peak-a-performance-engineering-ai-assistant-for-gpu-kernels-powered-by-natural-language-transformations" class="md-skip">
           跳转至
         </a>
       
@@ -94,7 +96,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="页眉">
-    <a href="." title="Paper Notes" class="md-header__button md-logo" aria-label="Paper Notes" data-md-component="logo">
+    <a href="../.." title="Paper Notes" class="md-header__button md-logo" aria-label="Paper Notes" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -114,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Home
+              PEAK
             
           </span>
         </div>
@@ -230,11 +232,9 @@
   
   
   
-    
   
-  
-    <li class="md-tabs__item md-tabs__item--active">
-      <a href="." class="md-tabs__link">
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
         
   
   
@@ -255,7 +255,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="simulation/" class="md-tabs__link">
+        <a href="../../simulation/" class="md-tabs__link">
           
   
   
@@ -277,7 +277,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="tensor-program-optimization/" class="md-tabs__link">
+        <a href="../../tensor-program-optimization/" class="md-tabs__link">
           
   
   
@@ -295,11 +295,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="automated-kernel-generation/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
           
   
   
@@ -321,7 +323,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="intra-gpu-multiplexing/" class="md-tabs__link">
+        <a href="../../intra-gpu-multiplexing/" class="md-tabs__link">
           
   
   
@@ -341,7 +343,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="about/" class="md-tabs__link">
+      <a href="../../about/" class="md-tabs__link">
         
   
   
@@ -376,7 +378,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="Paper Notes" class="md-nav__button md-logo" aria-label="Paper Notes" data-md-component="logo">
+    <a href="../.." title="Paper Notes" class="md-nav__button md-logo" aria-label="Paper Notes" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -403,37 +405,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Home
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="." class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
         
   
   
@@ -449,131 +424,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        🎯 网站简介
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        📚 内容分类
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="📚 内容分类">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#simulation" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Simulation
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#tensor-program-optimization" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Tensor Program Optimization
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#automated-kernel-generation" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Automated Kernel Generation
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#intra-gpu-spatial-multiplexing" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Intra-GPU Spatial Multiplexing
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        🔍 如何使用
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        📝 笔记模板
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        🚀 更新日志
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -636,7 +486,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="simulation/" class="md-nav__link ">
+            <a href="../../simulation/" class="md-nav__link ">
               
   
   
@@ -680,7 +530,7 @@
   
   
     <li class="md-nav__item">
-      <a href="simulation/amali/" class="md-nav__link">
+      <a href="../../simulation/amali/" class="md-nav__link">
         
   
   
@@ -708,7 +558,7 @@
   
   
     <li class="md-nav__item">
-      <a href="simulation/apex/" class="md-nav__link">
+      <a href="../../simulation/apex/" class="md-nav__link">
         
   
   
@@ -736,7 +586,7 @@
   
   
     <li class="md-nav__item">
-      <a href="simulation/astra-sim/" class="md-nav__link">
+      <a href="../../simulation/astra-sim/" class="md-nav__link">
         
   
   
@@ -764,7 +614,7 @@
   
   
     <li class="md-nav__item">
-      <a href="simulation/astra-sim-2/" class="md-nav__link">
+      <a href="../../simulation/astra-sim-2/" class="md-nav__link">
         
   
   
@@ -792,7 +642,7 @@
   
   
     <li class="md-nav__item">
-      <a href="simulation/chakra/" class="md-nav__link">
+      <a href="../../simulation/chakra/" class="md-nav__link">
         
   
   
@@ -820,7 +670,7 @@
   
   
     <li class="md-nav__item">
-      <a href="simulation/frontier/" class="md-nav__link">
+      <a href="../../simulation/frontier/" class="md-nav__link">
         
   
   
@@ -848,7 +698,7 @@
   
   
     <li class="md-nav__item">
-      <a href="simulation/llmcompass/" class="md-nav__link">
+      <a href="../../simulation/llmcompass/" class="md-nav__link">
         
   
   
@@ -876,7 +726,7 @@
   
   
     <li class="md-nav__item">
-      <a href="simulation/linear/" class="md-nav__link">
+      <a href="../../simulation/linear/" class="md-nav__link">
         
   
   
@@ -904,7 +754,7 @@
   
   
     <li class="md-nav__item">
-      <a href="simulation/mystique/" class="md-nav__link">
+      <a href="../../simulation/mystique/" class="md-nav__link">
         
   
   
@@ -932,7 +782,7 @@
   
   
     <li class="md-nav__item">
-      <a href="simulation/neusight/" class="md-nav__link">
+      <a href="../../simulation/neusight/" class="md-nav__link">
         
   
   
@@ -960,7 +810,7 @@
   
   
     <li class="md-nav__item">
-      <a href="simulation/simai/" class="md-nav__link">
+      <a href="../../simulation/simai/" class="md-nav__link">
         
   
   
@@ -988,7 +838,7 @@
   
   
     <li class="md-nav__item">
-      <a href="simulation/vidur/" class="md-nav__link">
+      <a href="../../simulation/vidur/" class="md-nav__link">
         
   
   
@@ -1016,7 +866,7 @@
   
   
     <li class="md-nav__item">
-      <a href="simulation/vtrain/" class="md-nav__link">
+      <a href="../../simulation/vtrain/" class="md-nav__link">
         
   
   
@@ -1096,7 +946,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="tensor-program-optimization/" class="md-nav__link ">
+            <a href="../../tensor-program-optimization/" class="md-nav__link ">
               
   
   
@@ -1140,7 +990,7 @@
   
   
     <li class="md-nav__item">
-      <a href="tensor-program-optimization/learning-optimize-tensor-programs/" class="md-nav__link">
+      <a href="../../tensor-program-optimization/learning-optimize-tensor-programs/" class="md-nav__link">
         
   
   
@@ -1168,7 +1018,7 @@
   
   
     <li class="md-nav__item">
-      <a href="tensor-program-optimization/ansor/" class="md-nav__link">
+      <a href="../../tensor-program-optimization/ansor/" class="md-nav__link">
         
   
   
@@ -1196,7 +1046,7 @@
   
   
     <li class="md-nav__item">
-      <a href="tensor-program-optimization/roller/" class="md-nav__link">
+      <a href="../../tensor-program-optimization/roller/" class="md-nav__link">
         
   
   
@@ -1224,7 +1074,7 @@
   
   
     <li class="md-nav__item">
-      <a href="tensor-program-optimization/learned-performance-model-tpu/" class="md-nav__link">
+      <a href="../../tensor-program-optimization/learned-performance-model-tpu/" class="md-nav__link">
         
   
   
@@ -1252,7 +1102,7 @@
   
   
     <li class="md-nav__item">
-      <a href="tensor-program-optimization/metatune/" class="md-nav__link">
+      <a href="../../tensor-program-optimization/metatune/" class="md-nav__link">
         
   
   
@@ -1280,7 +1130,7 @@
   
   
     <li class="md-nav__item">
-      <a href="tensor-program-optimization/unicox/" class="md-nav__link">
+      <a href="../../tensor-program-optimization/unicox/" class="md-nav__link">
         
   
   
@@ -1308,7 +1158,7 @@
   
   
     <li class="md-nav__item">
-      <a href="tensor-program-optimization/tritonblas/" class="md-nav__link">
+      <a href="../../tensor-program-optimization/tritonblas/" class="md-nav__link">
         
   
   
@@ -1336,7 +1186,7 @@
   
   
     <li class="md-nav__item">
-      <a href="tensor-program-optimization/gpu-performance-portability/" class="md-nav__link">
+      <a href="../../tensor-program-optimization/gpu-performance-portability/" class="md-nav__link">
         
   
   
@@ -1364,7 +1214,7 @@
   
   
     <li class="md-nav__item">
-      <a href="tensor-program-optimization/anatomy-triton-attention/" class="md-nav__link">
+      <a href="../../tensor-program-optimization/anatomy-triton-attention/" class="md-nav__link">
         
   
   
@@ -1392,7 +1242,7 @@
   
   
     <li class="md-nav__item">
-      <a href="tensor-program-optimization/tritonbench/" class="md-nav__link">
+      <a href="../../tensor-program-optimization/tritonbench/" class="md-nav__link">
         
   
   
@@ -1424,6 +1274,8 @@
       
   
   
+    
+  
   
   
     
@@ -1459,22 +1311,23 @@
     
     
       
+        
+        
+      
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="automated-kernel-generation/" class="md-nav__link ">
+            <a href="../" class="md-nav__link ">
               
   
   
@@ -1492,13 +1345,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1518,7 +1371,7 @@
   
   
     <li class="md-nav__item">
-      <a href="automated-kernel-generation/avo/" class="md-nav__link">
+      <a href="../avo/" class="md-nav__link">
         
   
   
@@ -1546,7 +1399,7 @@
   
   
     <li class="md-nav__item">
-      <a href="automated-kernel-generation/cuda-llm/" class="md-nav__link">
+      <a href="../cuda-llm/" class="md-nav__link">
         
   
   
@@ -1574,7 +1427,7 @@
   
   
     <li class="md-nav__item">
-      <a href="automated-kernel-generation/evoengineer/" class="md-nav__link">
+      <a href="../evoengineer/" class="md-nav__link">
         
   
   
@@ -1602,7 +1455,7 @@
   
   
     <li class="md-nav__item">
-      <a href="automated-kernel-generation/geak/" class="md-nav__link">
+      <a href="../geak/" class="md-nav__link">
         
   
   
@@ -1630,7 +1483,7 @@
   
   
     <li class="md-nav__item">
-      <a href="automated-kernel-generation/k-search/" class="md-nav__link">
+      <a href="../k-search/" class="md-nav__link">
         
   
   
@@ -1658,7 +1511,7 @@
   
   
     <li class="md-nav__item">
-      <a href="automated-kernel-generation/kernelband/" class="md-nav__link">
+      <a href="../kernelband/" class="md-nav__link">
         
   
   
@@ -1686,7 +1539,7 @@
   
   
     <li class="md-nav__item">
-      <a href="automated-kernel-generation/kernelblaster/" class="md-nav__link">
+      <a href="../kernelblaster/" class="md-nav__link">
         
   
   
@@ -1714,7 +1567,7 @@
   
   
     <li class="md-nav__item">
-      <a href="automated-kernel-generation/kernelevolve/" class="md-nav__link">
+      <a href="../kernelevolve/" class="md-nav__link">
         
   
   
@@ -1742,7 +1595,7 @@
   
   
     <li class="md-nav__item">
-      <a href="automated-kernel-generation/kernelskill/" class="md-nav__link">
+      <a href="../kernelskill/" class="md-nav__link">
         
   
   
@@ -1767,10 +1620,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="automated-kernel-generation/peak/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PEAK
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1786,6 +1666,159 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#background" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Background
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#methodology" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Methodology
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Methodology">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#system-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        System Overview
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#representative-natural-transformations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Representative Natural Transformations
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-design-choices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Design Choices
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#experiment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Experiment
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Experiment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#experimental-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Experimental Setup
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#headline-results" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Headline Results
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#performance-workflow-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Performance Workflow Examples
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#end-to-end-optimization-cost" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        End-to-End Optimization Cost
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limitation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Limitation
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1798,7 +1831,7 @@
   
   
     <li class="md-nav__item">
-      <a href="automated-kernel-generation/tritonforge/" class="md-nav__link">
+      <a href="../tritonforge/" class="md-nav__link">
         
   
   
@@ -1868,7 +1901,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="intra-gpu-multiplexing/" class="md-nav__link ">
+            <a href="../../intra-gpu-multiplexing/" class="md-nav__link ">
               
   
   
@@ -1912,7 +1945,7 @@
   
   
     <li class="md-nav__item">
-      <a href="intra-gpu-multiplexing/nanoflow/" class="md-nav__link">
+      <a href="../../intra-gpu-multiplexing/nanoflow/" class="md-nav__link">
         
   
   
@@ -1940,7 +1973,7 @@
   
   
     <li class="md-nav__item">
-      <a href="intra-gpu-multiplexing/bullet/" class="md-nav__link">
+      <a href="../../intra-gpu-multiplexing/bullet/" class="md-nav__link">
         
   
   
@@ -1968,7 +2001,7 @@
   
   
     <li class="md-nav__item">
-      <a href="intra-gpu-multiplexing/nexus/" class="md-nav__link">
+      <a href="../../intra-gpu-multiplexing/nexus/" class="md-nav__link">
         
   
   
@@ -1996,7 +2029,7 @@
   
   
     <li class="md-nav__item">
-      <a href="intra-gpu-multiplexing/pd-multiplex/" class="md-nav__link">
+      <a href="../../intra-gpu-multiplexing/pd-multiplex/" class="md-nav__link">
         
   
   
@@ -2024,7 +2057,7 @@
   
   
     <li class="md-nav__item">
-      <a href="intra-gpu-multiplexing/duetserve/" class="md-nav__link">
+      <a href="../../intra-gpu-multiplexing/duetserve/" class="md-nav__link">
         
   
   
@@ -2059,7 +2092,7 @@
   
   
     <li class="md-nav__item">
-      <a href="about/" class="md-nav__link">
+      <a href="../../about/" class="md-nav__link">
         
   
   
@@ -2106,10 +2139,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#background" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🎯 网站简介
+        Background
       
     </span>
   </a>
@@ -2117,22 +2150,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#methodology" class="md-nav__link">
     <span class="md-ellipsis">
       
-        📚 内容分类
+        Methodology
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="📚 内容分类">
+    <nav class="md-nav" aria-label="Methodology">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#simulation" class="md-nav__link">
+  <a href="#system-overview" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Simulation
+        System Overview
       
     </span>
   </a>
@@ -2140,10 +2173,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#tensor-program-optimization" class="md-nav__link">
+  <a href="#representative-natural-transformations" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Tensor Program Optimization
+        Representative Natural Transformations
       
     </span>
   </a>
@@ -2151,21 +2184,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#automated-kernel-generation" class="md-nav__link">
+  <a href="#key-design-choices" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Automated Kernel Generation
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#intra-gpu-spatial-multiplexing" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Intra-GPU Spatial Multiplexing
+        Key Design Choices
       
     </span>
   </a>
@@ -2178,32 +2200,71 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#experiment" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🔍 如何使用
+        Experiment
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Experiment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#experimental-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Experimental Setup
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#headline-results" class="md-nav__link">
     <span class="md-ellipsis">
       
-        📝 笔记模板
+        Headline Results
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#performance-workflow-examples" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🚀 更新日志
+        Performance Workflow Examples
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#end-to-end-optimization-cost" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        End-to-End Optimization Cost
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limitation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Limitation
       
     </span>
   </a>
@@ -2230,42 +2291,348 @@
   
 
 
-<h1 id="_1">欢迎来到论文笔记<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
-<p>这是一个用于记录和整理论文阅读笔记的个人知识库。</p>
-<h2 id="_2">🎯 网站简介<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<p>本站点记录了我在人工智能、机器学习等领域的论文阅读笔记。每篇笔记包含论文的核心思想、方法总结、实验结果分析以及个人思考。</p>
-<p>大多数性能导向的系统研究可以归纳为“固定资源下的再分配优化”，并伴随着清晰的 trade-off。</p>
-<p>如果系统研究关注的是“资源空间中的最优分配”，那么算法研究关注的是“函数空间中的最优构造”。</p>
-<h2 id="_3">📚 内容分类<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
-<p>网站按研究领域组织论文笔记：</p>
-<h3 id="simulation"><a href="simulation/">Simulation</a><a class="headerlink" href="#simulation" title="Permanent link">&para;</a></h3>
-<p>Papers on performance modeling, simulation frameworks, and analytical models for ML systems.</p>
-<h3 id="tensor-program-optimization"><a href="tensor-program-optimization/">Tensor Program Optimization</a><a class="headerlink" href="#tensor-program-optimization" title="Permanent link">&para;</a></h3>
-<p>Papers on automated tensor program optimization through compiler techniques, ML-guided search, and performance modeling for deep learning workloads.</p>
-<h3 id="automated-kernel-generation"><a href="automated-kernel-generation/">Automated Kernel Generation</a><a class="headerlink" href="#automated-kernel-generation" title="Permanent link">&para;</a></h3>
-<p>Papers on LLM-driven generation, profiling-guided refinement, and automated optimization of GPU kernels and low-level code.</p>
-<h3 id="intra-gpu-spatial-multiplexing"><a href="intra-gpu-multiplexing/">Intra-GPU Spatial Multiplexing</a><a class="headerlink" href="#intra-gpu-spatial-multiplexing" title="Permanent link">&para;</a></h3>
-<p>Papers on GPU spatial multiplexing techniques for efficient LLM serving, including prefill-decode disaggregation and dynamic resource partitioning.</p>
-<h2 id="_4">🔍 如何使用<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<h1 id="peak-a-performance-engineering-ai-assistant-for-gpu-kernels-powered-by-natural-language-transformations">PEAK: A Performance Engineering AI-Assistant for GPU Kernels Powered by Natural Language Transformations<a class="headerlink" href="#peak-a-performance-engineering-ai-assistant-for-gpu-kernels-powered-by-natural-language-transformations" title="Permanent link">&para;</a></h1>
+<div class="paper-meta">
+<p><strong>Authors</strong>: Muhammad Usman Tariq, Abhinav Jangda, Angelica Moreira, Madan Musuvathi, Tyler Sorensen<br />
+<strong>Institution</strong>: Stanford University, Microsoft Research Redmond, University of California Santa Cruz<br />
+<strong>Conference</strong>: arXiv<br />
+<strong>Year</strong>: 2025<br />
+<strong>Paper Link</strong>: <a href="https://arxiv.org/abs/2512.19018">arXiv:2512.19018</a>  </p>
+</div>
+<div class="paper-tags">
+<p><span class="paper-tag">GPU Kernels</span>
+<span class="paper-tag">Natural Transformations</span>
+<span class="paper-tag">Cross-Backend</span></p>
+</div>
+<h2 id="background">Background<a class="headerlink" href="#background" title="Permanent link">&para;</a></h2>
+<p>PEAK is built around a simple but useful observation: many GPU kernel optimizations are easier to describe in natural language than to encode as rigid compiler passes. Instead of treating kernel generation as a monolithic one-shot synthesis problem, PEAK treats optimization as a sequence of explicit transformations that can be interpreted, applied, validated, and iterated on by an LLM-assisted system.</p>
+<p>The paper focuses on matrix multiplication because it is both performance-critical and structurally rich enough to exercise tiling, tensor core usage, pipelining, caching, and backend-specific tuning. The broader goal is not only to build a competitive MatMul optimizer, but also to expose how LLMs behave when asked to carry out realistic low-level kernel transformations across different GPU ecosystems.</p>
+<p><strong>Key Takeaways</strong></p>
 <ul>
-<li><strong>浏览分类</strong>：点击顶部导航栏选择感兴趣的研究领域</li>
-<li><strong>搜索论文</strong>：使用右上角的搜索框快速查找特定论文或关键词</li>
-<li><strong>阅读笔记</strong>：每篇笔记包含论文摘要、核心思想、方法介绍和个人理解</li>
+<li>PEAK frames GPU kernel optimization as interpretable natural-language transformations rather than opaque end-to-end generation.</li>
+<li>The same framework is instantiated across CUDA, HIP, and HLSL, which highlights both portability and backend-specific specialization.</li>
+<li>For MatMul, the resulting kernels are competitive with vendor libraries on NVIDIA and AMD, and reach hardware-level documented FLOPS on HLSL where a standard vendor library is unavailable.</li>
 </ul>
-<h2 id="_5">📝 笔记模板<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
-<p>每篇论文笔记通常包含以下内容：</p>
+<h2 id="methodology">Methodology<a class="headerlink" href="#methodology" title="Permanent link">&para;</a></h2>
+<p>PEAK is a modular optimization framework that applies natural-language transformation specifications to a kernel context, then validates correctness and evaluates performance after each step. The core design aims to preserve human interpretability: each optimization remains visible as a named transformation with explicit intent, instead of disappearing inside a black-box search loop.</p>
+<p>The kernel context is broader than kernel source alone. It includes the device kernel, host launcher code, input specification, and a set of performance tuning parameters. This gives the system enough context to modify both implementation structure and evaluation setup while staying grounded in executable kernels.</p>
+<h3 id="system-overview">System Overview<a class="headerlink" href="#system-overview" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Input</th>
+<th>Output</th>
+<th>Role</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Natural Transformations</td>
+<td>Kernel context plus a natural-language optimization instruction</td>
+<td>Updated kernel and host code</td>
+<td>Applies an interpretable optimization step such as tiling, tensor-core use, or pipelining</td>
+</tr>
+<tr>
+<td>Kernel Context</td>
+<td>Kernel, launcher, input sizes, tuning parameters</td>
+<td>Structured optimization state</td>
+<td>Provides enough surrounding context for low-level edits and backend-specific execution</td>
+</tr>
+<tr>
+<td>Correctness Validators</td>
+<td>Candidate kernel and test inputs</td>
+<td>Pass / fail feedback</td>
+<td>Checks semantic correctness after each transformation</td>
+</tr>
+<tr>
+<td>Performance Evaluators</td>
+<td>Candidate kernel and tuning space</td>
+<td>Runtime and throughput measurements</td>
+<td>Searches or enumerates promising performance settings</td>
+</tr>
+<tr>
+<td>Performance Workflow</td>
+<td>Seed kernel plus ordered transformation sequence</td>
+<td>Final optimized implementation</td>
+<td>Orchestrates iterative optimization, validation, checkpointing, and rollback</td>
+</tr>
+</tbody>
+</table>
+<h3 id="representative-natural-transformations">Representative Natural Transformations<a class="headerlink" href="#representative-natural-transformations" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Transformation</th>
+<th>Purpose</th>
+<th>Passes / LLM Calls</th>
+<th>Tuning Parameters</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Refactor</td>
+<td>Rewrite complex accesses into reusable macros and cleaner primitives</td>
+<td>2 / 3</td>
+<td>None</td>
+</tr>
+<tr>
+<td>TB-Tiling</td>
+<td>Introduce thread-block tiling</td>
+<td>6 / 9</td>
+<td><code>TILE_K_SIZE</code></td>
+</tr>
+<tr>
+<td>Warp-Tiling</td>
+<td>Map work to warp-level structure</td>
+<td>1 / 1</td>
+<td><code>WARP_X_DIM</code></td>
+</tr>
+<tr>
+<td>Thread-Tiling</td>
+<td>Increase per-thread reuse</td>
+<td>3 / 3</td>
+<td><code>TRD_X_DIM</code>, <code>TRD_Y_DIM</code></td>
+</tr>
+<tr>
+<td>Tensor-Core</td>
+<td>Switch to tensor-core execution paths</td>
+<td>1 / 1</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Split-K</td>
+<td>Parallelize along the reduction dimension</td>
+<td>1 / 3</td>
+<td><code>K_SPLITS</code></td>
+</tr>
+<tr>
+<td>Pipelining</td>
+<td>Overlap memory movement and compute</td>
+<td>1 / 2</td>
+<td><code>NUM_STAGES</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="key-design-choices">Key Design Choices<a class="headerlink" href="#key-design-choices" title="Permanent link">&para;</a></h3>
 <ul>
-<li><strong>论文基本信息</strong>（标题、作者、会议/期刊、年份）</li>
-<li><strong>摘要</strong>：论文要解决的问题和主要贡献</li>
-<li><strong>核心思想</strong>：论文的关键创新点</li>
-<li><strong>方法</strong>：技术细节和实现方式</li>
-<li><strong>实验结果</strong>：主要实验结论</li>
-<li><strong>个人笔记</strong>：个人思考、疑问和延伸阅读</li>
+<li>The system is backend-agnostic at the framework level and keeps backend-specific logic mostly in drivers and a small number of specialized transformations.</li>
+<li>Natural transformations are lightweight to write and revise, which makes them easier to extend than compiler passes or RL-heavy search policies.</li>
+<li>Validation and performance search are first-class parts of the workflow rather than post-processing steps.</li>
+<li>The paper studies a semi-autonomous setting with human-designed transformation sequences, but the same space could be searched automatically or proposed by an agent.</li>
 </ul>
-<h2 id="_6">🚀 更新日志<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
-<p>本网站会持续更新，记录最新阅读的论文。欢迎访问 <a href="https://github.com/zksainx/paper-notes">GitHub 仓库</a> 查看更新历史。</p>
+<h2 id="experiment">Experiment<a class="headerlink" href="#experiment" title="Permanent link">&para;</a></h2>
+<h3 id="experimental-setup">Experimental Setup<a class="headerlink" href="#experimental-setup" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Task</td>
+<td>Matrix multiplication kernels</td>
+</tr>
+<tr>
+<td>Backends</td>
+<td>CUDA, HIP, HLSL</td>
+</tr>
+<tr>
+<td>Devices</td>
+<td>NVIDIA A6000, AMD MI200, Qualcomm Adreno X1-85</td>
+</tr>
+<tr>
+<td>Precisions</td>
+<td>fp32 and fp16 where supported</td>
+</tr>
+<tr>
+<td>Input Sizes</td>
+<td>2048 and 4096 square matrices</td>
+</tr>
+<tr>
+<td>Optimization Target</td>
+<td>Performance relative to naive baseline and hardware/library ceilings</td>
+</tr>
+<tr>
+<td>Evaluation Pattern</td>
+<td>Apply ordered transformation sequences, validate correctness, then evaluate performance</td>
+</tr>
+</tbody>
+</table>
+<h3 id="headline-results">Headline Results<a class="headerlink" href="#headline-results" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Device</th>
+<th>Backend</th>
+<th>Precision</th>
+<th>Baseline Speedup</th>
+<th>% of Max FLOPS</th>
+<th># Transformations</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>NVIDIA A6000</td>
+<td>CUDA</td>
+<td>fp32</td>
+<td>9.36x / 10.36x</td>
+<td>95.0% / 91.6%</td>
+<td>11</td>
+</tr>
+<tr>
+<td>NVIDIA A6000</td>
+<td>CUDA</td>
+<td>fp16</td>
+<td>41.06x / 45.34x</td>
+<td>99.4% / 89.5%</td>
+<td>9</td>
+</tr>
+<tr>
+<td>AMD MI200</td>
+<td>HIP</td>
+<td>fp32</td>
+<td>24.39x / 25.21x</td>
+<td>91.9% / 86.2%</td>
+<td>8</td>
+</tr>
+<tr>
+<td>AMD MI200</td>
+<td>HIP</td>
+<td>fp16</td>
+<td>36.14x / 39.56x</td>
+<td>48.2% / 37.2%</td>
+<td>5</td>
+</tr>
+<tr>
+<td>Qualcomm Adreno X1-85</td>
+<td>HLSL</td>
+<td>similar</td>
+<td>4.16x / 14.71x</td>
+<td>107.3% / 109.8%</td>
+<td>3</td>
+</tr>
+<tr>
+<td><strong>Average</strong></td>
+<td></td>
+<td></td>
+<td><strong>19.52x</strong></td>
+<td><strong>78.26%</strong></td>
+<td><strong>7.3</strong></td>
+</tr>
+</tbody>
+</table>
+<p>The core result is that PEAK reaches competitive MatMul performance without relying on an opaque RL pipeline. NVIDIA results often exceed 90% of peak or library-level throughput, AMD remains strong for fp32, and HLSL reaches the documented hardware FLOPS despite the lack of a standard BLAS-style library. That cross-backend portability is one of the paper's strongest claims.</p>
+<h3 id="performance-workflow-examples">Performance Workflow Examples<a class="headerlink" href="#performance-workflow-examples" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Device</th>
+<th>Precision</th>
+<th>Transformation Sequence</th>
+<th># Transforms</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A6000</td>
+<td>fp32</td>
+<td>Refactor -&gt; TB-Tiling -&gt; Thread-Tiling -&gt; Thread-Cache -&gt; Transpose -&gt; Thread-Chunk -&gt; Split-K -&gt; Pipelining -&gt; Register-Staging -&gt; Offset -&gt; Block-Swizzle</td>
+<td>11</td>
+</tr>
+<tr>
+<td>A6000</td>
+<td>fp16</td>
+<td>Refactor -&gt; TB-Tiling -&gt; Warp-Tiling -&gt; Tensor-Core -&gt; Tensor-Tiling -&gt; Pipelining -&gt; Register-Staging -&gt; Offset -&gt; Block-Swizzle</td>
+<td>9</td>
+</tr>
+<tr>
+<td>MI200</td>
+<td>fp32</td>
+<td>Refactor -&gt; TB-Tiling -&gt; Warp-Tiling -&gt; Tensor-Core -&gt; Tensor-Tiling</td>
+<td>5</td>
+</tr>
+<tr>
+<td>MI200</td>
+<td>fp16</td>
+<td>Refactor -&gt; TB-Tiling -&gt; Warp-Tiling -&gt; Tensor-Core -&gt; Tensor-Tiling -&gt; Offset -&gt; Block-Swizzle -&gt; Pipelining</td>
+<td>8</td>
+</tr>
+<tr>
+<td>X1-85</td>
+<td>both</td>
+<td>Refactor -&gt; TB-Tiling -&gt; Thread-Tiling</td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+<p>These sequences show how PEAK behaves more like a performance-engineering workflow than a single optimizer call. Some transformations are common across backends, while others diverge because of hardware-specific constraints such as shared-memory limits or tensor-core APIs.</p>
+<h3 id="end-to-end-optimization-cost">End-to-End Optimization Cost<a class="headerlink" href="#end-to-end-optimization-cost" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Workflow</th>
+<th>Validation Time</th>
+<th>Transformation Time</th>
+<th>Performance Search Time</th>
+<th>Total</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A6000 fp32</td>
+<td>825 s (3.91%)</td>
+<td>1285 s (6.09%)</td>
+<td>18995 s (89.99%)</td>
+<td>21105 s</td>
+</tr>
+<tr>
+<td>A6000 fp16</td>
+<td>1124 s (1.55%)</td>
+<td>257 s (6.77%)</td>
+<td>15226 s (91.68%)</td>
+<td>16607 s</td>
+</tr>
+</tbody>
+</table>
+<p>The runtime breakdown shows that transformation generation itself is not the main bottleneck. Performance evaluation dominates the workflow, which suggests that future improvements depend less on faster prompting and more on better search-space pruning or stronger performance estimators.</p>
+<h2 id="limitation">Limitation<a class="headerlink" href="#limitation" title="Permanent link">&para;</a></h2>
+<p>PEAK trades full autonomy for interpretability and control. That makes the system easier to inspect and debug, but it also means the reported results still depend on curated transformation sequences for the case study.</p>
+<table>
+<thead>
+<tr>
+<th>Limitation</th>
+<th>Why It Matters</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Human-seeded transformation workflows</td>
+<td>The study uses expert-designed sequences, so autonomy is demonstrated more as a future direction than a fully solved capability</td>
+</tr>
+<tr>
+<td>Case study centered on MatMul</td>
+<td>Results are strong on a very important kernel, but generality across broader kernel families is not yet established at the same depth</td>
+</tr>
+<tr>
+<td>Performance search dominates runtime</td>
+<td>More than 90% of end-to-end time can go into evaluation and tuning, which limits scalability</td>
+</tr>
+<tr>
+<td>Mid-workflow optimization can be unstable</td>
+<td>The paper notes that performance does not improve monotonically across transformation sequences</td>
+</tr>
+<tr>
+<td>Backend-specific adaptation still exists</td>
+<td>The framework is portable, but some transformations and drivers still require backend-specific knowledge</td>
+</tr>
+</tbody>
+</table>
 <hr />
-<p><em>最后更新：2025年</em></p>
+<p><em>Reading date: 2026-04</em>
+<em>Note status: Completed</em></p>
 
 
 
@@ -2327,12 +2694,12 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.sections", "navigation.indexes", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "search.share", "content.code.copy", "content.tabs.link"], "search": "assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.sections", "navigation.indexes", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "search.share", "content.code.copy", "content.tabs.link"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
     
     
-      <script src="assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
-        <script src="javascripts/mathjax.js"></script>
+        <script src="../../javascripts/mathjax.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       

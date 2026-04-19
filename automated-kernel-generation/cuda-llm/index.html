@@ -12,24 +12,24 @@
         <meta name="author" content="zksainx">
       
       
-        <link rel="canonical" href="https://zksainx.github.io/paper-notes/tensor-program-optimization/cuda-L1/">
+        <link rel="canonical" href="https://zksainx.github.io/paper-notes/automated-kernel-generation/cuda-llm/">
       
       
-        <link rel="prev" href="../unicox/">
+        <link rel="prev" href="../avo/">
       
       
-        <link rel="next" href="../cuda-L2/">
+        <link rel="next" href="../evoengineer/">
       
       
         
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.3">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
-        <title>CUDA-L1 - Paper Notes</title>
+        <title>CUDA-LLM - Paper Notes</title>
       
     
     
@@ -82,7 +82,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#cuda-l1-improving-cuda-optimization-via-contrastive-reinforcement-learning" class="md-skip">
+        <a href="#cuda-llm-llms-can-write-efficient-cuda-kernels" class="md-skip">
           跳转至
         </a>
       
@@ -116,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              CUDA-L1
+              CUDA-LLM
             
           </span>
         </div>
@@ -273,6 +273,28 @@
   
   
   
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../tensor-program-optimization/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Tensor Program Optimization
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
     
   
   
@@ -285,7 +307,7 @@
   
     
   
-  Tensor Program Optimization
+  Automated Kernel Generation
 
         </a>
       </li>
@@ -876,8 +898,6 @@
       
   
   
-    
-  
   
   
     
@@ -895,6 +915,374 @@
       
         
       
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../tensor-program-optimization/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tensor Program Optimization
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Tensor Program Optimization
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tensor-program-optimization/learning-optimize-tensor-programs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Learning to Optimize Tensor Programs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tensor-program-optimization/ansor/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ansor
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tensor-program-optimization/roller/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Roller
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tensor-program-optimization/learned-performance-model-tpu/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Learned Performance Model for TPU
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tensor-program-optimization/metatune/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MetaTune
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tensor-program-optimization/unicox/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UniCoX
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tensor-program-optimization/tritonblas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    tritonBLAS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tensor-program-optimization/gpu-performance-portability/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GPU Performance Portability
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tensor-program-optimization/anatomy-triton-attention/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Anatomy of Triton Attention Kernel
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tensor-program-optimization/tritonbench/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TritonBench
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
         
       
         
@@ -935,7 +1323,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
         
           
           <div class="md-nav__link md-nav__container">
@@ -946,7 +1334,7 @@
   <span class="md-ellipsis">
     
   
-    Tensor Program Optimization
+    Automated Kernel Generation
   
 
     
@@ -957,18 +1345,18 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_3">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             
   
-    Tensor Program Optimization
+    Automated Kernel Generation
   
 
           </label>
@@ -983,154 +1371,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../learning-optimize-tensor-programs/" class="md-nav__link">
+      <a href="../avo/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Learning to Optimize Tensor Programs
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../ansor/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Ansor
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../roller/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Roller
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../learned-performance-model-tpu/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Learned Performance Model for TPU
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../metatune/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    MetaTune
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../unicox/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    UniCoX
+    AVO
   
 
     
@@ -1167,7 +1415,7 @@
   <span class="md-ellipsis">
     
   
-    CUDA-L1
+    CUDA-LLM
   
 
     
@@ -1185,7 +1433,7 @@
   <span class="md-ellipsis">
     
   
-    CUDA-L1
+    CUDA-LLM
   
 
     
@@ -1211,10 +1459,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#abstract" class="md-nav__link">
+  <a href="#background" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Abstract
+        Background
       
     </span>
   </a>
@@ -1222,33 +1470,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#core-ideas" class="md-nav__link">
+  <a href="#methodology" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Core Ideas
+        Methodology
       
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#1-introduction-motivation" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1. Introduction &amp; Motivation
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="1. Introduction &amp; Motivation">
+    <nav class="md-nav" aria-label="Methodology">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#system-overview" class="md-nav__link">
     <span class="md-ellipsis">
       
-        核心挑战
+        System Overview
       
     </span>
   </a>
@@ -1256,10 +1493,21 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#feature-functions-in-fsr" class="md-nav__link">
     <span class="md-ellipsis">
       
-        解决方案
+        Feature Functions in FSR
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-design-choices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Design Choices
       
     </span>
   </a>
@@ -1272,22 +1520,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-methodology-cuda-l1-framework" class="md-nav__link">
+  <a href="#experiment" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2. Methodology: CUDA-L1 Framework
+        Experiment
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="2. Methodology: CUDA-L1 Framework">
+    <nav class="md-nav" aria-label="Experiment">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#21-stage-1-supervised-fine-tuning-via-data-augmentation" class="md-nav__link">
+  <a href="#experimental-setup" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2.1 Stage 1: Supervised Fine-tuning via Data Augmentation
+        Experimental Setup
       
     </span>
   </a>
@@ -1295,10 +1543,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#22-stage-2-self-supervised-learning" class="md-nav__link">
+  <a href="#correctness-results" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2.2 Stage 2: Self-supervised Learning
+        Correctness Results
       
     </span>
   </a>
@@ -1306,10 +1554,21 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#23-stage-3-contrastive-reinforcement-learning" class="md-nav__link">
+  <a href="#headline-performance-results" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2.3 Stage 3: Contrastive Reinforcement Learning
+        Headline Performance Results
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#where-the-speedups-come-from" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Where the Speedups Come From
       
     </span>
   </a>
@@ -1322,202 +1581,13 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#3-reward-mechanism-robustness" class="md-nav__link">
+  <a href="#limitation" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3. Reward Mechanism &amp; Robustness
+        Limitation
       
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="3. Reward Mechanism &amp; Robustness">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#31-reward-computation" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3.1 Reward Computation
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#32-typical-reward-hacking-behaviors" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3.2 Typical Reward Hacking Behaviors
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#33-training-robustness" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3.3 Training Robustness
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#4-experimental-results" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4. Experimental Results
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="4. Experimental Results">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#41-performance-on-kernelbench" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4.1 Performance on KernelBench
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#42-performance-by-task-difficulty" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4.2 Performance by Task Difficulty
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#43-cross-architecture-generalization" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4.3 Cross-Architecture Generalization
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#44-discovered-optimization-techniques" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4.4 Discovered Optimization Techniques
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#5-case-studies" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        5. Case Studies
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="5. Case Studies">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#51-diagonal-matrix-multiplication-diaga-b-64x-speedup" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        5.1 Diagonal Matrix Multiplication: diag(A) * B (64x Speedup)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#52-lstm-34x-speedup" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        5.2 LSTM (3.4x Speedup)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#53-3d-transposed-convolution-120x-speedup" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        5.3 3D Transposed Convolution (120x Speedup)
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#6-conclusion-impact" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        6. Conclusion &amp; Impact
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="6. Conclusion &amp; Impact">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#key-insights" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Key Insights
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#future-directions" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Future Directions
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1537,126 +1607,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../cuda-L2/" class="md-nav__link">
+      <a href="../evoengineer/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    CUDA-L2
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../tritonblas/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    tritonBLAS
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../gpu-performance-portability/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    GPU Performance Portability
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../anatomy-triton-attention/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Anatomy of Triton Attention Kernel
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../tritonforge/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    TritonForge
+    EvoEngineer
   
 
     
@@ -1685,6 +1643,34 @@
     
   
     GEAK
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../k-search/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    K-Search
   
 
     
@@ -1761,14 +1747,98 @@
   
   
     <li class="md-nav__item">
-      <a href="../tritonbench/" class="md-nav__link">
+      <a href="../kernelevolve/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    TritonBench
+    KernelEvolve
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kernelskill/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    KernelSkill
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../peak/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PEAK
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tritonforge/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TritonForge
   
 
     
@@ -1827,7 +1897,7 @@
         
           
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
         
           
           <div class="md-nav__link md-nav__container">
@@ -1849,14 +1919,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -2069,10 +2139,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#abstract" class="md-nav__link">
+  <a href="#background" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Abstract
+        Background
       
     </span>
   </a>
@@ -2080,33 +2150,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#core-ideas" class="md-nav__link">
+  <a href="#methodology" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Core Ideas
+        Methodology
       
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#1-introduction-motivation" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1. Introduction &amp; Motivation
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="1. Introduction &amp; Motivation">
+    <nav class="md-nav" aria-label="Methodology">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#system-overview" class="md-nav__link">
     <span class="md-ellipsis">
       
-        核心挑战
+        System Overview
       
     </span>
   </a>
@@ -2114,10 +2173,21 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#feature-functions-in-fsr" class="md-nav__link">
     <span class="md-ellipsis">
       
-        解决方案
+        Feature Functions in FSR
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-design-choices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Design Choices
       
     </span>
   </a>
@@ -2130,22 +2200,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-methodology-cuda-l1-framework" class="md-nav__link">
+  <a href="#experiment" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2. Methodology: CUDA-L1 Framework
+        Experiment
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="2. Methodology: CUDA-L1 Framework">
+    <nav class="md-nav" aria-label="Experiment">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#21-stage-1-supervised-fine-tuning-via-data-augmentation" class="md-nav__link">
+  <a href="#experimental-setup" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2.1 Stage 1: Supervised Fine-tuning via Data Augmentation
+        Experimental Setup
       
     </span>
   </a>
@@ -2153,10 +2223,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#22-stage-2-self-supervised-learning" class="md-nav__link">
+  <a href="#correctness-results" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2.2 Stage 2: Self-supervised Learning
+        Correctness Results
       
     </span>
   </a>
@@ -2164,10 +2234,21 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#23-stage-3-contrastive-reinforcement-learning" class="md-nav__link">
+  <a href="#headline-performance-results" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2.3 Stage 3: Contrastive Reinforcement Learning
+        Headline Performance Results
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#where-the-speedups-come-from" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Where the Speedups Come From
       
     </span>
   </a>
@@ -2180,202 +2261,13 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#3-reward-mechanism-robustness" class="md-nav__link">
+  <a href="#limitation" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3. Reward Mechanism &amp; Robustness
+        Limitation
       
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="3. Reward Mechanism &amp; Robustness">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#31-reward-computation" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3.1 Reward Computation
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#32-typical-reward-hacking-behaviors" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3.2 Typical Reward Hacking Behaviors
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#33-training-robustness" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3.3 Training Robustness
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#4-experimental-results" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4. Experimental Results
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="4. Experimental Results">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#41-performance-on-kernelbench" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4.1 Performance on KernelBench
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#42-performance-by-task-difficulty" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4.2 Performance by Task Difficulty
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#43-cross-architecture-generalization" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4.3 Cross-Architecture Generalization
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#44-discovered-optimization-techniques" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4.4 Discovered Optimization Techniques
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#5-case-studies" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        5. Case Studies
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="5. Case Studies">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#51-diagonal-matrix-multiplication-diaga-b-64x-speedup" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        5.1 Diagonal Matrix Multiplication: diag(A) * B (64x Speedup)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#52-lstm-34x-speedup" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        5.2 LSTM (3.4x Speedup)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#53-3d-transposed-convolution-120x-speedup" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        5.3 3D Transposed Convolution (120x Speedup)
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#6-conclusion-impact" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        6. Conclusion &amp; Impact
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="6. Conclusion &amp; Impact">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#key-insights" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Key Insights
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#future-directions" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Future Directions
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -2399,191 +2291,273 @@
   
 
 
-<h1 id="cuda-l1-improving-cuda-optimization-via-contrastive-reinforcement-learning">CUDA-L1: Improving CUDA Optimization via Contrastive Reinforcement Learning<a class="headerlink" href="#cuda-l1-improving-cuda-optimization-via-contrastive-reinforcement-learning" title="Permanent link">&para;</a></h1>
+<h1 id="cuda-llm-llms-can-write-efficient-cuda-kernels">CUDA-LLM: LLMs Can Write Efficient CUDA Kernels<a class="headerlink" href="#cuda-llm-llms-can-write-efficient-cuda-kernels" title="Permanent link">&para;</a></h1>
 <div class="paper-meta">
-<p><strong>Authors</strong>: Xiaoya Li, Xiaofei Sun, Albert Wang, Jiwei Li, Chris Shum<br />
-<strong>Institution</strong>: DeepReinforce Team<br />
+<p><strong>Authors</strong>: Wentao Chen, Jiace Zhu, Qi Fan, Yehan Ma, An Zou<br />
+<strong>Institution</strong>: Shanghai Jiao Tong University<br />
+<strong>Conference</strong>: arXiv<br />
 <strong>Year</strong>: 2025<br />
-<strong>Paper Link</strong>: <a href="https://arxiv.org/abs/2507.14111">arXiv:2507.14111</a><br />
-<strong>GitHub</strong>: <a href="https://github.com/deepreinforce-ai/CUDA-L1">deepreinforce-ai/CUDA-L1</a><br />
-<strong>Project Page</strong>: <a href="https://deepreinforce-ai.github.io/cudal1_blog/">CUDA-L1 Blog</a></p>
+<strong>Paper Link</strong>: <a href="https://arxiv.org/abs/2506.09092">arXiv:2506.09092</a>  </p>
 </div>
 <div class="paper-tags">
-<p><span class="paper-tag">CUDA Optimization</span>
-<span class="paper-tag">Reinforcement Learning</span>
-<span class="paper-tag">Contrastive Learning</span>
-<span class="paper-tag">GPU Performance</span></p>
+<p><span class="paper-tag">CUDA</span>
+<span class="paper-tag">Performance Reinforcement</span>
+<span class="paper-tag">Kernel Optimization</span></p>
 </div>
-<h2 id="abstract">Abstract<a class="headerlink" href="#abstract" title="Permanent link">&para;</a></h2>
-<p>随着 LLMs 的快速发展，对 GPU 计算资源的需求呈指数级增长，使得 CUDA 优化变得至关重要。传统的 CUDA 优化依赖于专家工程师的手工调整，耗时且门槛极高。尽管现有的 LLMs（如 DeepSeek-R1, OpenAI-o1）在代码生成方面取得了进展，但在生成<strong>高性能</strong> CUDA 代码方面成功率极低（在 KernelBench 上仅约 15%），主要原因是训练数据中高质量 CUDA 代码的稀缺。</p>
-<p><strong>Key Contributions</strong>:
-- 提出了一个基于 Contrastive Reinforcement Learning 的自动化 CUDA 优化框架
-- 在 NVIDIA A100 上实现 <strong>3.12x</strong> 平均加速比（中位数 1.42x），峰值加速 120x
-- 超越强基线：比 Torch Compile 快 2.77x，比 CUDA Graph 快 2.81x，比 cuDNN 快 7.72x
-- 展示强大的跨架构泛化能力（H100: 3.85x, L40: 3.13x, RTX 3090: 2.51x）</p>
-<h2 id="core-ideas">Core Ideas<a class="headerlink" href="#core-ideas" title="Permanent link">&para;</a></h2>
-<p>CUDA-L1 是一个基于 Contrastive RL 的自动化 CUDA 优化框架，通过利用代码执行速度作为奖励信号，使模型能够自动发现和组合优化技术。该框架采用三阶段训练策略（监督微调 → 自监督学习 → 对比强化学习），通过在 Prompt 中嵌入不同性能的对比样本，引导模型学习"为什么某段代码更快"。系统不仅能进行底层 CUDA 优化，还能发现算法层面的数学捷径，为 GPU 资源高效利用开辟了新路径。</p>
+<h2 id="background">Background<a class="headerlink" href="#background" title="Permanent link">&para;</a></h2>
+<p>CUDA-LLM studies whether an LLM can do more than emit syntactically plausible CUDA kernels. The core challenge is that CUDA programming is hardware-specific, architecture-aware, and strongly performance-sensitive. Correct indexing and functional validity are only the first hurdle; useful kernels also need coalesced memory access, balanced resource usage, and low synchronization overhead on real GPUs.</p>
+<p>The paper addresses this gap with a framework called Feature Search and Reinforcement (FSR). Instead of treating kernel generation as a one-shot prompting problem, FSR uses actual compilation outcomes, functional test results, and runtime latency measurements to iteratively steer the model toward valid and faster CUDA code.</p>
+<p><strong>Key Takeaways</strong></p>
+<ul>
+<li>FSR turns CUDA generation into an iterative repair-and-optimization loop grounded in real execution feedback.</li>
+<li>The framework improves both correctness and performance relative to direct LLM generation.</li>
+<li>On a 20-task benchmark suite, CUDA-LLM solves all tasks on both test GPUs and reports speedups up to 179x over the human-written baseline.</li>
+</ul>
+<h2 id="methodology">Methodology<a class="headerlink" href="#methodology" title="Permanent link">&para;</a></h2>
+<p>CUDA-LLM is centered on FSR, a loop that evaluates candidate kernels along three dimensions: compilation, functional correctness, and execution performance. The design separates these checks into explicit feature functions so the system can reject invalid kernels early and only spend runtime profiling budget on code that is already executable and correct.</p>
+<p>The workflow begins with an initial prompt that asks the model to produce multiple candidate CUDA kernels. If none of them both compiles and passes the functional validator, FSR refines the prompt using the candidate code, the observed error messages, and the interaction history, then generates a new batch. Once at least one valid kernel appears, the system profiles those kernels on real hardware, keeps the fastest one, and uses that best candidate plus its optimization history as the starting point for the next refinement round.</p>
+<h3 id="system-overview">System Overview<a class="headerlink" href="#system-overview" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Input</th>
+<th>Output</th>
+<th>Role</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Initial Prompting</td>
+<td>Task description and kernel objective</td>
+<td><code>N</code> candidate CUDA kernels</td>
+<td>Produces the first batch of implementations</td>
+</tr>
+<tr>
+<td>Compilation Verifier</td>
+<td>Candidate kernel</td>
+<td>Compile pass / error log</td>
+<td>Filters out syntactically or toolchain-invalid kernels</td>
+</tr>
+<tr>
+<td>Function Validator</td>
+<td>Compiled kernel and test inputs</td>
+<td>Correct / incorrect result</td>
+<td>Ensures semantic correctness against reference outputs</td>
+</tr>
+<tr>
+<td>Performance Profiler</td>
+<td>Valid kernels on target GPU</td>
+<td>Execution latency and speed ranking</td>
+<td>Measures runtime efficiency on real hardware</td>
+</tr>
+<tr>
+<td>Prompt Refinement Loop</td>
+<td>Candidate code, errors, history, best kernel</td>
+<td>New refined prompt</td>
+<td>Feeds back failure and performance signals to improve the next batch</td>
+</tr>
+</tbody>
+</table>
+<h3 id="feature-functions-in-fsr">Feature Functions in FSR<a class="headerlink" href="#feature-functions-in-fsr" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Feature Function</th>
+<th>What It Checks</th>
+<th>Why It Matters</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Compilation Verifier</td>
+<td>Whether the kernel builds successfully</td>
+<td>Prevents invalid CUDA from entering later stages</td>
+</tr>
+<tr>
+<td>Function Validator</td>
+<td>Whether outputs match reference behavior</td>
+<td>Guards against semantically wrong but compilable kernels</td>
+</tr>
+<tr>
+<td>Performance Profiler</td>
+<td>Actual kernel runtime on GPU</td>
+<td>Makes optimization target concrete and hardware-aware</td>
+</tr>
+</tbody>
+</table>
+<h3 id="key-design-choices">Key Design Choices<a class="headerlink" href="#key-design-choices" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Correctness and performance are optimized jointly, but in stages: compile first, then validate outputs, then profile.</li>
+<li>Prompt refinement is driven by concrete evidence such as compiler diagnostics and failing behavior, not only by free-form model self-reflection.</li>
+<li>The benchmark includes varied CUDA tasks, which makes the method less dependent on a single kernel family.</li>
+<li>The paper uses DeepSeek-V3-0324 as the backbone model for code reasoning and generation.</li>
+</ul>
+<h2 id="experiment">Experiment<a class="headerlink" href="#experiment" title="Permanent link">&para;</a></h2>
+<h3 id="experimental-setup">Experimental Setup<a class="headerlink" href="#experimental-setup" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Benchmark Suite</td>
+<td>20 CUDA kernel tasks</td>
+</tr>
+<tr>
+<td>Task Sources</td>
+<td>NVIDIA CUDA Samples, LeetGPU, KernelBench</td>
+</tr>
+<tr>
+<td>Evaluation Metrics</td>
+<td>Compilation + function correctness, runtime latency, speedup over baseline</td>
+</tr>
+<tr>
+<td>Backbone Model</td>
+<td>DeepSeek-V3-0324</td>
+</tr>
+<tr>
+<td>Edge GPU</td>
+<td>NVIDIA GeForce GTX 1660 SUPER</td>
+</tr>
+<tr>
+<td>Server GPU</td>
+<td>NVIDIA GeForce RTX 3090 Ti</td>
+</tr>
+<tr>
+<td>Workload Style</td>
+<td>Multiple input sizes per task to test robustness and scalability</td>
+</tr>
+</tbody>
+</table>
+<h3 id="correctness-results">Correctness Results<a class="headerlink" href="#correctness-results" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>GPU</th>
+<th>Direct LLM Generation</th>
+<th>CUDA-LLM with FSR</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GTX 1660 SUPER</td>
+<td>Fails several tasks under pass@5 generation</td>
+<td>Passes all 20 tasks</td>
+</tr>
+<tr>
+<td>RTX 3090 Ti</td>
+<td>Fails several tasks under pass@5 generation</td>
+<td>Passes all 20 tasks</td>
+</tr>
+</tbody>
+</table>
+<p>The correctness gap is one of the strongest results in the paper. Direct generation can produce kernels that compile or look plausible but still fail functional testing. FSR closes that gap by repeatedly feeding compilation and validation failures back into the generation loop until a valid kernel is found.</p>
+<h3 id="headline-performance-results">Headline Performance Results<a class="headerlink" href="#headline-performance-results" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Result Type</th>
+<th>Reported Gain</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Best observed speedup</td>
+<td>179x</td>
+</tr>
+<tr>
+<td>Matrix Transpose on RTX 3090 Ti</td>
+<td>104x</td>
+</tr>
+<tr>
+<td>Dot Product on RTX 3090 Ti</td>
+<td>102x</td>
+</tr>
+<tr>
+<td>Monte Carlo Integration on RTX 3090 Ti</td>
+<td>179x</td>
+</tr>
+<tr>
+<td>Matrix Copy on GTX 1660 SUPER</td>
+<td>89.5x</td>
+</tr>
+<tr>
+<td>Reduction on GTX 1660 SUPER</td>
+<td>73.3x</td>
+</tr>
+<tr>
+<td>Typical gain range on RTX 3090 Ti</td>
+<td>5.95x to 68.3x</td>
+</tr>
+<tr>
+<td>Typical gain range on GTX 1660 SUPER</td>
+<td>6.06x to 60.0x</td>
+</tr>
+</tbody>
+</table>
+<p>The performance gains are uneven across tasks, which is expected for a heterogeneous benchmark. Some kernels benefit from dramatic improvements in memory access structure or warp-level cooperation, while others see more modest but still meaningful acceleration. The paper emphasizes that the framework improves execution efficiency on nearly all tasks rather than only on a handful of cherry-picked cases.</p>
+<h3 id="where-the-speedups-come-from">Where the Speedups Come From<a class="headerlink" href="#where-the-speedups-come-from" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Task Pattern</th>
+<th>Optimization Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Matrix Transpose</td>
+<td>Coalesced reads and writes, reduced transactions, loop unrolling, lighter address arithmetic</td>
+</tr>
+<tr>
+<td>Reduction / Dot Product / Monte Carlo Integration</td>
+<td>Better use of warp-level primitives and lower synchronization overhead</td>
+</tr>
+<tr>
+<td>General Memory-Bound Kernels</td>
+<td>Improved memory behavior and reduced wasted accesses</td>
+</tr>
+</tbody>
+</table>
+<p>The qualitative analysis suggests that FSR is not merely repairing syntax. It often pushes the model toward standard high-value CUDA optimizations such as coalescing, warp-level communication, and more efficient thread coordination.</p>
+<h2 id="limitation">Limitation<a class="headerlink" href="#limitation" title="Permanent link">&para;</a></h2>
+<p>CUDA-LLM shows that feedback-driven prompting can make LLM-generated CUDA both correct and fast, but the paper still leaves several open constraints around generality and evaluation scope.</p>
+<table>
+<thead>
+<tr>
+<th>Limitation</th>
+<th>Why It Matters</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CUDA-specific focus</td>
+<td>The framework is evaluated only on CUDA, so portability beyond NVIDIA-style backends is not demonstrated here</td>
+</tr>
+<tr>
+<td>Benchmark breadth vs. depth</td>
+<td>The study spans 20 tasks, but the paper does not provide the same level of deep per-kernel analysis for every task</td>
+</tr>
+<tr>
+<td>Large performance variance across tasks</td>
+<td>Some kernels gain dramatically, while others improve less, which suggests uneven optimization reliability</td>
+</tr>
+<tr>
+<td>Heavy dependence on runtime evaluation</td>
+<td>Real execution latency is essential to the loop, so optimization cost can grow with search depth and test diversity</td>
+</tr>
+<tr>
+<td>No broader cross-backend comparison</td>
+<td>Unlike later systems that test CUDA, HIP, and other backends, this work does not study transfer across programming ecosystems</td>
+</tr>
+</tbody>
+</table>
 <hr />
-<h2 id="1-introduction-motivation">1. Introduction &amp; Motivation<a class="headerlink" href="#1-introduction-motivation" title="Permanent link">&para;</a></h2>
-<p>本文提出了 <strong>CUDA-L1</strong>，这是一个基于 <strong>Contrastive Reinforcement Learning (RL)</strong> 的自动化 CUDA 优化框架。该框架通过利用代码执行速度作为奖励信号，使模型能够自动发现、组合优化技术，甚至在没有人类先验知识的情况下发现反直觉的优化策略。</p>
-<h3 id="_1">核心挑战<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
-<ul>
-<li>高质量 CUDA 代码在训练数据中极度稀缺</li>
-<li>现有 LLMs 在生成高性能 CUDA 代码方面成功率低（约 15%）</li>
-<li>传统手工优化耗时且需要专家级知识</li>
-</ul>
-<h3 id="_2">解决方案<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
-<p>CUDA-L1 采用三阶段训练流水线：SFT（监督微调）→ Self-supervised（自监督学习）→ Contrastive RL（对比强化学习），通过执行反馈自动学习优化策略。</p>
-<hr />
-<h2 id="2-methodology-cuda-l1-framework">2. Methodology: CUDA-L1 Framework<a class="headerlink" href="#2-methodology-cuda-l1-framework" title="Permanent link">&para;</a></h2>
-<p>CUDA-L1 采用三阶段的渐进式训练策略，旨在逐步增强模型对 CUDA 语义的理解和性能优化能力。</p>
-<h3 id="21-stage-1-supervised-fine-tuning-via-data-augmentation">2.1 Stage 1: Supervised Fine-tuning via Data Augmentation<a class="headerlink" href="#21-stage-1-supervised-fine-tuning-via-data-augmentation" title="Permanent link">&para;</a></h3>
-<ul>
-<li><strong>目标</strong>：扩展模型对 CUDA 模式的接触，确保生成的代码可执行且正确。</li>
-<li><strong>数据构建</strong>：利用现有的强力模型（GPT-4o, OpenAI-o1, DeepSeek-R1, Claude 3.7 等）对 KernelBench 的 Reference Code 进行改写和优化。</li>
-<li><strong>筛选标准</strong>：通过"一次通过"（One-shot）策略生成代码，仅保留同时满足 <strong>Executability</strong>（可编译运行）和 <strong>Correctness</strong>（结果与 PyTorch 基准一致）的代码。</li>
-<li><strong>结果</strong>：收集了 2,105 个成功的 CUDA 代码片段用于微调基础模型（DeepSeek-v3-671B）。</li>
-</ul>
-<h3 id="22-stage-2-self-supervised-learning">2.2 Stage 2: Self-supervised Learning<a class="headerlink" href="#22-stage-2-self-supervised-learning" title="Permanent link">&para;</a></h3>
-<ul>
-<li><strong>目标</strong>：在不引入外部监督的情况下，进一步提高代码的正确率和稳定性。</li>
-<li><strong>过程</strong>：<ol>
-<li>使用 SFT 后的模型生成 CUDA 代码。</li>
-<li>验证代码的 Executability 和 Correctness。</li>
-<li>将验证通过的代码作为正样本，重新训练模型。</li>
-</ol>
-</li>
-<li><strong>特点</strong>：此阶段是一个特例的 REINFORCE 算法（Reward 为 0 或 1），暂不关注运行速度，仅关注代码能否正确运行。</li>
-</ul>
-<h3 id="23-stage-3-contrastive-reinforcement-learning">2.3 Stage 3: Contrastive Reinforcement Learning<a class="headerlink" href="#23-stage-3-contrastive-reinforcement-learning" title="Permanent link">&para;</a></h3>
-<p>这是本文的核心创新点。传统的 RL 方法（如 PPO, GRPO）直接优化标量奖励效果不佳，因为它们缺乏对"为什么这段代码更快"的推理。</p>
-<ul>
-<li><strong>核心机制</strong>：在 Prompt 中嵌入<strong>对比样本（Contrastive Exemplars）</strong>。<ul>
-<li><strong>Prompt 构造</strong>：包含任务描述、参考代码、<strong>历史生成的不同性能的代码及其分数</strong>。</li>
-<li><strong>模型任务</strong>：模型需要先进行 <strong>Performance Analysis</strong>（比较不同实现的优劣），设计算法，最后生成优化后的代码。</li>
-<li><strong>协同进化 (Co-evolutionary Dynamic)</strong>：<ol>
-<li><strong>Foundation Model Enhancement</strong>：通过梯度更新优化模型参数。</li>
-<li><strong>Fixed-Parameter Solution Optimization</strong>：通过对比分析高质量样本，激发模型当前的推理潜力。</li>
-</ol>
-</li>
-</ul>
-</li>
-<li><strong>Exemplar Selection</strong>：使用基于 Bucket 的采样策略，确保 Prompt 中包含具有性能差异的 Competitive 样本，引导模型避免陷入局部最优。</li>
-<li><strong>训练算法</strong>：采用 <strong>Group Relative Policy Optimization (GRPO)</strong>，最大化归一化后的奖励。</li>
-</ul>
-<hr />
-<h2 id="3-reward-mechanism-robustness">3. Reward Mechanism &amp; Robustness<a class="headerlink" href="#3-reward-mechanism-robustness" title="Permanent link">&para;</a></h2>
-<p>RL 在代码优化中极易出现 <strong>Reward Hacking</strong>（欺骗奖励系统）。论文详细分析了发现的漏洞及应对措施。</p>
-<h3 id="31-reward-computation">3.1 Reward Computation<a class="headerlink" href="#31-reward-computation" title="Permanent link">&para;</a></h3>
-<ul>
-<li><strong>Speedup Score</strong>: <span class="arithmatex">\(Score(d) = t_{ref} / t_{d}\)</span>。</li>
-<li><strong>稳定性措施</strong>：<ul>
-<li>使用独占 GPU（Dedicated GPU Allocation）。</li>
-<li>随机化执行顺序（Order Randomization）以消除 Warm-up 偏差。</li>
-<li>多次测量取中位数，并进行 Bucketized Variance Control。</li>
-</ul>
-</li>
-</ul>
-<h3 id="32-typical-reward-hacking-behaviors">3.2 Typical Reward Hacking Behaviors<a class="headerlink" href="#32-typical-reward-hacking-behaviors" title="Permanent link">&para;</a></h3>
-<ol>
-<li><strong>Improper Timing Measurement (异步流欺骗)</strong>：<ul>
-<li><em>现象</em>：模型创建额外的 CUDA Stream 异步执行，主流（Main Stream）立即结束，导致计时器记录的时间极短。</li>
-<li><em>对策</em>：在记录结束时间前强制同步所有 Stream (<code>torch.cuda.synchronize()</code>)。</li>
-</ul>
-</li>
-<li><strong>Lazy Evaluation (惰性求值)</strong>：<ul>
-<li><em>现象</em>：模型返回一个未计算的 Lazy Object，直到正确性检查时才计算。</li>
-<li><em>对策</em>：检查输出必须是标准的 <code>torch.Tensor</code>，且已分配显存。</li>
-</ul>
-</li>
-<li><strong>Result Caching (结果缓存)</strong>：<ul>
-<li><em>现象</em>：根据输入地址缓存结果，直接返回缓存值。</li>
-<li><em>对策</em>：严格的随机输入测试。</li>
-</ul>
-</li>
-</ol>
-<h3 id="33-training-robustness">3.3 Training Robustness<a class="headerlink" href="#33-training-robustness" title="Permanent link">&para;</a></h3>
-<ul>
-<li><strong>Reward Checking Model</strong>：使用 DeepSeek-R1 作为判别器，检测代码是否包含 Hacking 逻辑。</li>
-<li><strong>Reward Smoothing</strong>：对异常高的奖励进行截断和平滑，防止梯度爆炸或过拟合单一 Hacking 策略。</li>
-</ul>
-<hr />
-<h2 id="4-experimental-results">4. Experimental Results<a class="headerlink" href="#4-experimental-results" title="Permanent link">&para;</a></h2>
-<h3 id="41-performance-on-kernelbench">4.1 Performance on KernelBench<a class="headerlink" href="#41-performance-on-kernelbench" title="Permanent link">&para;</a></h3>
-<p>在 NVIDIA A100 上，针对 KernelBench 的 250 个内核进行测试：</p>
-<ul>
-<li><strong>vs. Default Baseline</strong>: 平均加速 <strong>3.12x</strong>，中位数 1.42x，峰值 120x</li>
-<li><strong>vs. Torch Compile</strong>: 平均加速 <strong>2.77x</strong></li>
-<li><strong>vs. Torch Compile (Reduce Overhead)</strong>: 平均加速 <strong>2.88x</strong></li>
-<li><strong>vs. CUDA Graph</strong>: 平均加速 <strong>2.81x</strong></li>
-<li><strong>vs. cuDNN</strong>: 平均加速 <strong>7.72x</strong></li>
-</ul>
-<h3 id="42-performance-by-task-difficulty">4.2 Performance by Task Difficulty<a class="headerlink" href="#42-performance-by-task-difficulty" title="Permanent link">&para;</a></h3>
-<ul>
-<li><strong>Level 1 (单一算子)</strong>: 2.78x 加速</li>
-<li><strong>Level 2 (算子融合)</strong>: <strong>3.55x</strong> 加速（表现最好）</li>
-<li><strong>Level 3 (完整模型)</strong>: 2.96x 加速</li>
-</ul>
-<h3 id="43-cross-architecture-generalization">4.3 Cross-Architecture Generalization<a class="headerlink" href="#43-cross-architecture-generalization" title="Permanent link">&para;</a></h3>
-<p>尽管模型是在 A100 上训练的，但在其他架构上仍表现出色：</p>
-<ul>
-<li><strong>NVIDIA H100</strong>: 平均加速 <strong>3.85x</strong>（峰值 368x）</li>
-<li><strong>NVIDIA L40</strong>: 平均加速 3.13x</li>
-<li><strong>NVIDIA RTX 3090</strong>: 平均加速 2.51x</li>
-</ul>
-<p>这证明了学习到的优化模式具有架构可移植性。</p>
-<h3 id="44-discovered-optimization-techniques">4.4 Discovered Optimization Techniques<a class="headerlink" href="#44-discovered-optimization-techniques" title="Permanent link">&para;</a></h3>
-<p>CUDA-L1 自动发现并组合了多种优化手段：</p>
-<ul>
-<li><strong>Memory Layout Optimization</strong>: 保证内存连续性</li>
-<li><strong>Memory Coalescing</strong>: 优化 Warp 访存模式</li>
-<li><strong>Warp-Level Primitives</strong>: 使用 <code>__shfl_down_sync</code> 等指令进行高效规约</li>
-<li><strong>Shared Memory Tiling</strong>: 减少 Global Memory 访问</li>
-<li><strong>Mathematical Short-Circuit</strong>: 发现数学上的恒等关系直接跳过计算</li>
-</ul>
-<hr />
-<h2 id="5-case-studies">5. Case Studies<a class="headerlink" href="#5-case-studies" title="Permanent link">&para;</a></h2>
-<h3 id="51-diagonal-matrix-multiplication-diaga-b-64x-speedup">5.1 Diagonal Matrix Multiplication: <code>diag(A) * B</code> (64x Speedup)<a class="headerlink" href="#51-diagonal-matrix-multiplication-diaga-b-64x-speedup" title="Permanent link">&para;</a></h3>
-<ul>
-<li><strong>原代码</strong>: <code>torch.diag(A) @ B</code>，复杂度 <span class="arithmatex">\(O(N^2 M)\)</span>，显存占用大。</li>
-<li><strong>CUDA-L1</strong>: 发现利用 Broadcasting 机制 <code>A.unsqueeze(1) * B</code>，将复杂度降为 <span class="arithmatex">\(O(NM)\)</span>，避免了构建巨大的对角矩阵。</li>
-<li><strong>启示</strong>: RL 不仅能做底层优化，还能进行算法层面的重构。</li>
-</ul>
-<h3 id="52-lstm-34x-speedup">5.2 LSTM (3.4x Speedup)<a class="headerlink" href="#52-lstm-34x-speedup" title="Permanent link">&para;</a></h3>
-<ul>
-<li><strong>优化组合</strong>:<ol>
-<li><strong>CUDA Graphs</strong>: 消除 Kernel Launch overhead（贡献最大）。</li>
-<li><strong>Static Tensor Reuse</strong>: 预分配显存，避免动态分配开销。</li>
-<li><strong>Memory Contiguity</strong>: 强制内存连续。</li>
-</ol>
-</li>
-<li><strong>分析</strong>: 只有组合使用这些技术才能达到最佳效果，RL 学会了这种组合策略。</li>
-</ul>
-<h3 id="53-3d-transposed-convolution-120x-speedup">5.3 3D Transposed Convolution (120x Speedup)<a class="headerlink" href="#53-3d-transposed-convolution-120x-speedup" title="Permanent link">&para;</a></h3>
-<ul>
-<li><strong>场景</strong>: Conv3d → GroupNorm → Min(0) → Clamp(0, 1)。</li>
-<li><strong>发现</strong>: 模型发现当 <code>min_value == 0</code> 时，经过 <code>min(x, 0)</code> 后所有值 <span class="arithmatex">\(\le 0\)</span>，再经过 <code>clamp(0, 1)</code> 后结果恒为 <strong>0</strong>。</li>
-<li><strong>优化</strong>: 模型生成了一个 <strong>Mathematical Short-Circuit</strong>，检测到特定参数时直接返回全零 Tensor，完全跳过卷积计算。</li>
-<li><strong>意义</strong>: 这是一个人类工程师可能忽略，但 RL 通过试错发现的"捷径"。</li>
-</ul>
-<hr />
-<h2 id="6-conclusion-impact">6. Conclusion &amp; Impact<a class="headerlink" href="#6-conclusion-impact" title="Permanent link">&para;</a></h2>
-<p>CUDA-L1 证明了通过引入 <strong>Contrastive RL</strong> 和基于执行速度的奖励机制，可以将一个初始 CUDA 能力较弱的 LLM 转化为高效的 CUDA 优化器。该系统不仅超越了传统的编译优化工具（如 Torch Compile），还能发现深层次的算法优化和数学捷径，为 GPU 资源的高效利用开辟了新路径。</p>
-<h3 id="key-insights">Key Insights<a class="headerlink" href="#key-insights" title="Permanent link">&para;</a></h3>
-<ul>
-<li><strong>Contrastive Learning</strong> 对于理解性能差异至关重要</li>
-<li><strong>Execution-based Rewards</strong> 比静态分析更有效</li>
-<li><strong>Reward Hacking</strong> 是 RL 系统的重要挑战，需要系统性防御</li>
-<li>模型能够发现超越人类直觉的优化策略</li>
-</ul>
-<h3 id="future-directions">Future Directions<a class="headerlink" href="#future-directions" title="Permanent link">&para;</a></h3>
-<ul>
-<li>扩展到更多 GPU 架构和计算模式</li>
-<li>结合静态分析和动态执行反馈</li>
-<li>探索更复杂的奖励函数设计</li>
-</ul>
-<hr />
-<p><em>Reading date: 2025</em>
+<p><em>Reading date: 2026-04</em>
 <em>Note status: Completed</em></p>
 
 

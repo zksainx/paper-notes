@@ -12,24 +12,24 @@
         <meta name="author" content="zksainx">
       
       
-        <link rel="canonical" href="https://zksainx.github.io/paper-notes/tensor-program-optimization/kernelband/">
+        <link rel="canonical" href="https://zksainx.github.io/paper-notes/automated-kernel-generation/avo/">
       
       
-        <link rel="prev" href="../geak/">
+        <link rel="prev" href="../">
       
       
-        <link rel="next" href="../kernelblaster/">
+        <link rel="next" href="../cuda-llm/">
       
       
         
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.3">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
-        <title>KernelBand - Paper Notes</title>
+        <title>AVO - Paper Notes</title>
       
     
     
@@ -82,7 +82,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#kernelband-boosting-llm-based-kernel-optimization-with-a-hierarchical-and-hardware-aware-multi-armed-bandit" class="md-skip">
+        <a href="#avo-agentic-variation-operators-for-autonomous-evolutionary-search" class="md-skip">
           跳转至
         </a>
       
@@ -116,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              KernelBand
+              AVO
             
           </span>
         </div>
@@ -273,6 +273,28 @@
   
   
   
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../tensor-program-optimization/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Tensor Program Optimization
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
     
   
   
@@ -285,7 +307,7 @@
   
     
   
-  Tensor Program Optimization
+  Automated Kernel Generation
 
         </a>
       </li>
@@ -876,8 +898,6 @@
       
   
   
-    
-  
   
   
     
@@ -895,6 +915,374 @@
       
         
       
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../tensor-program-optimization/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tensor Program Optimization
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Tensor Program Optimization
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tensor-program-optimization/learning-optimize-tensor-programs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Learning to Optimize Tensor Programs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tensor-program-optimization/ansor/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ansor
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tensor-program-optimization/roller/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Roller
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tensor-program-optimization/learned-performance-model-tpu/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Learned Performance Model for TPU
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tensor-program-optimization/metatune/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MetaTune
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tensor-program-optimization/unicox/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UniCoX
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tensor-program-optimization/tritonblas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    tritonBLAS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tensor-program-optimization/gpu-performance-portability/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GPU Performance Portability
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tensor-program-optimization/anatomy-triton-attention/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Anatomy of Triton Attention Kernel
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tensor-program-optimization/tritonbench/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TritonBench
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
         
       
         
@@ -935,7 +1323,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
         
           
           <div class="md-nav__link md-nav__container">
@@ -946,7 +1334,7 @@
   <span class="md-ellipsis">
     
   
-    Tensor Program Optimization
+    Automated Kernel Generation
   
 
     
@@ -957,18 +1345,18 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_3">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             
   
-    Tensor Program Optimization
+    Automated Kernel Generation
   
 
           </label>
@@ -980,17 +1368,225 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../learning-optimize-tensor-programs/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AVO
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
   <span class="md-ellipsis">
     
   
-    Learning to Optimize Tensor Programs
+    AVO
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#background" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Background
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#methodology" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Methodology
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Methodology">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#system-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        System Overview
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#avo-vs-prior-evolutionary-pipelines" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AVO vs. Prior Evolutionary Pipelines
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-design-choices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Design Choices
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#experiment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Experiment
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Experiment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#experimental-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Experimental Setup
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#headline-results" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Headline Results
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evolution-trajectory" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Evolution Trajectory
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#agent-discovered-optimizations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Agent-Discovered Optimizations
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limitation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Limitation
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cuda-llm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CUDA-LLM
   
 
     
@@ -1011,294 +1607,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../ansor/" class="md-nav__link">
+      <a href="../evoengineer/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Ansor
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../roller/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Roller
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../learned-performance-model-tpu/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Learned Performance Model for TPU
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../metatune/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    MetaTune
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../unicox/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    UniCoX
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../cuda-L1/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    CUDA-L1
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../cuda-L2/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    CUDA-L2
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../tritonblas/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    tritonBLAS
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../gpu-performance-portability/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    GPU Performance Portability
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../anatomy-triton-attention/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Anatomy of Triton Attention Kernel
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../tritonforge/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    TritonForge
+    EvoEngineer
   
 
     
@@ -1344,26 +1660,17 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
+    <li class="md-nav__item">
+      <a href="../k-search/" class="md-nav__link">
         
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
   
   
   <span class="md-ellipsis">
     
   
-    KernelBand
+    K-Search
   
 
     
@@ -1371,10 +1678,20 @@
   
   
 
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kernelband/" class="md-nav__link">
         
   
   
@@ -1390,137 +1707,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#abstract" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Abstract
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#core-ideas" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Core Ideas
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Core Ideas">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#problem-formulation" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Problem Formulation
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#three-key-mechanisms" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Three Key Mechanisms
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#algorithm-overview" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Algorithm Overview
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#regret-guarantee" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Regret Guarantee
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#experimental-results" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Experimental Results
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Experimental Results">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#case-study-seeded_dropout-kernel" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Case Study: seeded_dropout Kernel
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#limitations-future-work" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Limitations &amp; Future Work
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1561,14 +1747,98 @@
   
   
     <li class="md-nav__item">
-      <a href="../tritonbench/" class="md-nav__link">
+      <a href="../kernelevolve/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    TritonBench
+    KernelEvolve
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kernelskill/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    KernelSkill
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../peak/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PEAK
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tritonforge/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TritonForge
   
 
     
@@ -1627,7 +1897,7 @@
         
           
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
         
           
           <div class="md-nav__link md-nav__container">
@@ -1649,14 +1919,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -1869,10 +2139,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#abstract" class="md-nav__link">
+  <a href="#background" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Abstract
+        Background
       
     </span>
   </a>
@@ -1880,22 +2150,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#core-ideas" class="md-nav__link">
+  <a href="#methodology" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Core Ideas
+        Methodology
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Core Ideas">
+    <nav class="md-nav" aria-label="Methodology">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#problem-formulation" class="md-nav__link">
+  <a href="#system-overview" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Problem Formulation
+        System Overview
       
     </span>
   </a>
@@ -1903,10 +2173,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#three-key-mechanisms" class="md-nav__link">
+  <a href="#avo-vs-prior-evolutionary-pipelines" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Three Key Mechanisms
+        AVO vs. Prior Evolutionary Pipelines
       
     </span>
   </a>
@@ -1914,21 +2184,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#algorithm-overview" class="md-nav__link">
+  <a href="#key-design-choices" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Algorithm Overview
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#regret-guarantee" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Regret Guarantee
+        Key Design Choices
       
     </span>
   </a>
@@ -1941,22 +2200,55 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#experimental-results" class="md-nav__link">
+  <a href="#experiment" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Experimental Results
+        Experiment
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Experimental Results">
+    <nav class="md-nav" aria-label="Experiment">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#case-study-seeded_dropout-kernel" class="md-nav__link">
+  <a href="#experimental-setup" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Case Study: seeded_dropout Kernel
+        Experimental Setup
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#headline-results" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Headline Results
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evolution-trajectory" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Evolution Trajectory
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#agent-discovered-optimizations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Agent-Discovered Optimizations
       
     </span>
   </a>
@@ -1969,10 +2261,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#limitations-future-work" class="md-nav__link">
+  <a href="#limitation" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Limitations &amp; Future Work
+        Limitation
       
     </span>
   </a>
@@ -1999,159 +2291,280 @@
   
 
 
-<h1 id="kernelband-boosting-llm-based-kernel-optimization-with-a-hierarchical-and-hardware-aware-multi-armed-bandit">KernelBand: Boosting LLM-based Kernel Optimization with a Hierarchical and Hardware-aware Multi-armed Bandit<a class="headerlink" href="#kernelband-boosting-llm-based-kernel-optimization-with-a-hierarchical-and-hardware-aware-multi-armed-bandit" title="Permanent link">&para;</a></h1>
+<h1 id="avo-agentic-variation-operators-for-autonomous-evolutionary-search">AVO: Agentic Variation Operators for Autonomous Evolutionary Search<a class="headerlink" href="#avo-agentic-variation-operators-for-autonomous-evolutionary-search" title="Permanent link">&para;</a></h1>
 <div class="paper-meta">
-<p><strong>Authors</strong>: Dezhi Ran, Shuxiao Xie, Mingfang Ji, Ziyue Hua, Mengzhou Wu, Yuan Cao, Yuzhe Guo, Yu Hao, Linyi Li, Yitao Hu, Tao Xie<br />
-<strong>Institution</strong>: Peking University, ECNU, Tianjin University, Beijing Jiaotong University, HKUST, Simon Fraser University<br />
-<strong>Conference</strong>: arXiv 2025<br />
-<strong>Paper Link</strong>: <a href="https://arxiv.org/abs/2511.18868">arXiv:2511.18868</a></p>
+<p><strong>Authors</strong>: Andrew Kerr, Haicheng Wu, Yang Xu, Yu-Jung Chen, Hanfeng Chen, Aditya Kane, Ronny Krashinsky, Ming-Yu Liu, Vinod Grover, Luis Ceze, Roger Bringmann, John Tran, Wei Liu, Fung Xie, Michael Lightstone, Humphrey Shi<br />
+<strong>Institution</strong>: NVIDIA, University of Washington, and collaborators<br />
+<strong>Conference</strong>: arXiv<br />
+<strong>Year</strong>: 2026<br />
+<strong>Paper Link</strong>: <a href="https://arxiv.org/abs/2603.24517">arXiv:2603.24517</a>  </p>
 </div>
 <div class="paper-tags">
-<p><span class="paper-tag">LLM for Code</span>
-<span class="paper-tag">Multi-armed Bandit</span>
-<span class="paper-tag">Kernel Optimization</span>
-<span class="paper-tag">Triton</span></p>
+<p><span class="paper-tag">Evolutionary Search</span>
+<span class="paper-tag">Attention Kernels</span>
+<span class="paper-tag">Agentic Optimization</span></p>
 </div>
-<h2 id="abstract">Abstract<a class="headerlink" href="#abstract" title="Permanent link">&para;</a></h2>
-<p>KernelBand formulates kernel optimization as a hierarchical multi-armed bandit (MAB) problem, enabling LLM agents to strategically navigate the optimization space by treating kernel selection and optimization strategy application as sequential decision-making processes. The approach leverages hardware profiling to identify promising strategies and employs runtime behavior clustering to reduce exploration overhead.</p>
-<p><strong>Key Contributions</strong>:
-- First formulation of kernel optimization as hierarchical MAB problem
-- Profiling-guided strategy selection with runtime behavior clustering
-- Superior performance on TritonBench with fewer tokens and consistent improvement without saturation</p>
-<h2 id="core-ideas">Core Ideas<a class="headerlink" href="#core-ideas" title="Permanent link">&para;</a></h2>
-<h3 id="problem-formulation">Problem Formulation<a class="headerlink" href="#problem-formulation" title="Permanent link">&para;</a></h3>
-<p><strong>Kernel Optimization Problem</strong>: Given operation O and hardware H, find implementation k* that minimizes execution time:</p>
-<div class="arithmatex">\[
-k^* = \arg\min_{k \in \mathcal{K}} \mathcal{T}(k, \mathcal{H})
-\]</div>
-<p><strong>Hierarchical MAB Formulation</strong>:</p>
+<h2 id="background">Background<a class="headerlink" href="#background" title="Permanent link">&para;</a></h2>
+<p>AVO starts from a critique of prior LLM-in-the-loop evolutionary search. In earlier systems, the language model usually serves only as a candidate generator inside a rigid pipeline: the framework decides how to sample parents, when to evaluate, and how to manage the population. That setup limits what the model can actually discover, especially on heavily optimized GPU kernels where meaningful progress requires iterative debugging, profiling, documentation lookup, and strategy revision rather than one-shot generation.</p>
+<p>The paper studies this problem on forward-pass attention kernels for NVIDIA Blackwell GPUs. This is an intentionally hard target: both cuDNN and FlashAttention-4 already represent months of expert optimization, so any further gain requires discovering micro-architectural improvements rather than only broad algorithmic changes. AVO argues that the variation operator itself should become agentic.</p>
+<p><strong>Key Takeaways</strong></p>
 <ul>
-<li>At iteration t, agent selects: (i) kernel <span class="arithmatex">\(k_t \in C_t\)</span>, (ii) strategy <span class="arithmatex">\(s_t \in S\)</span></li>
-<li>Action: <span class="arithmatex">\(a_t = (k_t, s_t)\)</span> treated as single arm</li>
-<li>Reward: <span class="arithmatex">\(r_t = 1 - \frac{\mathcal{T}(k_{t+1}, \mathcal{H})}{\mathcal{T}(k_t, \mathcal{H})}\)</span> (relative speedup)</li>
-<li>Failed kernels receive <span class="arithmatex">\(r_t = -1\)</span></li>
+<li>AVO elevates the LLM from candidate generator to autonomous variation operator inside evolutionary search.</li>
+<li>The agent can inspect lineage, consult a knowledge base, run tools, validate kernels, and revise its own optimization plan before committing a new version.</li>
+<li>On Blackwell B200 GPUs, AVO reports up to 3.5% gains over cuDNN and up to 10.5% over FlashAttention-4 on multi-head attention, with rapid transfer to grouped-query attention.</li>
 </ul>
-<h3 id="three-key-mechanisms">Three Key Mechanisms<a class="headerlink" href="#three-key-mechanisms" title="Permanent link">&para;</a></h3>
-<p><strong>1. Profiling-Guided Strategy Selection</strong></p>
-<p>9-dimensional profiling vector per kernel:
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>φ(k) = [L2_hit, mem_bw, sm_util, warp_eff, achieved_occupancy,
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>        reg_per_thread, shared_conflicts, load_store_coalesced,
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>        tensor_core_util]
-</code></pre></div></p>
-<p>Each strategy s maintains logistic head for compatibility:</p>
-<div class="arithmatex">\[
-\psi(s, \phi(k)) = \sigma(w_s^T \phi(k) + b_s) \in [0,1]
-\]</div>
-<p><strong>2. Runtime Behavior Clustering</strong></p>
-<p>6-dimensional runtime feature vector:
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>ρ(k) = [log T(k), log mem_footprint(k), arithmetic_intensity(k),
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>        block_dimx, block_dimy, achieved_occupancy]
-</code></pre></div></p>
-<p>Partition into K=3 clusters using incremental k-means++, enabling knowledge transfer across similar kernels.</p>
-<p><strong>3. Hierarchical UCB Algorithm</strong></p>
-<p>Three-term UCB surrogate:</p>
-<div class="arithmatex">\[
-\text{UCB}_{c(k),s}(t) = \underbrace{\hat{\mu}_{c(k),s}}_{\text{exploitation}} + \underbrace{\sqrt{\frac{2\ln t}{n_{c(k),s}}}}_{\text{exploration}} + \underbrace{\alpha \psi(s, \phi(k))}_{\text{profiling bias}}
-\]</div>
-<h3 id="algorithm-overview">Algorithm Overview<a class="headerlink" href="#algorithm-overview" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>1: Initialize candidate pool C₁ = {k₀}
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>2: for t = 1 to T do
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>3:   Cluster Cₜ into K behavior-based clusters
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>4:   Extract profiling features φ(k) for all k ∈ Cₜ
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>5:   Select (kₜ, sₜ) = argmax UCB score
-<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>6:   kₜ₊₁ ← LLM(kₜ, sₜ)  // Apply strategy via LLM
-<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>7:   rₜ ← Evaluate(kₜ₊₁, H)
-<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>8:   Update cluster-level statistics
-<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>9:   if kₜ₊₁ valid then Cₜ₊₁ ← Cₜ ∪ {kₜ₊₁}
-<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>10: end for
-<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>11: return argmin T(k, H) over k ∈ C_T
-</code></pre></div>
-<h3 id="regret-guarantee">Regret Guarantee<a class="headerlink" href="#regret-guarantee" title="Permanent link">&para;</a></h3>
-<p>Under cluster-similarity assumption:</p>
-<div class="arithmatex">\[
-\mathbb{E}[\text{Regret}(T)] \leq 3|S|\sqrt{8T \ln T} + T\epsilon_{\text{cluster}} + T\alpha\epsilon_{\text{profile}}
-\]</div>
-<p>Scales with number of clusters (3) rather than pool size |Cₜ|.</p>
-<h2 id="experimental-results">Experimental Results<a class="headerlink" href="#experimental-results" title="Permanent link">&para;</a></h2>
-<p><strong>Setup</strong>: RTX 4090 / A100, DeepSeek-V3.2 / GPT-5.1, TritonBench L1+L2 (29 kernels)</p>
-<p><strong>Main Results</strong> (Best-of-iteration, RTX 4090 + DeepSeek-V3.2):</p>
+<h2 id="methodology">Methodology<a class="headerlink" href="#methodology" title="Permanent link">&para;</a></h2>
+<p>AVO replaces the usual <code>Sample -&gt; Generate</code> variation pipeline with a single autonomous agent invocation. Instead of handing a selected parent to an LLM and taking its first answer as the candidate, AVO gives the agent access to the full lineage of prior kernels, a domain-specific knowledge base, and the evaluation function. Within one variation step, the agent can compare previous versions, inspect profiler outputs, consult hardware documentation, attempt edits, diagnose failures, and only commit a new version once it passes correctness checks and matches or improves the best score so far.</p>
+<p>The current paper studies a single-lineage continuous evolution setting. That choice isolates the effect of the agentic variation operator itself rather than mixing it with archive or island management choices. Over a seven-day run, the agent autonomously maintains progress through self-supervision: when it stalls or enters unproductive loops, a supervisory mechanism reviews the trajectory and redirects exploration toward new candidate directions.</p>
+<h3 id="system-overview">System Overview<a class="headerlink" href="#system-overview" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
-<th>Method</th>
-<th>Iter 0</th>
-<th>Iter 3</th>
-<th>Iter 6</th>
-<th>Iter 9</th>
+<th>Component</th>
+<th>Input</th>
+<th>Output</th>
+<th>Role</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>GEAK</td>
-<td>0.70x/7%</td>
-<td>1.66x/25%</td>
-<td>2.15x/25%</td>
-<td>2.40x/32%</td>
+<td>Agentic Variation Operator</td>
+<td>Prior lineage, knowledge base, evaluation utilities</td>
+<td>New candidate kernel version</td>
+<td>Replaces fixed mutation/crossover with an autonomous optimization loop</td>
 </tr>
 <tr>
-<td><strong>KernelBand</strong></td>
-<td><strong>2.28x/29%</strong></td>
-<td><strong>3.15x/46%</strong></td>
-<td><strong>7.54x/46%</strong></td>
-<td><strong>9.78x/54%</strong></td>
+<td>Lineage <code>P_t</code></td>
+<td>Prior committed kernels and scores</td>
+<td>Search context</td>
+<td>Lets the agent revisit earlier ideas and reason over historical progress</td>
+</tr>
+<tr>
+<td>Knowledge Base <code>K</code></td>
+<td>Documentation, reference kernels, hardware guides</td>
+<td>External expertise</td>
+<td>Provides domain-specific background for architecture-aware edits</td>
+</tr>
+<tr>
+<td>Scoring Function <code>f</code></td>
+<td>Candidate kernel execution</td>
+<td>Correctness and throughput score vector</td>
+<td>Filters invalid kernels and measures hardware-level payoff</td>
+</tr>
+<tr>
+<td>Self-Supervision Mechanism</td>
+<td>Evolution trajectory and stagnation signals</td>
+<td>New optimization directions</td>
+<td>Prevents the run from stalling or looping on unproductive edits</td>
 </tr>
 </tbody>
 </table>
-<p><em>(Format: Speedup/Fast@1)</em></p>
-<p><strong>Cross-Platform Results</strong> (Iter 9, Best-of-iteration):</p>
+<h3 id="avo-vs-prior-evolutionary-pipelines">AVO vs. Prior Evolutionary Pipelines<a class="headerlink" href="#avo-vs-prior-evolutionary-pipelines" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
-<th>Platform</th>
-<th>GEAK</th>
-<th>KernelBand</th>
+<th>Prior Evolutionary Search</th>
+<th>AVO</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>4090 + DeepSeek</td>
-<td>2.40x/32%</td>
-<td>9.78x/54%</td>
+<td>LLM is confined to candidate generation</td>
+<td>Agent owns the entire variation step</td>
 </tr>
 <tr>
-<td>4090 + GPT-5.1</td>
-<td>1.13x/24%</td>
-<td>12.06x/52%</td>
+<td>Sampling and evaluation are fixed by the framework</td>
+<td>Agent can decide when to inspect, test, and revise</td>
 </tr>
 <tr>
-<td>A100 + DeepSeek</td>
-<td>3.22x/21%</td>
-<td>22.30x/72%</td>
+<td>Typically one output per invocation</td>
+<td>Multiple internal edit-evaluate-debug cycles per committed step</td>
+</tr>
+<tr>
+<td>Limited ability to use tools or documentation</td>
+<td>Direct access to references, profiling feedback, and tool use</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Scalability</strong> (20 iterations): KernelBand continues improving while GEAK saturates around iteration 10.</p>
-<h3 id="case-study-seeded_dropout-kernel">Case Study: seeded_dropout Kernel<a class="headerlink" href="#case-study-seeded_dropout-kernel" title="Permanent link">&para;</a></h3>
-<p><strong>Optimization progression</strong>:</p>
-<ol>
-<li>Baseline: fixed BLOCK_SIZE configuration</li>
-<li>First breakthrough: autotuning with adaptive block sizing and warp-level parallelism</li>
-<li>Second breakthrough: vectorized loads/stores with tunable vector widths</li>
-<li>Refinements: simplified vectorized memory access to reduce instruction overhead</li>
-</ol>
-<p><strong>Key advantages demonstrated</strong>:</p>
+<h3 id="key-design-choices">Key Design Choices<a class="headerlink" href="#key-design-choices" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Hierarchical MAB prevented catastrophic regression by maintaining diverse candidates</li>
-<li>Profiling-guided selection identified memory bandwidth as primary bottleneck</li>
-<li>Runtime clustering enabled knowledge transfer from similar memory-bound kernels</li>
+<li>The agent is a general-purpose coding agent, not a kernel-only specialist, and no task-specific model retraining is required.</li>
+<li>A new version is committed only if it is correct and at least matches the best benchmark score so far.</li>
+<li>The lineage persists as a sequence of git commits, which preserves state continuity across long-running autonomous search.</li>
+<li>The methodology is orthogonal to population structure and could, in principle, be extended beyond the single-lineage regime explored here.</li>
 </ul>
-<h2 id="limitations-future-work">Limitations &amp; Future Work<a class="headerlink" href="#limitations-future-work" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Distinctive challenges: non-stationary rewards, contextual strategy effectiveness, large action space, expensive evaluations</li>
-<li>Future: adaptive stopping criteria, diversity-driven re-prompting, memory-augmented iterative reasoning</li>
-</ul>
+<h2 id="experiment">Experiment<a class="headerlink" href="#experiment" title="Permanent link">&para;</a></h2>
+<h3 id="experimental-setup">Experimental Setup<a class="headerlink" href="#experimental-setup" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Target Hardware</td>
+<td>NVIDIA B200 (Blackwell)</td>
+</tr>
+<tr>
+<td>Software Stack</td>
+<td>CUDA 13.1, PyTorch 2.10.0</td>
+</tr>
+<tr>
+<td>Kernel Target</td>
+<td>Forward-pass attention</td>
+</tr>
+<tr>
+<td>Precision / Head Dim</td>
+<td>BF16, head dimension 128</td>
+</tr>
+<tr>
+<td>Main MHA Config</td>
+<td>16 heads, causal and non-causal</td>
+</tr>
+<tr>
+<td>GQA Configs</td>
+<td>32 query heads with group sizes 8 and 4</td>
+</tr>
+<tr>
+<td>Baselines</td>
+<td>cuDNN 9.19.1 and FlashAttention-4</td>
+</tr>
+<tr>
+<td>Search Duration</td>
+<td>7 days continuous autonomous evolution</td>
+</tr>
+</tbody>
+</table>
+<h3 id="headline-results">Headline Results<a class="headerlink" href="#headline-results" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Task</th>
+<th>Baseline Comparison</th>
+<th>Reported Gain</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Multi-Head Attention</td>
+<td>vs. cuDNN</td>
+<td>Up to +3.5%</td>
+</tr>
+<tr>
+<td>Multi-Head Attention</td>
+<td>vs. FlashAttention-4</td>
+<td>Up to +10.5%</td>
+</tr>
+<tr>
+<td>Grouped-Query Attention</td>
+<td>vs. cuDNN</td>
+<td>Up to +7.0%</td>
+</tr>
+<tr>
+<td>Grouped-Query Attention</td>
+<td>vs. FlashAttention-4</td>
+<td>Up to +9.3%</td>
+</tr>
+<tr>
+<td>Peak MHA Throughput</td>
+<td>BF16 on B200</td>
+<td>Up to 1668 TFLOPS</td>
+</tr>
+</tbody>
+</table>
+<p>These numbers are especially notable because the target baselines are already expert-engineered attention kernels on the newest GPU generation. The result is not that AVO merely approaches strong baselines, but that it exceeds them in the reported benchmarked configurations.</p>
+<h3 id="evolution-trajectory">Evolution Trajectory<a class="headerlink" href="#evolution-trajectory" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Search Statistic</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Continuous evolution time</td>
+<td>7 days</td>
+</tr>
+<tr>
+<td>Successful committed kernel versions</td>
+<td>40</td>
+</tr>
+<tr>
+<td>Explored optimization directions</td>
+<td>500+</td>
+</tr>
+<tr>
+<td>GQA transfer effort</td>
+<td>About 30 minutes autonomous adaptation</td>
+</tr>
+</tbody>
+</table>
+<p>The trajectory analysis shows that progress is not smooth or incremental at every step. The paper emphasizes discrete jumps, diminishing returns, and long-running search behavior rather than a single-shot lucky outcome. That profile is consistent with the claim that AVO is functioning as a true autonomous variation operator rather than a prompt wrapper around a fixed optimizer.</p>
+<h3 id="agent-discovered-optimizations">Agent-Discovered Optimizations<a class="headerlink" href="#agent-discovered-optimizations" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Optimization</th>
+<th>Reported Impact</th>
+<th>Main Idea</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Branchless accumulator rescaling</td>
+<td>+8.1% geomean on non-causal, +1.6% on causal</td>
+<td>Removes branch divergence and replaces blocking fence with lighter synchronization</td>
+</tr>
+<tr>
+<td>Correction / MMA pipeline overlap</td>
+<td>Positive throughput gain</td>
+<td>Overlaps normalization work with later tensor-core compute stages</td>
+</tr>
+<tr>
+<td>Register rebalancing across warp groups</td>
+<td>+2.1% geomean on non-causal</td>
+<td>Redistributes registers from low-pressure to critical-path warp groups</td>
+</tr>
+</tbody>
+</table>
+<p>The most interesting aspect of these optimizations is that they are micro-architectural rather than cosmetic. They involve reasoning jointly about synchronization, memory ordering, warp specialization, pipeline overlap, and register allocation. This is exactly the type of multi-factor hardware reasoning that fixed mutation operators are bad at expressing.</p>
+<h2 id="limitation">Limitation<a class="headerlink" href="#limitation" title="Permanent link">&para;</a></h2>
+<p>AVO is impressive, but the paper studies a very specific and unusually favorable regime: one high-value kernel family, one top-end hardware generation, and a long continuous evolution budget.</p>
+<table>
+<thead>
+<tr>
+<th>Limitation</th>
+<th>Why It Matters</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Attention-only evaluation</td>
+<td>The paper does not yet show the same level of success on a broad operator benchmark beyond attention</td>
+</tr>
+<tr>
+<td>Single-lineage setting</td>
+<td>Population-scale effects and archive-based evolutionary management are left for future work</td>
+</tr>
+<tr>
+<td>Long optimization horizon</td>
+<td>Seven days of autonomous search is powerful but expensive, which may limit practical deployment</td>
+</tr>
+<tr>
+<td>Hardware specialization</td>
+<td>The strongest results are tied to Blackwell B200 and attention kernels, so generalization to other architectures remains open</td>
+</tr>
+<tr>
+<td>Agent complexity is high</td>
+<td>Tool use, persistent memory, supervision, and iterative diagnosis increase system overhead compared with simpler evolutionary methods</td>
+</tr>
+</tbody>
+</table>
 <hr />
-<p><em>Reading date: 2025-12</em>
+<p><em>Reading date: 2026-04</em>
 <em>Note status: Completed</em></p>
 
 
