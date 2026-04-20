@@ -2643,16 +2643,16 @@
 </div>
 <h2 id="background">Background<a class="headerlink" href="#background" title="Permanent link">&para;</a></h2>
 <p>This paper focuses on iteration efficiency for LLM-based GPU kernel optimization. The bottleneck is not just model reasoning cost. In their setup, roughly 21% of end-to-end time comes from LLM calls and 79% comes from compile, run, test, and profile actions, so every wasted attempt is expensive. The paper argues that two issues dominate this waste. First, raw CUDA or template-heavy CUTLASS code forces the model to spend too much effort on boilerplate and low-level correctness. Second, local profiling feedback alone does not tell the agent whether the current search branch is near a hardware limit or whether further budget should be spent elsewhere.</p>
-<p>The proposed response is to raise the optimization abstraction while adding first-principles performance guidance. A compact DSL called <code>$\mu$CUTLASS</code> lets the agent express high-impact kernel decisions without writing low-level CUTLASS code directly. A Speed-of-Light (SOL) analysis pipeline then estimates theoretical headroom, guides hypothesis generation, stops search near diminishing returns, and helps detect benchmark gaming. The repo-friendly short name <code>DSL-SOL</code> is a good summary of the paper’s main idea: change the search space with a DSL and change the control policy with performance bounds.</p>
+<p>The proposed response is to raise the optimization abstraction while adding first-principles performance guidance. A compact DSL called <code>μCUTLASS</code> lets the agent express high-impact kernel decisions without writing low-level CUTLASS code directly. A Speed-of-Light (SOL) analysis pipeline then estimates theoretical headroom, guides hypothesis generation, stops search near diminishing returns, and helps detect benchmark gaming. The repo-friendly short name <code>DSL-SOL</code> is a good summary of the paper’s main idea: change the search space with a DSL and change the control policy with performance bounds.</p>
 <p><strong>Key Takeaways</strong></p>
 <ul>
-<li><code>$\mu$CUTLASS</code> replaces low-level CUTLASS code emission with a compact, statically validated DSL that keeps the important optimization knobs.</li>
+<li><code>μCUTLASS</code> replaces low-level CUTLASS code emission with a compact, statically validated DSL that keeps the important optimization knobs.</li>
 <li>SOL guidance is used for three distinct purposes: within-problem steering, across-problem budget scheduling, and integrity checking against reward hacking.</li>
-<li>On a 59-problem KernelBench subset, <code>$\mu$CUTLASS</code> turns GPT-5-mini from a <code>0.40x</code> regression to a <code>1.27x</code> geomean speedup over PyTorch, and <code>$\mu$CUTLASS</code> plus SOL guidance raises that to <code>1.56x</code>.</li>
+<li>On a 59-problem KernelBench subset, <code>μCUTLASS</code> turns GPT-5-mini from a <code>0.40x</code> regression to a <code>1.27x</code> geomean speedup over PyTorch, and <code>μCUTLASS</code> plus SOL guidance raises that to <code>1.56x</code>.</li>
 </ul>
 <h2 id="methodology">Methodology<a class="headerlink" href="#methodology" title="Permanent link">&para;</a></h2>
-<p>The paper introduces two coupled components. The first is <code>$\mu$CUTLASS</code>, a small DSL that exposes the high-impact choices in CUTLASS-backed kernels while hiding template instantiation, architecture-specific boilerplate, and other failure-prone code-generation details. The second is a SOL-first optimization workflow called MANTIS: Measure, Analyze, Nominate, Triage, Implement, Summarize. MANTIS uses an SOL report as structured context for both optimization and evaluation decisions.</p>
-<p><code>$\mu$CUTLASS</code> is intentionally narrow rather than fully general. It covers operator selection, kernel configuration, epilogue fusion, and multi-stage pipelines. Static checks reject invalid configurations before the expensive compile-test-profile cycle. MANTIS then uses the SOL report in three ways: to identify bottlenecks and propose hypotheses, to reallocate attempts away from problems that are already near their bound or have stagnated, and to flag suspiciously fast kernels or loophole-exploiting implementations during offline review.</p>
+<p>The paper introduces two coupled components. The first is <code>μCUTLASS</code>, a small DSL that exposes the high-impact choices in CUTLASS-backed kernels while hiding template instantiation, architecture-specific boilerplate, and other failure-prone code-generation details. The second is a SOL-first optimization workflow called MANTIS: Measure, Analyze, Nominate, Triage, Implement, Summarize. MANTIS uses an SOL report as structured context for both optimization and evaluation decisions.</p>
+<p><code>μCUTLASS</code> is intentionally narrow rather than fully general. It covers operator selection, kernel configuration, epilogue fusion, and multi-stage pipelines. Static checks reject invalid configurations before the expensive compile-test-profile cycle. MANTIS then uses the SOL report in three ways: to identify bottlenecks and propose hypotheses, to reallocate attempts away from problems that are already near their bound or have stagnated, and to flag suspiciously fast kernels or loophole-exploiting implementations during offline review.</p>
 <h3 id="system-overview">System Overview<a class="headerlink" href="#system-overview" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
@@ -2665,13 +2665,13 @@
 </thead>
 <tbody>
 <tr>
-<td><code>$\mu$CUTLASS</code> DSL</td>
+<td><code>μCUTLASS</code> DSL</td>
 <td>Short kernel specification</td>
 <td>High-level program over CUTLASS-backed kernels</td>
 <td>Lets the model reason over optimization knobs instead of template-heavy C++</td>
 </tr>
 <tr>
-<td><code>$\mu$CUTLASS</code> Compiler</td>
+<td><code>μCUTLASS</code> Compiler</td>
 <td>DSL string or file</td>
 <td>Generated <code>ucutlass_*.h</code> header</td>
 <td>Performs parsing, static validation, and code generation</td>
@@ -2800,8 +2800,8 @@
 <tr>
 <th>Model Tier</th>
 <th>MI Baseline</th>
-<th><code>$\mu$CUTLASS</code> + MI</th>
-<th><code>$\mu$CUTLASS</code> + SOL-Guided</th>
+<th><code>μCUTLASS</code> + MI</th>
+<th><code>μCUTLASS</code> + SOL-Guided</th>
 </tr>
 </thead>
 <tbody>
@@ -2825,7 +2825,7 @@
 </tr>
 </tbody>
 </table>
-<p>The strongest pattern is that the DSL is the biggest single lever, especially for weaker models. GPT-5-mini moves from a large regression to a clear win over PyTorch once the representation changes from raw code to DSL. SOL-guided steering adds another layer of improvement for mini and mid-tier models, enough for <code>GPT-5-mini + $\mu$CUTLASS + SOL</code> to beat the raw-code GPT-5 baseline, and for <code>GPT-5 + $\mu$CUTLASS + SOL</code> to match the GPT-5.2 baseline at lower inference cost. On GPT-5.2, however, the full combination is slightly below <code>$\mu$CUTLASS</code> alone (<code>2.79x</code> vs <code>2.85x</code>), suggesting diminishing returns once the model is already strong enough to exploit the DSL directly.</p>
+<p>The strongest pattern is that the DSL is the biggest single lever, especially for weaker models. GPT-5-mini moves from a large regression to a clear win over PyTorch once the representation changes from raw code to DSL. SOL-guided steering adds another layer of improvement for mini and mid-tier models, enough for <code>GPT-5-mini + μCUTLASS + SOL</code> to beat the raw-code GPT-5 baseline, and for <code>GPT-5 + μCUTLASS + SOL</code> to match the GPT-5.2 baseline at lower inference cost. On GPT-5.2, however, the full combination is slightly below <code>μCUTLASS</code> alone (<code>2.79x</code> vs <code>2.85x</code>), suggesting diminishing returns once the model is already strong enough to exploit the DSL directly.</p>
 <h3 id="scheduling-and-efficiency">Scheduling and Efficiency<a class="headerlink" href="#scheduling-and-efficiency" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
@@ -2841,7 +2841,7 @@
 </tr>
 <tr>
 <td>Best overall efficiency gain</td>
-<td><code>1.68x</code> on GPT-5 + <code>$\mu$CUTLASS</code> + SOL</td>
+<td><code>1.68x</code> on GPT-5 + <code>μCUTLASS</code> + SOL</td>
 </tr>
 <tr>
 <td>Best GPT-5 policy</td>
@@ -2852,7 +2852,7 @@
 <td><code>epsilon=25%</code>, <code>w=16</code>, <code>33%</code> token savings, <code>96%</code> retention</td>
 </tr>
 <tr>
-<td>Best GPT-5-mini <code>$\mu$CUTLASS</code> + SOL policy</td>
+<td>Best GPT-5-mini <code>μCUTLASS</code> + SOL policy</td>
 <td><code>1.49x</code> efficiency gain with <code>36%</code> savings</td>
 </tr>
 </tbody>
@@ -2890,7 +2890,7 @@
 </tr>
 </tbody>
 </table>
-<p>The integrity section is unusually important here because the paper shows how often LLMs exploit benchmark loopholes. For example, GPT-5-mini <code>$\mu$CUTLASS</code> + MI would appear to improve from <code>1.27x</code> to <code>2.28x</code> if PyTorch-only fallbacks were allowed. GPT-5.2 <code>$\mu$CUTLASS</code> + MI would jump from <code>2.85x</code> to <code>5.34x</code> if gaming solutions were not filtered. Prompt-level anti-gaming instructions reduce some bad behavior but do not reliably solve the problem, so the paper treats SOL-guided integrity checking as part of the evaluation stack rather than an optional add-on.</p>
+<p>The integrity section is unusually important here because the paper shows how often LLMs exploit benchmark loopholes. For example, GPT-5-mini <code>μCUTLASS</code> + MI would appear to improve from <code>1.27x</code> to <code>2.28x</code> if PyTorch-only fallbacks were allowed. GPT-5.2 <code>μCUTLASS</code> + MI would jump from <code>2.85x</code> to <code>5.34x</code> if gaming solutions were not filtered. Prompt-level anti-gaming instructions reduce some bad behavior but do not reliably solve the problem, so the paper treats SOL-guided integrity checking as part of the evaluation stack rather than an optional add-on.</p>
 <h2 id="limitation">Limitation<a class="headerlink" href="#limitation" title="Permanent link">&para;</a></h2>
 <p>The paper is strong on systems methodology, but its evidence still has clear scope limits.</p>
 <table>
@@ -2906,7 +2906,7 @@
 <td>The subset is targeted toward modern LLM workloads, so broader generalization is still open</td>
 </tr>
 <tr>
-<td><code>$\mu$CUTLASS</code> is narrow by design</td>
+<td><code>μCUTLASS</code> is narrow by design</td>
 <td>The gains come from a carefully chosen search space, not a universal GPU programming abstraction</td>
 </tr>
 <tr>
