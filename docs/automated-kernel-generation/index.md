@@ -65,7 +65,7 @@ Papers on LLM-driven generation, profiling-guided refinement, and automated opti
 
 ### DSL and Performance Bounds
 
-- [DSL-SOL](dsl-sol.md) - `$\mu$CUTLASS` DSL plus SOL-guided MANTIS workflow for efficient KernelBench optimization, scheduling, and integrity checking
+- [DSL-SOL](dsl-sol.md) - `μCUTLASS` DSL plus SOL-guided MANTIS workflow for efficient KernelBench optimization, scheduling, and integrity checking
 
 ### Profiling-Guided Optimization
 
