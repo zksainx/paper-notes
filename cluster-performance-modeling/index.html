@@ -12,31 +12,31 @@
         <meta name="author" content="zksainx">
       
       
-        <link rel="canonical" href="https://zksainx.github.io/paper-notes/simulation/linear/">
+        <link rel="canonical" href="https://zksainx.github.io/paper-notes/cluster-performance-modeling/">
       
       
-        <link rel="prev" href="../llmcompass/">
+        <link rel="prev" href="../intra-gpu-multiplexing/duetserve/">
       
       
-        <link rel="next" href="../mystique/">
+        <link rel="next" href="prism/">
       
       
         
       
       
-      <link rel="icon" href="../../assets/images/favicon.png">
+      <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
-        <title>Path Forward Beyond Simulators - Paper Notes</title>
+        <title>Cluster Performance Modeling - Paper Notes</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -55,9 +55,9 @@
       
     
     
-      <link rel="stylesheet" href="../../stylesheets/extra.css">
+      <link rel="stylesheet" href="../stylesheets/extra.css">
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -82,7 +82,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#path-forward-beyond-simulators-fast-and-accurate-gpu-execution-time-prediction-for-dnn-workloads" class="md-skip">
+        <a href="#cluster-performance-modeling" class="md-skip">
           跳转至
         </a>
       
@@ -96,7 +96,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="页眉">
-    <a href="../.." title="Paper Notes" class="md-header__button md-logo" aria-label="Paper Notes" data-md-component="logo">
+    <a href=".." title="Paper Notes" class="md-header__button md-logo" aria-label="Paper Notes" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -116,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Path Forward Beyond Simulators
+              Cluster Performance Modeling
             
           </span>
         </div>
@@ -234,7 +234,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../.." class="md-tabs__link">
+      <a href=".." class="md-tabs__link">
         
   
   
@@ -251,13 +251,11 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../simulation/" class="md-tabs__link">
           
   
   
@@ -279,7 +277,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../tensor-program-optimization/" class="md-tabs__link">
+        <a href="../tensor-program-optimization/" class="md-tabs__link">
           
   
   
@@ -301,7 +299,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../automated-kernel-generation/" class="md-tabs__link">
+        <a href="../automated-kernel-generation/" class="md-tabs__link">
           
   
   
@@ -323,7 +321,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../intra-gpu-multiplexing/" class="md-tabs__link">
+        <a href="../intra-gpu-multiplexing/" class="md-tabs__link">
           
   
   
@@ -341,11 +339,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../cluster-performance-modeling/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
           
   
   
@@ -365,7 +365,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../about/" class="md-tabs__link">
+      <a href="../about/" class="md-tabs__link">
         
   
   
@@ -400,7 +400,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Paper Notes" class="md-nav__button md-logo" aria-label="Paper Notes" data-md-component="logo">
+    <a href=".." title="Paper Notes" class="md-nav__button md-logo" aria-label="Paper Notes" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -430,7 +430,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href=".." class="md-nav__link">
         
   
   
@@ -454,8 +454,6 @@
       
   
   
-    
-  
   
   
     
@@ -495,23 +493,22 @@
     
     
       
-        
-        
-      
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
+            <a href="../simulation/" class="md-nav__link ">
               
   
   
@@ -529,13 +526,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -555,7 +552,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../amali/" class="md-nav__link">
+      <a href="../simulation/amali/" class="md-nav__link">
         
   
   
@@ -583,7 +580,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../apex/" class="md-nav__link">
+      <a href="../simulation/apex/" class="md-nav__link">
         
   
   
@@ -611,7 +608,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../astra-sim/" class="md-nav__link">
+      <a href="../simulation/astra-sim/" class="md-nav__link">
         
   
   
@@ -639,7 +636,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../astra-sim-2/" class="md-nav__link">
+      <a href="../simulation/astra-sim-2/" class="md-nav__link">
         
   
   
@@ -667,7 +664,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../chakra/" class="md-nav__link">
+      <a href="../simulation/chakra/" class="md-nav__link">
         
   
   
@@ -695,7 +692,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../frontier/" class="md-nav__link">
+      <a href="../simulation/frontier/" class="md-nav__link">
         
   
   
@@ -723,7 +720,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../llmcompass/" class="md-nav__link">
+      <a href="../simulation/llmcompass/" class="md-nav__link">
         
   
   
@@ -748,37 +745,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Path Forward Beyond Simulators
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../simulation/linear/" class="md-nav__link">
         
   
   
@@ -794,48 +764,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#abstract" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Abstract
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#core-ideas" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Core Ideas
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -848,7 +776,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../mystique/" class="md-nav__link">
+      <a href="../simulation/mystique/" class="md-nav__link">
         
   
   
@@ -876,7 +804,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../neusight/" class="md-nav__link">
+      <a href="../simulation/neusight/" class="md-nav__link">
         
   
   
@@ -904,7 +832,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../simai/" class="md-nav__link">
+      <a href="../simulation/simai/" class="md-nav__link">
         
   
   
@@ -932,7 +860,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../vidur/" class="md-nav__link">
+      <a href="../simulation/vidur/" class="md-nav__link">
         
   
   
@@ -960,7 +888,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../vtrain/" class="md-nav__link">
+      <a href="../simulation/vtrain/" class="md-nav__link">
         
   
   
@@ -1040,7 +968,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../tensor-program-optimization/" class="md-nav__link ">
+            <a href="../tensor-program-optimization/" class="md-nav__link ">
               
   
   
@@ -1084,7 +1012,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tensor-program-optimization/learning-optimize-tensor-programs/" class="md-nav__link">
+      <a href="../tensor-program-optimization/learning-optimize-tensor-programs/" class="md-nav__link">
         
   
   
@@ -1112,7 +1040,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tensor-program-optimization/ansor/" class="md-nav__link">
+      <a href="../tensor-program-optimization/ansor/" class="md-nav__link">
         
   
   
@@ -1140,7 +1068,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tensor-program-optimization/roller/" class="md-nav__link">
+      <a href="../tensor-program-optimization/roller/" class="md-nav__link">
         
   
   
@@ -1168,7 +1096,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tensor-program-optimization/learned-performance-model-tpu/" class="md-nav__link">
+      <a href="../tensor-program-optimization/learned-performance-model-tpu/" class="md-nav__link">
         
   
   
@@ -1196,7 +1124,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tensor-program-optimization/metatune/" class="md-nav__link">
+      <a href="../tensor-program-optimization/metatune/" class="md-nav__link">
         
   
   
@@ -1224,7 +1152,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tensor-program-optimization/unicox/" class="md-nav__link">
+      <a href="../tensor-program-optimization/unicox/" class="md-nav__link">
         
   
   
@@ -1252,7 +1180,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tensor-program-optimization/tritonblas/" class="md-nav__link">
+      <a href="../tensor-program-optimization/tritonblas/" class="md-nav__link">
         
   
   
@@ -1280,7 +1208,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tensor-program-optimization/gpu-performance-portability/" class="md-nav__link">
+      <a href="../tensor-program-optimization/gpu-performance-portability/" class="md-nav__link">
         
   
   
@@ -1308,7 +1236,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tensor-program-optimization/anatomy-triton-attention/" class="md-nav__link">
+      <a href="../tensor-program-optimization/anatomy-triton-attention/" class="md-nav__link">
         
   
   
@@ -1336,7 +1264,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tensor-program-optimization/tritonbench/" class="md-nav__link">
+      <a href="../tensor-program-optimization/tritonbench/" class="md-nav__link">
         
   
   
@@ -1432,7 +1360,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../automated-kernel-generation/" class="md-nav__link ">
+            <a href="../automated-kernel-generation/" class="md-nav__link ">
               
   
   
@@ -1476,7 +1404,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../automated-kernel-generation/avo/" class="md-nav__link">
+      <a href="../automated-kernel-generation/avo/" class="md-nav__link">
         
   
   
@@ -1504,7 +1432,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../automated-kernel-generation/ascendkernelgen/" class="md-nav__link">
+      <a href="../automated-kernel-generation/ascendkernelgen/" class="md-nav__link">
         
   
   
@@ -1532,7 +1460,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../automated-kernel-generation/astra/" class="md-nav__link">
+      <a href="../automated-kernel-generation/astra/" class="md-nav__link">
         
   
   
@@ -1560,7 +1488,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../automated-kernel-generation/cuda-llm/" class="md-nav__link">
+      <a href="../automated-kernel-generation/cuda-llm/" class="md-nav__link">
         
   
   
@@ -1588,7 +1516,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../automated-kernel-generation/cudaforge/" class="md-nav__link">
+      <a href="../automated-kernel-generation/cudaforge/" class="md-nav__link">
         
   
   
@@ -1616,7 +1544,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../automated-kernel-generation/cupilot/" class="md-nav__link">
+      <a href="../automated-kernel-generation/cupilot/" class="md-nav__link">
         
   
   
@@ -1644,7 +1572,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../automated-kernel-generation/maxcode/" class="md-nav__link">
+      <a href="../automated-kernel-generation/maxcode/" class="md-nav__link">
         
   
   
@@ -1672,7 +1600,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../automated-kernel-generation/evoengineer/" class="md-nav__link">
+      <a href="../automated-kernel-generation/evoengineer/" class="md-nav__link">
         
   
   
@@ -1700,7 +1628,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../automated-kernel-generation/geak/" class="md-nav__link">
+      <a href="../automated-kernel-generation/geak/" class="md-nav__link">
         
   
   
@@ -1728,7 +1656,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../automated-kernel-generation/dsl-sol/" class="md-nav__link">
+      <a href="../automated-kernel-generation/dsl-sol/" class="md-nav__link">
         
   
   
@@ -1756,7 +1684,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../automated-kernel-generation/k-search/" class="md-nav__link">
+      <a href="../automated-kernel-generation/k-search/" class="md-nav__link">
         
   
   
@@ -1784,7 +1712,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../automated-kernel-generation/kernelband/" class="md-nav__link">
+      <a href="../automated-kernel-generation/kernelband/" class="md-nav__link">
         
   
   
@@ -1812,7 +1740,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../automated-kernel-generation/kernelblaster/" class="md-nav__link">
+      <a href="../automated-kernel-generation/kernelblaster/" class="md-nav__link">
         
   
   
@@ -1840,7 +1768,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../automated-kernel-generation/kernelevolve/" class="md-nav__link">
+      <a href="../automated-kernel-generation/kernelevolve/" class="md-nav__link">
         
   
   
@@ -1868,7 +1796,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../automated-kernel-generation/kernelskill/" class="md-nav__link">
+      <a href="../automated-kernel-generation/kernelskill/" class="md-nav__link">
         
   
   
@@ -1896,7 +1824,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../automated-kernel-generation/peak/" class="md-nav__link">
+      <a href="../automated-kernel-generation/peak/" class="md-nav__link">
         
   
   
@@ -1924,7 +1852,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../automated-kernel-generation/stark/" class="md-nav__link">
+      <a href="../automated-kernel-generation/stark/" class="md-nav__link">
         
   
   
@@ -1952,7 +1880,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../automated-kernel-generation/tritonforge/" class="md-nav__link">
+      <a href="../automated-kernel-generation/tritonforge/" class="md-nav__link">
         
   
   
@@ -2022,7 +1950,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../intra-gpu-multiplexing/" class="md-nav__link ">
+            <a href="../intra-gpu-multiplexing/" class="md-nav__link ">
               
   
   
@@ -2066,7 +1994,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../intra-gpu-multiplexing/nanoflow/" class="md-nav__link">
+      <a href="../intra-gpu-multiplexing/nanoflow/" class="md-nav__link">
         
   
   
@@ -2094,7 +2022,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../intra-gpu-multiplexing/bullet/" class="md-nav__link">
+      <a href="../intra-gpu-multiplexing/bullet/" class="md-nav__link">
         
   
   
@@ -2122,7 +2050,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../intra-gpu-multiplexing/nexus/" class="md-nav__link">
+      <a href="../intra-gpu-multiplexing/nexus/" class="md-nav__link">
         
   
   
@@ -2150,7 +2078,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../intra-gpu-multiplexing/pd-multiplex/" class="md-nav__link">
+      <a href="../intra-gpu-multiplexing/pd-multiplex/" class="md-nav__link">
         
   
   
@@ -2178,7 +2106,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../intra-gpu-multiplexing/duetserve/" class="md-nav__link">
+      <a href="../intra-gpu-multiplexing/duetserve/" class="md-nav__link">
         
   
   
@@ -2210,6 +2138,8 @@
       
   
   
+    
+  
   
   
     
@@ -2225,22 +2155,23 @@
     
     
       
+        
+        
+      
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../cluster-performance-modeling/" class="md-nav__link ">
+            <a href="./" class="md-nav__link md-nav__link--active">
               
   
   
@@ -2258,13 +2189,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="0">
+              <label class="md-nav__link md-nav__link--active" for="__nav_6" id="__nav_6_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             
@@ -2284,7 +2215,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cluster-performance-modeling/prism/" class="md-nav__link">
+      <a href="prism/" class="md-nav__link">
         
   
   
@@ -2319,7 +2250,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../about/" class="md-nav__link">
+      <a href="../about/" class="md-nav__link">
         
   
   
@@ -2366,10 +2297,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#abstract" class="md-nav__link">
+  <a href="#research-areas" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Abstract
+        Research Areas
       
     </span>
   </a>
@@ -2377,13 +2308,30 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#core-ideas" class="md-nav__link">
+  <a href="#papers" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Core Ideas
+        Papers
       
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Papers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#variability-aware-distributed-training" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Variability-Aware Distributed Training
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2407,30 +2355,23 @@
   
 
 
-<h1 id="path-forward-beyond-simulators-fast-and-accurate-gpu-execution-time-prediction-for-dnn-workloads">Path Forward Beyond Simulators: Fast and Accurate GPU Execution Time Prediction for DNN Workloads<a class="headerlink" href="#path-forward-beyond-simulators-fast-and-accurate-gpu-execution-time-prediction-for-dnn-workloads" title="Permanent link">&para;</a></h1>
-<div class="paper-meta">
-<p><strong>Authors</strong>: Ying Li, Yifan Sun, Adwait Jog<br />
-<strong>Institution</strong>: Multiple Institutions<br />
-<strong>Conference</strong>: MICRO 2023<br />
-<strong>Paper Link</strong>: <a href="https://dl.acm.org/doi/10.1145/3613424.3614277">ACM DL</a></p>
-</div>
-<div class="paper-tags">
-<p><span class="paper-tag">GPU Performance</span>
-<span class="paper-tag">DNN Prediction</span>
-<span class="paper-tag">Linear Regression</span></p>
-</div>
-<h2 id="abstract">Abstract<a class="headerlink" href="#abstract" title="Permanent link">&para;</a></h2>
-<p>This paper proposes a fast, linear-regression-based execution time predictor for DNNs as an alternative to slow simulators. It predicts new DNN performance with 7% error and new GPU performance with 15.2% error, offering a practical solution for modeling large-scale systems and DNNs.</p>
-<p><strong>Key Contributions</strong>:
-- Fast linear-regression-based DNN execution time predictor
-- Multiple performance models: End-to-End (E2E), Layer-Wise (LW), Kernel-Wise (KW), and Inter-GPU Kernel-Wise (IGKW)
-- Large-scale dataset with 646 models from HuggingFace, TorchVision
-- Practical alternative to time-consuming simulators</p>
-<h2 id="core-ideas">Core Ideas<a class="headerlink" href="#core-ideas" title="Permanent link">&para;</a></h2>
-<p>Simulators are becoming increasingly impractical for modeling today's large-scale systems and DNNs due to long simulation times. This work collects execution time data for DNNs, layers, and kernels on various GPUs, then develops lightweight regression models that maintain acceptable accuracy while dramatically reducing prediction time compared to full simulation approaches.</p>
+<h1 id="cluster-performance-modeling">Cluster Performance Modeling<a class="headerlink" href="#cluster-performance-modeling" title="Permanent link">&para;</a></h1>
+<p>Papers on variability-aware performance modeling, tail-latency analysis, and scheduling insights for large-scale distributed training clusters.</p>
+<h2 id="research-areas">Research Areas<a class="headerlink" href="#research-areas" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Probabilistic performance modeling for distributed training</li>
+<li>Tail-latency and straggler analysis in GPU clusters</li>
+<li>Parallelism-topology co-design and critical-path attribution</li>
+<li>Variability-aware scheduling and cluster-level optimization</li>
+<li>Runtime trace analysis and simulation-driven planning</li>
+</ul>
+<h2 id="papers">Papers<a class="headerlink" href="#papers" title="Permanent link">&para;</a></h2>
+<h3 id="variability-aware-distributed-training">Variability-Aware Distributed Training<a class="headerlink" href="#variability-aware-distributed-training" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="prism/">PRISM</a> - Probabilistic runtime modeling framework for p95-oriented performance guarantees in large-scale training.</li>
+</ul>
 <hr />
-<p><em>Reading date: 2025</em>
-<em>Note status: Completed</em></p>
+<p><em>Continuously updated...</em></p>
 
 
 
@@ -2492,12 +2433,12 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.sections", "navigation.indexes", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "search.share", "content.code.copy", "content.tabs.link"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.sections", "navigation.indexes", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "search.share", "content.code.copy", "content.tabs.link"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
       
-        <script src="../../javascripts/mathjax.js"></script>
+        <script src="../javascripts/mathjax.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
