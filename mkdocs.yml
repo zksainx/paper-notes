@@ -140,6 +140,9 @@ nav:
       - Nexus: intra-gpu-multiplexing/nexus.md
       - PD-Multiplexing: intra-gpu-multiplexing/pd-multiplex.md
       - DuetServe: intra-gpu-multiplexing/duetserve.md
+  - Cluster Performance Modeling:
+      - cluster-performance-modeling/index.md
+      - PRISM: cluster-performance-modeling/prism.md
   - About: about.md
 
 # Copyright

@@ -26,6 +26,9 @@ Papers on LLM-driven generation, profiling-guided refinement, and automated opti
 ### [Intra-GPU Spatial Multiplexing](intra-gpu-multiplexing/index.md)
 Papers on GPU spatial multiplexing techniques for efficient LLM serving, including prefill-decode disaggregation and dynamic resource partitioning.
 
+### [Cluster Performance Modeling](cluster-performance-modeling/index.md)
+Papers on probabilistic runtime modeling, tail-latency analysis, and variability-aware scheduling for large-scale distributed training clusters.
+
 ## 🔍 如何使用
 
 - **浏览分类**：点击顶部导航栏选择感兴趣的研究领域
