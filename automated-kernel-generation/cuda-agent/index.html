@@ -12,13 +12,13 @@
         <meta name="author" content="zksainx">
       
       
-        <link rel="canonical" href="https://zksainx.github.io/paper-notes/automated-kernel-generation/cuda-llm/">
+        <link rel="canonical" href="https://zksainx.github.io/paper-notes/automated-kernel-generation/cuda-agent/">
       
       
-        <link rel="prev" href="../astra/">
+        <link rel="prev" href="../cuda-llm/">
       
       
-        <link rel="next" href="../cuda-agent/">
+        <link rel="next" href="../cudaforge/">
       
       
         
@@ -29,7 +29,7 @@
     
     
       
-        <title>CUDA-LLM - Paper Notes</title>
+        <title>CUDA Agent - Paper Notes</title>
       
     
     
@@ -82,7 +82,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#cuda-llm-llms-can-write-efficient-cuda-kernels" class="md-skip">
+        <a href="#cuda-agent-large-scale-agentic-rl-for-high-performance-cuda-kernel-generation" class="md-skip">
           跳转至
         </a>
       
@@ -116,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              CUDA-LLM
+              CUDA Agent
             
           </span>
         </div>
@@ -1490,6 +1490,34 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../cuda-llm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CUDA-LLM
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -1509,7 +1537,7 @@
   <span class="md-ellipsis">
     
   
-    CUDA-LLM
+    CUDA Agent
   
 
     
@@ -1527,7 +1555,7 @@
   <span class="md-ellipsis">
     
   
-    CUDA-LLM
+    CUDA Agent
   
 
     
@@ -1587,17 +1615,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#feature-functions-in-fsr" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Feature Functions in FSR
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#key-design-choices" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1637,10 +1654,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#correctness-results" class="md-nav__link">
+  <a href="#headline-results" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Correctness Results
+        Headline Results
       
     </span>
   </a>
@@ -1648,21 +1665,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#headline-performance-results" class="md-nav__link">
+  <a href="#ablation-results" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Headline Performance Results
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#where-the-speedups-come-from" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Where the Speedups Come From
+        Ablation Results
       
     </span>
   </a>
@@ -1689,34 +1695,6 @@
   
 </nav>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../cuda-agent/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    CUDA Agent
-  
-
-    
-  </span>
-  
-  
-
-      </a>
     </li>
   
 
@@ -2541,17 +2519,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#feature-functions-in-fsr" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Feature Functions in FSR
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#key-design-choices" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2591,10 +2558,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#correctness-results" class="md-nav__link">
+  <a href="#headline-results" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Correctness Results
+        Headline Results
       
     </span>
   </a>
@@ -2602,21 +2569,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#headline-performance-results" class="md-nav__link">
+  <a href="#ablation-results" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Headline Performance Results
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#where-the-speedups-come-from" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Where the Speedups Come From
+        Ablation Results
       
     </span>
   </a>
@@ -2659,31 +2615,31 @@
   
 
 
-<h1 id="cuda-llm-llms-can-write-efficient-cuda-kernels">CUDA-LLM: LLMs Can Write Efficient CUDA Kernels<a class="headerlink" href="#cuda-llm-llms-can-write-efficient-cuda-kernels" title="Permanent link">&para;</a></h1>
+<h1 id="cuda-agent-large-scale-agentic-rl-for-high-performance-cuda-kernel-generation">CUDA Agent: Large-Scale Agentic RL for High-Performance CUDA Kernel Generation<a class="headerlink" href="#cuda-agent-large-scale-agentic-rl-for-high-performance-cuda-kernel-generation" title="Permanent link">&para;</a></h1>
 <div class="paper-meta">
-<p><strong>Authors</strong>: Wentao Chen, Jiace Zhu, Qi Fan, Yehan Ma, An Zou<br />
-<strong>Institution</strong>: Shanghai Jiao Tong University<br />
+<p><strong>Authors</strong>: Weinan Dai, Hanlin Wu, Qiying Yu, Huan-ang Gao, Jiahao Li, Chengquan Jiang, Weiqiang Lou, Yufan Song, Hongli Yu, Jiaze Chen, Wei-Ying Ma, Ya-Qin Zhang, Jingjing Liu, Mingxuan Wang, Xin Liu, Hao Zhou<br />
+<strong>Institution</strong>: ByteDance Seed; Institute for AI Industry Research (AIR), Tsinghua University<br />
 <strong>Conference</strong>: arXiv<br />
-<strong>Year</strong>: 2025<br />
-<strong>Paper Link</strong>: <a href="https://arxiv.org/abs/2506.09092">arXiv:2506.09092</a>  </p>
+<strong>Year</strong>: 2026<br />
+<strong>Paper Link</strong>: <a href="https://arxiv.org/abs/2602.24286">arXiv:2602.24286</a>  </p>
 </div>
 <div class="paper-tags">
-<p><span class="paper-tag">CUDA</span>
-<span class="paper-tag">Performance Reinforcement</span>
-<span class="paper-tag">Kernel Optimization</span></p>
+<p><span class="paper-tag">CUDA Kernel Optimization</span>
+<span class="paper-tag">Agentic Reinforcement Learning</span>
+<span class="paper-tag">KernelBench</span></p>
 </div>
 <h2 id="background">Background<a class="headerlink" href="#background" title="Permanent link">&para;</a></h2>
-<p>CUDA-LLM studies whether an LLM can do more than emit syntactically plausible CUDA kernels. The core challenge is that CUDA programming is hardware-specific, architecture-aware, and strongly performance-sensitive. Correct indexing and functional validity are only the first hurdle; useful kernels also need coalesced memory access, balanced resource usage, and low synchronization overhead on real GPUs.</p>
-<p>The paper addresses this gap with a framework called Feature Search and Reinforcement (FSR). Instead of treating kernel generation as a one-shot prompting problem, FSR uses actual compilation outcomes, functional test results, and runtime latency measurements to iteratively steer the model toward valid and faster CUDA code.</p>
+<p>CUDA kernel optimization remains a bottleneck for production deep learning systems because performance depends on hardware-aware implementation details that are hard to recover from generic code reasoning alone. Existing LLM-based approaches either run training-free refinement loops or fine-tune models with fixed feedback templates, but both lines often plateau below strong compiler baselines such as <code>torch.compile</code>.</p>
+<p>CUDA Agent targets this gap by training an LLM as a long-horizon coding agent in a CUDA-specific tool environment. The central claim is that optimization ability should be learned end-to-end with execution feedback, rather than approximated by one-shot generation or hand-crafted search scripts.</p>
 <p><strong>Key Takeaways</strong></p>
 <ul>
-<li>FSR turns CUDA generation into an iterative repair-and-optimization loop grounded in real execution feedback.</li>
-<li>The framework improves both correctness and performance relative to direct LLM generation.</li>
-<li>On a 20-task benchmark suite, CUDA-LLM solves all tasks on both test GPUs and reports speedups up to 179x over the human-written baseline.</li>
+<li>CUDA Agent combines data scaling, agent-environment design, and RL stability tricks into one training system instead of treating them as separate patches.</li>
+<li>The system explicitly optimizes both correctness and speed with anti-hacking guardrails in the reward pipeline.</li>
+<li>On KernelBench, the model substantially exceeds <code>torch.compile</code> and strong proprietary coding models, especially on hard fused operators.</li>
 </ul>
 <h2 id="methodology">Methodology<a class="headerlink" href="#methodology" title="Permanent link">&para;</a></h2>
-<p>CUDA-LLM is centered on FSR, a loop that evaluates candidate kernels along three dimensions: compilation, functional correctness, and execution performance. The design separates these checks into explicit feature functions so the system can reject invalid kernels early and only spend runtime profiling budget on code that is already executable and correct.</p>
-<p>The workflow begins with an initial prompt that asks the model to produce multiple candidate CUDA kernels. If none of them both compiles and passes the functional validator, FSR refines the prompt using the candidate code, the observed error messages, and the interaction history, then generates a new batch. Once at least one valid kernel appears, the system profiles those kernels on real hardware, keeps the fastest one, and uses that best candidate plus its optimization history as the starting point for the next refinement round.</p>
+<p>CUDA Agent is built as a three-part pipeline: synthesized training tasks, a skill-integrated agent loop, and stable agentic RL. The training dataset (<code>CUDA-Agent-Ops-6K</code>) is designed to expose fusion-heavy operator compositions that require nontrivial kernel-level decisions.</p>
+<p>The interaction loop follows a ReAct-style coding workflow over tools, with explicit profiling, correctness checks, and iterative code revision. RL then optimizes long multi-turn trajectories, with warm-up stages for both actor and critic to prevent early collapse.</p>
 <h3 id="system-overview">System Overview<a class="headerlink" href="#system-overview" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
@@ -2696,71 +2652,74 @@
 </thead>
 <tbody>
 <tr>
-<td>Initial Prompting</td>
-<td>Task description and kernel objective</td>
-<td><code>N</code> candidate CUDA kernels</td>
-<td>Produces the first batch of implementations</td>
+<td>Data Synthesis Pipeline</td>
+<td>Seed operators from <code>torch</code> and <code>transformers</code></td>
+<td><code>CUDA-Agent-Ops-6K</code> (6,000 filtered tasks)</td>
+<td>Builds diverse operator-level RL tasks through composition + filtering</td>
 </tr>
 <tr>
-<td>Compilation Verifier</td>
-<td>Candidate kernel</td>
-<td>Compile pass / error log</td>
-<td>Filters out syntactically or toolchain-invalid kernels</td>
+<td>Skill-Integrated Agent Loop</td>
+<td>Task spec, coding tools, profiling scripts</td>
+<td>Multi-turn optimization trajectories</td>
+<td>Enables analyze-implement-profile-refine behavior under execution feedback</td>
 </tr>
 <tr>
-<td>Function Validator</td>
-<td>Compiled kernel and test inputs</td>
-<td>Correct / incorrect result</td>
-<td>Ensures semantic correctness against reference outputs</td>
+<td>Robust Reward Scheduler</td>
+<td>Correctness results + eager/compile runtime</td>
+<td>Discrete reward in <code>{-1, 1, 2, 3}</code></td>
+<td>Stabilizes optimization signal across tasks with different difficulty</td>
 </tr>
 <tr>
-<td>Performance Profiler</td>
-<td>Valid kernels on target GPU</td>
-<td>Execution latency and speed ranking</td>
-<td>Measures runtime efficiency on real hardware</td>
+<td>Anti-Hacking Evaluation Guardrails</td>
+<td>Candidate kernels and eval scripts</td>
+<td>Trustworthy reward signal</td>
+<td>Prevents reward hacking and fallback-based false speedups</td>
 </tr>
 <tr>
-<td>Prompt Refinement Loop</td>
-<td>Candidate code, errors, history, best kernel</td>
-<td>New refined prompt</td>
-<td>Feeds back failure and performance signals to improve the next batch</td>
+<td>Multi-Stage RL Training</td>
+<td>Single-turn warm-up traces + agent trajectories</td>
+<td>Trained CUDA Agent policy</td>
+<td>Uses RFT actor init + value pretraining + PPO for stable long-horizon RL</td>
 </tr>
 </tbody>
 </table>
-<h3 id="feature-functions-in-fsr">Feature Functions in FSR<a class="headerlink" href="#feature-functions-in-fsr" title="Permanent link">&para;</a></h3>
+<h3 id="key-design-choices">Key Design Choices<a class="headerlink" href="#key-design-choices" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
-<th>Feature Function</th>
-<th>What It Checks</th>
+<th>Design Choice</th>
+<th>Concrete Implementation</th>
 <th>Why It Matters</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Compilation Verifier</td>
-<td>Whether the kernel builds successfully</td>
-<td>Prevents invalid CUDA from entering later stages</td>
+<td>Task-space scaling</td>
+<td>Crawl seed ops, synthesize fused ops, filter by executability/determinism/nontrivial runtime</td>
+<td>Creates enough high-quality tasks for RL without relying on KernelBench training data</td>
 </tr>
 <tr>
-<td>Function Validator</td>
-<td>Whether outputs match reference behavior</td>
-<td>Guards against semantically wrong but compilable kernels</td>
+<td>Agent skills abstraction</td>
+<td>CUDA workflow encoded as skill instructions + tool use</td>
+<td>Teaches iterative optimization behavior, not just final-code emission</td>
 </tr>
 <tr>
-<td>Performance Profiler</td>
-<td>Actual kernel runtime on GPU</td>
-<td>Makes optimization target concrete and hardware-aware</td>
+<td>Milestone reward</td>
+<td>Reward tiers based on correctness and &gt;=5% wins vs eager/compile</td>
+<td>Reduces outlier sensitivity compared with raw speedup ratio reward</td>
+</tr>
+<tr>
+<td>Training stability</td>
+<td>Single-turn RL warm-up, RFT for actor, value pretraining for critic</td>
+<td>Avoids policy collapse in long-context multi-turn optimization</td>
+</tr>
+<tr>
+<td>Secure evaluation</td>
+<td>Script protection, fallback restrictions, multi-input checks, synchronized profiling</td>
+<td>Improves validity of measured speedup and prevents shortcut exploitation</td>
 </tr>
 </tbody>
 </table>
-<h3 id="key-design-choices">Key Design Choices<a class="headerlink" href="#key-design-choices" title="Permanent link">&para;</a></h3>
-<ul>
-<li>Correctness and performance are optimized jointly, but in stages: compile first, then validate outputs, then profile.</li>
-<li>Prompt refinement is driven by concrete evidence such as compiler diagnostics and failing behavior, not only by free-form model self-reflection.</li>
-<li>The benchmark includes varied CUDA tasks, which makes the method less dependent on a single kernel family.</li>
-<li>The paper uses DeepSeek-V3-0324 as the backbone model for code reasoning and generation.</li>
-</ul>
 <h2 id="experiment">Experiment<a class="headerlink" href="#experiment" title="Permanent link">&para;</a></h2>
 <h3 id="experimental-setup">Experimental Setup<a class="headerlink" href="#experimental-setup" title="Permanent link">&para;</a></h3>
 <table>
@@ -2772,128 +2731,118 @@
 </thead>
 <tbody>
 <tr>
-<td>Benchmark Suite</td>
-<td>20 CUDA kernel tasks</td>
+<td>Benchmark</td>
+<td>KernelBench Level 1-3 (250 tasks total)</td>
 </tr>
 <tr>
-<td>Task Sources</td>
-<td>NVIDIA CUDA Samples, LeetGPU, KernelBench</td>
+<td>Baselines</td>
+<td><code>torch</code> eager, <code>torch.compile</code>, Claude Opus 4.5, Gemini 3 Pro, GLM 4.6, Kimi K2</td>
 </tr>
 <tr>
-<td>Evaluation Metrics</td>
-<td>Compilation + function correctness, runtime latency, speedup over baseline</td>
+<td>Main metrics</td>
+<td>Pass Rate, Faster Rate, Geomean Speed-up</td>
 </tr>
 <tr>
-<td>Backbone Model</td>
-<td>DeepSeek-V3-0324</td>
+<td>Base model</td>
+<td>Seed1.6 (23B active / 230B total MoE)</td>
 </tr>
 <tr>
-<td>Edge GPU</td>
-<td>NVIDIA GeForce GTX 1660 SUPER</td>
+<td>RL training scale</td>
+<td>150 steps, batch size 1024</td>
 </tr>
 <tr>
-<td>Server GPU</td>
-<td>NVIDIA GeForce RTX 3090 Ti</td>
+<td>Context / turns</td>
+<td>32,768 (single-turn RL), 131,072 (agentic RL), up to 150 turns train / 200 eval</td>
 </tr>
 <tr>
-<td>Workload Style</td>
-<td>Multiple input sizes per task to test robustness and scalability</td>
+<td>Sandbox infra</td>
+<td>CPU-GPU decoupled execution with 128 NVIDIA H20 GPUs</td>
 </tr>
 </tbody>
 </table>
-<h3 id="correctness-results">Correctness Results<a class="headerlink" href="#correctness-results" title="Permanent link">&para;</a></h3>
+<h3 id="headline-results">Headline Results<a class="headerlink" href="#headline-results" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
-<th>GPU</th>
-<th>Direct LLM Generation</th>
-<th>CUDA-LLM with FSR</th>
+<th>Setting</th>
+<th>Pass Rate</th>
+<th>Faster Rate vs Compile</th>
+<th>Geomean Speed-up vs Compile</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>GTX 1660 SUPER</td>
-<td>Fails several tasks under pass@5 generation</td>
-<td>Passes all 20 tasks</td>
+<td>Overall CUDA Agent</td>
+<td>98.8%</td>
+<td>96.8%</td>
+<td>2.11x</td>
 </tr>
 <tr>
-<td>RTX 3090 Ti</td>
-<td>Fails several tasks under pass@5 generation</td>
-<td>Passes all 20 tasks</td>
+<td>Level 1</td>
+<td>100.0%</td>
+<td>97.0%</td>
+<td>1.87x</td>
+</tr>
+<tr>
+<td>Level 2</td>
+<td>100.0%</td>
+<td>100.0%</td>
+<td>2.80x</td>
+</tr>
+<tr>
+<td>Level 3</td>
+<td>94.0%</td>
+<td>90.0%</td>
+<td>1.52x</td>
 </tr>
 </tbody>
 </table>
-<p>The correctness gap is one of the strongest results in the paper. Direct generation can produce kernels that compile or look plausible but still fail functional testing. FSR closes that gap by repeatedly feeding compilation and validation failures back into the generation loop until a valid kernel is found.</p>
-<h3 id="headline-performance-results">Headline Performance Results<a class="headerlink" href="#headline-performance-results" title="Permanent link">&para;</a></h3>
+<p>Compared with proprietary baselines, CUDA Agent reports materially higher optimization success at the hard end of the benchmark. In Level 3, Faster Rate vs <code>torch.compile</code> is 90.0% for CUDA Agent versus 50.0% (Claude Opus 4.5) and 52.0% (Gemini 3 Pro), matching the paper's statement of about 40-point advantage on the hardest split.</p>
+<h3 id="ablation-results">Ablation Results<a class="headerlink" href="#ablation-results" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
-<th>Result Type</th>
-<th>Reported Gain</th>
+<th>Variant</th>
+<th>Pass Rate</th>
+<th>Faster Rate vs Compile</th>
+<th>Geomean Speed-up vs Compile</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Best observed speedup</td>
-<td>179x</td>
+<td>w/o Agent Loop</td>
+<td>77.1%</td>
+<td>14.1%</td>
+<td>0.69x</td>
 </tr>
 <tr>
-<td>Matrix Transpose on RTX 3090 Ti</td>
-<td>104x</td>
+<td>w/o Robust Reward</td>
+<td>96.8%</td>
+<td>60.4%</td>
+<td>1.25x</td>
 </tr>
 <tr>
-<td>Dot Product on RTX 3090 Ti</td>
-<td>102x</td>
+<td>w/o RFT</td>
+<td>95.6%</td>
+<td>49.8%</td>
+<td>1.05x</td>
 </tr>
 <tr>
-<td>Monte Carlo Integration on RTX 3090 Ti</td>
-<td>179x</td>
+<td>w/o Value Pretraining</td>
+<td>98.6%</td>
+<td>50.9%</td>
+<td>1.00x</td>
 </tr>
 <tr>
-<td>Matrix Copy on GTX 1660 SUPER</td>
-<td>89.5x</td>
-</tr>
-<tr>
-<td>Reduction on GTX 1660 SUPER</td>
-<td>73.3x</td>
-</tr>
-<tr>
-<td>Typical gain range on RTX 3090 Ti</td>
-<td>5.95x to 68.3x</td>
-</tr>
-<tr>
-<td>Typical gain range on GTX 1660 SUPER</td>
-<td>6.06x to 60.0x</td>
+<td>Full CUDA Agent</td>
+<td>98.8%</td>
+<td>96.8%</td>
+<td>2.11x</td>
 </tr>
 </tbody>
 </table>
-<p>The performance gains are uneven across tasks, which is expected for a heterogeneous benchmark. Some kernels benefit from dramatic improvements in memory access structure or warp-level cooperation, while others see more modest but still meaningful acceleration. The paper emphasizes that the framework improves execution efficiency on nearly all tasks rather than only on a handful of cherry-picked cases.</p>
-<h3 id="where-the-speedups-come-from">Where the Speedups Come From<a class="headerlink" href="#where-the-speedups-come-from" title="Permanent link">&para;</a></h3>
-<table>
-<thead>
-<tr>
-<th>Task Pattern</th>
-<th>Optimization Effect</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Matrix Transpose</td>
-<td>Coalesced reads and writes, reduced transactions, loop unrolling, lighter address arithmetic</td>
-</tr>
-<tr>
-<td>Reduction / Dot Product / Monte Carlo Integration</td>
-<td>Better use of warp-level primitives and lower synchronization overhead</td>
-</tr>
-<tr>
-<td>General Memory-Bound Kernels</td>
-<td>Improved memory behavior and reduced wasted accesses</td>
-</tr>
-</tbody>
-</table>
-<p>The qualitative analysis suggests that FSR is not merely repairing syntax. It often pushes the model toward standard high-value CUDA optimizations such as coalescing, warp-level communication, and more efficient thread coordination.</p>
+<p>Ablations show that correctness alone is not enough for strong optimization: removing reward design or multi-stage stabilization preserves high pass rates but sharply reduces speedup quality. Removing the agent loop causes both correctness and performance regression, indicating that multi-turn execution feedback is central to the gains.</p>
 <h2 id="limitation">Limitation<a class="headerlink" href="#limitation" title="Permanent link">&para;</a></h2>
-<p>CUDA-LLM shows that feedback-driven prompting can make LLM-generated CUDA both correct and fast, but the paper still leaves several open constraints around generality and evaluation scope.</p>
 <table>
 <thead>
 <tr>
@@ -2903,27 +2852,24 @@
 </thead>
 <tbody>
 <tr>
-<td>CUDA-specific focus</td>
-<td>The framework is evaluated only on CUDA, so portability beyond NVIDIA-style backends is not demonstrated here</td>
+<td>No comparison with stronger compiler stacks like TVM</td>
+<td>Leaves open whether gains hold against more advanced autotuning compilers</td>
 </tr>
 <tr>
-<td>Benchmark breadth vs. depth</td>
-<td>The study spans 20 tasks, but the paper does not provide the same level of deep per-kernel analysis for every task</td>
+<td>High infrastructure cost (large isolated GPU pool)</td>
+<td>Makes direct reproduction difficult for smaller labs</td>
 </tr>
 <tr>
-<td>Large performance variance across tasks</td>
-<td>Some kernels gain dramatically, while others improve less, which suggests uneven optimization reliability</td>
+<td>Training system complexity</td>
+<td>Data synthesis, secure sandboxing, and multi-stage RL increase engineering burden</td>
 </tr>
 <tr>
-<td>Heavy dependence on runtime evaluation</td>
-<td>Real execution latency is essential to the loop, so optimization cost can grow with search depth and test diversity</td>
-</tr>
-<tr>
-<td>No broader cross-backend comparison</td>
-<td>Unlike later systems that test CUDA, HIP, and other backends, this work does not study transfer across programming ecosystems</td>
+<td>Institution metadata ambiguity in converted source</td>
+<td>The extracted text did not preserve explicit affiliation block, which weakens metadata completeness</td>
 </tr>
 </tbody>
 </table>
+<p>The paper itself explicitly highlights the first two points; the latter two are practical implications from the reported pipeline design and artifact format.</p>
 <hr />
 <p><em>Reading date: 2026-04</em>
 <em>Note status: Completed</em></p>
