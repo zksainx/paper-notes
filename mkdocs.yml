@@ -119,6 +119,7 @@ nav:
       - AscendKernelGen: automated-kernel-generation/ascendkernelgen.md
       - Astra: automated-kernel-generation/astra.md
       - CUDA-LLM: automated-kernel-generation/cuda-llm.md
+      - CUDA Agent: automated-kernel-generation/cuda-agent.md
       - CudaForge: automated-kernel-generation/cudaforge.md
       - cuPilot: automated-kernel-generation/cupilot.md
       - MaxCode: automated-kernel-generation/maxcode.md

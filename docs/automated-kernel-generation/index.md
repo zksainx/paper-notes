@@ -57,6 +57,7 @@ Papers on LLM-driven generation, profiling-guided refinement, and automated opti
 ### Search and Reinforcement Frameworks
 
 - [CUDA-LLM](cuda-llm.md) - Feature Search and Reinforcement loop that iteratively repairs and accelerates CUDA kernels using compilation, correctness, and runtime feedback
+- [CUDA Agent](cuda-agent.md) - Large-scale agentic RL system that combines synthesized operator training data, skill-integrated tool use, and stable multi-stage optimization for high-performance CUDA kernel generation
 - [MaxCode](maxcode.md) - Max-reward RL framework that augments code optimization search with critique, best-so-far reward, and optional reward-to-go guidance
 
 ### Natural-Language Transformation Systems
