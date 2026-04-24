@@ -2835,6 +2835,7 @@
 <p>KernelBlaster uses a Memory-Augmented In-Context Reinforcement Learning (MAIC-RL) framework. Instead of updating model weights through standard RL training, the system treats the prompt context itself as the mutable policy state. That policy state is stored in a Persistent CUDA Knowledge Base containing optimization strategies, associated performance states, and their expected gains.</p>
 <p>The optimization loop works by profiling generated kernels, extracting a performance signature, matching the current kernel to known performance states, retrieving candidate optimizations from memory, and then applying a weighted search over those candidates. After validation and profiling, the observed performance is written back to the Knowledge Base. This creates a continual cross-task improvement loop in which later optimization attempts benefit from prior search traces.</p>
 <h3 id="system-overview">System Overview<a class="headerlink" href="#system-overview" title="Permanent link">&para;</a></h3>
+<p><img alt="KernelBlaster overview" src="../../assets/automated-kernel-generation/kernelblaster.png" /></p>
 <table>
 <thead>
 <tr>
