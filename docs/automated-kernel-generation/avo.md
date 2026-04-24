@@ -36,6 +36,8 @@ The current paper studies a single-lineage continuous evolution setting. That ch
 
 ### System Overview
 
+![AVO overview](../assets/automated-kernel-generation/AVO.png)
+
 | Component | Input | Output | Role |
 | --- | --- | --- | --- |
 | Agentic Variation Operator | Prior lineage, knowledge base, evaluation utilities | New candidate kernel version | Replaces fixed mutation/crossover with an autonomous optimization loop |

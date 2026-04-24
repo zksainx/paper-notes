@@ -118,11 +118,16 @@ nav:
       - AVO: automated-kernel-generation/avo.md
       - AscendKernelGen: automated-kernel-generation/ascendkernelgen.md
       - Astra: automated-kernel-generation/astra.md
+      - AutoTriton: automated-kernel-generation/autotriton.md
+      - CUDA-L1: automated-kernel-generation/cuda-l1.md
+      - CUDA-L2: automated-kernel-generation/cuda-l2.md
       - CUDA-LLM: automated-kernel-generation/cuda-llm.md
       - CUDA Agent: automated-kernel-generation/cuda-agent.md
+      - Kevin: automated-kernel-generation/kevin.md
       - CudaForge: automated-kernel-generation/cudaforge.md
       - cuPilot: automated-kernel-generation/cupilot.md
       - MaxCode: automated-kernel-generation/maxcode.md
+      - QiMeng-Kernel: automated-kernel-generation/qimeng-kernel.md
       - EvoEngineer: automated-kernel-generation/evoengineer.md
       - GEAK: automated-kernel-generation/geak.md
       - DSL-SOL: automated-kernel-generation/dsl-sol.md

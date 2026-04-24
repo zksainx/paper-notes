@@ -56,9 +56,14 @@ Papers on LLM-driven generation, profiling-guided refinement, and automated opti
 
 ### Search and Reinforcement Frameworks
 
+- [AutoTriton](autotriton.md) - Triton-specialized 8B model trained with curated SFT data and GRPO to improve executable kernel generation
+- [CUDA-L1](cuda-l1.md) - Three-stage CUDA optimizer that combines data augmentation, self-training, and contrastive RL with speedup-based rewards
+- [CUDA-L2](cuda-l2.md) - Matmul-specialized RL system that beats cuBLAS and cuBLASLt baselines across 1,000 HGEMM configurations on A100
 - [CUDA-LLM](cuda-llm.md) - Feature Search and Reinforcement loop that iteratively repairs and accelerates CUDA kernels using compilation, correctness, and runtime feedback
 - [CUDA Agent](cuda-agent.md) - Large-scale agentic RL system that combines synthesized operator training data, skill-integrated tool use, and stable multi-stage optimization for high-performance CUDA kernel generation
+- [Kevin](kevin.md) - Multi-turn RL recipe for CUDA kernel generation that learns iterative refinement strategies across execution-feedback loops
 - [MaxCode](maxcode.md) - Max-reward RL framework that augments code optimization search with critique, best-so-far reward, and optional reward-to-go guidance
+- [QiMeng-Kernel](qimeng-kernel.md) - Hierarchical MTMC framework that separates semantic optimization policy from stepwise kernel implementation for robust Triton and GPU kernel generation
 
 ### Natural-Language Transformation Systems
 

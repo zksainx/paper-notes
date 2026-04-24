@@ -35,6 +35,8 @@ Two ideas are central to making the multi-agent design work. Grounded instructio
 
 ### System Overview
 
+![STARK overview](../assets/automated-kernel-generation/stark.png)
+
 | Component | Input | Output | Role |
 | --- | --- | --- | --- |
 | Plan Agent | Selected node, root kernel, local children, leaderboard entries | Grounded optimization instruction | Chooses a promising transformation and anchors it to code spans |

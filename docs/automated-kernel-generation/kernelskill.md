@@ -37,6 +37,8 @@ The key architectural contribution is the Memory Bank. Long-term memory stores r
 
 ### System Overview
 
+![KernelSkill overview](../assets/automated-kernel-generation/kernelskill.png)
+
 | Agent / Module | Input | Output | Role |
 | --- | --- | --- | --- |
 | Generator | PyTorch reference program | Initial CUDA implementation | Produces diverse correct starting kernels without optimizing for speed |

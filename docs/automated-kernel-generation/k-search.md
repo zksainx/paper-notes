@@ -36,6 +36,8 @@ The search state is maintained as an explicit tree with Closed nodes for actions
 
 ### System Overview
 
+![K-Search overview](../assets/automated-kernel-generation/k-search.png)
+
 | Component | Input | Output | Role |
 | --- | --- | --- | --- |
 | World Model | Search state, action history, execution feedback | Updated search tree | Maintains beliefs about promising optimization directions |

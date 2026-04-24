@@ -36,6 +36,8 @@ The main technical challenge is that the action space grows over time. Each acti
 
 ### System Overview
 
+![KernelBand overview](../assets/automated-kernel-generation/kernelband.png)
+
 | Component | Input | Output | Role |
 | --- | --- | --- | --- |
 | Runtime Behavior Characterization | Candidate kernel execution | Behavioral vector and hardware signature | Encodes bottlenecks and execution traits for downstream decision making |
