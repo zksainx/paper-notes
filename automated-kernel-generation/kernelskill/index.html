@@ -1345,6 +1345,16 @@
       
         
       
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
     
     
     
@@ -1493,6 +1503,90 @@
   
   
     <li class="md-nav__item">
+      <a href="../autotriton/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AutoTriton
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cuda-l1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CUDA-L1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cuda-l2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CUDA-L2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../cuda-llm/" class="md-nav__link">
         
   
@@ -1529,6 +1623,34 @@
     
   
     CUDA Agent
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kevin/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Kevin
   
 
     
@@ -1613,6 +1735,34 @@
     
   
     MaxCode
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../qimeng-kernel/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QiMeng-Kernel
   
 
     
@@ -2686,6 +2836,7 @@
 <p>KernelSkill is a closed-loop multi-agent optimizer. A Generator first produces a correct but not necessarily fast CUDA implementation from a PyTorch reference. A Reviewer then compiles, verifies, and profiles the kernel. Once correctness is established, a Feature Extractor derives static code features, while profiling tools contribute runtime evidence. These signals are used to retrieve candidate optimization methods from long-term memory. A Planner selects and sequences methods, and the Optimizer or Repairer applies them. If compilation or correctness fails, a Diagnoser reasons over the failure and the system iterates again.</p>
 <p>The key architectural contribution is the Memory Bank. Long-term memory stores reusable expert knowledge in a structured, auditable form: normalized profiling fields, derived features, bottleneck rules, method-decision tables, and method-specific implementation guidance. Short-term memory tracks what happened in the current task, including failed repair attempts and already-tried optimization methods, so the system avoids oscillating between the same bad edits.</p>
 <h3 id="system-overview">System Overview<a class="headerlink" href="#system-overview" title="Permanent link">&para;</a></h3>
+<p><img alt="KernelSkill overview" src="../../assets/automated-kernel-generation/kernelskill.png" /></p>
 <table>
 <thead>
 <tr>

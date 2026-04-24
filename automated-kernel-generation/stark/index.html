@@ -1345,6 +1345,16 @@
       
         
       
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
     
     
     
@@ -1493,6 +1503,90 @@
   
   
     <li class="md-nav__item">
+      <a href="../autotriton/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AutoTriton
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cuda-l1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CUDA-L1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cuda-l2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CUDA-L2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../cuda-llm/" class="md-nav__link">
         
   
@@ -1529,6 +1623,34 @@
     
   
     CUDA Agent
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kevin/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Kevin
   
 
     
@@ -1613,6 +1735,34 @@
     
   
     MaxCode
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../qimeng-kernel/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QiMeng-Kernel
   
 
     
@@ -2684,6 +2834,7 @@
 <p>STARK organizes optimization around a search tree whose nodes are candidate kernels plus their evaluation outcomes. Each step selects one prior node to expand, constructs agent-specific context from local history and global leaders, proposes a targeted optimization, materializes it into code, evaluates correctness and runtime, and then inserts the result back into the tree. This turns kernel optimization into a feedback-driven search loop rather than a sequence of isolated retries.</p>
 <p>Two ideas are central to making the multi-agent design work. Grounded instruction forces the planner to annotate the source with explicit edit spans such as <code>&lt;&lt;&lt;IMPROVE BEGINS&gt;&gt;&gt; ... &lt;&lt;&lt;IMPROVE ENDS&gt;&gt;&gt;</code>, so the code agent is not asked to reinterpret a vague natural-language plan. Dynamic context windows then expose different slices of history to different roles: the planner sees the current node, its children, and top global candidates; the coder also sees closely related cousin branches; the debugger focuses on sibling failures and fixes. The result is a division of labor that is both role-specialized and history-aware.</p>
 <h3 id="system-overview">System Overview<a class="headerlink" href="#system-overview" title="Permanent link">&para;</a></h3>
+<p><img alt="STARK overview" src="../../assets/automated-kernel-generation/stark.png" /></p>
 <table>
 <thead>
 <tr>

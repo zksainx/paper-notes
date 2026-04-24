@@ -1345,6 +1345,16 @@
       
         
       
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
     
     
     
@@ -1493,6 +1503,90 @@
   
   
     <li class="md-nav__item">
+      <a href="../autotriton/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AutoTriton
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cuda-l1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CUDA-L1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cuda-l2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CUDA-L2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../cuda-llm/" class="md-nav__link">
         
   
@@ -1529,6 +1623,34 @@
     
   
     CUDA Agent
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kevin/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Kevin
   
 
     
@@ -1613,6 +1735,34 @@
     
   
     MaxCode
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../qimeng-kernel/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QiMeng-Kernel
   
 
     
@@ -2685,6 +2835,7 @@
 <p>K-Search starts from the observation that many failed search trajectories are not bad because the high-level idea is wrong, but because a particular low-level instantiation is temporarily buggy or incomplete. Standard heuristic evolutionary search tends to discard those promising ideas too early. K-Search addresses this by separating the optimization plan from the implementation: the world model reasons over abstract optimization intents, while a separate code-generation policy performs local refinement until it stalls.</p>
 <p>The search state is maintained as an explicit tree with Closed nodes for actions that have been explored and Open nodes for pending optimization hypotheses. Each open node stores a parent program, a natural-language optimization intent, and a priority score. At each iteration, the system selects the highest-priority frontier action, samples implementations locally until stagnation, evaluates them, and then updates the world model so it can insert new actions, revise priorities, or prune dead branches.</p>
 <h3 id="system-overview">System Overview<a class="headerlink" href="#system-overview" title="Permanent link">&para;</a></h3>
+<p><img alt="K-Search overview" src="../../assets/automated-kernel-generation/k-search.png" /></p>
 <table>
 <thead>
 <tr>

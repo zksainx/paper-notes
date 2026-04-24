@@ -1345,6 +1345,16 @@
       
         
       
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
     
     
     
@@ -1673,6 +1683,90 @@
   
   
     <li class="md-nav__item">
+      <a href="../autotriton/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AutoTriton
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cuda-l1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CUDA-L1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cuda-l2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CUDA-L2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../cuda-llm/" class="md-nav__link">
         
   
@@ -1709,6 +1803,34 @@
     
   
     CUDA Agent
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kevin/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Kevin
   
 
     
@@ -1793,6 +1915,34 @@
     
   
     MaxCode
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../qimeng-kernel/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QiMeng-Kernel
   
 
     
@@ -2685,6 +2835,7 @@
 <p>AVO replaces the usual <code>Sample -&gt; Generate</code> variation pipeline with a single autonomous agent invocation. Instead of handing a selected parent to an LLM and taking its first answer as the candidate, AVO gives the agent access to the full lineage of prior kernels, a domain-specific knowledge base, and the evaluation function. Within one variation step, the agent can compare previous versions, inspect profiler outputs, consult hardware documentation, attempt edits, diagnose failures, and only commit a new version once it passes correctness checks and matches or improves the best score so far.</p>
 <p>The current paper studies a single-lineage continuous evolution setting. That choice isolates the effect of the agentic variation operator itself rather than mixing it with archive or island management choices. Over a seven-day run, the agent autonomously maintains progress through self-supervision: when it stalls or enters unproductive loops, a supervisory mechanism reviews the trajectory and redirects exploration toward new candidate directions.</p>
 <h3 id="system-overview">System Overview<a class="headerlink" href="#system-overview" title="Permanent link">&para;</a></h3>
+<p><img alt="AVO overview" src="../../assets/automated-kernel-generation/AVO.png" /></p>
 <table>
 <thead>
 <tr>
