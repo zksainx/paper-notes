@@ -36,6 +36,8 @@ The optimization loop works by profiling generated kernels, extracting a perform
 
 ### System Overview
 
+![KernelBlaster overview](../assets/automated-kernel-generation/kernelblaster.png)
+
 | Component | Input | Output | Role |
 | --- | --- | --- | --- |
 | State Extractor | Runtime profiling information and code | Performance state signature | Converts low-level execution behavior into retrievable textual state |
