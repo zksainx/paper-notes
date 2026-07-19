@@ -149,6 +149,14 @@ nav:
   - Cluster Performance Modeling:
       - cluster-performance-modeling/index.md
       - PRISM: cluster-performance-modeling/prism.md
+  - Speculative Decoding:
+      - speculative-decoding/index.md
+      - EAGLE: speculative-decoding/eagle.md
+      - EAGLE-2: speculative-decoding/eagle-2.md
+      - EAGLE-3: speculative-decoding/eagle-3.md
+      - DFlash: speculative-decoding/dflash.md
+      - Domino: speculative-decoding/domino.md
+      - DSpark: speculative-decoding/dspark.md
   - About: about.md
 
 # Copyright
