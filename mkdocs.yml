@@ -157,6 +157,13 @@ nav:
       - DFlash: speculative-decoding/dflash.md
       - Domino: speculative-decoding/domino.md
       - DSpark: speculative-decoding/dspark.md
+  - MTP:
+      - mtp/index.md
+      - Better & Faster LLMs via Multi-token Prediction: mtp/better-faster-multi-token-prediction.md
+      - DeepSeek-V3 Technical Report: mtp/deepseek-v3.md
+      - How Transformers Learn to Plan via MTP: mtp/how-transformers-learn-to-plan.md
+      - Your LLM Knows the Future: mtp/your-llm-knows-the-future.md
+      - Medusa: mtp/medusa.md
   - About: about.md
 
 # Copyright
