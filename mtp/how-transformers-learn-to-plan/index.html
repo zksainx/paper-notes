@@ -12,29 +12,31 @@
         <meta name="author" content="zksainx">
       
       
-        <link rel="canonical" href="https://zksainx.github.io/paper-notes/">
+        <link rel="canonical" href="https://zksainx.github.io/paper-notes/mtp/how-transformers-learn-to-plan/">
       
       
+        <link rel="prev" href="../deepseek-v3/">
       
-        <link rel="next" href="simulation/">
+      
+        <link rel="next" href="../your-llm-knows-the-future/">
       
       
         
       
       
-      <link rel="icon" href="assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
-        <title>Paper Notes</title>
+        <title>How Transformers Learn to Plan via MTP - Paper Notes</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.ec1eaa64.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -53,9 +55,9 @@
       
     
     
-      <link rel="stylesheet" href="stylesheets/extra.css">
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -80,7 +82,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#how-transformers-learn-to-plan-via-multi-token-prediction" class="md-skip">
           跳转至
         </a>
       
@@ -94,7 +96,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="页眉">
-    <a href="." title="Paper Notes" class="md-header__button md-logo" aria-label="Paper Notes" data-md-component="logo">
+    <a href="../.." title="Paper Notes" class="md-header__button md-logo" aria-label="Paper Notes" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -114,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Home
+              How Transformers Learn to Plan via MTP
             
           </span>
         </div>
@@ -230,11 +232,9 @@
   
   
   
-    
   
-  
-    <li class="md-tabs__item md-tabs__item--active">
-      <a href="." class="md-tabs__link">
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
         
   
   
@@ -255,7 +255,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="simulation/" class="md-tabs__link">
+        <a href="../../simulation/" class="md-tabs__link">
           
   
   
@@ -277,7 +277,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="tensor-program-optimization/" class="md-tabs__link">
+        <a href="../../tensor-program-optimization/" class="md-tabs__link">
           
   
   
@@ -299,7 +299,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="automated-kernel-generation/" class="md-tabs__link">
+        <a href="../../automated-kernel-generation/" class="md-tabs__link">
           
   
   
@@ -321,7 +321,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="intra-gpu-multiplexing/" class="md-tabs__link">
+        <a href="../../intra-gpu-multiplexing/" class="md-tabs__link">
           
   
   
@@ -343,7 +343,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="cluster-performance-modeling/" class="md-tabs__link">
+        <a href="../../cluster-performance-modeling/" class="md-tabs__link">
           
   
   
@@ -365,7 +365,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="speculative-decoding/" class="md-tabs__link">
+        <a href="../../speculative-decoding/" class="md-tabs__link">
           
   
   
@@ -383,11 +383,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="mtp/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
           
   
   
@@ -407,7 +409,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="about/" class="md-tabs__link">
+      <a href="../../about/" class="md-tabs__link">
         
   
   
@@ -442,7 +444,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="Paper Notes" class="md-nav__button md-logo" aria-label="Paper Notes" data-md-component="logo">
+    <a href="../.." title="Paper Notes" class="md-nav__button md-logo" aria-label="Paper Notes" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -469,37 +471,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Home
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="." class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
         
   
   
@@ -515,164 +490,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        🎯 网站简介
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        📚 内容分类
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="📚 内容分类">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#simulation" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Simulation
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#tensor-program-optimization" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Tensor Program Optimization
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#automated-kernel-generation" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Automated Kernel Generation
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#intra-gpu-spatial-multiplexing" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Intra-GPU Spatial Multiplexing
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#cluster-performance-modeling" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Cluster Performance Modeling
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#speculative-decoding" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Speculative Decoding
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#mtp" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        MTP
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        🔍 如何使用
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        📝 笔记模板
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        🚀 更新日志
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -735,7 +552,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="simulation/" class="md-nav__link ">
+            <a href="../../simulation/" class="md-nav__link ">
               
   
   
@@ -779,7 +596,7 @@
   
   
     <li class="md-nav__item">
-      <a href="simulation/amali/" class="md-nav__link">
+      <a href="../../simulation/amali/" class="md-nav__link">
         
   
   
@@ -807,7 +624,7 @@
   
   
     <li class="md-nav__item">
-      <a href="simulation/apex/" class="md-nav__link">
+      <a href="../../simulation/apex/" class="md-nav__link">
         
   
   
@@ -835,7 +652,7 @@
   
   
     <li class="md-nav__item">
-      <a href="simulation/astra-sim/" class="md-nav__link">
+      <a href="../../simulation/astra-sim/" class="md-nav__link">
         
   
   
@@ -863,7 +680,7 @@
   
   
     <li class="md-nav__item">
-      <a href="simulation/astra-sim-2/" class="md-nav__link">
+      <a href="../../simulation/astra-sim-2/" class="md-nav__link">
         
   
   
@@ -891,7 +708,7 @@
   
   
     <li class="md-nav__item">
-      <a href="simulation/chakra/" class="md-nav__link">
+      <a href="../../simulation/chakra/" class="md-nav__link">
         
   
   
@@ -919,7 +736,7 @@
   
   
     <li class="md-nav__item">
-      <a href="simulation/frontier/" class="md-nav__link">
+      <a href="../../simulation/frontier/" class="md-nav__link">
         
   
   
@@ -947,7 +764,7 @@
   
   
     <li class="md-nav__item">
-      <a href="simulation/llmcompass/" class="md-nav__link">
+      <a href="../../simulation/llmcompass/" class="md-nav__link">
         
   
   
@@ -975,7 +792,7 @@
   
   
     <li class="md-nav__item">
-      <a href="simulation/linear/" class="md-nav__link">
+      <a href="../../simulation/linear/" class="md-nav__link">
         
   
   
@@ -1003,7 +820,7 @@
   
   
     <li class="md-nav__item">
-      <a href="simulation/mystique/" class="md-nav__link">
+      <a href="../../simulation/mystique/" class="md-nav__link">
         
   
   
@@ -1031,7 +848,7 @@
   
   
     <li class="md-nav__item">
-      <a href="simulation/neusight/" class="md-nav__link">
+      <a href="../../simulation/neusight/" class="md-nav__link">
         
   
   
@@ -1059,7 +876,7 @@
   
   
     <li class="md-nav__item">
-      <a href="simulation/simai/" class="md-nav__link">
+      <a href="../../simulation/simai/" class="md-nav__link">
         
   
   
@@ -1087,7 +904,7 @@
   
   
     <li class="md-nav__item">
-      <a href="simulation/vidur/" class="md-nav__link">
+      <a href="../../simulation/vidur/" class="md-nav__link">
         
   
   
@@ -1115,7 +932,7 @@
   
   
     <li class="md-nav__item">
-      <a href="simulation/vtrain/" class="md-nav__link">
+      <a href="../../simulation/vtrain/" class="md-nav__link">
         
   
   
@@ -1195,7 +1012,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="tensor-program-optimization/" class="md-nav__link ">
+            <a href="../../tensor-program-optimization/" class="md-nav__link ">
               
   
   
@@ -1239,7 +1056,7 @@
   
   
     <li class="md-nav__item">
-      <a href="tensor-program-optimization/learning-optimize-tensor-programs/" class="md-nav__link">
+      <a href="../../tensor-program-optimization/learning-optimize-tensor-programs/" class="md-nav__link">
         
   
   
@@ -1267,7 +1084,7 @@
   
   
     <li class="md-nav__item">
-      <a href="tensor-program-optimization/ansor/" class="md-nav__link">
+      <a href="../../tensor-program-optimization/ansor/" class="md-nav__link">
         
   
   
@@ -1295,7 +1112,7 @@
   
   
     <li class="md-nav__item">
-      <a href="tensor-program-optimization/roller/" class="md-nav__link">
+      <a href="../../tensor-program-optimization/roller/" class="md-nav__link">
         
   
   
@@ -1323,7 +1140,7 @@
   
   
     <li class="md-nav__item">
-      <a href="tensor-program-optimization/learned-performance-model-tpu/" class="md-nav__link">
+      <a href="../../tensor-program-optimization/learned-performance-model-tpu/" class="md-nav__link">
         
   
   
@@ -1351,7 +1168,7 @@
   
   
     <li class="md-nav__item">
-      <a href="tensor-program-optimization/metatune/" class="md-nav__link">
+      <a href="../../tensor-program-optimization/metatune/" class="md-nav__link">
         
   
   
@@ -1379,7 +1196,7 @@
   
   
     <li class="md-nav__item">
-      <a href="tensor-program-optimization/unicox/" class="md-nav__link">
+      <a href="../../tensor-program-optimization/unicox/" class="md-nav__link">
         
   
   
@@ -1407,7 +1224,7 @@
   
   
     <li class="md-nav__item">
-      <a href="tensor-program-optimization/tritonblas/" class="md-nav__link">
+      <a href="../../tensor-program-optimization/tritonblas/" class="md-nav__link">
         
   
   
@@ -1435,7 +1252,7 @@
   
   
     <li class="md-nav__item">
-      <a href="tensor-program-optimization/gpu-performance-portability/" class="md-nav__link">
+      <a href="../../tensor-program-optimization/gpu-performance-portability/" class="md-nav__link">
         
   
   
@@ -1463,7 +1280,7 @@
   
   
     <li class="md-nav__item">
-      <a href="tensor-program-optimization/anatomy-triton-attention/" class="md-nav__link">
+      <a href="../../tensor-program-optimization/anatomy-triton-attention/" class="md-nav__link">
         
   
   
@@ -1491,7 +1308,7 @@
   
   
     <li class="md-nav__item">
-      <a href="tensor-program-optimization/tritonbench/" class="md-nav__link">
+      <a href="../../tensor-program-optimization/tritonbench/" class="md-nav__link">
         
   
   
@@ -1599,7 +1416,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="automated-kernel-generation/" class="md-nav__link ">
+            <a href="../../automated-kernel-generation/" class="md-nav__link ">
               
   
   
@@ -1643,7 +1460,7 @@
   
   
     <li class="md-nav__item">
-      <a href="automated-kernel-generation/avo/" class="md-nav__link">
+      <a href="../../automated-kernel-generation/avo/" class="md-nav__link">
         
   
   
@@ -1671,7 +1488,7 @@
   
   
     <li class="md-nav__item">
-      <a href="automated-kernel-generation/ascendkernelgen/" class="md-nav__link">
+      <a href="../../automated-kernel-generation/ascendkernelgen/" class="md-nav__link">
         
   
   
@@ -1699,7 +1516,7 @@
   
   
     <li class="md-nav__item">
-      <a href="automated-kernel-generation/astra/" class="md-nav__link">
+      <a href="../../automated-kernel-generation/astra/" class="md-nav__link">
         
   
   
@@ -1727,7 +1544,7 @@
   
   
     <li class="md-nav__item">
-      <a href="automated-kernel-generation/autotriton/" class="md-nav__link">
+      <a href="../../automated-kernel-generation/autotriton/" class="md-nav__link">
         
   
   
@@ -1755,7 +1572,7 @@
   
   
     <li class="md-nav__item">
-      <a href="automated-kernel-generation/cuda-l1/" class="md-nav__link">
+      <a href="../../automated-kernel-generation/cuda-l1/" class="md-nav__link">
         
   
   
@@ -1783,7 +1600,7 @@
   
   
     <li class="md-nav__item">
-      <a href="automated-kernel-generation/cuda-l2/" class="md-nav__link">
+      <a href="../../automated-kernel-generation/cuda-l2/" class="md-nav__link">
         
   
   
@@ -1811,7 +1628,7 @@
   
   
     <li class="md-nav__item">
-      <a href="automated-kernel-generation/cuda-llm/" class="md-nav__link">
+      <a href="../../automated-kernel-generation/cuda-llm/" class="md-nav__link">
         
   
   
@@ -1839,7 +1656,7 @@
   
   
     <li class="md-nav__item">
-      <a href="automated-kernel-generation/cuda-agent/" class="md-nav__link">
+      <a href="../../automated-kernel-generation/cuda-agent/" class="md-nav__link">
         
   
   
@@ -1867,7 +1684,7 @@
   
   
     <li class="md-nav__item">
-      <a href="automated-kernel-generation/kevin/" class="md-nav__link">
+      <a href="../../automated-kernel-generation/kevin/" class="md-nav__link">
         
   
   
@@ -1895,7 +1712,7 @@
   
   
     <li class="md-nav__item">
-      <a href="automated-kernel-generation/cudaforge/" class="md-nav__link">
+      <a href="../../automated-kernel-generation/cudaforge/" class="md-nav__link">
         
   
   
@@ -1923,7 +1740,7 @@
   
   
     <li class="md-nav__item">
-      <a href="automated-kernel-generation/cupilot/" class="md-nav__link">
+      <a href="../../automated-kernel-generation/cupilot/" class="md-nav__link">
         
   
   
@@ -1951,7 +1768,7 @@
   
   
     <li class="md-nav__item">
-      <a href="automated-kernel-generation/maxcode/" class="md-nav__link">
+      <a href="../../automated-kernel-generation/maxcode/" class="md-nav__link">
         
   
   
@@ -1979,7 +1796,7 @@
   
   
     <li class="md-nav__item">
-      <a href="automated-kernel-generation/qimeng-kernel/" class="md-nav__link">
+      <a href="../../automated-kernel-generation/qimeng-kernel/" class="md-nav__link">
         
   
   
@@ -2007,7 +1824,7 @@
   
   
     <li class="md-nav__item">
-      <a href="automated-kernel-generation/evoengineer/" class="md-nav__link">
+      <a href="../../automated-kernel-generation/evoengineer/" class="md-nav__link">
         
   
   
@@ -2035,7 +1852,7 @@
   
   
     <li class="md-nav__item">
-      <a href="automated-kernel-generation/geak/" class="md-nav__link">
+      <a href="../../automated-kernel-generation/geak/" class="md-nav__link">
         
   
   
@@ -2063,7 +1880,7 @@
   
   
     <li class="md-nav__item">
-      <a href="automated-kernel-generation/dsl-sol/" class="md-nav__link">
+      <a href="../../automated-kernel-generation/dsl-sol/" class="md-nav__link">
         
   
   
@@ -2091,7 +1908,7 @@
   
   
     <li class="md-nav__item">
-      <a href="automated-kernel-generation/k-search/" class="md-nav__link">
+      <a href="../../automated-kernel-generation/k-search/" class="md-nav__link">
         
   
   
@@ -2119,7 +1936,7 @@
   
   
     <li class="md-nav__item">
-      <a href="automated-kernel-generation/kernelband/" class="md-nav__link">
+      <a href="../../automated-kernel-generation/kernelband/" class="md-nav__link">
         
   
   
@@ -2147,7 +1964,7 @@
   
   
     <li class="md-nav__item">
-      <a href="automated-kernel-generation/kernelblaster/" class="md-nav__link">
+      <a href="../../automated-kernel-generation/kernelblaster/" class="md-nav__link">
         
   
   
@@ -2175,7 +1992,7 @@
   
   
     <li class="md-nav__item">
-      <a href="automated-kernel-generation/kernelevolve/" class="md-nav__link">
+      <a href="../../automated-kernel-generation/kernelevolve/" class="md-nav__link">
         
   
   
@@ -2203,7 +2020,7 @@
   
   
     <li class="md-nav__item">
-      <a href="automated-kernel-generation/kernelskill/" class="md-nav__link">
+      <a href="../../automated-kernel-generation/kernelskill/" class="md-nav__link">
         
   
   
@@ -2231,7 +2048,7 @@
   
   
     <li class="md-nav__item">
-      <a href="automated-kernel-generation/peak/" class="md-nav__link">
+      <a href="../../automated-kernel-generation/peak/" class="md-nav__link">
         
   
   
@@ -2259,7 +2076,7 @@
   
   
     <li class="md-nav__item">
-      <a href="automated-kernel-generation/stark/" class="md-nav__link">
+      <a href="../../automated-kernel-generation/stark/" class="md-nav__link">
         
   
   
@@ -2287,7 +2104,7 @@
   
   
     <li class="md-nav__item">
-      <a href="automated-kernel-generation/tritonforge/" class="md-nav__link">
+      <a href="../../automated-kernel-generation/tritonforge/" class="md-nav__link">
         
   
   
@@ -2357,7 +2174,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="intra-gpu-multiplexing/" class="md-nav__link ">
+            <a href="../../intra-gpu-multiplexing/" class="md-nav__link ">
               
   
   
@@ -2401,7 +2218,7 @@
   
   
     <li class="md-nav__item">
-      <a href="intra-gpu-multiplexing/nanoflow/" class="md-nav__link">
+      <a href="../../intra-gpu-multiplexing/nanoflow/" class="md-nav__link">
         
   
   
@@ -2429,7 +2246,7 @@
   
   
     <li class="md-nav__item">
-      <a href="intra-gpu-multiplexing/bullet/" class="md-nav__link">
+      <a href="../../intra-gpu-multiplexing/bullet/" class="md-nav__link">
         
   
   
@@ -2457,7 +2274,7 @@
   
   
     <li class="md-nav__item">
-      <a href="intra-gpu-multiplexing/nexus/" class="md-nav__link">
+      <a href="../../intra-gpu-multiplexing/nexus/" class="md-nav__link">
         
   
   
@@ -2485,7 +2302,7 @@
   
   
     <li class="md-nav__item">
-      <a href="intra-gpu-multiplexing/pd-multiplex/" class="md-nav__link">
+      <a href="../../intra-gpu-multiplexing/pd-multiplex/" class="md-nav__link">
         
   
   
@@ -2513,7 +2330,7 @@
   
   
     <li class="md-nav__item">
-      <a href="intra-gpu-multiplexing/duetserve/" class="md-nav__link">
+      <a href="../../intra-gpu-multiplexing/duetserve/" class="md-nav__link">
         
   
   
@@ -2575,7 +2392,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="cluster-performance-modeling/" class="md-nav__link ">
+            <a href="../../cluster-performance-modeling/" class="md-nav__link ">
               
   
   
@@ -2619,7 +2436,7 @@
   
   
     <li class="md-nav__item">
-      <a href="cluster-performance-modeling/prism/" class="md-nav__link">
+      <a href="../../cluster-performance-modeling/prism/" class="md-nav__link">
         
   
   
@@ -2691,7 +2508,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="speculative-decoding/" class="md-nav__link ">
+            <a href="../../speculative-decoding/" class="md-nav__link ">
               
   
   
@@ -2735,7 +2552,7 @@
   
   
     <li class="md-nav__item">
-      <a href="speculative-decoding/eagle/" class="md-nav__link">
+      <a href="../../speculative-decoding/eagle/" class="md-nav__link">
         
   
   
@@ -2763,7 +2580,7 @@
   
   
     <li class="md-nav__item">
-      <a href="speculative-decoding/eagle-2/" class="md-nav__link">
+      <a href="../../speculative-decoding/eagle-2/" class="md-nav__link">
         
   
   
@@ -2791,7 +2608,7 @@
   
   
     <li class="md-nav__item">
-      <a href="speculative-decoding/eagle-3/" class="md-nav__link">
+      <a href="../../speculative-decoding/eagle-3/" class="md-nav__link">
         
   
   
@@ -2819,7 +2636,7 @@
   
   
     <li class="md-nav__item">
-      <a href="speculative-decoding/dflash/" class="md-nav__link">
+      <a href="../../speculative-decoding/dflash/" class="md-nav__link">
         
   
   
@@ -2847,7 +2664,7 @@
   
   
     <li class="md-nav__item">
-      <a href="speculative-decoding/domino/" class="md-nav__link">
+      <a href="../../speculative-decoding/domino/" class="md-nav__link">
         
   
   
@@ -2875,7 +2692,7 @@
   
   
     <li class="md-nav__item">
-      <a href="speculative-decoding/dspark/" class="md-nav__link">
+      <a href="../../speculative-decoding/dspark/" class="md-nav__link">
         
   
   
@@ -2907,6 +2724,8 @@
       
   
   
+    
+  
   
   
     
@@ -2930,22 +2749,23 @@
     
     
       
+        
+        
+      
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" checked>
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="mtp/" class="md-nav__link ">
+            <a href="../" class="md-nav__link ">
               
   
   
@@ -2963,13 +2783,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_8" id="__nav_8_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_8" id="__nav_8_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_8">
             <span class="md-nav__icon md-icon"></span>
             
@@ -2989,7 +2809,7 @@
   
   
     <li class="md-nav__item">
-      <a href="mtp/better-faster-multi-token-prediction/" class="md-nav__link">
+      <a href="../better-faster-multi-token-prediction/" class="md-nav__link">
         
   
   
@@ -3017,7 +2837,7 @@
   
   
     <li class="md-nav__item">
-      <a href="mtp/deepseek-v3/" class="md-nav__link">
+      <a href="../deepseek-v3/" class="md-nav__link">
         
   
   
@@ -3042,10 +2862,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="mtp/how-transformers-learn-to-plan/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    How Transformers Learn to Plan via MTP
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -3061,6 +2908,126 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#background" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Background
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#methodology" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Methodology
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Methodology">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#system-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        System Overview
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-design-choices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Design Choices
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#experiment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Experiment
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Experiment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#experimental-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Experimental Setup
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#headline-results" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Headline Results
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limitation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Limitation
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -3073,7 +3040,7 @@
   
   
     <li class="md-nav__item">
-      <a href="mtp/your-llm-knows-the-future/" class="md-nav__link">
+      <a href="../your-llm-knows-the-future/" class="md-nav__link">
         
   
   
@@ -3101,7 +3068,7 @@
   
   
     <li class="md-nav__item">
-      <a href="mtp/medusa/" class="md-nav__link">
+      <a href="../medusa/" class="md-nav__link">
         
   
   
@@ -3136,7 +3103,7 @@
   
   
     <li class="md-nav__item">
-      <a href="about/" class="md-nav__link">
+      <a href="../../about/" class="md-nav__link">
         
   
   
@@ -3183,10 +3150,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#background" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🎯 网站简介
+        Background
       
     </span>
   </a>
@@ -3194,22 +3161,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#methodology" class="md-nav__link">
     <span class="md-ellipsis">
       
-        📚 内容分类
+        Methodology
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="📚 内容分类">
+    <nav class="md-nav" aria-label="Methodology">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#simulation" class="md-nav__link">
+  <a href="#system-overview" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Simulation
+        System Overview
       
     </span>
   </a>
@@ -3217,65 +3184,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#tensor-program-optimization" class="md-nav__link">
+  <a href="#key-design-choices" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Tensor Program Optimization
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#automated-kernel-generation" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Automated Kernel Generation
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#intra-gpu-spatial-multiplexing" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Intra-GPU Spatial Multiplexing
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#cluster-performance-modeling" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Cluster Performance Modeling
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#speculative-decoding" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Speculative Decoding
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#mtp" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        MTP
+        Key Design Choices
       
     </span>
   </a>
@@ -3288,32 +3200,49 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#experiment" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🔍 如何使用
+        Experiment
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Experiment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#experimental-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Experimental Setup
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#headline-results" class="md-nav__link">
     <span class="md-ellipsis">
       
-        📝 笔记模板
+        Headline Results
       
     </span>
   </a>
   
 </li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
+  <a href="#limitation" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🚀 更新日志
+        Limitation
       
     </span>
   </a>
@@ -3340,48 +3269,176 @@
   
 
 
-<h1 id="_1">欢迎来到论文笔记<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
-<p>这是一个用于记录和整理论文阅读笔记的个人知识库。</p>
-<h2 id="_2">🎯 网站简介<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<p>本站点记录了我在人工智能、机器学习等领域的论文阅读笔记。每篇笔记包含论文的核心思想、方法总结、实验结果分析以及个人思考。</p>
-<p>大多数性能导向的系统研究可以归纳为“固定资源下的再分配优化”，并伴随着清晰的 trade-off。</p>
-<p>如果系统研究关注的是“资源空间中的最优分配”，那么算法研究关注的是“函数空间中的最优构造”。</p>
-<h2 id="_3">📚 内容分类<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
-<p>网站按研究领域组织论文笔记：</p>
-<h3 id="simulation"><a href="simulation/">Simulation</a><a class="headerlink" href="#simulation" title="Permanent link">&para;</a></h3>
-<p>Papers on performance modeling, simulation frameworks, and analytical models for ML systems.</p>
-<h3 id="tensor-program-optimization"><a href="tensor-program-optimization/">Tensor Program Optimization</a><a class="headerlink" href="#tensor-program-optimization" title="Permanent link">&para;</a></h3>
-<p>Papers on automated tensor program optimization through compiler techniques, ML-guided search, and performance modeling for deep learning workloads.</p>
-<h3 id="automated-kernel-generation"><a href="automated-kernel-generation/">Automated Kernel Generation</a><a class="headerlink" href="#automated-kernel-generation" title="Permanent link">&para;</a></h3>
-<p>Papers on LLM-driven generation, profiling-guided refinement, and automated optimization of GPU kernels and low-level code.</p>
-<h3 id="intra-gpu-spatial-multiplexing"><a href="intra-gpu-multiplexing/">Intra-GPU Spatial Multiplexing</a><a class="headerlink" href="#intra-gpu-spatial-multiplexing" title="Permanent link">&para;</a></h3>
-<p>Papers on GPU spatial multiplexing techniques for efficient LLM serving, including prefill-decode disaggregation and dynamic resource partitioning.</p>
-<h3 id="cluster-performance-modeling"><a href="cluster-performance-modeling/">Cluster Performance Modeling</a><a class="headerlink" href="#cluster-performance-modeling" title="Permanent link">&para;</a></h3>
-<p>Papers on probabilistic runtime modeling, tail-latency analysis, and variability-aware scheduling for large-scale distributed training clusters.</p>
-<h3 id="speculative-decoding"><a href="speculative-decoding/">Speculative Decoding</a><a class="headerlink" href="#speculative-decoding" title="Permanent link">&para;</a></h3>
-<p>Papers on lossless LLM inference acceleration through efficient drafting, parallel verification, dynamic candidate construction, and serving-aware scheduling.</p>
-<h3 id="mtp"><a href="mtp/">MTP</a><a class="headerlink" href="#mtp" title="Permanent link">&para;</a></h3>
-<p>Papers on multi-token prediction as a training objective, model-internal future-token capability, and its use for reasoning or inference acceleration.</p>
-<h2 id="_4">🔍 如何使用<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<h1 id="how-transformers-learn-to-plan-via-multi-token-prediction">How Transformers Learn to Plan via Multi-Token Prediction<a class="headerlink" href="#how-transformers-learn-to-plan-via-multi-token-prediction" title="Permanent link">&para;</a></h1>
+<div class="paper-meta">
+<p><strong>Authors</strong>: Jianhao Huang, Zhanpeng Zhou, Renqiu Xia, Baharan Mirzasoleiman, Weijie Su, Wei Huang<br />
+<strong>Institution</strong>: University of California, Los Angeles; Shanghai Jiao Tong University; University of Pennsylvania; RIKEN Center for Advanced Intelligence Project; The Institute of Statistical Mathematics<br />
+<strong>Conference</strong>: arXiv<br />
+<strong>Year</strong>: 2026<br />
+<strong>Paper Link</strong>: <a href="https://arxiv.org/abs/2604.11912">arXiv:2604.11912</a>  </p>
+</div>
+<div class="paper-tags">
+<p><span class="paper-tag">Multi-Token Prediction</span>
+<span class="paper-tag">Planning</span>
+<span class="paper-tag">Transformer Theory</span></p>
+</div>
+<h2 id="background">Background<a class="headerlink" href="#background" title="Permanent link">&para;</a></h2>
+<p>MTP is often motivated by empirical gains, but the mechanism behind those gains is less clear. This paper studies the question through planning tasks, where the model must determine a global solution before emitting the first answer token. Standard next-token prediction can exploit teacher-forced prefixes and learn local shortcuts instead of the true planning computation.</p>
+<p>The core claim is that MTP changes optimization, not just inference. During evaluation, models still generate one token at a time with the normal autoregressive head. The improvement comes from the training signal: predicting several future tokens from the same prefix encourages the network to form representations that already contain information about later consequences.</p>
+<p><strong>Key Takeaways</strong></p>
 <ul>
-<li><strong>浏览分类</strong>：点击顶部导航栏选择感兴趣的研究领域</li>
-<li><strong>搜索论文</strong>：使用右上角的搜索框快速查找特定论文或关键词</li>
-<li><strong>阅读笔记</strong>：每篇笔记包含论文摘要、核心思想、方法介绍和个人理解</li>
+<li>MTP outperforms NTP on synthetic graph path-finding and more realistic Countdown and SAT tasks.</li>
+<li>The paper identifies a reverse-reasoning circuit: attend to the end node first, then trace predecessor nodes backward.</li>
+<li>A gradient decoupling property gives MTP a cleaner signal than pure NTP for discovering this circuit.</li>
 </ul>
-<h2 id="_5">📝 笔记模板<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
-<p>每篇论文笔记通常包含以下内容：</p>
+<h2 id="methodology">Methodology<a class="headerlink" href="#methodology" title="Permanent link">&para;</a></h2>
+<p>The empirical setup compares MTP and NTP under the same inference mode. MTP with lookahead <code>k</code> predicts the next <code>k</code> tokens in parallel from the same prefix. The architecture follows the independent-head formulation from Gloeckle et al., using a shared transformer backbone and separate output heads. NTP is the special case <code>k = 1</code>.</p>
+<h3 id="system-overview">System Overview<a class="headerlink" href="#system-overview" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Input</th>
+<th>Output</th>
+<th>Role</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Planning task generator</td>
+<td>Graph, Countdown, or SAT instance</td>
+<td>Serialized prompt and solution</td>
+<td>Creates tasks requiring future-aware decisions</td>
+</tr>
+<tr>
+<td>Shared transformer</td>
+<td>Teacher-forced prefix</td>
+<td>Hidden representation</td>
+<td>Learns state used by all prediction heads</td>
+</tr>
+<tr>
+<td>MTP heads</td>
+<td>Shared representation</td>
+<td>Multiple future-token distributions</td>
+<td>Provide lookahead supervision</td>
+</tr>
+<tr>
+<td>Standard AR evaluator</td>
+<td>Generated prefix</td>
+<td>One next token</td>
+<td>Tests whether MTP training improves ordinary decoding</td>
+</tr>
+<tr>
+<td>Disentangled transformer analysis</td>
+<td>Star graph task</td>
+<td>Attention and gradient conditions</td>
+<td>Makes the planning mechanism mathematically tractable</td>
+</tr>
+</tbody>
+</table>
+<h3 id="key-design-choices">Key Design Choices<a class="headerlink" href="#key-design-choices" title="Permanent link">&para;</a></h3>
 <ul>
-<li><strong>论文基本信息</strong>（标题、作者、会议/期刊、年份）</li>
-<li><strong>摘要</strong>：论文要解决的问题和主要贡献</li>
-<li><strong>核心思想</strong>：论文的关键创新点</li>
-<li><strong>方法</strong>：技术细节和实现方式</li>
-<li><strong>实验结果</strong>：主要实验结论</li>
-<li><strong>个人笔记</strong>：个人思考、疑问和延伸阅读</li>
+<li>Separate the training objective from inference: all models are evaluated with standard next-token generation.</li>
+<li>Use star graphs to expose the Clever Hans shortcut, then binary trees to test whether MTP helps beyond removing that shortcut.</li>
+<li>Analyze a two-layer disentangled transformer where content and position matching can be studied explicitly.</li>
+<li>Prove that MTP can converge to a reverse-reasoning circuit, while NTP gradients can point away from that circuit.</li>
 </ul>
-<h2 id="_6">🚀 更新日志<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
-<p>本网站会持续更新，记录最新阅读的论文。欢迎访问 <a href="https://github.com/zksainx/paper-notes">GitHub 仓库</a> 查看更新历史。</p>
+<h2 id="experiment">Experiment<a class="headerlink" href="#experiment" title="Permanent link">&para;</a></h2>
+<h3 id="experimental-setup">Experimental Setup<a class="headerlink" href="#experimental-setup" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Synthetic graph tasks</td>
+<td>Star graph and binary tree path finding</td>
+</tr>
+<tr>
+<td>Realistic planning tasks</td>
+<td>Countdown and 3-SAT</td>
+</tr>
+<tr>
+<td>Countdown model/data</td>
+<td>85M parameter model, 1M samples, 100 epochs</td>
+</tr>
+<tr>
+<td>3-SAT model/data</td>
+<td>5.3M parameter model, 50K samples, 300 epochs</td>
+</tr>
+<tr>
+<td>Reporting</td>
+<td>Averages over 3 independent runs</td>
+</tr>
+</tbody>
+</table>
+<h3 id="headline-results">Headline Results<a class="headerlink" href="#headline-results" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Task</th>
+<th style="text-align: right;">NTP</th>
+<th style="text-align: right;">Best Reported MTP</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Star graph</td>
+<td style="text-align: right;">50% across data sizes</td>
+<td style="text-align: right;">100% with 2-MTP at 0.5M samples</td>
+</tr>
+<tr>
+<td>Countdown</td>
+<td style="text-align: right;">60.27</td>
+<td style="text-align: right;">64.93 with 7-MTP</td>
+</tr>
+<tr>
+<td>3-SAT</td>
+<td style="text-align: right;">10.40</td>
+<td style="text-align: right;">87.47 with 7-MTP</td>
+</tr>
+<tr>
+<td>Standard 8-layer transformer check</td>
+<td style="text-align: right;">NTP overfits, around 20% test accuracy</td>
+<td style="text-align: right;">3-MTP reaches 100% train and test accuracy</td>
+</tr>
+</tbody>
+</table>
+<p>The star graph result shows that MTP helps even with only one extra lookahead target. The binary tree experiments reduce the chance that the result is only due to disabling teacher-forced cheating, because every step requires a decision. Countdown and SAT add evidence that the effect carries beyond toy graph serialization.</p>
+<p>The theory explains the pattern. Under MTP, a shallow head receives an isolated signal for the future endpoint, encouraging layer 1 to attend to the end node. A deeper head then uses that endpoint-oriented representation to identify the intermediate predecessor. Under pure NTP, gradients from different layers are entangled and can reinforce a local shortcut rather than the reverse plan.</p>
+<h2 id="limitation">Limitation<a class="headerlink" href="#limitation" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Limitation</th>
+<th>Why It Matters</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Theory uses simplified transformers</td>
+<td>The disentangled model is useful for proof but does not cover all behavior of production LLMs</td>
+</tr>
+<tr>
+<td>Tasks are controlled</td>
+<td>Graph, Countdown, and SAT isolate planning but do not represent the full diversity of language reasoning</td>
+</tr>
+<tr>
+<td>Focus is reasoning, not serving</td>
+<td>The paper does not evaluate MTP as an inference acceleration system</td>
+</tr>
+<tr>
+<td>Future-token quality is task dependent</td>
+<td>Larger lookahead helps SAT strongly, while Countdown gains are more modest</td>
+</tr>
+</tbody>
+</table>
 <hr />
-<p><em>最后更新：2025年</em></p>
+<p><em>Reading date: 2026-07</em><br />
+<em>Note status: Completed</em></p>
 
 
 
@@ -3443,12 +3500,12 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.sections", "navigation.indexes", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "search.share", "content.code.copy", "content.tabs.link"], "search": "assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.sections", "navigation.indexes", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "search.share", "content.code.copy", "content.tabs.link"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
     
     
-      <script src="assets/javascripts/bundle.d7400e89.min.js"></script>
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
-        <script src="javascripts/mathjax.js"></script>
+        <script src="../../javascripts/mathjax.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
