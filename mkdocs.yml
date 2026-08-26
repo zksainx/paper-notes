@@ -164,6 +164,79 @@ nav:
       - How Transformers Learn to Plan via MTP: mtp/how-transformers-learn-to-plan.md
       - Your LLM Knows the Future: mtp/your-llm-knows-the-future.md
       - Medusa: mtp/medusa.md
+  - LLM Infrastructure:
+      - llm-infrastructure/index.md
+      - Research Landscape: llm-infrastructure/research-landscape.md
+      - Source Status: llm-infrastructure/source-status.md
+      - OSDI 2025: llm-infrastructure/osdi-2025.md
+      - WaferLLM: llm-infrastructure/waferllm.md
+      - BlitzScale: llm-infrastructure/blitzscale.md
+      - Understanding Stragglers: llm-infrastructure/understanding-stragglers.md
+      - NanoFlow: llm-infrastructure/nanoflow.md
+      - WLB-LLM: llm-infrastructure/wlb-llm.md
+      - DecDEC: llm-infrastructure/decdec.md
+      - SOSP 2025: llm-infrastructure/sosp-2025.md
+      - ByteRobust: llm-infrastructure/byterobust.md
+      - Mycroft: llm-infrastructure/mycroft.md
+      - DCP: llm-infrastructure/dcp.md
+      - TrainVerify: llm-infrastructure/trainverify.md
+      - Pie: llm-infrastructure/pie.md
+      - DiffKV: llm-infrastructure/diffkv.md
+      - Jenga: llm-infrastructure/jenga.md
+      - IC-Cache: llm-infrastructure/ic-cache.md
+      - KTransformers: llm-infrastructure/ktransformers.md
+      - PrefillOnly: llm-infrastructure/prefillonly.md
+      - Mercury: llm-infrastructure/mercury.md
+      - HedraRAG: llm-infrastructure/hedrarag.md
+      - HeteroInfer: llm-infrastructure/heteroinfer.md
+      - Aegaeon: llm-infrastructure/aegaeon.md
+      - Sailor: llm-infrastructure/sailor.md
+      - METIS RAG: llm-infrastructure/metis-rag.md
+      - OSDI 2026: llm-infrastructure/osdi-2026.md
+      - Strata: llm-infrastructure/strata.md
+      - ECHO: llm-infrastructure/echo-kv.md
+      - DirectKV: llm-infrastructure/directkv.md
+      - LMETRIC: llm-infrastructure/lmetric.md
+      - Prism Serving: llm-infrastructure/prism-serving.md
+      - Tessera: llm-infrastructure/tessera.md
+      - LLM Data Pipeline: llm-infrastructure/llm-data-pipeline.md
+      - Cocoon DP: llm-infrastructure/cocoon-dp.md
+      - Kareus: llm-infrastructure/kareus.md
+      - Weave RL: llm-infrastructure/weave-rl.md
+      - RLinf: llm-infrastructure/rlinf.md
+      - DynaRL: llm-infrastructure/dynarl.md
+      - RollArt: llm-infrastructure/rollart.md
+      - Seer RL: llm-infrastructure/seer-rl.md
+      - SPEX: llm-infrastructure/spex.md
+      - Murakkab: llm-infrastructure/murakkab.md
+      - StriaTrace: llm-infrastructure/striattrace.md
+      - SDCHunter: llm-infrastructure/sdchunter.md
+      - AEGIS SDC: llm-infrastructure/aegis-sdc.md
+      - OpGuard: llm-infrastructure/opguard.md
+      - RobustRL: llm-infrastructure/robustrl.md
+      - Local MoE SLO: llm-infrastructure/local-moe-slo.md
+      - UEP: llm-infrastructure/uep.md
+      - BatchGen: llm-infrastructure/batchgen.md
+      - EcoServe: llm-infrastructure/ecoserve.md
+      - Pipeline Serving: llm-infrastructure/pipeline-serving.md
+      - OpenTela: llm-infrastructure/opentela.md
+      - Kairox: llm-infrastructure/kairox.md
+      - ADAngel: llm-infrastructure/adangel.md
+      - Sereno: llm-infrastructure/sereno.md
+      - SOSP 2026: llm-infrastructure/sosp-2026.md
+      - PrismLLM: llm-infrastructure/prismllm.md
+      - LLM-42: llm-infrastructure/llm-42.md
+      - Cerium: llm-infrastructure/cerium.md
+      - Moebius: llm-infrastructure/moebius.md
+      - TensorHub: llm-infrastructure/tensorhub.md
+      - YoloFS: llm-infrastructure/yolofs.md
+      - Model2Kernel: llm-infrastructure/model2kernel.md
+      - SkVM: llm-infrastructure/skvm.md
+      - AgileLog: llm-infrastructure/agilelog.md
+      - TStore: llm-infrastructure/tstore.md
+      - Janus Serving: llm-infrastructure/janus-serving.md
+      - LMTracer: llm-infrastructure/lmtracer.md
+      - Voice Context: llm-infrastructure/voice-context.md
   - About: about.md
 
 # Copyright

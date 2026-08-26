@@ -35,6 +35,9 @@ Papers on lossless LLM inference acceleration through efficient drafting, parall
 ### [MTP](mtp/index.md)
 Papers on multi-token prediction as a training objective, model-internal future-token capability, and its use for reasoning or inference acceleration.
 
+### [LLM Infrastructure](llm-infrastructure/index.md)
+OSDI and SOSP 2025-2026 papers on large-model training, serving, memory, agents, and production reliability.
+
 ## 🔍 如何使用
 
 - **浏览分类**：点击顶部导航栏选择感兴趣的研究领域
