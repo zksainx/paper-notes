@@ -8,14 +8,14 @@ This collection covers papers in the official OSDI 2025, OSDI 2026, SOSP 2025, a
 - Excluded: generic GPU compilers, ordinary databases, vector search, or papers that only use an LLM as a developer tool when the LLM is not the system being operated.
 - Evidence: official conference abstracts and paper pages; SOSP 2026 preprint abstracts are linked when available. A title-only entry is marked as such instead of inventing quantitative claims.
 
-## Reading Map
+## Coverage
 
-| Note | Coverage | Papers |
+| Venue | Coverage | Papers |
 | --- | --- | ---: |
-| [OSDI 2025](osdi-2025.md) | Wafer-scale inference, autoscaling, training balance, serving throughput, low-bit inference | 6 |
-| [SOSP 2025](sosp-2025.md) | Training reliability, KV/memory management, serving, RAG, hybrid inference | 16 |
-| [OSDI 2026](osdi-2026.md) | Long-context serving, MoE/RL training, data pipelines, observability, SLOs, fault tolerance | 30 |
-| [SOSP 2026](sosp-2026.md) | Training emulation, production serving, agent runtimes, model storage, verification | 18 |
+| OSDI 2025 | Wafer-scale inference, autoscaling, training balance, serving throughput, low-bit inference | 6 |
+| SOSP 2025 | Training reliability, KV/memory management, serving, RAG, hybrid inference | 16 |
+| OSDI 2026 | Long-context serving, MoE/RL training, data pipelines, observability, SLOs, fault tolerance | 30 |
+| SOSP 2026 | Training emulation, production serving, agent runtimes, model storage, verification | 18 |
 
 ## OSDI 2025 Paper Notes
 
