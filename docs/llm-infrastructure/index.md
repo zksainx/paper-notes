@@ -1,21 +1,26 @@
 # LLM Infrastructure at OSDI/SOSP (2025-2026)
 
-This collection covers papers in the official OSDI 2025, OSDI 2026, SOSP 2025, and SOSP 2026 programs whose primary system object is large-model training, inference, serving, model/activation storage, agent runtime, or production reliability. It intentionally keeps one category and four venue-year notes rather than creating a directory per subtopic.
+This guide covers papers in the official OSDI 2025, OSDI 2026, SOSP 2025, and SOSP 2026 programs whose primary system object is large-model training, inference, serving, model/activation storage, agent runtime, or production reliability. It is the single entry point for coverage status, individual paper notes, and the cross-paper research landscape.
 
 ## Scope
 
 - Included: LLM/foundation-model training and post-training, inference and serving, KV/context/weight storage, agentic workflows, GPU/runtime orchestration, and production correctness/diagnostics.
 - Excluded: generic GPU compilers, ordinary databases, vector search, or papers that only use an LLM as a developer tool when the LLM is not the system being operated.
-- Evidence: official conference abstracts and paper pages; SOSP 2026 preprint abstracts are linked when available. A title-only entry is marked as such instead of inventing quantitative claims.
+- Evidence: official conference/author PDFs, complete `arxiv2md` conversions, and official project artifacts when a camera-ready paper is not public. Title-only entries are not summarized.
 
 ## Coverage
 
-| Venue | Coverage | Papers |
-| --- | --- | ---: |
-| OSDI 2025 | Wafer-scale inference, autoscaling, training balance, serving throughput, low-bit inference | 6 |
-| SOSP 2025 | Training reliability, KV/memory management, serving, RAG, hybrid inference | 16 |
-| OSDI 2026 | Long-context serving, MoE/RL training, data pipelines, observability, SLOs, fault tolerance | 30 |
-| SOSP 2026 | Training emulation, production serving, agent runtimes, model storage, verification | 18 |
+| Venue | Accepted / in scope | Notes | Archived sources | Coverage |
+| --- | ---: | ---: | ---: | --- |
+| OSDI 2025 | 6 | 6 | 6 | Wafer inference, autoscaling, training balance, serving, quantization |
+| SOSP 2025 | 16 | 16 | 15 | Reliability, KV/memory, serving, RAG, heterogeneous inference |
+| OSDI 2026 | 30 | 30 | 30 | Long context, MoE/RL, data, observability, SLOs, fault tolerance |
+| SOSP 2026 | 18 | 13 | 13 | Emulation, serving, agents, model storage, verification |
+| **Total** | **70** | **65** | **64** | Complete for all publicly available sources |
+
+Five SOSP 2026 papers had no public camera-ready text as of 2026-08-26 and were explicitly waived: **ACDC**, **Beyond Utilization**, **MeshRT**, **SANDHI**, and **SystemX**. ACDC exposes production traces but not its system design; the other four expose only title/author metadata. They are intentionally not reconstructed from titles.
+
+Originals are archived under `originals/osdi25/`, `originals/sosp25/`, `originals/osdi26/`, and `originals/sosp26/`.
 
 ## OSDI 2025 Paper Notes
 
@@ -94,21 +99,76 @@ This collection covers papers in the official OSDI 2025, OSDI 2026, SOSP 2025, a
 - [LMTracer](lmtracer.md) - graph-embedded low-overhead GPU profiling.
 - [Voice Context](voice-context.md) - structured long-running context for voice LLMs.
 
-Five accepted SOSP 2026 papers had no public camera-ready text as of 2026-08-26: ACDC, Beyond Utilization, MeshRT, SANDHI, and SystemX. They are excluded from the required note set by explicit user decision; see [Source Status](source-status.md) for the evidence trail.
+## Research Landscape
 
-## Synthesis
+The dominant problem across these papers is no longer simply faster matrix multiplication. It is **state management under dynamic execution**: deciding where weights, KV cache, optimizer tensors, context, agent side effects, communication dependencies, privacy noise, and model versions live; when they move; and which invariants make those transitions safe.
 
-- [Research Landscape](research-landscape.md) - macro-level taxonomy and cross-paper conclusions.
-- [Source Status](source-status.md) - per-venue coverage and unpublished-paper audit.
+Three transitions organize the literature:
 
-## Cross-Year Synthesis
+1. **Static placement to adaptive control.** Parallelism, memory allocation, routing, precision, and hardware assignment increasingly change online.
+2. **Single-request engines to workflow runtimes.** RAG, agents, RL, voice, and Tree-of-Thought expose multi-stage dependencies that a token loop cannot optimize globally.
+3. **Best-effort speed to production contracts.** Determinism, SDC detection, formal equivalence, fault isolation, energy, privacy, and side-effect control become first-class objectives.
 
-- **Serving is becoming memory- and state-centric.** KV caching, weight placement, GPU ballooning, CPU/GPU hybrids, and disaggregated I/O dominate the 2025-2026 systems agenda.
-- **Training systems are moving from static parallelism to adaptive control.** Workload-aware sharding, heterogeneous MoE pipelines, RL post-training co-scheduling, hot switching, and interruption recovery all treat the runtime as a feedback loop.
-- **Reliability is now a first-class LLM systems problem.** Silent data corruption, deterministic inference, tracing, equivalence checking, and production diagnosis appear alongside throughput work.
-- **Agents change the unit of orchestration.** Agent workflows, streaming-data forks, voice context orchestration, and cloud control planes require state isolation and policy-aware scheduling rather than a single request queue.
+### Research Map
+
+| State being managed | Representative systems | Core control action |
+| --- | --- | --- |
+| Weights and versions | BlitzScale, Prism, Aegaeon, Janus, TensorHub, TStore | Load, balloon, fork, transfer, compress, retain |
+| KV and context | DiffKV, Jenga, Strata, ECHO, DirectKV, PrefillOnly, Voice Context | Compress, tier, prefetch, drop, project |
+| Parallel execution | WLB-LLM, DCP, Tessera, Mercury, Moebius, UEP | Repartition, switch, overlap, rebalance |
+| RL workflow state | Weave, RLinf, DynaRL, RollArt, Seer, RobustRL | Co-schedule, transform, migrate, isolate roles |
+| Correctness evidence | TrainVerify, Mycroft, OpGuard, SDCHunter, AEGIS, LLM-42, Model2Kernel | Trace, replay, verify, compare, rollback |
+| Agent side effects | Pie, Murakkab, YoloFS, AgileLog, SkVM | Program, sandbox, fork, gate, compile |
+| Hardware resources | WaferLLM, HeteroInfer, KTransformers, Kairox, ADAngel, Sereno | Map to topology, CPU/GPU/NPU, precision, bandwidth |
+
+### Memory as the Serving Control Plane
+
+Serving papers increasingly use memory allocation as scheduling. Aegaeon moves model state at token granularity; Prism unifies spatial and temporal sharing through ballooning; Janus separates steady and burst pools over a virtual HBM substrate. Strata, ECHO, and DirectKV turn CPU/SSD memory into scheduled cache tiers rather than passive overflow.
+
+Request routing and memory management are converging: the best destination depends on which state is present, how cheaply missing state can arrive, and what eviction externality a request creates.
+
+### Parallelism as a Runtime Variable
+
+WLB-LLM balances document-dependent attention work, DCP repartitions each batch, Tessera uses post-overlap cost, Moebius switches TP and EP between decode steps, and pipeline serving changes chunk size from live SLO slack. Parallelism is becoming a stateful online decision rather than a launch-time configuration.
+
+The main systems challenge shifts from finding one optimal plan to defining safe transitions between plans while preserving weights, KV state, communication groups, and in-flight requests.
+
+### RL Post-Training as a Distinct Systems Domain
+
+RL combines memory-bound rollout, compute-bound optimization, tool/environment latency, bursty reward work, and frequent weight publication. Weave fills cross-job bubbles; RLinf transforms workflows into micro-flows; DynaRL follows moving bottlenecks; RollArt maps stages to heterogeneous hardware; Seer handles synchronous rollout tails; TensorHub distributes versions; RobustRL recovers roles independently.
+
+The unresolved problem is jointly optimizing throughput and learning semantics: staleness, sampling bias, partial trajectories, and recovery affect the learned policy, not only system performance.
+
+### Reliability Near the First Divergence
+
+Loss curves are late and ambiguous. Mycroft traces collective dependencies; OpGuard locates the first bitwise mismatch; SDCHunter replays the triggering workload; AEGIS escalates from cheap sensing to verification; TrainVerify proves plans before execution; Model2Kernel constrains CUDA symbolic execution with model semantics.
+
+The common pattern is a cheap structured invariant on the fast path, followed by focused escalation near suspicious evidence. This scales better than continuous full tracing or duplicated execution.
+
+### Reversible State for Agents
+
+Pie makes inference programmable, Murakkab makes workflows declarative, and SkVM compiles skills for model/harness capabilities. YoloFS stages and snapshots mutations; AgileLog gives agents isolated continuous forks of live streams.
+
+The emerging primitive is a **reversible branch of state**. Agent autonomy becomes practical when exploration is cheap, isolated, inspectable, and promotable. This idea can extend from files and logs to databases, cloud resources, credentials, and external tool transactions.
+
+### Hardware Heterogeneity as an Input
+
+WaferLLM replaces GPU assumptions with PLMR; HeteroInfer schedules GPU and NPU together; KTransformers and Kairox use CPU compute and DRAM; UEP restores GPU/NIC portability through CPU proxies; ADAngel selects mixed-precision algorithms by workload; Sereno yields NPU bandwidth to foreground apps.
+
+These systems expose meaningful hardware asymmetry to planners while retaining a stable higher-level contract, rather than hiding every device behind an identical abstraction.
+
+### Open Problems
+
+- **Control-loop composability:** cache, routing, frequency, and parallelism controllers can oscillate or fight each other.
+- **State-transition correctness:** live migration needs transactional guarantees across weights, KV, requests, and communication groups.
+- **Quality-aware metrics:** throughput and latency do not capture RAG quality, speculative waste, quantization error, RL staleness, or agent outcomes.
+- **Reproducibility:** production results often depend on private traces, specialized hardware, and changing model versions.
+- **Programmable-system security:** inferlets, skills, agent forks, and adaptive control planes expand the trusted computing base.
+- **Energy accounting:** few systems jointly optimize energy, embodied hardware cost, and SLOs.
+
+The unifying direction is **adaptive, state-aware infrastructure with explicit correctness boundaries**. The strongest systems expose hidden state, attach an invariant or cost to it, and safely change its placement or execution policy at finer granularity than previous stacks.
 
 ---
 
 *Reading date: 2026-08*
-*Note status: Completed*
+*Note status: Completed for all publicly available sources*

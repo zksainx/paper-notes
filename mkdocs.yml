@@ -166,8 +166,6 @@ nav:
       - Medusa: mtp/medusa.md
   - LLM Infrastructure:
       - llm-infrastructure/index.md
-      - Research Landscape: llm-infrastructure/research-landscape.md
-      - Source Status: llm-infrastructure/source-status.md
       - WaferLLM: llm-infrastructure/waferllm.md
       - BlitzScale: llm-infrastructure/blitzscale.md
       - Understanding Stragglers: llm-infrastructure/understanding-stragglers.md
